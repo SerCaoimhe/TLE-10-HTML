@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Placido-Text</title>
+    <meta charset="UTF-8">
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+        }
+        header, footer, nav, main, section, article, aside {
+          border: 1px solid #ccc;
+          padding: 10px;
+          margin: 5px;
+        }
+        nav a {
+          margin-right: 10px;
+        }
+        aside {
+          position: fixed;
+          top: 80%;              
+          right: 0%;
+          width: 10%;
+          height: min-content; 
+          background-color: #84bdd9;
+          padding: 10px;
+          border-left: 10px solid #ccc;
+          font-size: 0.9em;
+          overflow-y: visible;
+        }
+        main {
+          margin-right: 230px; 
+          padding-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Text</h1>
+        <p>Welcome to my notes about the basics of HTML!</p>
+    </header>
+    <nav>
+        <a href="index.html" target="_self" title="Go back to Home">Home</a>
+        <a href="structure.html" target="_self" title="Learn about HTML Structure">Structure</a>
+        <a href="editor.html" target="_self" title="Learn about Visual Studio Code">Editor</a>
+        <a href="lists.html" target="_self" title="Learn about Lists">Lists</a>
+        <a href="tables.html" target="_self" title="Learn about Tables">Tables</a>
+        <a href="multimedia-elements.html" target="_self" title="Learn about Multimedia Elements">Multimedia Elements</a>
+        <a href="links.html" target="_self" title="Learn about Links">Links</a>
+        <a href="forms.html" target="_self" title="Learn about Forms">Forms</a>
+    </nav>
+    <aside>
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#text-elements">Text Elements</a></li>
+          <li><a href="#breaks">Breaks</a></li>
+          <li><a href="#preformatted-text">Preformatted Text</a></li>
+          <li><a href="#formatting">Formatting</a></li>
+        </ul>
+    </aside>
+    <main>
+        <section id="text-elements">
+            <h2>Text Elements</h2>
+            <article>
+                <h3>1. Heading</h3>
+                <p>The heading element is used for headings and subheadings. It is applied using the tags 
+                    <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> which define hierarchical levels for text, from highest
+                    (<code>&lt;h1&gt;</code>) to lowest (<code>&lt;h6&gt;</code>).
+                </p>
+                <p><b>Syntax:</b><code>&lt;hx&gt;Heading x&lt;/hx&gt;</code></p>
+            </article>
+            <article>
+                <h3>2. Paragraph</h3>
+                <p>The paragraph element is used for bodies of text. It is applied using the tag 
+                    <code>&lt;p&gt;</code> which automatically creates a new line.</p>
+                <p><b>Syntax:</b></p>
+                <pre><code>&lt;p&gt;This is one paragraph.&lt;/p&gt;
+&lt;p&gt;This is another paragraph.&lt;/p&gt;</code>
+                    </pre>
+            </article>
+        </section>
+        
+        <section id="breaks">
+            <h2>Breaks</h2>
+            <article>
+                <h3>1. Line Break</h3>
+                <p>The line break element forces the content to continue on a new line <strong>within</strong> the paragraph. It is applied using the <em>empty tag</em>  
+                    <code>&lt;br&gt;</code>. An empty tag is also known as a <em>self-closing tag</em>, or preferably <strong>void tag</strong>.
+                    This does not have an element content nor an end tag.
+                </p>
+                <p><b>Syntax:</b></p>
+                <pre><code>&lt;p&gt;This is one paragraph but you want a break after this.&lt;br&gt;
+   This still belongs to the same paragraph.&lt;/p&gt;
+   &lt;p&gt;This is another paragraph.&lt;/p&gt;</code>
+                </pre>
+                <p><b>Preview:</b></p>
+                <p>This is one paragraph but you want a break after this.<br>
+                    This still belongs to the same paragraph.</p>
+                <p>This is another paragraph.</p>
+            </article>
+            <article>
+                <h3>2. Horizontal Rule</h3>
+                <p>The horizontal rule element indicates a semantic break in the content and is indicated by a horizontal line <strong>between</strong> different sections. It is applied using the <em>void</em> tag 
+                    <code>&lt;hr&gt;</code>.
+                </p>
+                <p><b>Syntax:</b></p>
+                <pre><code>&lt;h2&gt;This is a main heading.&lt;/h2&gt;
+  &lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;This is different main heading.&lt;/h2&gt;
+  &lt;p&gt;This is a paragraph.&lt;/p&gt;</code>
+                </pre>
+                <p><b>Preview:</b></p>
+                <h2>This is a main heading.</h2>
+                <p>This is a paragraph.</p>
+                <hr>
+                <h2>This is a different main heading.</h2>
+                <p>This is a paragraph.</p>
+            </article>
+        </section>
+
+        <section id="preformatted-text">
+            <h2>Preformatted Text</h2>
+                <p>The preformatted text element defines text to be displayed with a fixed-width or 
+                <em>monospace</em> font (all letters and spaces have the same width) and with 
+                the spaces and line breaks preserved.
+                </p>
+                <p><b>Syntax:</b></p>
+                <pre><code>&lt;p&gt;This is regular 
+                    
+                    text where the font is monospace by default and extra spaces and line breaks are ignored.
+&lt;/p&gt;
+&lt;pre&gt;This is preformatted text where the 
+
+extra spaces and line breaks will be 
+
+     preserved.
+&lt;/pre&gt;</code>
+                </pre>
+                <p><b>Preview:</b></p>
+                <p>This is regular 
+                    
+                    text where extra spaces and line breaks are ignored.</p>
+                <pre>This is preformatted text where the font is 
+    
+           monospace by default
+
+extra spaces and line breaks will be 
+
+     preserved.
+                </pre>  
+                <p><b>ASCII Art:</b></p>
+                <p>This element is also useful for displaying <i>American Standard Code for Information Interchange (ASCII)</i> art.</p>  
+                <figure>
+                    <pre>
+                           _                 __                 
+      __.--**"""**--...__..--**""""*-.            
+    .'                                `-.         
+  .'                         _           \        
+ /                         .'        .    \   _._ 
+:                         :          :`*.  :-'.' ;
+;    `                    ;          `.) \   /.-' 
+:     `                             ; ' -*   ;    
+       :.    \           :       :  :        :    
+ ;     ; `.   `.         ;     ` |  '             
+ |         `.            `. -*"*\; /        :     
+ |    :     /`-.           `.    \/`.'  _    `.   
+ :    ;    :    `*-.__.-*""":`.   \ ;  'o` `. /   
+       ;   ;                ;  \   ;:       ;:   ,/
+  |  | |            [bug]      /`  | ,      `*-*'/ 
+  `  : :  :                /  /    | : .    ._.-'  
+   \  \ ,  \              :   `.   :  \ \   .'     
+    :  *:   ;             :    |`*-'   `*+-*       
+    `**-*`""               *---*
+                    </pre>
+                    <figcaption>Rhinoceros ASCII Art</figcaption>
+                </figure>
+                <figure>
+                    <pre>
+                ;               ,           
+         ,;                 '.         
+        ;:                   :;        
+       ::                     ::       
+       ::                     ::       
+       ':                     :        
+        :.                    :        
+     ;' ::                   ::  '     
+    .'  ';                   ;'  '.    
+   ::    :;                 ;:    ::   
+   ;      :;.             ,;:     ::   
+   :;      :;:           ,;"      ::   
+   ::.      ':;  ..,.;  ;:'     ,.;:   
+    "'"...   '::,::::: ;:   .;.;""'    
+        '"""....;:::::;,;.;"""         
+    .:::.....'"':::::::'",...;::::;.   
+   ;:' '""'"";.,;:::::;.'""""""  ':;   
+  ::'         ;::;:::;::..         :;  
+ ::         ,;:::::::::::;:..       :: 
+ ;'     ,;;:;::::::::::::::;";..    ':.
+::     ;:"  ::::::"""'::::::  ":     ::
+ :.    ::   ::::::;  :::::::   :     ; 
+  ;    ::   :::::::  :::::::   :    ;  
+   '   ::   ::::::....:::::'  ,:   '   
+    '  ::    :::::::::::::"   ::       
+       ::     ':::::::::"'    ::       
+       ':       """""""'      ::       
+        ::                   ;:        
+        ':;                 ;:"        
+-hrr-     ';              ,;'          
+            "'           '"            
+              '
+                    </pre>
+                    <figcaption>Spider ASCII Art</figcaption>
+                </figure>
+        </section>
+
+        <section id="formatting">
+            <h2>Formatting</h2>
+            <p>Formatting elements can be added to make either <em>visual</em> or 
+                <em>semantic</em> changes to text. 
+                Visual changes are purely for appearance, while semantic changes 
+                affect how the browser treats the text.
+            </p>
+            <table width="500" border="1">
+                <thead>
+                    <tr style="background-color:#4fa7d3;">
+                        <th>Format</th>
+                        <th>Tags</th>
+                        <th>Syntax</th>
+                        <th>Preview</th>
+                        <th>Semantic?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="text-align:center">Normal</td>
+                        <td style="text-align:center">--</td>
+                        <td style="text-align:center"><pre><code>&lt;p&gt;Normal&lt;/p&gt;</code></pre></td>
+                        <td style="text-align:center">Normal</td>
+                        <td style="text-align:center">--</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">Bold</td>
+                        <td style="text-align:center"><pre><code>&lt;b&gt;&lt;/b&gt;</code></pre></td>
+                        <td style="text-align:center"><pre><code>&lt;b&gt;Bold&lt;/b&gt;</code></pre></td>
+                        <td style="text-align:center"><b>Bold</b></td>
+                        <td style="text-align:center">No</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">Strong</td>
+                        <td style="text-align:center"><pre><code>&lt;strong&gt;&lt;/strong&gt;</code></pre></td>
+                        <td style="text-align:center"><pre><code>&lt;strong&gt;Strong&lt;/strong&gt;</code></pre></td>
+                        <td style="text-align:center"><strong>Strong</strong></td>
+                        <td style="text-align:center">Yes</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">Italicized</td>
+                        <td style="text-align:center"><pre><code>&lt;i&gt;&lt;/i&gt;</code></pre></td>
+                        <td style="text-align:center"><pre><code>&lt;i&gt;Italicized&lt;/i&gt;</code></pre></td>
+                        <td style="text-align:center"><i>Italicized</i></td>
+                        <td style="text-align:center">No</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">Emphasis</td>
+                        <td style="text-align:center"><pre><code>&lt;em&gt;&lt;/em&gt;</code></pre></td>
+                        <td style="text-align:center"><pre><code>&lt;em&gt;Emphasis&lt;/em&gt;</code></pre></td>
+                        <td style="text-align:center"><em>Emphasis</em></td>
+                        <td style="text-align:center">Yes</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">Underlined</td>
+                        <td style="text-align:center"><pre><code>&lt;u&gt;&lt;/u&gt;</code></pre></td>
+                        <td style="text-align:center"><pre><code>&lt;u&gt;Underlined&lt;/u&gt;</code></pre></td>
+                        <td style="text-align:center"><u>Underline</u></td>
+                        <td style="text-align:center">No</td>
+                    </tr>  
+                    <tr>
+                        <td style="text-align:center">Inserted</td>
+                        <td style="text-align:center"><pre><code>&lt;ins&gt;&lt;/ins&gt;</code></pre></td>
+                        <td style="text-align:center"><pre><code>&lt;ins&gt;Inserted&lt;/ins&gt;</code></pre></td>
+                        <td style="text-align:center"><ins>Inserted</ins></td>
+                        <td style="text-align:center">Yes</td>
+                    </tr>          
+                    <tr>
+                        <td style="text-align:center">Small</td>
+                        <td style="text-align:center"><pre><code>&lt;small&gt;&lt;/small&gt;</code></pre></td>
+                        <td style="text-align:center"><pre><code>&lt;small&gt;Small&lt;/small&gt;</code></pre></td>
+                        <td style="text-align:center"><small>Small</small></td>
+                        <td style="text-align:center">Yes</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">Subscript</td>
+                        <td style="text-align:center"><pre><code>&lt;sub&gt;&lt;/sub&gt;</code></pre></td>
+                        <td style="text-align:center"><pre><code>X&lt;sub&gt;Subscript&lt;/sub&gt;</code></pre></td>
+                        <td style="text-align:center">X<sub>Subscript</sub></td>
+                        <td style="text-align:center">Yes</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">Superscript</td>
+                        <td style="text-align:center"><pre><code>&lt;sup&gt;&lt;/sup&gt;</code></pre></td>
+                        <td style="text-align:center"><pre><code>X&lt;sup&gt;Superscript&lt;/sup&gt;</code></pre></td>
+                        <td style="text-align:center">X<sup>Superscript</sup></td>
+                        <td style="text-align:center">Yes</td>
+                    </tr>
+                   <tr>
+                        <td style="text-align:center">Strikethrough</td>
+                        <td style="text-align:center"><pre><code>&lt;s&gt;&lt;/s&gt;</code></pre></td>
+                        <td style="text-align:center"><pre><code>&lt;s&gt;Strikethrough&lt;/s&gt;</code></pre></td>
+                        <td style="text-align:center"><s>Strikethrough</s></td>
+                        <td style="text-align:center">No</td>
+                    </tr>
+                     <tr>
+                        <td style="text-align:center">Deleted</td>
+                        <td style="text-align:center"><pre><code>&lt;del&gt;&lt;/del&gt;</code></pre></td>
+                        <td style="text-align:center"><pre><code>&lt;del&gt;Deleted&lt;/del&gt;</code></pre></td>
+                        <td style="text-align:center"><del>Deleted</del></td>
+                        <td style="text-align:center">Yes</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">Marked</td>
+                        <td style="text-align:center"><pre><code>&lt;mark&gt;&lt;/mark&gt;</code></pre></td>
+                        <td style="text-align:center"><pre><code>&lt;mark&gt;Marked&lt;/mark&gt;</code></pre></td>
+                        <td style="text-align:center"><mark>Marked</mark></td>
+                        <td style="text-align:center">Yes</td>
+                    </tr>
+                </tbody>
+            </table>
+    </section>
+    <section>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+         <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+         <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <p>Seatwork 1.4</p>
+        <p><b>1. Word</b> (not semantic)</p>
+        <p><mark>2. Word</mark></p>
+        <p><u>3. Word</u> (not semantic)</p>
+        <p><del>4. Word</del> (semantic)</p>
+        <p><small>5. Word</small></p>
+        <p><ins>6. Word</ins> (semantic)</p>
+        <p><strong>7. Word</strong> (semantic)</p>
+        <p><em>8. Word</em> (semantic)</p>
+        <p>9.<sub>Word</sub></p>
+        <p>10.<sup>Word</sup></p>
+        <p><i>11. Word</i> (not semantic)</p>
+        <p><s>12. Word</s> (not semantic)</p>
+        <p>13. Word</p>
+        <pre>14.             Word</pre>
+        15. <hr>
+        
+
+    </section>
+    </main>
+    <footer>
+        <p>© 2025 Derik's Notes. All rights reserved.</p>
+    </footer>
+</body>
+</html>

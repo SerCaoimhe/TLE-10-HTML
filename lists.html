@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Placido-Lists</title>
+    <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+    header, footer, nav, main, section, article, aside {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 5px;
+    }
+    nav a {
+      margin-right: 10px;
+    }
+    aside {
+      background-color: #f9f9f9;
+      font-size: 0.9em;
+    }
+    </style>
+  
+</head>
+<body>
+    <header>
+        <h1>Lists</h1>
+        <p>Welcome to my notes about the basics of HTML!</p>
+    </header>
+    <nav>
+        <a href="index.html" target="_self" title="Go back to Home">Home</a>
+        <a href="structure.html" target="_self" title="Learn about HTML Structure">Structure</a>
+        <a href="editor.html" target="_self" title="Learn about Visual Studio Code">Editor</a>
+        <a href="text-elements.html" target="_self" title="Learn about Text Elements">Text Elements</a>
+        <a href="tables.html" target="_self" title="Learn about Tables">Tables</a>
+        <a href="multimedia-elements.html" target="_self" title="Learn about Multimedia Elements">Multimedia Elements</a>
+        <a href="links.html" target="_self" title="Learn about Links">Links</a>
+        <a href="forms.html" target="_self" title="Learn about Forms">Forms</a>
+    </nav>
+    <main>
+        <section>
+            <h2>What is a list?</h2>
+            <p>A list enumerates items within a group.</p>
+            <p>Lists can be combined and nested.</p>
+        </section>
+        <section>
+            <h2>Types of Lists</h2>
+            <p>There are three types of lists, each with their appropriate use.</p>
+            <article>
+                <h3>Unordered List</h3>
+                <p>The unordered list element is used to enumerate items in <strong>no particular order</strong> using
+                    bullets as the default <em>list marker</em>. It is begun with the <em>unordered list</em> <code>&lt;ul&gt;</code> 
+                    tag and filled with the <em>list item</em> <code>&lt;li&gt;</code> tag.
+                </p>
+                <p>The list marker may be changed from a bullet to another type using the style attribute with the property <code>"list-style-type"</code> and the syntax:
+                    <code>&lt;li style="list-style-type:x;"&gt;</code> where x is any of the following values: disc, square, circle, or none. The "disc"
+                    property value will return the default bullet marker.
+                </p>
+                <p><b>Syntax:</b></p>
+                <pre><code>&lt;ul&gt;
+    &lt;li&gt;Item 1&lt;/li&gt;
+    &lt;li&gt;Item 2&lt;/li&gt;
+    &lt;li&gt;Item 3&lt;/li&gt;
+    &lt;li style="list-style-type: disc;"&gt;Item 4 (disc marker)&lt;/li&gt;
+    &lt;li style="list-style-type: square;"&gt;Item 5 (square marker)&lt;/li&gt;
+    &lt;li style="list-style-type: circle;"&gt;Item 6 (circle marker)&lt;/li&gt;
+    &lt;li style="list-style-type: none;"&gt;Item 7 (no marker)&lt;/li&gt;
+&lt;/ul&gt;
+                </code>
+                </pre>
+                <p><b>Preview:</b></p>
+                <ul>
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                    <li style="list-style-type: disc;">Item 4 (disc marker)</li>
+                    <li style="list-style-type: square;">Item 5 (square marker)</li>
+                    <li style="list-style-type: circle;">Item 6 (circle marker)</li>
+                    <li style="list-style-type: none;">Item 7 (no marker)</li>
+                </ul>
+            </article>
+            <article>
+                <h3>Ordered List</h3>
+                <p>The ordered list element is used to enumerate items <strong>in a particular order</strong> using
+                    a defined numbering style. It is begun with the <em>ordered list</em> <code>&lt;ol&gt;</code> tag and filled with the 
+                    <em>list item</em> <code>&lt;li&gt;</code> tag. 
+                </p>
+                <p>The attribute "type" defines the numbering system (1,I,i,A,a), while "start" defines
+                    the starting number. If no attributes are used, the list will use the default (1 starting from 1). 
+                </p>
+                <p><b>Syntax:</b></p>
+                <pre><code>&lt;ol type="1" start="1"&gt;
+    &lt;li&gt;Item 1&lt;/li&gt;
+    &lt;li&gt;Item 2&lt;/li&gt;
+    &lt;li&gt;Item 3&lt;/li&gt;
+&lt;/ol&gt;
+                </code>
+                </pre>
+                <p><b>Preview:</b></p>
+                <ol>
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                </ol>
+            </article>
+            <article>
+                <h3>Description List</h3>
+                <p>The description list element is used to enumerate and describe items. It is begun with the <em>description list</em> <code>&lt;dl&gt;</code> tag 
+                    and filled with the <em>definition term</em> <code>&lt;dt&gt;</code> and <em>description details</em> <code>&lt;dd&gt;</code> tags. 
+                </p>
+                <p>The description details typically begin with a list marker such as a bullet or hyphen, but this is not required. Just remember that the list will
+                    display whatever the element content is (including the list marker, if any). 
+                </p>
+                <p>When writing in code, separate each definition term with a blank line for clarity.</p>
+                <p><b>Syntax:</b></p>
+                <pre><code>&lt;dl&gt;
+    &lt;dt&gt;Item 1&lt;/dt&gt;
+    &lt;dd&gt;Item 1 description 1 (no list marker)&lt;/dd&gt;
+    &lt;dd&gt;- Item 1 description 2 (hyphen list marker)&lt;/dd&gt;
+    
+    &lt;dt&gt;Item 2&lt;/dt&gt;
+    &lt;dd&gt;🤯 Item 2 description (emoji list marker)&lt;/dd&gt;
+    
+    &lt;dt&gt;Item 3&lt;/dt&gt;
+    &lt;dd&gt;❤️ Item 3 description (emoji list marker)&lt;/dd&gt;
+&lt;/dl&gt;
+                </code>
+                </pre>
+                <p><b>Preview:</b></p>
+                <dl>
+                    <dt>Item 1</dt>
+                    <dd>Item 1 description 1 (no list marker)</dd>
+                    <dd>- Item 1 description 2 (hyphen list marker)</dd>
+
+                    <dt>Item 2</dt>
+                    <dd>🤯 Item 2 description (emoji list marker)</dd>
+                    
+                    <dt>Item 3</dt>
+                    <dd>❤️ Item 3 description (emoji list marker)</dd>
+                </dl>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>© 2025 Derik's Notes. All rights reserved.</p>
+    </footer>
+</body>
+</html>
