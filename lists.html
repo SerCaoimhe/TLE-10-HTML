@@ -23,7 +23,7 @@
     </style>
   
 </head>
-<body>
+<body><!--trying comment-->
     <header>
         <h1>Lists</h1>
         <p>Welcome to my notes about the basics of HTML!</p>
@@ -140,6 +140,92 @@
                     <dd>❤️ Item 3 description (emoji list marker)</dd>
                 </dl>
             </article>
+        </section>
+        <section>
+            <h2>Nesting Lists</h2>
+            <p>A list can be comprised of smaller lists inside. Simply begin another list before ending the current parent list.
+                Different types of lists may comprise a nested list.
+            </p>
+            <p>Example 1: nested list using only one type</p>
+            <p><b>Syntax:</b></p>
+                    <pre>&lt;h3&gt;Why Sir Derik is the best:&lt;/h3&gt;
+<code>&lt;ul&gt;&lt;!--START of main list--&gt;
+    &lt;li&gt;He is tall&lt;/li&gt;
+        &lt;!--Notice how another list is opened before the original is closed--&gt;
+        &lt;ul&gt;&lt;!--START of sub-list--&gt;
+            &lt;li style="list-style-type: circle;"&gt;Can turn on the airconditioner without stepping on a chair, which is unsanitary&lt;/li&gt;
+            &lt;li style="list-style-type: circle;"&gt;Can turn off the airconditioner without stepping on a chair, which is still unsanitary&lt;/li&gt;
+        &lt;/ul&gt;&lt;!--END of sub-list--&gt;
+    &lt;li&gt;He is handsome&lt;/li&gt;
+    &lt;li&gt;He is smart&lt;/li&gt;
+        &lt;ul&gt;&lt;!--START of sub-list--&gt;
+            &lt;li style="list-style-type: circle;"&gt;Knows the solution and answer to 1+1&lt;/li&gt;
+            &lt;li style="list-style-type: circle;"&gt;Has memorized the multiplication table up to 16x16&lt;/li&gt;
+        &lt;/ul&gt;&lt;!--END of sub-list--&gt;
+    &lt;li&gt;He is &lt;s&gt;Superman&lt;/s&gt; helpful&lt;/li&gt;
+&lt;/ul&gt;&lt;!--END of main list--&gt;
+                    </code>
+                    </pre>
+                <p><b>Preview:</b></p>
+                <h3>Why Sir Derik is the best:</h3>
+                    <ul>
+                        <li style="list-style-type: disc;">He is tall</li>
+                            <ul>
+                                <li style="list-style-type: circle;">Can turn on the airconditioner without stepping on a chair, which is unsanitary</li>
+                                <li style="list-style-type: circle;">Can turn off the airconditioner without stepping on a chair, which is still unsanitary</li>
+                            </ul>
+                        <li style="list-style-type: disc;">He is handsome</li>
+                        <li style="list-style-type: disc;">He is smart</li>
+                            <ul>
+                                <li style="list-style-type: circle;">Knows the solution and answer to 1+1</li>
+                                <li style="list-style-type: circle;">Has memorized the multiplication table up to 16x16</li>
+                            </ul><!--END of sub-list-->
+                        <li style="list-style-type: disc;">He is <s>Superman</s> helpful</li>
+                        <li style="list-style-type: disc;">He loves his advisory class</li>
+                    </ul>
+                    <br>
+            <p>Example 2: nested list using multiple types</p>
+            <p><b>Syntax:</b></p>
+                    <pre>&lt;h3&gt;Why Sir Derik is the best:&lt;/h3&gt;
+<code>&lt;ol&gt;&lt;!--START of main ORDERED list--&gt;
+    &lt;li&gt;He is tall&lt;/li&gt;
+        &lt;!--Notice how another list is opened before the original is closed--&gt;
+        &lt;ol type="a"&gt;&lt;!--START of ORDERED sub-list--&gt;
+            &lt;li&gt;Can turn on the airconditioner without stepping on a chair, which is unsanitary&lt;/li&gt;
+            &lt;li&gt;Can turn off the airconditioner without stepping on a chair, which is still unsanitary&lt;/li&gt;
+        &lt;/ol&gt;&lt;!--END of ORDERED sub-list--&gt;
+    &lt;li&gt;He is handsome&lt;/li&gt;
+    &lt;li&gt;He is smart&lt;/li&gt;
+        &lt;ul&gt;&lt;!--START of UNORDERED sub-list--&gt;
+            &lt;li style="list-style-type: circle;"&gt;Knows the solution and answer to 1+1&lt;/li&gt;
+            &lt;li style="list-style-type: circle;"&gt;Has memorized the multiplication table up to 16x16&lt;/li&gt;
+        &lt;/ul&gt;&lt;!--END of UNORDERED sub-list--&gt;
+    &lt;li&gt;He is &lt;s&gt;Superman&lt;/s&gt; helpful&lt;/li&gt;
+&lt;/ol&gt;&lt;!--END of main ORDERED list--&gt;
+                    </code>
+                    </pre>
+                <p><b>Preview:</b></p>
+                <h3>Why Sir Derik is the best:</h3>
+                    <ol>
+                        <li>He is tall</li>
+                            <ol type="a">
+                                <li>Can turn on the airconditioner without stepping on a chair, which is unsanitary</li>
+                                <li>Can turn off the airconditioner without stepping on a chair, which is still unsanitary</li>
+                            </ol>
+                        <li>He is handsome</li>
+                        <li>He is smart</li>
+                            <ul>
+                                <li style="list-style-type: circle;">Knows the solution and answer to 1+1</li>
+                                <li style="list-style-type: circle;">Has memorized the multiplication table up to 16x16</li>
+                            </ul>
+                        <li>He is <s>Superman</s> helpful</li>
+                        <li>He loves his advisory class</li>
+                    </ol>
+            <p>A description list may also be integrated in a similar manner shown in the previous examples.</p>
+        </section>
+        <section>
+            <h2>Exercise 1.4</h2>
+            <p>Use all three list types. Each one should have at least 5 items. In the case of description list, at least 1 description per item.</p>
         </section>
     </main>
     <footer>

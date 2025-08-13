@@ -23,9 +23,7 @@
     </style>
   
 </head>
-<body style="background-image:url('Multimedia/b7e1e580-c611-11ea-9b24-523c65baea0e.png');
-    background-size: cover; 
-    background-repeat: no-repeat;">
+<body>
     <header>
         <h1>Tables</h1>
         <p>Welcome to my notes about the basics of HTML!</p>
@@ -40,30 +38,65 @@
         <a href="links.html" target="_self" title="Learn about Links">Links</a>
         <a href="forms.html" target="_self" title="Learn about Forms">Forms</a>
     </nav>
-    <!--<main>
+    <main>
         <section>
-            <h2>Tables</h2>
-            <article>
-                <h3>Main Topic 1</h3>
-                <p>Blablabla</p>
-            </article>
-            <article>
-                <h3>Main Topic 2</h3>
-                <p>Blablabla</p>
-                <article>
-                    <h4>Subtopic 1</h4>
-                    <p>Blablabla.</p>
-                </article>
-                <section>
-                    <h4>Subtopic 2</h4>
-                    <p>Blablabla.</p>
-                    <h5>Supporting Detail 1</h5>
-                    <h5>Supporting Detail 2</h5>
-                    <h5>Supporting Detail 3</h5>
-                </article>
-            </article>
+            <h2>What is a table?</h2>
+            <p>A table is an object that organizes data into cells using <i>rows</i> (horizontal component) and <i>columns</i>
+                (vertical component) typically within a header and body structure.</p>
         </section>
-    </main>-->
+        <section>
+            <h2>Making a Table</h2>
+            <ol>
+                <li>Begin a table using the <code>&lt;table&gt;</code> tag.</li>
+                <li>Use the <em>style</em> attribute and <em>text-align</em> property to set the alignment of the cell content (center, right, left, or justify).</li> 
+                <li>Use the <em>width</em>, <em>cellspacing</em>, and <em>border</em> attributes to set appearance.</li> 
+                <li>To build it, keep adding rows using the <em>table row</em> <code>&lt;tr&gt;</code> tag.</li>
+                <li>Add columns using either the 
+                    <ul>
+                        <li><em>table header</em> <code>&lt;th&gt;</code> tag if it's <strong>for the header</strong></li>
+                        <li><em>table data</em> <code>&lt;td&gt;</code> tag if it's <strong>for the body</strong></li>
+                    </ul>
+            </ol>
+            <p><b>Syntax:</b></p>
+                <pre><code>
+&lt;table style="text-align:center" width="100%" border="1" cellspacing="0"&gt;
+    &lt;tr&gt;&lt;!--START of 1st row--&gt;
+        &lt;th&gt;Header 1&lt;/th&gt;
+        &lt;th&gt;Header 2&lt;/th&gt;
+        &lt;th&gt;Header 3&lt;/th&gt;
+    &lt;/tr&gt;&lt;!--END of 1st row--&gt;
+    &lt;tr&gt;&lt;!--START of 2nd row--&gt;
+        &lt;td&gt;Detail 1&lt;/td&gt;
+        &lt;td&gt;Detail 1&lt;/td&gt;
+        &lt;td&gt;Detail 1&lt;/td&gt;                        
+    &lt;/tr&gt;&lt;!--END of 2nd row--&gt;
+    &lt;tr&gt;&lt;!--START of 3rd row--&gt;
+        &lt;td&gt;Detail 2&lt;/td&gt;
+        &lt;td&gt;Detail 2&lt;/td&gt;
+        &lt;td&gt;Detail 2&lt;/td&gt;                        
+    &lt;/tr&gt;&lt;!--END of 3rd row--&gt;
+&lt;/table&gt;
+                </code></pre>
+            <p><b>Preview:</b></p>
+                <table style="text-align:center" width="100%" border="1" cellspacing="0">
+                    <tr><!--START of 1st row-->
+                        <th>Header 1</th>
+                        <th>Header 2</th>
+                        <th>Header 3</th>
+                    </tr><!--END of 1st row-->
+                    <tr><!--START of 2nd row-->
+                        <td>Detail 1</td>
+                        <td>Detail 1</td>
+                        <td>Detail 1</td>                        
+                    </tr><!--END of 2nd row-->
+                    <tr><!--START of 3rd row-->
+                        <td>Detail 2</td>
+                        <td>Detail 2</td>
+                        <td>Detail 2</td>                        
+                    </tr><!--END of 3rd row-->
+                </table>
+        </section>    
+    </main>
     <footer>
         <p>© 2025 Derik's Notes. All rights reserved.</p>
     </footer>
