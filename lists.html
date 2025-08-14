@@ -4,24 +4,35 @@
     <title>Placido-Lists</title>
     <meta charset="UTF-8">
     <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-    }
-    header, footer, nav, main, section, article, aside {
-      border: 1px solid #ccc;
-      padding: 10px;
-      margin: 5px;
-    }
-    nav a {
-      margin-right: 10px;
-    }
-    aside {
-      background-color: #f9f9f9;
-      font-size: 0.9em;
-    }
+        body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+        }
+        header, footer, nav, main, section, article, aside {
+          border: 1px solid #ccc;
+          padding: 10px;
+          margin: 5px;
+        }
+        nav a {
+          margin-right: 10px;
+        }
+        aside {
+          position: fixed;
+          top: 80%;              
+          right: 0%;
+          width: 10%;
+          height: min-content; 
+          background-color: #76b9f3;
+          padding: 10px;
+          border-left: 7px solid #2666c0;
+          font-size: 0.9em;
+          overflow-y: visible;
+        }
+        main {
+          margin-right: 230px; 
+          padding-right: 10px;
+        }
     </style>
-  
 </head>
 <body><!--trying comment-->
     <header>
@@ -39,17 +50,30 @@
         <a href="links.html" target="_self" title="Learn about Links">Links</a>
         <a href="forms.html" target="_self" title="Learn about Forms">Forms</a>
     </nav>
+    <aside>
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#what">What us a list?</a></li>
+          <li><a href="#types">Types of Lists</a></li>
+            <ul>
+                <li><a href="#unordered">Unordered</a></li>
+                <li><a href="#ordered">Ordered</a></li>
+                <li><a href="#description">Description</a></li>
+            </ul>
+          <li><a href="#nesting">Nesting Lists</a></li>
+        </ul>
+    </aside>
     <main>
-        <section>
+        <section id="what">
             <h2>What is a list?</h2>
             <p>A list enumerates items within a group.</p>
             <p>Lists can be combined and nested.</p>
         </section>
-        <section>
+        <section id="types">
             <h2>Types of Lists</h2>
             <p>There are three types of lists, each with their appropriate use.</p>
             <article>
-                <h3>Unordered List</h3>
+                <h3 id="unordered">Unordered List</h3>
                 <p>The unordered list element is used to enumerate items in <strong>no particular order</strong> using
                     bullets as the default <em>list marker</em>. It is begun with the <em>unordered list</em> <code>&lt;ul&gt;</code> 
                     tag and filled with the <em>list item</em> <code>&lt;li&gt;</code> tag.
@@ -82,7 +106,7 @@
                 </ul>
             </article>
             <article>
-                <h3>Ordered List</h3>
+                <h3 id="ordered">Ordered List</h3>
                 <p>The ordered list element is used to enumerate items <strong>in a particular order</strong> using
                     a defined numbering style. It is begun with the <em>ordered list</em> <code>&lt;ol&gt;</code> tag and filled with the 
                     <em>list item</em> <code>&lt;li&gt;</code> tag. 
@@ -106,7 +130,7 @@
                 </ol>
             </article>
             <article>
-                <h3>Description List</h3>
+                <h3 id="description">Description List</h3>
                 <p>The description list element is used to enumerate and describe items. It is begun with the <em>description list</em> <code>&lt;dl&gt;</code> tag 
                     and filled with the <em>definition term</em> <code>&lt;dt&gt;</code> and <em>description details</em> <code>&lt;dd&gt;</code> tags. 
                 </p>
@@ -142,7 +166,7 @@
                 </dl>
             </article>
         </section>
-        <section>
+        <section id="nesting">
             <h2>Nesting Lists</h2>
             <p>A list can be comprised of smaller lists inside. Simply begin another list before ending the current parent list.
                 Different types of lists may comprise a nested list.
