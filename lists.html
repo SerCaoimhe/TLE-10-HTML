@@ -176,40 +176,42 @@
             <h4>Example 1: nested list using only one type (unordered list)</h4>
             <h4>Syntax:</h4>
                     <pre><code>&lt;h3&gt;Why Sir Derik is the best:&lt;/h3&gt;
-    &lt;!--START of main UNORDERED list--&gt;
+    <b>&lt;!--START of main UNORDERED list--&gt;</b>
     &lt;ul&gt;
         &lt;li&gt;He is tall&lt;/li&gt;
+        <b>&lt;!--Notice how another list is opened before the original is closed--&gt;</b>    
+        <b>&lt;!--START of sub-list--&gt;</b>    
             &lt;ul style="list-style-type: circle;"&gt;
                 &lt;li&gt;Can turn on the airconditioner without stepping on a chair, which is unsanitary&lt;/li&gt;
                 &lt;li&gt;Can turn off the airconditioner without stepping on a chair, which is still unsanitary&lt;/li&gt;
                 &lt;li&gt;Tallest Berean thus far&lt;/li&gt;
-            &lt;!--END of sub-list--&gt;
+            <b>&lt;!--END of sub-list--&gt;</b>
             &lt;/ul&gt;
         &lt;li&gt;He is handsome&lt;/li&gt;
-            &lt;!--START of sub-list--&gt;
+            <b>&lt;!--START of sub-list--&gt;</b>
             &lt;ul style="list-style-type: circle;"&gt;
                 &lt;li&gt;Confirmed by mother, grandmother, and aunts&lt;/li&gt;
                 &lt;li&gt;Referred to as "pogi" by vendors and conductors&lt;/li&gt;
                 &lt;li&gt;Feels people in the LRT stealing glances&lt;/li&gt;
                 &lt;li&gt;Has a strong gut feeling about it&lt;/li&gt;
-            &lt;!--END of sub-list--&gt;
+            <b>&lt;!--END of sub-list--&gt;</b>
             &lt;/ul&gt;
         &lt;li&gt;He is smart&lt;/li&gt;
-            &lt;!--START of sub-list--&gt;
+            <b>&lt;!--START of sub-list--&gt;</b>
             &lt;ul style="list-style-type: circle;"&gt;
                 &lt;li&gt;Knows the solution and answer to 1+1&lt;/li&gt;
                 &lt;li&gt;Has memorized the multiplication table up to 16x16&lt;/li&gt;
-            &lt;!--END of sub-list--&gt;
+            <b>&lt;!--END of sub-list--&gt;</b>
             &lt;/ul&gt;
         &lt;li&gt;He is humble&lt;/li&gt;
-            &lt;!--START of sub-list--&gt;
+            <b>&lt;!--START of sub-list--&gt;</b>
             &lt;ul style="list-style-type: circle;"&gt;
                 &lt;li&gt;The humblest in the world&lt;/li&gt;
                 &lt;li&gt;Does not brag about his many great qualities&lt;/li&gt;
-            &lt;!--END of sub-list--&gt;
+            <b>&lt;!--END of sub-list--&gt;</b>
             &lt;/ul&gt;
         &lt;li&gt;He is &lt;s&gt;Superman&lt;/s&gt; helpful&lt;/li&gt;
-    &lt;!--END of main ORDERED list--&gt;
+    <b>&lt;!--END of main ORDERED list--&gt;</b>
     &lt;/ul&gt;
                     </code>
                     </pre>
@@ -218,6 +220,7 @@
                     <!--START of main UNORDERED list-->
                     <ul>
                         <li>He is tall</li>
+                            <!--START of sub-list-->    
                             <ul style="list-style-type: circle;">
                                 <li>Can turn on the airconditioner without stepping on a chair, which is unsanitary</li>
                                 <li>Can turn off the airconditioner without stepping on a chair, which is still unsanitary</li>
@@ -255,42 +258,43 @@
             <h4>Example 2: nested list using multiple types</h4>
             <h4>Syntax:</h4>
                     <pre>&lt;h3&gt;Why Sir Derik is the best:&lt;/h3&gt;
-&lt;!--START of main ORDERED list--&gt;
+<b>&lt;!--START of main ORDERED list--&gt;</b>
 <code>&lt;ol&gt;
     &lt;li&gt;He is tall&lt;/li&gt;
-        &lt;!--Notice how another list is opened before the original is closed--&gt;
-        &lt;!--START of ORDERED sub-list--&gt;
+        <b>&lt;!--Notice how another list is opened before the original is closed--&gt;</b>
+        <b>&lt;!--START of ORDERED sub-list--&gt;</b>
         &lt;ol type="a"&gt;
             &lt;li&gt;Can turn on the airconditioner without stepping on a chair, which is unsanitary&lt;/li&gt;
             &lt;li&gt;Can turn off the airconditioner without stepping on a chair, which is still unsanitary&lt;/li&gt;
             &lt;li&gt;Tallest Berean thus far&lt;/li&gt;
-        &lt;!--END of ORDERED sub-list--&gt;
+        <b>&lt;!--END of ORDERED sub-list--&gt;</b>
         &lt;/ol&gt;
     &lt;li&gt;He is handsome&lt;/li&gt;
-        &lt;!--START of UNORDERED sub-list--&gt;
+        <b>&lt;!--START of UNORDERED sub-list--&gt;</b>
         &lt;ul style="list-style-type: circle;"&gt;
             &lt;li&gt;Confirmed by mother, grandmother, and aunts&lt;/li&gt;
             &lt;li&gt;Referred to as "pogi" by vendors and conductors&lt;/li&gt;
             &lt;li&gt;Feels people in the LRT stealing glances&lt;/li&gt;
             &lt;li&gt;Has a strong gut feeling about it&lt;/li&gt;
-        &lt;!--END of UNORDERED sub-list--&gt;
+        <b>&lt;!--END of UNORDERED sub-list--&gt;</b>
         &lt;/ul&gt;
     &lt;li&gt;He is smart&lt;/li&gt;
-        &lt;!--START of UNORDERED sub-list--&gt;
+        <b>&lt;!--START of UNORDERED sub-list--&gt;</b>
         &lt;ul style="list-style-type: square;"&gt;
             &lt;li&gt;Knows the solution and answer to 1+1&lt;/li&gt;
             &lt;li&gt;Has memorized the multiplication table up to 16x16&lt;/li&gt;
-        &lt;!--END of UNORDERED sub-list--&gt;
+        <b>&lt;!--END of UNORDERED sub-list--&gt;</b>
         &lt;/ul&gt;
     &lt;li&gt;He is humble&lt;/li&gt;
-        &lt;!--START of UNORDERED sub-list--&gt;
+        <b>&lt;!--START of UNORDERED sub-list--&gt;</b>
         &lt;ul&gt;
             &lt;li&gt;The humblest in the world&lt;/li&gt;
             &lt;li style="list-style-type: none;"&gt;Does not brag about his many great qualities&lt;/li&gt;
-        &lt;!--END of UNORDERED sub-list--&gt;
+        <b>&lt;!--END of UNORDERED sub-list--&gt;</b>
         &lt;/ul&gt;
     &lt;li&gt;He is &lt;s&gt;Superman&lt;/s&gt; helpful&lt;/li&gt;
-&lt;/ol&gt;&lt;!--END of main ORDERED list--&gt;
+    <b>&lt;!--END of main ORDERED list--&gt;</b>
+    &lt;/ol&gt;
                     </code>
                     </pre>
                 <h4>Preview:</h4>
