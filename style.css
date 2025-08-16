@@ -1,0 +1,65 @@
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  cursor: help; /* shows "?" cursor on hover */
+  border-bottom: 1px dashed #555; /* subtle underline */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: max-content;
+  max-width: 200px;
+  background-color: #333;
+  color: #fff;
+  text-align: left;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  
+  /* Position */
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; /* above the word */
+  left: 50%;
+  transform: translateX(-50%);
+  
+  /* Animation */
+  opacity: 0;
+  transition: opacity 0.3s;
+  
+  /* Small arrow */
+  pointer-events: none;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%; /* at bottom of tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #333 transparent transparent transparent;
+}
+
+/* Show tooltip on hover or focus (keyboard accessible) */
+.tooltip:hover .tooltiptext,
+.tooltip:focus-within .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.funfact {
+  background: #d9edff;
+  border-left: 4px solid #2666c0;
+  padding: 0.5em 1em;
+  margin: 1em 0;
+  font-style: italic;
+}
+
+.funfact .b {
+  font-style: normal; /* override just for Author's Markup */
+  font-weight: bold
+}
