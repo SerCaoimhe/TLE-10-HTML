@@ -36,9 +36,7 @@
         }
     </style>
 </head>
-<body style="background-image:url('Multimedia/b7e1e580-c611-11ea-9b24-523c65baea0e.png');
-    background-size: cover; 
-    background-repeat: no-repeat;">
+<body>
     <header>
         <h1>HTML Structure</h1>
         <p>Welcome to my notes about the basics of HTML!</p>
@@ -55,30 +53,187 @@
         <a href="forms.html" target="_self" title="Learn about Forms">Forms</a>
         <a href="glossandex.html" target="_blank" title="Go to Glossary and Index of terms">Glossandex</a>
     </nav>
-    <!--<main>
-        <section>
-            <h2>HTML Structure</h2>
-            <article>
-                <h3>Main Topic 1</h3>
-                <p>Blablabla</p>
-            </article>
-            <article>
-                <h3>Main Topic 2</h3>
-                <p>Blablabla</p>
-                <article>
-                    <h4>Subtopic 1</h4>
-                    <p>Blablabla.</p>
-                </article>
-                <section>
-                    <h4>Subtopic 2</h4>
-                    <p>Blablabla.</p>
-                    <h5>Supporting Detail 1</h5>
-                    <h5>Supporting Detail 2</h5>
-                    <h5>Supporting Detail 3</h5>
-                </article>
-            </article>
-        </section>
-    </main>-->
+    <aside>
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#syntax">Syntax</a></li>
+            <ul>
+              <li><a href="#programming">Programming</a></li>
+              <li><a href="#html">HTML</a></li>
+              <li><a href="#skills">Skills</a></li>
+              <li><a href="#careers">Careers</a></li>
+            </ul>
+          <li><a href="#structure">Structure</a></li>
+          <li><a href="#top">Back to Top</a></li>
+        </ul>
+    </aside>
+    <main>
+    <section id="syntax">
+        <h2>Syntax</h2>
+
+        <!-- Element Article -->
+        <article>
+            <h3>Element</h3>
+            <p>
+                The <em>element</em> is the building block of HTML. It defines the content to be presented by the 
+                <span class="tooltip"><em>browser</em>.
+                    <span class="tooltiptext">program or application that displays webpages</span>
+                </span>
+                It is comprised of 
+                <span class="tooltip"><em>characters</em>
+                    <span class="tooltiptext">letters, numbers, symbols, and spaces</span>
+                </span>
+                arranged according to a particular 
+                <span class="tooltip"><em>syntax</em>.
+                    <span class="tooltiptext">rules governing how a language is structured</span>
+                </span>
+            </p>
+
+            <p>Examples of characters:</p>
+            <ul>
+                <li><code>a</code> is a character</li>
+                <li><code>1</code> is a character</li>
+                <li><code>!</code> is a character</li>
+                <li>(space) is a character</li>
+            </ul>
+
+            <p>
+                An element has specific parts that must be present to be understood and executed by the browser. 
+                It is initiated by the 
+                <span class="tooltip"><em>start tag</em>,
+                    <span class="tooltiptext">aka "open" tag</span>
+                </span>contains 
+                <span class="tooltip"><em>element content</em>,
+                    <span class="tooltiptext">the actual content to be presented by the browser</span>
+                </span>and ends with the 
+                <span class="tooltip"><em>end tag</em>
+                    <span class="tooltiptext">aka "close" tag</span>
+                </span>.
+            </p>
+
+            <!-- Parts of an element section -->Commit structure page changes
+            <section>
+                <h4>Parts of an Element</h4>
+                <ol>
+                    <li>Start Tag
+                        <ol type="a">
+                            <li><span class="tooltip">Opening angle bracket<span class="tooltiptext">aka the "less than symbol"</span></span> <code>&lt;</code></li>
+                            <li><span class="tooltip">Tag name<span class="tooltiptext">the name of the element</span></span> <code>x</code></li>
+                            <li><span class="tooltip">Closing angle bracket<span class="tooltiptext">aka the "greater than symbol"</span></span> <code>&gt;</code></li>
+                        </ol>
+                    </li>
+                    <li>Element Content <code>abc</code></li>
+                    <li>End Tag
+                        <ol type="a">
+                            <li>Opening angle bracket <code>&lt;</code></li>
+                            <li><span class="tooltip">Forward slash<span class="tooltiptext">indicates closing tag</span></span> <code>/</code></li>
+                            <li>Tag name <code>x</code></li>
+                            <li>Closing angle bracket <code>&gt;</code></li>
+                        </ol>
+                    </li>
+                </ol>
+
+                <!-- Table Example -->
+                <table border="1" cellspacing="0" cellpadding="3" style="text-align:center; width:max-content;">
+                    <tr style="background-color:#b5d6f3;">
+                        <th>Start Tag</th>
+                        <th>Element Content</th>
+                        <th>End Tag</th>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;x&gt;</code></td>
+                        <td><code>abc</code></td>
+                        <td><code>&lt;/x&gt;</code></td>
+                    </tr>
+                </table>
+
+                <!-- Paragraph Example -->
+                <h4>Example 1: Paragraph Element</h4>
+                <b>Syntax:</b>
+                <pre><code>&lt;p&gt;This is the element content.&lt;/p&gt;</code></pre>
+                <b>Preview:</b>
+                <p>This is the element content.</p>
+            </section>
+        </article>
+
+        <!-- Attribute Article -->
+        <article>
+            <h3>Attribute</h3>
+            <p>
+                An <em>attribute</em> is an <strong>optional</strong> but useful part of an element. It provides additional information that serve to further specify
+                instructions for the browser. They can be applied to <strong>all elements</strong>. To be applied, the
+                <span class="tooltip"><em>attribute name</em>
+                    <span class="tooltiptext">name of the attribute to be defined</span>
+                </span>
+                and
+                <span class="tooltip"><em> attribute value</em>
+                    <span class="tooltiptext">how the browser presents the element content based on chosen attribute</span>
+                </span>
+                must be encoded inside the start tag.
+            </p>
+            <section>
+                <h4>Parts of an Attribute</h4>
+                <ol>
+                    <li>Start Tag
+                        <ol type="a">
+                            <li><span class="tooltip">Opening angle bracket<span class="tooltiptext">aka the "less than symbol"</span></span> <code>&lt;</code></li>
+                            <li><span class="tooltip">Tag name<span class="tooltiptext">the name of the element</span></span> <code>x</code></li>
+                            <li><span class="tooltip">Closing angle bracket<span class="tooltiptext">aka the "greater than symbol"</span></span> <code>&gt;</code></li>
+                        </ol>
+                    </li>
+                    <li>Element Content <code>abc</code></li>
+                    <li>End Tag
+                        <ol type="a">
+                            <li>Opening angle bracket <code>&lt;</code></li>
+                            <li><span class="tooltip">Forward slash<span class="tooltiptext">indicates closing tag</span></span> <code>/</code></li>
+                            <li>Tag name <code>x</code></li>
+                            <li>Closing angle bracket <code>&gt;</code></li>
+                        </ol>
+                    </li>
+                </ol>
+
+                <!-- Table Example -->
+                <table border="1" cellspacing="0" cellpadding="3" style="text-align:center; width:max-content;">
+                    <tr style="background-color:#b5d6f3;">
+                        <th>Start Tag</th>
+                        <th>Element Content</th>
+                        <th>End Tag</th>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;x&gt;</code></td>
+                        <td><code>abc</code></td>
+                        <td><code>&lt;/x&gt;</code></td>
+                    </tr>
+                </table>
+
+                <!-- Paragraph Example -->
+                <h4>Example 1: Paragraph Element</h4>
+                <b>Syntax:</b>
+                <pre><code>&lt;p&gt;This is the element content.&lt;/p&gt;</code></pre>
+                <b>Preview:</b>
+                <p>This is the element content.</p>
+            </section>
+
+            <h4>Syntax:</h4>
+            <pre><code>&lt;p&gt;This is one paragraph.&lt;/p&gt;
+&lt;p&gt;This is another paragraph.&lt;/p&gt;</code></pre>
+
+            <h4>Preview:</h4>
+            <p>This is one paragraph.</p>
+            <p>This is another paragraph.</p>
+        </article>
+    </section>
+
+    <!-- Structure Section -->
+    <section id="structure">
+        <h2>Structure</h2>
+        <article>
+            <h3>Basic Parts</h3>
+            <!-- Add your structure content here -->
+        </article>
+    </section>
+</main>
+
     <footer>
         <p>© 2025 Derik's Notes. All rights reserved.</p>
     </footer>
