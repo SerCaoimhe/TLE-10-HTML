@@ -68,7 +68,11 @@
             <h2>Text Elements</h2>
             <article>
                 <h3>1. Heading</h3>
-                <p>The heading element is used for headings and subheadings. It is applied using the tags 
+                <p>The heading element is used for 
+                    <span class="tooltip">headings and subheadings.
+                        <span class="tooltiptext">denote topics in the page</span>
+                    </span> 
+                    It is applied using the tags 
                     <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> which define hierarchical levels for text, from highest
                     (<code>&lt;h1&gt;</code>) to lowest (<code>&lt;h6&gt;</code>).
                 </p>
@@ -91,13 +95,13 @@
             <article>
                 <h3>2. Paragraph</h3>
                 <p>The paragraph element is used for bodies of text. It is applied using the tag 
-                    <code>&lt;p&gt;</code> which automatically creates a new line.</p>
+                    <code>&lt;p&gt;</code> which automatically creates a new line with space above and below.</p>
                 <h4>Syntax:</h4>
-                <pre><code>&lt;p&gt;This is one paragraph.&lt;/p&gt;
+                <pre><code>&lt;p&gt;This is one paragraph.&lt;/p&gt;&lt;p&gt;This new paragraph is on the same line in the code, but is delegated to the next line in the browser.&lt;/p&gt;
 &lt;p&gt;This is another paragraph.&lt;/p&gt;</code>
                     </pre>
                 <h4>Preview:</h4>
-                <p>This is one paragraph.</p>
+                <p>This is one paragraph.</p><p>This new paragraph is on the same line in the code, but is delegated to the next line in the browser.</p>
                 <p>This is another paragraph.</p>
             </article>
         </section>
@@ -105,23 +109,31 @@
             <h2>Breaks</h2>
             <article>
                 <h3>1. Line Break</h3>
-                <p>The line break element forces the content to continue on a new line <strong>within</strong> the paragraph. It is applied using the <em>empty tag</em>  
-                    <code>&lt;br&gt;</code>. An empty tag is also known as a <em>self-closing tag</em>, or preferably <strong>void tag</strong>.
-                    This does not have an element content nor an end tag.
+                <p>The line break element forces the content to continue on a new line <strong>within</strong> the paragraph. It is applied using the 
+                    <span class="tooltip"><em>void tag</em>
+                        <span class="tooltiptext">does not have an element content nor an end tag</span>
+                    </span>  
+                    <code>&lt;br&gt;</code>. A void tag is also known as a 
+                    <span class="tooltip"><em>self-closing</em>
+                        <span class="tooltiptext">does not require an end tag</span>
+                    </span> or <em>empty tag</em>.
                 </p>
                 <h4>Syntax:</h4>
                 <pre><code>&lt;p&gt;This is one paragraph but you want a break after this.&lt;br&gt;
-   This still belongs to the same paragraph.&lt;/p&gt;
+   This still belongs to the same paragraph but is forced onto the next line.&lt;/p&gt;
    &lt;p&gt;This is another paragraph.&lt;/p&gt;</code>
                 </pre>
                 <h4>Preview:</h4>
                 <p>This is one paragraph but you want a break after this.<br>
-                    This still belongs to the same paragraph.</p>
+                    This still belongs to the same paragraph but is forced onto the next line.</p>
                 <p>This is another paragraph.</p>
             </article>
             <article>
                 <h3>2. Horizontal Rule</h3>
-                <p>The horizontal rule element indicates a semantic break in the content and is indicated by a horizontal line <strong>between</strong> different sections. It is applied using the <em>void</em> tag 
+                <p>The horizontal rule element indicates a 
+                    <span class="tooltip"><em>semantic</em>
+                        <span class="tooltiptext">has meaning and non-visual implication</span>
+                    </span> break in the content and is indicated by a horizontal line <strong>between</strong> different parts of the page. It is applied using the void tag 
                     <code>&lt;hr&gt;</code>.
                 </p>
                 <h4>Syntax:</h4>
@@ -143,18 +155,27 @@
         <section id="preformatted-text">
             <h2>Preformatted Text</h2>
                 <p>The preformatted text element defines text to be displayed with a fixed-width or 
-                <em>monospace</em> font (all letters and spaces have the same width) and with 
-                the spaces and line breaks preserved.
+                    <span class="tooltip"><em>monospace</em>
+                        <span class="tooltiptext">all characters have the same width</span>
+                    </span>
+                    font and with the spaces and line breaks in the code preserved. It is applied using the 
+                    tag <code>&lt;pre&gt;</code>.
+                </p>
+                <p>This is useful for presenting code as it is written and not as it is 
+                    <span class="tooltip"><em>rendered</em>,
+                        <span class="tooltiptext">displayed by the browser</span>
+                    </span>
+                    as seen in the <em>Syntax</em> sections in this site.
                 </p>
                 <h4>Syntax:</h4>
                 <pre><code>&lt;p&gt;This is regular 
                     
-                    text where extra spaces and line breaks are ignored.
+                    text where extra spaces and line breaks in the code are ignored.
 &lt;/p&gt;
 &lt;pre&gt;This is preformatted text where the 
             font is monospace by default and
 
-extra spaces and line breaks are 
+extra spaces and line breaks in the code are 
 
      preserved.
 &lt;/pre&gt;</code>
@@ -162,18 +183,33 @@ extra spaces and line breaks are
                 <h4>Preview:</h4>
                 <p>This is regular 
                     
-                    text where extra spaces and line breaks are ignored.
+                    text where extra spaces and line breaks in the code are ignored.
 </p>
 <pre>This is preformatted text where the 
             font is monospace by default and
 
-extra spaces and line breaks are 
+extra spaces and line breaks in the code are 
 
      preserved.
 </pre>  
-                <h4>ASCII Art:</h4>
+                <p class="funfact">
+                    <span class="b">🤓 Author's Markup:</span> The preformatted text element is often used in
+                    conjunction with the 
+                    <span class="tooltip">code element
+                        <span class="tooltiptext">indicates that the text represents code</span>
+                    </span> with tag <code>&lt;code&gt;</code> to display coding syntax. 
+                    Example: <code>&lt;pre&gt;&lt;code&gt;...&lt;/code&gt;&lt;/pre&gt;</code>
+                </p>
+            <h3>ASCII Art:</h3>
                 <p>This element is also useful for displaying <i>American Standard Code for Information Interchange (ASCII)</i> art.</p>  
-                <figure>
+                <table>
+                    <tr>
+                        <th>Preview with <code>&lt;pre&gt;</code></th>
+                        <th>Preview without <code>&lt;pre&gt;</code></th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <figure>
                     <pre>
                            _                 __                 
       __.--**"""**--...__..--**""""*-.            
@@ -197,6 +233,36 @@ extra spaces and line breaks are
                     </pre>
                     <figcaption>Rhinoceros ASCII Art</figcaption>
                 </figure>
+                    </td>
+                    <td>
+                            <figure>
+                    
+                           _                 __                 
+      __.--**"""**--...__..--**""""*-.            
+    .'                                `-.         
+  .'                         _           \        
+ /                         .'        .    \   _._ 
+:                         :          :`*.  :-'.' ;
+;    `                    ;          `.) \   /.-' 
+:     `                             ; ' -*   ;    
+       :.    \           :       :  :        :    
+ ;     ; `.   `.         ;     ` |  '             
+ |         `.            `. -*"*\; /        :     
+ |    :     /`-.           `.    \/`.'  _    `.   
+ :    ;    :    `*-.__.-*""":`.   \ ;  'o` `. /   
+       ;   ;                ;  \   ;:       ;:   ,/
+  |  | |            [bug]      /`  | ,      `*-*'/ 
+  `  : :  :                /  /    | : .    ._.-'  
+   \  \ ,  \              :   `.   :  \ \   .'     
+    :  *:   ;             :    |`*-'   `*+-*       
+    `**-*`""               *---*
+                    
+                    <figcaption>Rhinoceros ASCII Art</figcaption>
+                </figure>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
                 <figure>
                     <pre>
                 ;               ,           
@@ -234,6 +300,48 @@ extra spaces and line breaks are
                     </pre>
                     <figcaption>Spider ASCII Art</figcaption>
                 </figure>
+                </td>
+                <td>
+                <figure>
+                    
+                ;               ,           
+         ,;                 '.         
+        ;:                   :;        
+       ::                     ::       
+       ::                     ::       
+       ':                     :        
+        :.                    :        
+     ;' ::                   ::  '     
+    .'  ';                   ;'  '.    
+   ::    :;                 ;:    ::   
+   ;      :;.             ,;:     ::   
+   :;      :;:           ,;"      ::   
+   ::.      ':;  ..,.;  ;:'     ,.;:   
+    "'"...   '::,::::: ;:   .;.;""'    
+        '"""....;:::::;,;.;"""         
+    .:::.....'"':::::::'",...;::::;.   
+   ;:' '""'"";.,;:::::;.'""""""  ':;   
+  ::'         ;::;:::;::..         :;  
+ ::         ,;:::::::::::;:..       :: 
+ ;'     ,;;:;::::::::::::::;";..    ':.
+::     ;:"  ::::::"""'::::::  ":     ::
+ :.    ::   ::::::;  :::::::   :     ; 
+  ;    ::   :::::::  :::::::   :    ;  
+   '   ::   ::::::....:::::'  ,:   '   
+    '  ::    :::::::::::::"   ::       
+       ::     ':::::::::"'    ::       
+       ':       """""""'      ::       
+        ::                   ;:        
+        ':;                 ;:"        
+-hrr-     ';              ,;'          
+            "'           '"            
+              '
+                    
+                    <figcaption>Spider ASCII Art</figcaption>
+                </figure>
+                </td>
+                </tr>
+                </table>
         </section>
 
         <section id="formatting">
