@@ -77,7 +77,7 @@
           <span class="tooltiptext">with other types of list</span>
         </span> and 
         <span class="tooltip">nested.
-          <span class="tooltiptext">placed inside another list</span>
+          <span class="tooltiptext">comprised of sublists</span>
         </span>
       </p>
     </section>
@@ -94,26 +94,24 @@
             tag and filled with the <em>list item</em> <code>&lt;li&gt;</code> tag.
           </p>
           <p>The list marker may be changed from a bullet to another type using the 
-            <span class="tooltip"><em>style attribute</em>
-                <span class="tooltiptext">a CSS attribute</span>
-            </span> with the 
-            <span class="tooltip"><em>property</em>
-                <span class="tooltiptext">one of many definable variables of the style attribtue</span>
-            </span> <code>list-style-type</code> and corresponding property value with the syntax:
+            <span class="tooltip">style attribute
+                <span class="tooltiptext">see Structure>Attribute</span>
+            </span> 
+            with the <em>list-style-type</em> property and corresponding property value with the syntax:
             <code>&lt;ul style="list-style-type:x;"&gt;</code> where x is any of the following values: 
-            <span class="tooltip">disc
+            <span class="tooltip"><em>disc</em>,
                 <span class="tooltiptext">default, shaded circle aka "bullet"</span>
-            </span>, 
-            <span class="tooltip">circle
+            </span> 
+            <span class="tooltip"><em>circle</em>,
                 <span class="tooltiptext">unshaded circle</span>
-            </span>,
-            <span class="tooltip">square
-                <span class="tooltiptext">shaded circle</span>
-            </span>,
-            <span class="tooltip">none
+            </span>
+            <span class="tooltip"><em>square</em>,
+                <span class="tooltiptext">shaded square</span>
+            </span>
+            <span class="tooltip"><em>none</em>
                 <span class="tooltiptext">no list marker</span>
             </span>.
-              The "disc" value will return the default bullet marker.
+              The disc value will return the default bullet marker.
           </p>
           <table border="0" cellspacing="0" cellpadding="3" style="text-align:center; width:max-content;">
             <tr style="background-color:#b5d6f3;">
@@ -131,10 +129,19 @@
               <td><code>&gt;</code></td>
             </tr>
           </table>
+          <p>Possible list-style-types:</p>
+          <ul>
+            <li>default (no list-style-type value specified)</li>
+            <li style="list-style-type: disc;">disc</li>
+            <li style="list-style-type: circle;">circle</li>
+            <li style="list-style-type: square;">square</li>
+            <li style="list-style-type: none;">none</li>
+          </ul>
           <p>
-            The <code>list-style-type</code> can be defined for either the <strong>entire list</strong> by placing it in the <code>&lt;ul&gt;</code>
+            The list-style-type property can be defined for either the <strong>entire list</strong> by placing it in the <code>&lt;ul&gt;</code>
             tag or for a <strong>specific item</strong> by placing it in the <code>&lt;li&gt;</code> tag.
           </p>
+          <p>All items in the list will stick to the list-style-type value defined for the list unless overridden by a custom list-style-type value in an item (Example 2).</p>
           <h4>Example 1: property defined for entire list</h4>
           <b>Syntax:</b>
           <pre><code>&lt;ul style="list-style-type: circle;"&gt;
@@ -143,6 +150,7 @@
   &lt;li&gt;Item 3&lt;/li&gt;
   &lt;li&gt;Item 4&lt;/li&gt;
   &lt;li&gt;Item 5&lt;/li&gt;
+  &lt;li&gt;Item 6&lt;/li&gt;
 &lt;/ul&gt;</code></pre>
           <h4>Preview:</h4>
           <ul style="list-style-type: circle;">
@@ -151,23 +159,26 @@
             <li>Item 3</li>
             <li>Item 4</li>
             <li>Item 5</li>
+            <li>Item 6</li>
           </ul>
           <h4>Example 2: property defined for specific items</h4>
           <b>Syntax:</b>
-          <pre><code>&lt;ul&gt;
+          <pre><code>&lt;ul&gt;<b>&lt;!--list-tyle-type is not defined, so list follows default bullet until overridden--&gt;</b>
   &lt;li&gt;Item 1&lt;/li&gt;
-  &lt;li style="list-style-type: disc;"&gt;Item 2 (disc marker)&lt;/li&gt;
-  &lt;li style="list-style-type: square;"&gt;Item 3 (square marker)&lt;/li&gt;
-  &lt;li style="list-style-type: circle;"&gt;Item 4 (circle marker)&lt;/li&gt;
-  &lt;li style="list-style-type: none;"&gt;Item 5 (no marker)&lt;/li&gt;
+  &lt;li&gt;Item 2&lt;/li&gt;
+  &lt;li style="list-style-type: disc;"&gt;Item 3&lt;/li&gt;
+  &lt;li style="list-style-type: circle;"&gt;Item 4&lt;/li&gt;
+  &lt;li style="list-style-type: square;"&gt;Item 5&lt;/li&gt;
+  &lt;li style="list-style-type: none;"&gt;Item 6&lt;/li&gt;
 &lt;/ul&gt;</code></pre>
           <h4>Preview:</h4>
           <ul>
             <li>Item 1</li>
-            <li style="list-style-type: disc;">Item 2 (disc marker)</li>
-            <li style="list-style-type: square;">Item 3 (square marker)</li>
-            <li style="list-style-type: circle;">Item 4 (circle marker)</li>
-            <li style="list-style-type: none;">Item 5 (no marker)</li>
+            <li>Item 2</li>
+            <li style="list-style-type: disc;">Item 3</li>
+            <li style="list-style-type: circle;">Item 4</li>
+            <li style="list-style-type: square;">Item 5</li>
+            <li style="list-style-type: none;">Item 6</li>
           </ul>
         </article>
         <article>
@@ -176,8 +187,8 @@
             a defined numbering style. It is begun with the <em>ordered list</em> <code>&lt;ol&gt;</code> tag and filled with the 
             <em>list item</em> <code>&lt;li&gt;</code> tag. 
           </p>
-          <p>The attribute "type" defines the numbering system (1,I,i,A,a), while "start" defines
-            the starting number. If no attributes are used, the list will use the default (1 starting from 1). 
+          <p>The <em>type</em> attribute defines the numbering system while <em>start</em> defines
+            the starting value. If no attributes are used, the list will use the default (1 starting from 1). 
           </p>
             <h4>Syntax:</h4>
             <pre><code>&lt;ol type="1" start="1"&gt;
@@ -186,7 +197,7 @@
   &lt;li&gt;Item 3&lt;/li&gt;
 &lt;/ol&gt;</code></pre>
           <h4>Preview:</h4>
-          <ol>
+          <ol type="I" start="1">
             <li>Item 1</li>
             <li>Item 2</li>
             <li>Item 3</li>
@@ -194,10 +205,12 @@
       </article>
       <article>
         <h3 id="description">3. Description List</h3>
-        <p>The description list element is used to enumerate and describe items. It is begun with the <em>description list</em> <code>&lt;dl&gt;</code> tag 
-          and filled with the <em>definition term</em> <code>&lt;dt&gt;</code> and <em>description details</em> <code>&lt;dd&gt;</code> tags. 
+        <p>The description list element is used to enumerate and describe items. It is begun with the <em>description list</em> 
+          <code>&lt;dl&gt;</code> tag and filled with the <em>definition term</em> <code>&lt;dt&gt;</code> and <em>description details</em> 
+          <code>&lt;dd&gt;</code> tags. 
         </p>
-        <p>The description details typically begin with a list marker such as a bullet or hyphen, but this is not required. Just remember that the list will
+        <p>The description details typically begin with a list marker such as a bullet or hyphen, but this is not required. 
+          Just remember that the list will
           display whatever the element content is (including the list marker, if any). 
         </p>
         <p>When writing in code, separate each definition term with a blank line for clarity.</p>
@@ -232,6 +245,10 @@
       <p>A list can be comprised of smaller lists inside. Simply begin another list under an item in the current parent list.
         Different types of lists may comprise a nested list.
       </p>
+      <p class="funfact">
+            <span class="b">🤓 Author's Markup:</span> Always remember the "CEO rule": first one in, last one out. Example: 
+            <code>&lt;ol&gt;&lt;li&gt;&lt;ol&gt;...&lt;/ol&gt;&lt;/li&gt;&lt;/ol&gt;</code>
+        </p>
       <article>
         <h4>Example 1: nested list using only one type (unordered list)</h4>
         <b>Syntax:</b>
