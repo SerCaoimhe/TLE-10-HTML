@@ -56,13 +56,12 @@
     <aside>
         <h3>Quick Links</h3>
         <ul>
-          <li><a href="#syntax">Syntax</a></li>
-            <ul>
-              <li><a href="#programming">Programming</a></li>
-              <li><a href="#html">HTML</a></li>
-              <li><a href="#skills">Skills</a></li>
-              <li><a href="#careers">Careers</a></li>
-            </ul>
+            <li><a href="#syntax">Syntax</a>
+                <ul>
+                <li><a href="#element">Element</a></li>
+                <li><a href="#attribute">Attribute</a></li>
+                </ul>
+            </li>
           <li><a href="#structure">Structure</a></li>
           <li><a href="#top">Back to Top</a></li>
         </ul>
@@ -73,7 +72,7 @@
 
             <!-- Element Article -->
             <article>
-                <h3>Element</h3>
+                <h3 id="element">Element</h3>
                 <p>
                     The <em>element</em> is the building block of HTML. It defines the content to be presented by the 
                     <span class="tooltip"><em>browser</em>.
@@ -158,7 +157,7 @@
 
             <!-- Attribute Article -->
             <article>
-                <h3>Attribute</h3>
+                <h3 id="attribute">Attribute</h3>
                 <p>
                     An <em>attribute</em> is an aspect of an element. It provides additional information that serves to further specify
                     instructions for the browser. They can be applied to <strong>all elements</strong>, but most do not require them, save for
@@ -211,7 +210,7 @@
                         <tr>
                             <th style="background-color:#b5d6f3;">Style</th>
                             <td><code>&lt;x</code></td>
-                            <td><code>attribute=</code></td>
+                            <td><code>style=</code></td>
                             <td><code>"property:</code></td>
                             <td><code>value"</code></td>
                             <td><pre><code> &gt; </code></pre></td>
@@ -220,7 +219,7 @@
 
                     <!-- Paragraph Example -->
                     <h4>Example 1: HTML attributes for an ordered list</h4>
-                    <p>The attributes applied are <i>type</i> and <i>start</i>. The defined values for each are inside the quotation marks.</p>
+                    <p>The attributes applied are <em>type</em> and <em>start</em>. The defined values for each are inside the quotation marks.</p>
                     <b>Syntax:</b>
                     <pre><code>&lt;ol <span class="tooltip">type<span class="tooltiptext">attribute</span></span>="<span class="tooltip">I<span class="tooltiptext">value</span></span>" start="1"&gt;
     &lt;li&gt;Item 1&lt;/li&gt;
@@ -237,7 +236,7 @@
                         The defined value for each property is placed after the colon.
                     </p>
                     <p>Multiple properties can be included inside the style attribute and are separated by semicolons. Take note that all 
-                        property:value pairs, separated by semicolons, are enclosed within the one quote pair after the equal sign.
+                        <em>property:value</em> pairs, separated by semicolons, are enclosed within the one quote pair after the equal sign.
                     </p>
                     <b>Syntax:</b>
                     <pre><code>&lt;ul <span class="tooltip">style<span class="tooltiptext">attribute</span></span>="<span class="tooltip">list-style-type<span class="tooltiptext">property</span></span>: <span class="tooltip">circle<span class="tooltiptext">property value</span></span>; background-color:#b5d6f3;"&gt;
@@ -256,10 +255,7 @@
         <!-- Structure Section -->
         <section id="structure">
             <h2>Structure</h2>
-            <article>
-                <h3>Basic Parts</h3>
-                <!-- Add your structure content here -->
-            </article>
+            
         </section>
     </main>
     <footer>
