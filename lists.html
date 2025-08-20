@@ -38,8 +38,8 @@
 </head>
 <body><!--trying comment-->
   <header id="top">
-      <h1>Lists</h1>
-      <p>Welcome to my notes about the basics of HTML!</p>
+    <h1>Lists</h1>
+    <p>Welcome to my notes about the basics of HTML!</p>
   </header>
   <nav>
     <a href="index.html" target="_self" title="Go back to Home">Home</a>
@@ -57,12 +57,13 @@
     <h3>Quick Links</h3>
     <ul>
       <li><a href="#what">What is a list?</a></li>
-      <li><a href="#types">Types of Lists</a></li>
+      <li><a href="#types">Types of Lists</a>
         <ul>
           <li><a href="#unordered">Unordered</a></li>
           <li><a href="#ordered">Ordered</a></li>
           <li><a href="#description">Description</a></li>
         </ul>
+      </li>  
       <li><a href="#nested">Nested Lists</a></li>
       <li><a href="#top">Back to Top</a></li>
     </ul>
@@ -162,33 +163,33 @@
 &lt;/ul&gt;</code></pre>
           <h4>Preview:</h4>
           <ul>
-              <li>Item 1</li>
-              <li style="list-style-type: disc;">Item 2 (disc marker)</li>
-              <li style="list-style-type: square;">Item 3 (square marker)</li>
-              <li style="list-style-type: circle;">Item 4 (circle marker)</li>
-              <li style="list-style-type: none;">Item 5 (no marker)</li>
+            <li>Item 1</li>
+            <li style="list-style-type: disc;">Item 2 (disc marker)</li>
+            <li style="list-style-type: square;">Item 3 (square marker)</li>
+            <li style="list-style-type: circle;">Item 4 (circle marker)</li>
+            <li style="list-style-type: none;">Item 5 (no marker)</li>
           </ul>
-      </article>
-      <article>
-        <h3 id="ordered">2. Ordered List</h3>
-        <p>The ordered list element is used to enumerate items <strong>in a particular order</strong> using
+        </article>
+        <article>
+          <h3 id="ordered">2. Ordered List</h3>
+          <p>The ordered list element is used to enumerate items <strong>in a particular order</strong> using
             a defined numbering style. It is begun with the <em>ordered list</em> <code>&lt;ol&gt;</code> tag and filled with the 
             <em>list item</em> <code>&lt;li&gt;</code> tag. 
-        </p>
-        <p>The attribute "type" defines the numbering system (1,I,i,A,a), while "start" defines
+          </p>
+          <p>The attribute "type" defines the numbering system (1,I,i,A,a), while "start" defines
             the starting number. If no attributes are used, the list will use the default (1 starting from 1). 
-        </p>
-          <h4>Syntax:</h4>
-          <pre><code>&lt;ol type="1" start="1"&gt;
+          </p>
+            <h4>Syntax:</h4>
+            <pre><code>&lt;ol type="1" start="1"&gt;
   &lt;li&gt;Item 1&lt;/li&gt;
   &lt;li&gt;Item 2&lt;/li&gt;
   &lt;li&gt;Item 3&lt;/li&gt;
 &lt;/ol&gt;</code></pre>
           <h4>Preview:</h4>
           <ol>
-              <li>Item 1</li>
-              <li>Item 2</li>
-              <li>Item 3</li>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
           </ol>
       </article>
       <article>
@@ -200,8 +201,8 @@
           display whatever the element content is (including the list marker, if any). 
         </p>
         <p>When writing in code, separate each definition term with a blank line for clarity.</p>
-          <h4>Syntax:</h4>
-          <pre><code>&lt;dl&gt;
+        <h4>Syntax:</h4>
+        <pre><code>&lt;dl&gt;
   &lt;dt&gt;Item 1&lt;/dt&gt;
   &lt;dd&gt;Item 1 description 1 (no list marker)&lt;/dd&gt;
   &lt;dd&gt;- Item 1 description 2 (hyphen list marker)&lt;/dd&gt;
@@ -212,18 +213,18 @@
   &lt;dt&gt;Item 3&lt;/dt&gt;
   &lt;dd&gt;❤️ Item 3 description (emoji list marker)&lt;/dd&gt;
 &lt;/dl&gt;</code></pre>
-          <h4>Preview:</h4>
-          <dl>
-            <dt>Item 1</dt>
-            <dd>Item 1 description 1 (no list marker)</dd>
-            <dd>- Item 1 description 2 (hyphen list marker)</dd>
-            
-            <dt>Item 2</dt>
-            <dd>🤯 Item 2 description (emoji list marker)</dd>
-            
-            <dt>Item 3</dt>
-            <dd>❤️ Item 3 description (emoji list marker)</dd>
-          </dl>
+        <h4>Preview:</h4>
+        <dl>
+          <dt>Item 1</dt>
+          <dd>Item 1 description 1 (no list marker)</dd>
+          <dd>- Item 1 description 2 (hyphen list marker)</dd>
+          
+          <dt>Item 2</dt>
+          <dd>🤯 Item 2 description (emoji list marker)</dd>
+          
+          <dt>Item 3</dt>
+          <dd>❤️ Item 3 description (emoji list marker)</dd>
+        </dl>
       </article>
     </section>
     <section id="nested">
@@ -232,170 +233,201 @@
         Different types of lists may comprise a nested list.
       </p>
       <article>
-          <h4>Example 1: nested list using only one type (unordered list)</h4>
-          <b>Syntax:</b>
-          <pre><code>&lt;h3&gt;Why Sir Derik is the best:&lt;/h3&gt;
-  <b>&lt;!--START of main UNORDERED list--&gt;</b>
-  &lt;ul&gt;
-    &lt;li&gt;He is tall&lt;/li&gt;
-    <b>&lt;!--Notice how another list is opened under an item in the original list--&gt;</b>    
-    <b>&lt;!--START of sub-list--&gt;</b>    
-        &lt;ul style="list-style-type: circle;"&gt;
-            &lt;li&gt;Can turn on the airconditioner without stepping on a chair, which is unsanitary&lt;/li&gt;
-            &lt;li&gt;Can turn off the airconditioner without stepping on a chair, which is still unsanitary&lt;/li&gt;
-            &lt;li&gt;Tallest Berean thus far&lt;/li&gt;
-        <b>&lt;!--END of sub-list--&gt;</b>
-        &lt;/ul&gt;
-    &lt;li&gt;He is handsome&lt;/li&gt;
-        <b>&lt;!--START of sub-list--&gt;</b>
-        &lt;ul style="list-style-type: circle;"&gt;
-            &lt;li&gt;Confirmed by mother, grandmother, and aunts&lt;/li&gt;
-            &lt;li&gt;Referred to as "pogi" by vendors and conductors&lt;/li&gt;
-            &lt;li&gt;Feels people in the LRT stealing glances&lt;/li&gt;
-            &lt;li&gt;Has a strong gut feeling about it&lt;/li&gt;
-        <b>&lt;!--END of sub-list--&gt;</b>
-        &lt;/ul&gt;
-    &lt;li&gt;He is smart&lt;/li&gt;
-        <b>&lt;!--START of sub-list--&gt;</b>
-        &lt;ul style="list-style-type: circle;"&gt;
-            &lt;li&gt;Knows the solution and answer to 1+1&lt;/li&gt;
-            &lt;li&gt;Has memorized the multiplication table up to 16x16&lt;/li&gt;
-        <b>&lt;!--END of sub-list--&gt;</b>
-        &lt;/ul&gt;
-    &lt;li&gt;He is humble&lt;/li&gt;
-        <b>&lt;!--START of sub-list--&gt;</b>
-        &lt;ul style="list-style-type: circle;"&gt;
-            &lt;li&gt;The humblest in the world&lt;/li&gt;
-            &lt;li&gt;Does not brag about his many great qualities&lt;/li&gt;
-        <b>&lt;!--END of sub-list--&gt;</b>
-        &lt;/ul&gt;
-    &lt;li&gt;He is &lt;s&gt;Superman&lt;/s&gt; helpful&lt;/li&gt;
-    &lt;li&gt;He &lt;s&gt;loves&lt;/s&gt; likes his advisory class&lt;/li&gt;
-  <b>&lt;!--END of main UNORDERED list--&gt;</b>
-  &lt;/ul&gt;</code></pre>
-          <b>Preview:</b>
-          <h3>Why Sir Derik is the best:</h3>
-          <b><!--START of main UNORDERED list--></b>
-          <ul>
-            <li>He is tall</li>
-            <b><!--Notice how another list is opened under an item in the original list--></b>    
-            <b><!--START of sub-list--></b>    
-              <ul style="list-style-type: circle;">
-                <li>Can turn on the airconditioner without stepping on a chair, which is unsanitary</li>
-                <li>Can turn off the airconditioner without stepping on a chair, which is still unsanitary</li>
-                <li>Tallest Berean thus far</li>
-              <b><!--END of sub-list--></b>
-              </ul>
-            <li>He is handsome</li>
-              <b><!--START of sub-list--></b>
-              <ul style="list-style-type: circle;">
-                <li>Confirmed by mother, grandmother, and aunts</li>
-                <li>Referred to as "pogi" by vendors and conductors</li>
-                <li>Feels people in the LRT stealing glances</li>
-                <li>Has a strong gut feeling about it</li>
-              <b><!--END of sub-list--></b>
-              </ul>
-            <li>He is smart</li>
-              <b><!--START of sub-list--></b>
-              <ul style="list-style-type: circle;">
-                <li>Knows the solution and answer to 1+1</li>
-                <li>Has memorized the multiplication table up to 16x16</li>
-              <b><!--END of sub-list--></b>
-              </ul>
-            <li>He is humble</li>
-              <b><!--START of sub-list--></b>
-              <ul style="list-style-type: circle;">
-                <li>The humblest in the world</li>
-                <li>Does not brag about his many great qualities</li>
-              <b><!--END of sub-list--></b>
-              </ul>
-            <li>He is <s>Superman</s> helpful</li>
-            <li>He <s>loves</s> likes his advisory class</li>
-          <b><!--END of main UNORDERED list--></b>
-          </ul>
+        <h4>Example 1: nested list using only one type (unordered list)</h4>
+        <b>Syntax:</b>
+        <pre><code><b>&lt;!--spaces between items added for better legibility, but not required--&gt;</b>
+&lt;h3&gt;Why Sir Derik is the best:&lt;/h3&gt;
+<b>&lt;!--START of main UNORDERED list--&gt;</b>
+&lt;ul&gt;
+  
+  &lt;li&gt;He is tall<b>&lt;!--item is not closed until the sublist is closed--&gt;</b>
+  <b>&lt;!--Notice how another list is opened under an item in the original list--&gt;</b>    
+  <b>&lt;!--START of sublist--&gt;</b>    
+    &lt;ul style="list-style-type: circle;"&gt;
+      &lt;li&gt;Can turn on the airconditioner without stepping on a chair, which is unsanitary&lt;/li&gt;
+      &lt;li&gt;Can turn off the airconditioner without stepping on a chair, which is still unsanitary&lt;/li&gt;
+      &lt;li&gt;Tallest Berean thus far&lt;/li&gt;
+    <b>&lt;!--END of sublist--&gt;</b>
+    &lt;/ul&gt;
+  &lt;/li&gt;<b>&lt;!--item is now closed because the sublist is closed--&gt;</b>
+  
+  &lt;li&gt;He is handsome<b>&lt;!--item is not closed until the sublist is closed--&gt;</b>
+    <b>&lt;!--START of sublist--&gt;</b>
+    &lt;ul style="list-style-type: circle;"&gt;
+      &lt;li&gt;Confirmed by mother, grandmother, and aunts&lt;/li&gt;
+      &lt;li&gt;Referred to as "pogi" by vendors and conductors&lt;/li&gt;
+      &lt;li&gt;Feels people in the LRT stealing glances&lt;/li&gt;
+      &lt;li&gt;Has a strong gut feeling about it&lt;/li&gt;
+    <b>&lt;!--END of sublist--&gt;</b>
+    &lt;/ul&gt;
+  &lt;/li&gt;<b>&lt;!--item is now closed because the sublist is closed--&gt;</b>
+  
+  &lt;li&gt;He is smart<b>&lt;!--item is not closed until the sublist is closed--&gt;</b>
+    <b>&lt;!--START of sublist--&gt;</b>
+    &lt;ul style="list-style-type: circle;"&gt;
+      &lt;li&gt;Knows the solution and answer to 1+1&lt;/li&gt;
+      &lt;li&gt;Has memorized the multiplication table up to 16x16&lt;/li&gt;
+    <b>&lt;!--END of sublist--&gt;</b>
+    &lt;/ul&gt;
+  &lt;/li&gt;<b>&lt;!--item is now closed because the sublist is closed--&gt;</b>
+  
+  &lt;li&gt;He is humble<b>&lt;!--item is not closed until the sublist is closed--&gt;</b>
+    <b>&lt;!--START of sublist--&gt;</b>
+    &lt;ul style="list-style-type: circle;"&gt;
+      &lt;li&gt;The humblest in the world&lt;/li&gt;
+      &lt;li&gt;Does not brag about his many great qualities&lt;/li&gt;
+    <b>&lt;!--END of sublist--&gt;</b>
+    &lt;/ul&gt;
+  &lt;/li&gt;<b>&lt;!--item is now closed because the sublist is closed--&gt;</b>
+  
+  &lt;li&gt;He is &lt;s&gt;Superman&lt;/s&gt; helpful&lt;/li&gt;
+  &lt;li&gt;He &lt;s&gt;loves&lt;/s&gt; likes his advisory class&lt;/li&gt;
+
+<b>&lt;!--END of main UNORDERED list--&gt;</b>
+&lt;/ul&gt;</code></pre>
+        <b>Preview:</b>
+        <h3>Why Sir Derik is the best:</h3>
+        <b><!--START of main UNORDERED list--></b>
+        <ul>
+          <li>He is tall<!--item is not closed until the sublist is closed-->
+          <b><!--Notice how another list is opened under an item in the original list--></b>    
+          <b><!--START of sublist--></b>    
+            <ul style="list-style-type: circle;">
+              <li>Can turn on the airconditioner without stepping on a chair, which is unsanitary</li>
+              <li>Can turn off the airconditioner without stepping on a chair, which is still unsanitary</li>
+              <li>Tallest Berean thus far</li>
+            <b><!--END of sublist--></b>
+            </ul>
+          </li><!--item is now closed because the sublist is closed-->
+          <li>He is handsome<!--item is not closed until the sublist is closed-->
+            <b><!--START of sublist--></b>
+            <ul style="list-style-type: circle;">
+              <li>Confirmed by mother, grandmother, and aunts</li>
+              <li>Referred to as "pogi" by vendors and conductors</li>
+              <li>Feels people in the LRT stealing glances</li>
+              <li>Has a strong gut feeling about it</li>
+            <b><!--END of sublist--></b>
+            </ul>
+          </li><!--item is now closed because the sublist is closed-->
+          <li>He is smart<!--item is not closed until the sublist is closed-->
+            <b><!--START of sublist--></b>
+            <ul style="list-style-type: circle;">
+              <li>Knows the solution and answer to 1+1</li>
+              <li>Has memorized the multiplication table up to 16x16</li>
+            <b><!--END of sublist--></b>
+            </ul>
+          </li><!--item is now closed because the sublist is closed-->
+          <li>He is humble<!--item is not closed until the sublist is closed-->
+            <b><!--START of sublist--></b>
+            <ul style="list-style-type: circle;">
+              <li>The humblest in the world</li>
+              <li>Does not brag about his many great qualities</li>
+            <b><!--END of sublist--></b>
+            </ul>
+          </li><!--item is now closed because the sublist is closed-->
+          <li>He is <s>Superman</s> helpful</li>
+          <li>He <s>loves</s> likes his advisory class</li>
+        <b><!--END of main UNORDERED list--></b>
+        </ul>
       </article>
       <article>
-          <h4>Example 2: nested list using multiple types</h4>
-          <b>Syntax:</b>
-          <pre>&lt;h3&gt;Why Sir Derik is the best:&lt;/h3&gt;
-  <b>&lt;!--START of main ORDERED list--&gt;</b>
-  <code>&lt;ol&gt;
-    &lt;li&gt;He is tall&lt;/li&gt;
-      <b>&lt;!--Notice how another list is opened under an item in the original list--&gt;</b>
-      <b>&lt;!--START of ORDERED sub-list--&gt;</b>
-      &lt;ol type="a"&gt;
-        &lt;li&gt;Can turn on the airconditioner without stepping on a chair, which is unsanitary&lt;/li&gt;
-            &lt;li&gt;Can turn off the airconditioner without stepping on a chair, which is still unsanitary&lt;/li&gt;
-            &lt;li&gt;Tallest Berean thus far&lt;/li&gt;
-      <b>&lt;!--END of ORDERED sub-list--&gt;</b>
-      &lt;/ol&gt;
-    &lt;li&gt;He is handsome&lt;/li&gt;
-      <b>&lt;!--START of UNORDERED sub-list--&gt;</b>
-      &lt;ul style="list-style-type: circle;"&gt;
-        &lt;li&gt;Confirmed by mother, grandmother, and aunts&lt;/li&gt;
-        &lt;li&gt;Referred to as "pogi" by vendors and conductors&lt;/li&gt;
-        &lt;li&gt;Feels people in the LRT stealing glances&lt;/li&gt;
-        &lt;li&gt;Has a strong gut feeling about it&lt;/li&gt;
-      <b>&lt;!--END of UNORDERED sub-list--&gt;</b>
-      &lt;/ul&gt;
-    &lt;li&gt;He is smart&lt;/li&gt;
-      <b>&lt;!--START of UNORDERED sub-list--&gt;</b>
-      &lt;ul style="list-style-type: square;"&gt;
-        &lt;li&gt;Knows the solution and answer to 1+1&lt;/li&gt;
-        &lt;li&gt;Has memorized the multiplication table up to 16x16&lt;/li&gt;
-      <b>&lt;!--END of UNORDERED sub-list--&gt;</b>
-      &lt;/ul&gt;
-    &lt;li&gt;He is humble&lt;/li&gt;
-      <b>&lt;!--START of UNORDERED sub-list--&gt;</b>
-      &lt;ul&gt;
-        &lt;li&gt;The humblest in the world&lt;/li&gt;
-        &lt;li style="list-style-type: none;"&gt;Does not brag about his many great qualities&lt;/li&gt;
-      <b>&lt;!--END of UNORDERED sub-list--&gt;</b>
-      &lt;/ul&gt;
-    &lt;li&gt;He is &lt;s&gt;Superman&lt;/s&gt; helpful&lt;/li&gt;
-    &lt;li&gt;He &lt;s&gt;loves&lt;/s&gt; likes his advisory class&lt;/li&gt;
+        <h4>Example 2: nested list using multiple types</h4>
+        <b>Syntax:</b>
+        <pre><code><b>&lt;!--spaces between items added for better legibility, but not required--&gt;</b>
+&lt;h3&gt;Why Sir Derik is the best:&lt;/h3&gt;
+<b>&lt;!--START of main ORDERED list--&gt;</b>
+&lt;ol&gt;
+  
+  &lt;li&gt;He is tall<b>&lt;!--item is not closed until the sublist is closed--&gt;</b>
+    <b>&lt;!--Notice how another list is opened under an item in the original list--&gt;</b>
+    <b>&lt;!--START of ORDERED sublist--&gt;</b>
+    &lt;ol type="a"&gt;
+      &lt;li&gt;Can turn on the airconditioner without stepping on a chair, which is unsanitary&lt;/li&gt;
+      &lt;li&gt;Can turn off the airconditioner without stepping on a chair, which is still unsanitary&lt;/li&gt;
+      &lt;li&gt;Tallest Berean thus far&lt;/li&gt;
+    <b>&lt;!--END of ORDERED sublist--&gt;</b>
+    &lt;/ol&gt;
+  &lt;/li&gt;<b>&lt;!--item is now closed because the sublist is closed--&gt;</b>
+  
+  &lt;li&gt;He is handsome<b>&lt;!--item is not closed until the sublist is closed--&gt;</b>
+    <b>&lt;!--START of UNORDERED sublist--&gt;</b>
+    &lt;ul style="list-style-type: circle;"&gt;
+      &lt;li&gt;Confirmed by mother, grandmother, and aunts&lt;/li&gt;
+      &lt;li&gt;Referred to as "pogi" by vendors and conductors&lt;/li&gt;
+      &lt;li&gt;Feels people in the LRT stealing glances&lt;/li&gt;
+      &lt;li&gt;Has a strong gut feeling about it&lt;/li&gt;
+    <b>&lt;!--END of UNORDERED sublist--&gt;</b>
+    &lt;/ul&gt;
+  &lt;/li&gt;<b>&lt;!--item is now closed because the sublist is closed--&gt;</b>
+  
+  &lt;li&gt;He is smart<b>&lt;!--item is not closed until the sublist is closed--&gt;</b>
+    <b>&lt;!--START of UNORDERED sublist--&gt;</b>
+    &lt;ul style="list-style-type: square;"&gt;
+      &lt;li&gt;Knows the solution and answer to 1+1&lt;/li&gt;
+      &lt;li&gt;Has memorized the multiplication table up to 16x16&lt;/li&gt;
+    <b>&lt;!--END of UNORDERED sublist--&gt;</b>
+    &lt;/ul&gt;
+  &lt;/li&gt;<b>&lt;!--item is now closed because the sublist is closed--&gt;</b>
+  
+  &lt;li&gt;He is humble<b>&lt;!--item is not closed until the sublist is closed--&gt;</b>
+    <b>&lt;!--START of UNORDERED sublist--&gt;</b>
+    &lt;ul&gt;
+      &lt;li&gt;The humblest in the world&lt;/li&gt;
+      &lt;li style="list-style-type: none;"&gt;Does not brag about his many great qualities&lt;/li&gt;
+    <b>&lt;!--END of UNORDERED sublist--&gt;</b>
+    &lt;/ul&gt;
+  &lt;/li&gt;<b>&lt;!--item is now closed because the sublist is closed--&gt;</b>
+  
+  &lt;li&gt;He is &lt;s&gt;Superman&lt;/s&gt; helpful&lt;/li&gt;
+  
+  &lt;li&gt;He &lt;s&gt;loves&lt;/s&gt; likes his advisory class&lt;/li&gt;
+
 <b>&lt;!--END of main ORDERED list--&gt;</b>
 &lt;/ol&gt;</code></pre>
-          <b>Preview:</b>
-          <h3>Why Sir Derik is the best:</h3>
-            <!--START of main ORDERED list-->
-            <ol>
-              <li>He is tall</li>
-                <!--Notice how another list is opened under an item in the original list-->
-                <!--START of ORDERED sub-list-->
-                <ol type="a">
-                  <li>Can turn on the airconditioner without stepping on a chair, which is unsanitary</li>
-                  <li>Can turn off the airconditioner without stepping on a chair, which is still unsanitary</li>
-                  <li>Tallest Berean thus far</li>
-                <!--END of ORDERED sub-list-->
-                </ol>
-              <li>He is handsome</li>
-                <!--START of UNORDERED sub-list-->
-                <ul style="list-style-type: circle;">
-                  <li>Confirmed by mother, grandmother, and aunts</li>
-                  <li>Referred to as "pogi" by vendors and conductors</li>
-                  <li>Feels people in the LRT stealing glances</li>
-                  <li>Has a strong gut feeling about it</li>
-                <!--END of UNORDERED sub-list-->
-                </ul>
-              <li>He is smart</li>
-                <!--START of UNORDERED sub-list-->
-                <ul style="list-style-type: square;">
-                  <li>Knows the solution and answer to 1+1</li>
-                  <li>Has memorized the multiplication table up to 16x16</li>
-                <!--END of UNORDERED sub-list-->
-                </ul>
-              <li>He is humble</li>
-                <!--START of UNORDERED sub-list-->
-                <ul>
-                  <li>The humblest in the world</li>
-                  <li style="list-style-type: none;">Does not brag about his many great qualities</li>
-                <!--END of UNORDERED sub-list-->
-                </ul>
-              <li>He is <s>Superman</s> helpful</li>
-              <li>He <s>loves</s> likes his advisory class</li>
-            <!--END of main ORDERED list-->
+        <b>Preview:</b>
+        <h3>Why Sir Derik is the best:</h3>
+          <!--START of main ORDERED list-->
+        <ol>
+          <li>He is tall<!--item is not closed until the sublist is closed-->
+            <!--Notice how another list is opened under an item in the original list-->
+            <!--START of ORDERED sublist-->
+            <ol type="a">
+              <li>Can turn on the airconditioner without stepping on a chair, which is unsanitary</li>
+              <li>Can turn off the airconditioner without stepping on a chair, which is still unsanitary</li>
+              <li>Tallest Berean thus far</li>
+            <!--END of ORDERED sublist-->
             </ol>
+          </li><!--item is now closed because the sublist is closed-->
+          <li>He is handsome<!--item is not closed until the sublist is closed-->
+            <!--START of UNORDERED sublist-->
+            <ul style="list-style-type: circle;">
+              <li>Confirmed by mother, grandmother, and aunts</li>
+              <li>Referred to as "pogi" by vendors and conductors</li>
+              <li>Feels people in the LRT stealing glances</li>
+              <li>Has a strong gut feeling about it</li>
+            <!--END of UNORDERED sublist-->
+            </ul>
+          </li><!--item is now closed because the sublist is closed-->
+          <li>He is smart<!--item is not closed until the sublist is closed-->
+            <!--START of UNORDERED sublist-->
+            <ul style="list-style-type: square;">
+              <li>Knows the solution and answer to 1+1</li>
+              <li>Has memorized the multiplication table up to 16x16</li>
+            <!--END of UNORDERED sublist-->
+            </ul>
+          </li><!--item is now closed because the sublist is closed-->
+          <li>He is humble<!--item is not closed until the sublist is closed-->
+            <!--START of UNORDERED sublist-->
+            <ul>
+              <li>The humblest in the world</li>
+              <li style="list-style-type: none;">Does not brag about his many great qualities</li>
+            <!--END of UNORDERED sublist-->
+            </ul>
+          </li><!--item is now closed because the sublist is closed-->
+          <li>He is <s>Superman</s> helpful</li>
+          <li>He <s>loves</s> likes his advisory class</li>
+        <!--END of main ORDERED list-->
+        </ol>
             <p>A description list may also be integrated in a similar manner shown in the previous examples.</p>
       </article>
     </section>
