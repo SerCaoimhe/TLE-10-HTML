@@ -98,7 +98,7 @@
                 <span class="tooltiptext">see Structure>Attribute</span>
             </span> 
             with the <em>list-style-type</em> property and corresponding property value with the syntax:
-            <code>&lt;ul style="list-style-type:x;"&gt;</code> where x is any of the following values: 
+            <code>&lt;ul style="list-style-type:x;"&gt;</code> where <code><code>x</code></code> is any of the following values: 
             <span class="tooltip"><em>disc</em>,
                 <span class="tooltiptext">default, shaded circle aka "bullet"</span>
             </span> 
@@ -113,7 +113,7 @@
             </span>.
               The disc value will return the default bullet marker.
           </p>
-          <table border="0" cellspacing="0" cellpadding="3" style="text-align:center; width:max-content;">
+          <table border="0" cellspacing="0" cellpadding="3" style="text-align:center; width:300px;">
             <tr style="background-color:#b5d6f3;">
               <th></th>
               <th>Attribute</th>
@@ -141,7 +141,11 @@
             The list-style-type property can be defined for either the <strong>entire list</strong> by placing it in the <code>&lt;ul&gt;</code>
             tag or for a <strong>specific item</strong> by placing it in the <code>&lt;li&gt;</code> tag.
           </p>
-          <p>All items in the list will stick to the list-style-type value defined for the list unless overridden by a custom list-style-type value in an item (Example 2).</p>
+          <p>All items in the list will stick to the list-style-type value defined for the list unless 
+            <span class="tooltip">overridden
+              <span class="tooltiptext">when a general rule is replaced by a more specific rule</span>
+            </span> by a custom list-style-type value in an item (Example 2).
+          </p>
           <h4>Example 1: property defined for entire list</h4>
           <b>Syntax:</b>
           <pre><code>&lt;ul style="list-style-type: circle;"&gt;
@@ -171,7 +175,7 @@
   &lt;li style="list-style-type: square;"&gt;Item 5&lt;/li&gt;
   &lt;li style="list-style-type: none;"&gt;Item 6&lt;/li&gt;
 &lt;/ul&gt;</code></pre>
-          <h4>Preview:</h4>
+          <b>Preview:</b>
           <ul>
             <li>Item 1</li>
             <li>Item 2</li>
@@ -184,23 +188,134 @@
         <article>
           <h3 id="ordered">2. Ordered List</h3>
           <p>The ordered list element is used to enumerate items <strong>in a particular order</strong> using
-            a defined numbering style. It is begun with the <em>ordered list</em> <code>&lt;ol&gt;</code> tag and filled with the 
+            <span class="tooltip">Arabic numerals
+              <span class="tooltiptext">e.g. -1, 0, 1</span>
+            </span> 
+            as the default numbering style. It is begun with the <em>ordered list</em> <code>&lt;ol&gt;</code> tag and filled with the 
             <em>list item</em> <code>&lt;li&gt;</code> tag. 
           </p>
           <p>The <em>type</em> attribute defines the numbering system while <em>start</em> defines
-            the starting value. If no attributes are used, the list will use the default (1 starting from 1). 
+            the starting value with the syntax:
+            <code>&lt;ul type="x" start="y"&gt;</code> where <code><code>x</code></code> is any of the following values: 
+            <span class="tooltip"><em>1</em>
+                <span class="tooltiptext">for Arabic numerals</span>
+            </span>, 
+            <span class="tooltip"><em>I</em>
+                <span class="tooltiptext">for uppercase Roman numerals</span>
+            </span>,
+            <span class="tooltip"><em>i</em>
+                <span class="tooltiptext">for lowercase Roman numerals</span>
+            </span>,
+            <span class="tooltip"><em>A</em>
+                <span class="tooltiptext">for uppercase letters</span>
+            </span>,
+            <span class="tooltip"><em>a</em>
+                <span class="tooltiptext">for lowercase letters</span>
+            </span>;
+            and <code>y</code> is any natural number (integer in the case of Arabic numerals). 
           </p>
-            <h4>Syntax:</h4>
-            <pre><code>&lt;ol type="1" start="1"&gt;
+          <p> If no attributes are used, the list will use the default Arabic numerals starting from 1.</p> 
+          <p class="funfact">
+            <span class="b">🤓 Author's Markup:</span> Another attribute is <em>value</em>, reserved for the <code>&ltli&gt;</code> tag and overrides the consecutive numbering in the list.
+          </p>
+          <table border="0" cellspacing="0" cellpadding="3" style="text-align:center; width:300px;">
+            <caption>Syntax</caption>
+            <thead>
+              <tr style="background-color:#b5d6f3;">
+                <th></th>
+                <th>Attribute</th>
+                <th>Value</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>&lt;ol</code></td>
+                <td><code>type=</code></td>
+                <td><code>"x"</code></td>
+                <td><code>&gt;</code></td>
+              </tr>
+            </tbody>
+          </table>
+          <br>
+          <br>
+          <table border="0" cellspacing="0" cellpadding="3" style="text-align:center; width:500px;">
+            <caption>Possible Type and Start values</caption>
+            <thead>
+              <tr style="background-color:#b5d6f3;">
+                <th>Numbering Style</th>
+                <th>Type</th>
+                <th>Start</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Arabic</td>
+                <td>1</td>
+                <td>Integers</td>
+              </tr>
+              <tr>
+                <td>Uppercase Roman</td>
+                <td>I</td>
+                <td rowspan="4">Natural Numbers</td>
+              </tr>
+              <tr>
+                <td>Lowercase Roman</td>
+                <td>i</td>
+              </tr>
+              <tr>
+                <td>Uppercase Alphabet</td>
+                <td>A</td>
+              </tr>
+              <tr>
+                <td>Lowercase Alphabet</td>
+                <td>a</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>
+            The type attribute can be defined for either the <strong>entire list</strong> by placing it in the <code>&lt;ol&gt;</code>
+            tag or for a <strong>specific item</strong> by placing it in the <code>&lt;li&gt;</code> tag.
+          </p>
+          <p>All items in the list will stick to the type value defined for the list unless overridden by a custom type value in an item (Example 2).
+          </p>
+          <h4>Example 1: type defined for entire list</h4>
+          <b>Syntax:</b>
+          <pre><code>&lt;ol type="A" start="1"&gt;
   &lt;li&gt;Item 1&lt;/li&gt;
   &lt;li&gt;Item 2&lt;/li&gt;
   &lt;li&gt;Item 3&lt;/li&gt;
+  &lt;li&gt;Item 4&lt;/li&gt;
+  &lt;li&gt;Item 5&lt;/li&gt;
+  &lt;li&gt;Item 6&lt;/li&gt;
 &lt;/ol&gt;</code></pre>
-          <h4>Preview:</h4>
-          <ol type="I" start="1">
+          <b>Preview:</b>
+          <ol type="A" start="1">
             <li>Item 1</li>
             <li>Item 2</li>
             <li>Item 3</li>
+            <li>Item 4</li>
+            <li>Item 5</li>
+            <li>Item 6</li>
+          </ol>
+          <h4>Example 2: type defined for specific items</h4>
+          <b>Syntax:</b>
+          <pre><code>&lt;ol&gt;<b>&lt;!--type is not defined, so list follows default Arabic numerals until overridden--&gt;</b>
+  &lt;li&gt;Item 1&lt;/li&gt;
+  &lt;li type="A"&gt;Item 2&lt;/li&gt;
+  &lt;li type="I"&gt;Item 3&lt;/li&gt;
+  &lt;li type="i"&gt;Item 4&lt;/li&gt;
+  &lt;li type="a"&gt;Item 5&lt;/li&gt;
+  &lt;li&gt;Item 6&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+          <b>Preview:</b>
+          <ol>
+            <li>Item 1</li>
+            <li type="A">Item 2</li>
+            <li type="I">Item 3</li>
+            <li type="i">Item 4</li>
+            <li type="a">Item 5</li>
+            <li>Item 6</li>
           </ol>
       </article>
       <article>
@@ -246,9 +361,9 @@
         Different types of lists may comprise a nested list.
       </p>
       <p class="funfact">
-            <span class="b">🤓 Author's Markup:</span> Always remember the "CEO rule": first one in, last one out. Example: 
-            <code>&lt;ol&gt;&lt;li&gt;&lt;ol&gt;...&lt;/ol&gt;&lt;/li&gt;&lt;/ol&gt;</code>
-        </p>
+        <span class="b">🤓 Author's Markup:</span> Always remember the "CEO rule": first one in, last one out. Example: 
+        <code>&lt;ol&gt;&lt;li&gt;&lt;ol&gt;...&lt;/ol&gt;&lt;/li&gt;&lt;/ol&gt;</code>
+      </p>
       <article>
         <h4>Example 1: nested list using only one type (unordered list)</h4>
         <b>Syntax:</b>
