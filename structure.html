@@ -134,7 +134,7 @@
                     </ol>
 
                     <!-- Table Example -->
-                    <table border="1" cellspacing="0" cellpadding="3" style="text-align:center; width:max-content;">
+                    <table border="0" cellspacing="0" cellpadding="3" style="text-align:center; width:300px;">
                         <tr style="background-color:#b5d6f3;">
                             <th>Start Tag</th>
                             <th>Element Content</th>
@@ -160,8 +160,12 @@
             <article>
                 <h3>Attribute</h3>
                 <p>
-                    An <em>attribute</em> is an <strong>optional</strong> but useful part of an element. It provides additional information that serve to further specify
-                    instructions for the browser. They can be applied to <strong>all elements</strong>. To be applied, the
+                    An <em>attribute</em> is an aspect of an element. It provides additional information that serves to further specify
+                    instructions for the browser. They can be applied to <strong>all elements</strong>, but most do not require them, save for
+                    <span class="tooltip">some.
+                        <span class="tooltiptext">e.g. <code>&lt;a&gt;, &lt;img&gt;, &lt;iframe&gt;, &lt;input&gt;</code></span>
+                    </span>
+                        To be applied, the
                     <span class="tooltip"><em>attribute name</em>
                         <span class="tooltiptext">name of the attribute to be defined</span>
                     </span>
@@ -169,69 +173,77 @@
                     <span class="tooltip"><em> attribute value</em>
                         <span class="tooltiptext">how the browser presents the element content based on chosen attribute</span>
                     </span>
-                    must be encoded inside the start tag.
+                    must be encoded <strong>inside the start tag</strong>.
                 </p>
                 <section>
                     <h4>Parts of an Attribute</h4>
                     <ol>
-                        <li>Attribute Name <code><span class="tooltip">type<span class="tooltiptext">the text before the equal sign</span></span></code></li>
+                        <li>Attribute Name <code><span class="tooltip">attribute<span class="tooltiptext">the text before the equal sign</span></span></code></li>
                         <li>Attribute Value <code><span class="tooltip">value<span class="tooltiptext">the text inside the quotes</span></span></code></li>
-                        <p>CSS attributes can be used in HTML, and they have an additional component:</p>
-                        <li><span class="tooltip">Property<span class="tooltiptext">additional component to CSS attributes</span></span> 
+                        <p><em>Style</em>, a CSS attribute, can be used in HTML, and it has an additional component, the 
+                            <span class="tooltip"><em>property</em>.
+                                <span class="tooltiptext">additional component of the style attribute</span>
+                            </span>
+                        </p>
+                        <li>Property
                             <code><span class="tooltip">property<span class="tooltiptext">the text after the equal sign</span></span></code></li>
                         <li>Property Value <code><span class="tooltip">value<span class="tooltiptext">the text after the colon</span></span></code></li>
                     </ol>
 
                     <!-- Table Example -->
-                    <table border="1" cellspacing="0" cellpadding="3" style="text-align:center; width:max-content;">
+                    <table border="0" cellspacing="0" cellpadding="3" style="text-align:center; width:600px;">
                         <tr style="background-color:#b5d6f3;">
                             <th></th>
-                            <th>Tag Name</th>
+                            <th></th>
                             <th>Attribute Name</th>
                             <th>Attribute Value/Property</th>
-                            <th colspan="2">Property Value</th>
+                            <th>Property Value</th>
+                            <th></th>
                         </tr>
                         <tr>
-                            <th style="background-color:#b5d6f3;">HTML</th>
-                            <td><code>&lt;ol</code></td>
-                            <td><code>type=</code></td>
+                            <th style="background-color:#b5d6f3;">HTML </th>
+                            <td><code>&lt;x</code></td>
+                            <td><code>attribute=</code></td>
                             <td><code>"value"</code></th>
                             <td></td>
+                            <td><pre><code> &gt; </code></pre></td>
                         </tr>
                         <tr>
-                            <th style="background-color:#b5d6f3;">CSS</th>
-                            <td><code>&lt;ul</code></td>
-                            <td><code>style=</code></td>
+                            <th style="background-color:#b5d6f3;">Style</th>
+                            <td><code>&lt;x</code></td>
+                            <td><code>attribute=</code></td>
                             <td><code>"property:</code></td>
                             <td><code>value"</code></td>
+                            <td><pre><code> &gt; </code></pre></td>
                         </tr>
                     </table>
 
                     <!-- Paragraph Example -->
                     <h4>Example 1: HTML attributes for an ordered list</h4>
-                    <p>The attributes applied are "type" and "start". The defined values for each are inside the quotation marks.</p>
+                    <p>The attributes applied are <i>type</i> and <i>start</i>. The defined values for each are inside the quotation marks.</p>
                     <b>Syntax:</b>
                     <pre><code>&lt;ol <span class="tooltip">type<span class="tooltiptext">attribute</span></span>="<span class="tooltip">I<span class="tooltiptext">value</span></span>" start="1"&gt;
-        &lt;li&gt;Item 1&lt;/li&gt;
-        &lt;li&gt;Item 2&lt;/li&gt;     
-    &lt;/ol&gt;</code></pre>
+    &lt;li&gt;Item 1&lt;/li&gt;
+    &lt;li&gt;Item 2&lt;/li&gt;     
+&lt;/ol&gt;</code></pre>
                     <b>Preview:</b>
                     <ol type="I" start="1">
                         <li>Item 1</li>
                         <li>Item 2</li>     
                     </ol>
 
-                    <h4>Example 2: CSS attribute and properties for an unordered list</h4>
-                    <p>The attribute applied is "style", while the properties are "line-style-type" and "background-color". 
+                    <h4>Example 2: Style and properties for an unordered list</h4>
+                    <p>The attribute applied is <em>style</em>, while the properties are <em>line-style-type</em> and <em>background-color</em>. 
                         The defined value for each property is placed after the colon.
                     </p>
-                    <p>Multiple properties can be included inside one CSS attribute and are separated by semicolons.
+                    <p>Multiple properties can be included inside the style attribute and are separated by semicolons. Take note that all 
+                        property:value pairs, separated by semicolons, are enclosed within the one quote pair after the equal sign.
                     </p>
                     <b>Syntax:</b>
                     <pre><code>&lt;ul <span class="tooltip">style<span class="tooltiptext">attribute</span></span>="<span class="tooltip">list-style-type<span class="tooltiptext">property</span></span>: <span class="tooltip">circle<span class="tooltiptext">property value</span></span>; background-color:#b5d6f3;"&gt;
-        &lt;li&gt;Item 1&lt;/li&gt;
-        &lt;li&gt;Item 2&lt;/li&gt;     
-    &lt;/ul&gt;</code></pre>
+    &lt;li&gt;Item 1&lt;/li&gt;
+    &lt;li&gt;Item 2&lt;/li&gt;     
+&lt;/ul&gt;</code></pre>
                     <b>Preview:</b>
                     <ul style="list-style-type: circle; background-color:#b5d6f3;">
                         <li>Item 1</li>

@@ -351,9 +351,9 @@ extra spaces and line breaks in the code are
                 Visual changes are purely for appearance, while semantic changes 
                 affect how the browser treats the text.
             </p>
-            <table width="500" border="1">
+            <table border="1" cellspacing="0" cellpadding="3" style="text-align:center; width:max-content;">
                 <thead>
-                    <tr style="background-color:#4fa7d3;">
+                    <tr style="background-color:#b5d6f3;">
                         <th>Format</th>
                         <th>Tags</th>
                         <th>Syntax</th>
@@ -364,10 +364,10 @@ extra spaces and line breaks in the code are
                 <tbody>
                     <tr>
                         <td style="text-align:center">Normal</td>
-                        <td style="text-align:center">--</td>
+                        <td style="text-align:center">-</td>
                         <td style="text-align:center"><pre><code>&lt;p&gt;Normal&lt;/p&gt;</code></pre></td>
                         <td style="text-align:center">Normal</td>
-                        <td style="text-align:center">--</td>
+                        <td style="text-align:center">No</td>
                     </tr>
                     <tr>
                         <td style="text-align:center">Bold</td>
@@ -401,7 +401,7 @@ extra spaces and line breaks in the code are
                         <td style="text-align:center">Underlined</td>
                         <td style="text-align:center"><pre><code>&lt;u&gt;&lt;/u&gt;</code></pre></td>
                         <td style="text-align:center"><pre><code>&lt;u&gt;Underlined&lt;/u&gt;</code></pre></td>
-                        <td style="text-align:center"><u>Underline</u></td>
+                        <td style="text-align:center"><u>Underlined</u></td>
                         <td style="text-align:center">No</td>
                     </tr>  
                     <tr>
@@ -455,6 +455,11 @@ extra spaces and line breaks in the code are
                     </tr>
                 </tbody>
             </table>
+            <p class="funfact">
+                <span class="b">🤓 Author's Markup:</span> The deleted and inserted text elements are typically used to
+                show revisions, showing which text should be removed and which should be added. Example: 
+                The strikethrough element is <del>semantic</del> <ins>not semantic</ins>.
+            </p>
     </section>
     </main>
     <footer>
