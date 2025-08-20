@@ -152,18 +152,12 @@
   &lt;li&gt;Item 1&lt;/li&gt;
   &lt;li&gt;Item 2&lt;/li&gt;
   &lt;li&gt;Item 3&lt;/li&gt;
-  &lt;li&gt;Item 4&lt;/li&gt;
-  &lt;li&gt;Item 5&lt;/li&gt;
-  &lt;li&gt;Item 6&lt;/li&gt;
 &lt;/ul&gt;</code></pre>
           <h4>Preview:</h4>
           <ul style="list-style-type: circle;">
             <li>Item 1</li>
             <li>Item 2</li>
             <li>Item 3</li>
-            <li>Item 4</li>
-            <li>Item 5</li>
-            <li>Item 6</li>
           </ul>
           <h4>Example 2: property defined for specific items</h4>
           <b>Syntax:</b>
@@ -174,6 +168,7 @@
   &lt;li style="list-style-type: circle;"&gt;Item 4&lt;/li&gt;
   &lt;li style="list-style-type: square;"&gt;Item 5&lt;/li&gt;
   &lt;li style="list-style-type: none;"&gt;Item 6&lt;/li&gt;
+  &lt;li&gt;Item 7&lt;/li&gt;
 &lt;/ul&gt;</code></pre>
           <b>Preview:</b>
           <ul>
@@ -183,6 +178,7 @@
             <li style="list-style-type: circle;">Item 4</li>
             <li style="list-style-type: square;">Item 5</li>
             <li style="list-style-type: none;">Item 6</li>
+            <li>Item 7</li>
           </ul>
         </article>
         <article>
@@ -285,44 +281,40 @@
   &lt;li&gt;Item 1&lt;/li&gt;
   &lt;li&gt;Item 2&lt;/li&gt;
   &lt;li&gt;Item 3&lt;/li&gt;
-  &lt;li&gt;Item 4&lt;/li&gt;
-  &lt;li&gt;Item 5&lt;/li&gt;
-  &lt;li&gt;Item 6&lt;/li&gt;
 &lt;/ol&gt;</code></pre>
           <b>Preview:</b>
           <ol type="A" start="1">
             <li>Item 1</li>
             <li>Item 2</li>
             <li>Item 3</li>
-            <li>Item 4</li>
-            <li>Item 5</li>
-            <li>Item 6</li>
           </ol>
           <h4>Example 2: type defined for specific items</h4>
           <b>Syntax:</b>
           <pre><code>&lt;ol&gt;<b>&lt;!--type is not defined, so list follows default Arabic numerals until overridden--&gt;</b>
   &lt;li&gt;Item 1&lt;/li&gt;
-  &lt;li type="A"&gt;Item 2&lt;/li&gt;
-  &lt;li type="I"&gt;Item 3&lt;/li&gt;
-  &lt;li type="i"&gt;Item 4&lt;/li&gt;
-  &lt;li type="a"&gt;Item 5&lt;/li&gt;
-  &lt;li&gt;Item 6&lt;/li&gt;
+  &lt;li&gt;Item 2&lt;/li&gt;
+  &lt;li type="A"&gt;Item 3&lt;/li&gt;
+  &lt;li type="I"&gt;Item 4&lt;/li&gt;
+  &lt;li type="i"&gt;Item 5&lt;/li&gt;
+  &lt;li type="a"&gt;Item 6&lt;/li&gt;
+  &lt;li&gt;Item 7&lt;/li&gt;
 &lt;/ol&gt;</code></pre>
           <b>Preview:</b>
           <ol>
             <li>Item 1</li>
-            <li type="A">Item 2</li>
-            <li type="I">Item 3</li>
-            <li type="i">Item 4</li>
-            <li type="a">Item 5</li>
-            <li>Item 6</li>
+            <li>Item 2</li>
+            <li type="A">Item 3</li>
+            <li type="I">Item 4</li>
+            <li type="i">Item 5</li>
+            <li type="a">Item 6</li>
+            <li>Item 7</li>
           </ol>
       </article>
       <article>
         <h3 id="description">3. Description List</h3>
         <p>The description list element is used to enumerate and describe items. It is begun with the <em>description list</em> 
           <code>&lt;dl&gt;</code> tag and filled with the <em>definition term</em> <code>&lt;dt&gt;</code> and <em>description details</em> 
-          <code>&lt;dd&gt;</code> tags. 
+          <code>&lt;dd&gt;</code> tag. 
         </p>
         <p>The description details typically begin with a list marker such as a bullet or hyphen, but this is not required. 
           Just remember that the list will
@@ -362,7 +354,7 @@
       </p>
       <p class="funfact">
         <span class="b">🤓 Author's Markup:</span> Always remember the "CEO rule": first one in, last one out. Example: 
-        <code>&lt;ol&gt;&lt;li&gt;&lt;ol&gt;...&lt;/ol&gt;&lt;/li&gt;&lt;/ol&gt;</code>
+        <code>&lt;ol&gt;&lt;li&gt;&lt;ul&gt;&lt;li&gt;...&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ol&gt;</code>
       </p>
       <article>
         <h4>Example 1: nested list using only one type (unordered list)</h4>
