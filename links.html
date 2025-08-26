@@ -34,6 +34,10 @@
       margin-right: 230px; 
       padding-right: 10px;
     }
+
+    iframe { 
+      width: 30%; height: 300px; border: 2px solid #333; margin-top: 10px; 
+    }
   </style>
 </head>
 <body><!--trying comment-->
@@ -71,7 +75,115 @@
   <main>
     <section>
       <h2>What is a Link?</h2>
-      <p></p>
+      <p>A <em>link</em> is a concept in computing that refers to a connection between two objects (webpages, files, etc.).</p>
+      <p>Meanwhile, a <em>hyperlink</em> is specific type of link created and operated using HTML. In simple terms, a hyperlink is an
+        <span class="tooltip">interactive link
+          <span class="tooltiptext">beyond than just clickable (e.g.. provides visual feedback, navigable using <kbd>Tab</kbd>)</span>
+        </span>
+      </p>
+      <p class="funfact">
+        <span class="b">🤓 Author's Markup:</span> All hyperlinks are links but not all links are hyperlinks.
+      </p>
+    </section>
+
+    <section>
+      <h2>Hyperlink</h2>
+      <p>
+        The hyperlink element inserts a hyperlink inside the HTML document. It is applied using the <em>anchor</em> tag <code>&lt;a&gt;</code>,
+        the <strong>required</strong> 
+        <span class="tooltip"><em>hyperlink reference</em>
+          <span class="tooltiptext"><code>href</code></span>
+        </span> attribute, and the 
+        <span class="tooltip"><em>link text</em>
+          <span class="tooltiptext">interactive text representing the hyperlink</span>
+        </span> 
+        element content with the syntax <code>&lt;a href="x"&gt;y&lt;/a&gt;</code>
+        where <code>x</code> is the 
+        <span class="tooltip">destination URL
+          <span class="tooltiptext">web address (Uniform Resource Locator)</span>
+        </span> or 
+        <span class="tooltip">file destination.
+          <span class="tooltiptext">within local machine</span>
+        </span>
+        and <code>y</code> is the link text.
+      
+      <table border="0" cellspacing="0" cellpadding="3" style="text-align:center; width: max-content;">
+        <tr style="background-color:#b5d6f3;">
+          <th></th>
+          <th>Attribute</th>
+          <th>Value</th>
+          <th></th>
+          <th>Element Content</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><code>&lt;a</code></td>
+          <td><pre><code>   href=   </code></pre></td>
+          <td><code>"x"</code></td>
+          <td><code>&gt;</code></td>
+          <td><code>y</code></td>
+          <td><code>&lt;/a&gt;</code></td>
+        </tr>
+      </table>
+      <p>Another attribute ideally used is <em>target</em>. By default, the linked document will be opened in the same 
+        <span class="tooltip">frame,
+          <span class="tooltiptext">usually means the same browser tab</span>
+        </span>
+        replacing the one being displayed before the link was clicked. The target attribute allows one to set where the linked document will be opened.
+        It can have any one of the following values:
+      </p>
+      <ul>
+        <li><code>_self</code> - default; opens document in the same frame</li>
+        <li><code>_blank</code> - opens the document in a new tab</li>
+        <li><code>_parent</code> - opens the document in the parent frame</li>
+        <li><code>_top</code> - opens the document in the 
+          <span class="tooltip">outermost frame
+            <span class="tooltiptext">essentially the entire tab</span>
+          </span>
+          </li>
+      </ul>
+      <h3>Example 1: target defined as <code>_self</code></h3>
+      <b>Syntax</b><pre><code>
+&lt;p&gt;
+  Clicking the link will replace this page with the destination (simply go back to return here):
+  &lt;a href="https://youtube.com/shorts/DArL8-mqZqs?si=-GFqCSnn4T3E3ky4" <b>target="_self"</b> title="open the link in the current tab">
+    Watermelon Sugar PUG!
+  &lt;/a&gt;
+&lt;/p&gt;
+        </code></pre>
+      <b>Preview</b>
+      <p>
+        Clicking the link will replace this page with the destination (simply go back to return here):
+        <a href="https://www.youtube.com/shorts/DgnnbwXQ7Nc" target="_self" title="open the link in the current tab">Watermelon Sugar PUG!</a>
+      </p>
+
+      <h3>Example 2: target defined as <code>_blank</code></h3>
+      <b>Syntax</b>
+      <pre><code>&lt;p&gt;
+  Clicking the link will open the destination as a new tab:
+  &lt;a href="https://www.youtube.com/shorts/tvDmruktCT4" <b>target="_blank"</b> title="open the link in the new tab">
+    *vine boom*
+  &lt;/a&gt;
+&lt;/p&gt;
+</code></pre>
+      <b>Preview</b>
+      <p>
+        Clicking the link will open the destination as a new tab:
+        <a href="https://www.youtube.com/shorts/tvDmruktCT4" target="_blank" title="open the link in a new tab">*vine boom*</a>
+      </p>
+
+      <h3>Example 3: target defined as <code>_parent</code></h3>
+      <b>Preview</b>
+      <p>
+        <iframe src="parentframe.html" name="parentframe"></iframe>
+      </p>
+
+      <h3>Example 4: target defined as <code>_top</code></h3>
+      <b>Preview</b>
+      <p>
+        <iframe src="parentframe2.html" name="parentframe2"></iframe>
+      </p>
+      
     </section>
   </main>
   <footer>

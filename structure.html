@@ -67,163 +67,180 @@
         </ul>
     </aside>
     <main>
-        <section id="syntax">
-            <h2>Syntax</h2>
-
-            <!-- Element Article -->
-            <article>
-                <h3 id="element">Element</h3>
-                <p>
-                    The <em>element</em> is the building block of HTML. It defines the content to be presented by the 
-                    <span class="tooltip"><em>browser</em>.
-                        <span class="tooltiptext">program or application that displays webpages</span>
-                    </span>
-                    It is comprised of 
-                    <span class="tooltip"><em>characters</em>
-                        <span class="tooltiptext">letters, numbers, symbols, and spaces</span>
-                    </span>
-                    arranged according to a particular 
-                    <span class="tooltip"><em>syntax</em>.
-                        <span class="tooltiptext">rules governing how a language is structured</span>
-                    </span>
-                </p>
-
-                <p>Examples of characters:</p>
-                <ul>
-                    <li><code>a</code> is a character</li>
-                    <li><code>1</code> is a character</li>
-                    <li><code>!</code> is a character</li>
-                    <li>(space) is a character</li>
-                </ul>
-
-                <p>
-                    An element has specific parts that must be present to be understood and executed by the browser. 
-                    It is initiated by the 
-                    <span class="tooltip"><em>start tag</em>,
-                        <span class="tooltiptext">aka "open" tag</span>
-                    </span>contains 
-                    <span class="tooltip"><em>element content</em>,
-                        <span class="tooltiptext">the actual content to be presented by the browser</span>
-                    </span>and ends with the 
-                    <span class="tooltip"><em>end tag</em>
-                        <span class="tooltiptext">aka "close" tag</span>
-                    </span>.
-                </p>
-
-                <!-- Parts of an element section -->
-                <section>
-                    <h4>Parts of an Element</h4>
-                    <ol>
-                        <li>Start Tag
-                            <ol type="a">
-                                <li><span class="tooltip">Opening angle bracket<span class="tooltiptext">aka the "less than symbol"</span></span> <code>&lt;</code></li>
-                                <li><span class="tooltip">Tag name<span class="tooltiptext">element identifier</span></span> <code>x</code></li>
-                                <li><span class="tooltip">Closing angle bracket<span class="tooltiptext">aka the "greater than symbol"</span></span> <code>&gt;</code></li>
-                            </ol>
-                        </li>
-                        <li>Element Content <code>abc</code></li>
-                        <li>End Tag
-                            <ol type="a">
-                                <li>Opening angle bracket <code>&lt;</code></li>
-                                <li><span class="tooltip">Forward slash<span class="tooltiptext">indicates closing tag</span></span> <code>/</code></li>
-                                <li>Tag name <code>x</code></li>
-                                <li>Closing angle bracket <code>&gt;</code></li>
-                            </ol>
-                        </li>
-                    </ol>
-
-                    <!-- Table Example -->
-                    <table border="0" cellspacing="0" cellpadding="3" style="text-align:center; width:300px;">
-                        <tr style="background-color:#b5d6f3;">
-                            <th>Start Tag</th>
-                            <th>Element Content</th>
-                            <th>End Tag</th>
-                        </tr>
-                        <tr>
-                            <td><code>&lt;x&gt;</code></td>
-                            <td><code>abc</code></td>
-                            <td><code>&lt;/x&gt;</code></td>
-                        </tr>
-                    </table>
-
-                    <!-- Paragraph Example -->
-                    <h4>Example 1: Paragraph Element</h4>
-                    <b>Syntax:</b>
-                    <pre><code>&lt;p&gt;This is the element content.&lt;/p&gt;</code></pre>
-                    <b>Preview:</b>
-                    <p>This is the element content.</p>
-                </section>
-            </article>
-
-            <!-- Attribute Article -->
-            <article>
-                <h3 id="attribute">Attribute</h3>
-                <p>
-                    An <em>attribute</em> is an aspect of an element. It provides additional information that serves to further specify
-                    instructions for the browser. They can be applied to <strong>all elements</strong>, but most do not require them, save for
-                    <span class="tooltip">some.
-                        <span class="tooltiptext">e.g. <code>&lt;a&gt;, &lt;img&gt;, &lt;iframe&gt;, &lt;input&gt;</code></span>
-                    </span>
-                        To be applied, the
-                    <span class="tooltip"><em>attribute name</em>
-                        <span class="tooltiptext">name of the attribute to be defined</span>
-                    </span>
-                    and
-                    <span class="tooltip"><em> attribute value</em>
-                        <span class="tooltiptext">how the browser presents the element content based on chosen attribute</span>
-                    </span>
-                    must be encoded <strong>inside the start tag</strong>.
-                </p>
-                <section>
-                    <h4>Parts of an Attribute</h4>
-                    <ol>
-                        <li>Attribute Name <code><span class="tooltip">attribute<span class="tooltiptext">the text before the equal sign</span></span></code></li>
-                        <li>Attribute Value <code><span class="tooltip">value<span class="tooltiptext">the text inside the quotes</span></span></code></li>
-                        <p><em>Style</em>, a CSS attribute, can be used in HTML, and it has an additional component, the 
-                          <span class="tooltip"><em>property</em>
-                            <span class="tooltiptext">one of many definable variables of the style attribtue
-                          </span>
-                        </p>
-                        <li>Property
-                            <code><span class="tooltip">property<span class="tooltiptext">the text after the equal sign</span></span></code></li>
-                        <li>Property Value <code><span class="tooltip">value<span class="tooltiptext">the text after the colon</span></span></code></li>
-                    </ol>
-
-                    <!-- Table Example -->
-                    <table border="0" cellspacing="0" cellpadding="3" style="text-align:center; width:600px;">
-                        <tr style="background-color:#b5d6f3;">
-                            <th></th>
-                            <th></th>
-                            <th>Attribute Name</th>
-                            <th>Attribute Value/Property</th>
-                            <th>Property Value</th>
-                            <th></th>
-                        </tr>
-                        <tr>
-                            <th style="background-color:#b5d6f3;">HTML </th>
-                            <td><code>&lt;x</code></td>
-                            <td><code>attribute=</code></td>
-                            <td><code>"value"</code></th>
-                            <td></td>
-                            <td><pre><code> &gt; </code></pre></td>
-                        </tr>
-                        <tr>
-                            <th style="background-color:#b5d6f3;">Style</th>
-                            <td><code>&lt;x</code></td>
-                            <td><code>style=</code></td>
-                            <td><code>"property:</code></td>
-                            <td><code>value"</code></td>
-                            <td><pre><code> &gt; </code></pre></td>
-                        </tr>
-                    </table>
-
-                    <!-- Paragraph Example -->
-                    <h4>Example 1: HTML attributes for an ordered list</h4>
-                    <p>The attributes applied are <em>type</em> and <em>start</em>. The defined values for each are inside the quotation marks.</p>
-                    <b>Syntax:</b>
-                    <pre><code>&lt;ol <span class="tooltip">type<span class="tooltiptext">attribute</span></span>="<span class="tooltip">I<span class="tooltiptext">value</span></span>" start="1"&gt;
-    &lt;li&gt;Item 1&lt;/li&gt;
-    &lt;li&gt;Item 2&lt;/li&gt;     
+      <section id="structure">
+        <h2>Structure</h2>
+            
+      </section>  
+      
+      <section id="syntax">
+        <h2>Syntax</h2>
+        <article>
+          <h3 id="element">Element</h3>
+          <p>
+            The <em>element</em> is the building block of HTML. It defines the content to be presented by the 
+            <span class="tooltip"><em>browser</em>.
+              <span class="tooltiptext">program or application that displays webpages</span>
+            </span>
+            It is comprised of 
+            <span class="tooltip"><em>characters</em>
+              <span class="tooltiptext">letters, numbers, symbols, and spaces</span>
+            </span>
+            arranged according to a particular 
+            <span class="tooltip"><em>syntax</em>.
+              <span class="tooltiptext">rules governing how a language is structured</span>
+            </span>
+          </p>
+          
+          <p>Examples of characters:</p>
+          <ul>
+            <li><code>a</code> is a character</li>
+            <li><code>1</code> is a character</li>
+            <li><code>!</code> is a character</li>
+            <li>(space) is a character</li>
+          </ul>
+          
+          <h4>Parts of an Element</h4>
+          
+          <p>
+            An element has specific parts that must be present to be understood and executed by the browser. 
+            It is initiated by the 
+            <span class="tooltip"><em>start tag</em>,
+              <span class="tooltiptext">aka "open" tag</span>
+            </span>contains 
+            <span class="tooltip"><em>element content</em>,
+              <span class="tooltiptext">the actual content to be presented by the browser</span>
+            </span>and ends with the 
+            <span class="tooltip"><em>end tag</em>
+              <span class="tooltiptext">aka "close" tag</span>
+            </span>.
+          </p>
+          
+          <ol>
+            <li>Start Tag
+              <ol type="a">
+                <li><span class="tooltip">Opening angle bracket<span class="tooltiptext">aka the "less than symbol"</span></span> <code>&lt;</code></li>
+                <li><span class="tooltip">Tag name<span class="tooltiptext">element identifier</span></span> <code>x</code></li>
+                <li><span class="tooltip">Closing angle bracket<span class="tooltiptext">aka the "greater than symbol"</span></span> <code>&gt;</code></li>
+              </ol>
+            </li>
+            <li>Element Content <code>abc</code></li>
+            <li>End Tag
+              <ol type="a">
+                <li>Opening angle bracket <code>&lt;</code></li>
+                <li><span class="tooltip">Forward slash<span class="tooltiptext">indicates closing tag</span></span> <code>/</code></li>
+                <li>Tag name <code>x</code></li>
+                <li>Closing angle bracket <code>&gt;</code></li>
+              </ol>
+            </li>
+          </ol>
+          
+          <p>Some elements are <em>empty</em> which means that they do not have element content nor an end tags (Example 2).</p>
+          
+          <table border="0" cellspacing="0" cellpadding="7" style="text-align: center; width: max-content;">
+            <tr style="background-color:#b5d6f3;">
+              <th></th>
+              <th>Start Tag</th>
+              <th>Element Content</th>
+              <th>End Tag</th>
+            </tr>
+            <tr>
+              <th style="background-color:#b5d6f3;">Regular Element</th>
+              <td><code>&lt;x&gt;</code></td>
+              <td><code>abc</code></td>
+              <td><code>&lt;/x&gt;</code></td>
+            </tr>
+            <tr>
+              <th style="background-color:#b5d6f3;">Empty Element</th>
+              <td><code>&lt;x&gt;</code></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
+        
+        <h4>Example 1: Regular Element (paragraph)</h4>
+        <b>Syntax:</b>
+        <pre><code>&lt;p&gt;This is the element content.&lt;/p&gt;</code></pre>
+        <b>Preview:</b>
+        <p>This is the element content.</p>
+        
+        <h4>Example 2: Empty Element (horizontal rule)</h4>
+        <b>Syntax:</b>
+        <pre><code>&lt;hr&gt;</code></pre>
+        <b>Preview:</b>
+        <hr>
+        
+        <p class="funfact">
+          <span class="b">🤓 Author's Markup:</span> Regular elements will still be rendered even if their element content is not defined. 
+          Example: <code>&lt;p&gt;&lt;/p&gt;</code>
+        </p>
+        </article>
+        
+        <article>
+            <h3 id="attribute">Attribute</h3>
+            <p>
+              An <em>attribute</em> is an aspect of an element. It provides additional information that serves to further specify
+              instructions for the browser. They can be applied to <strong>all elements</strong>, but most do not require them, save for
+              <span class="tooltip">some.
+                <span class="tooltiptext">e.g. <code>&lt;a&gt;, &lt;img&gt;, &lt;iframe&gt;, &lt;input&gt;</code></span>
+              </span>
+                To be applied, the
+              <span class="tooltip"><em>attribute name</em>
+                <span class="tooltiptext">name of the attribute to be defined</span>
+              </span>
+              and
+              <span class="tooltip"><em> attribute value</em>
+                <span class="tooltiptext">how the browser presents the element content based on chosen attribute</span>
+              </span>
+              must be encoded <strong>inside the start tag</strong>.
+            </p>
+            
+            <h4>Parts of an Attribute</h4>
+            <ol>
+              <li>Attribute Name <code><span class="tooltip">attribute<span class="tooltiptext">the text before the equal sign</span></span></code></li>
+              <li>Attribute Value <code><span class="tooltip">value<span class="tooltiptext">the text inside the quotes</span></span></code></li>
+              <p><em>Style</em>, a CSS attribute, can be used in HTML, and it has an additional component, the 
+                <span class="tooltip"><em>property</em>
+                  <span class="tooltiptext">one of many definable variables of the style attribtue
+                </span>
+              </p>
+              <li>Property
+                <code><span class="tooltip">property<span class="tooltiptext">the text after the equal sign</span></span></code></li>
+              <li>Property Value <code><span class="tooltip">value<span class="tooltiptext">the text after the colon</span></span></code></li>
+              </ol>
+            
+            <table border="0" cellspacing="0" cellpadding="7" style="text-align:center; width: max-content;">
+              <tr style="background-color:#b5d6f3;">
+                <th></th>
+                <th></th>
+                <th>Attribute Name</th>
+                <th>Attribute Value/Property</th>
+                <th>Property Value</th>
+                <th></th>
+              </tr>
+              <tr>
+                <th style="background-color:#b5d6f3;">HTML </th>
+                <td><code>&lt;x</code></td>
+                <td><code>attribute=</code></td>
+                <td><code>"value"</code></th>
+                <td></td>
+                <td><pre><code> &gt; </code></pre></td>
+              </tr>
+              <tr>
+                <th style="background-color:#b5d6f3;">Style</th>
+                <td><code>&lt;x</code></td>
+                <td><code>style=</code></td>
+                <td><code>"property:</code></td>
+                <td><code>value"</code></td>
+                <td><pre><code> &gt; </code></pre></td>
+              </tr>
+            </table>
+              
+              <h4>Example 1: HTML attributes for an ordered list</h4>
+              <p>The attributes applied are <em>type</em> and <em>start</em>. The defined values for each are inside the quotation marks.</p>
+              <b>Syntax:</b>
+              <pre><code>&lt;ol <span class="tooltip">type<span class="tooltiptext">attribute</span></span>="<span class="tooltip">I<span class="tooltiptext">value</span></span>" start="1"&gt;
+  &lt;li&gt;Item 1&lt;/li&gt;
+  &lt;li&gt;Item 2&lt;/li&gt;     
 &lt;/ol&gt;</code></pre>
                     <b>Preview:</b>
                     <ol type="I" start="1">
@@ -239,9 +256,9 @@
                         <em>property:value</em> pairs, separated by semicolons, are enclosed within the one quote pair after the equal sign.
                     </p>
                     <b>Syntax:</b>
-                    <pre><code>&lt;ul <span class="tooltip">style<span class="tooltiptext">attribute</span></span>="<span class="tooltip">list-style-type<span class="tooltiptext">property</span></span>: <span class="tooltip">circle<span class="tooltiptext">property value</span></span>; background-color:#b5d6f3;"&gt;
-    &lt;li&gt;Item 1&lt;/li&gt;
-    &lt;li&gt;Item 2&lt;/li&gt;     
+                    <pre><code>&lt;ul <span class="tooltip">style<span class="tooltiptext">attribute</span></span>="<span class="tooltip">list-style-type<span class="tooltiptext">property<sub>1</sub></span></span>: <span class="tooltip">circle<span class="tooltiptext">value<sub>1</sub></span></span>; <span class="tooltip">background-color<span class="tooltiptext">property<sub>2</sub></span></span>:<span class="tooltip">#b5d6f3<span class="tooltiptext">value<sub>2</sub></span></span>;"&gt;
+  &lt;li&gt;Item 1&lt;/li&gt;
+  &lt;li&gt;Item 2&lt;/li&gt;     
 &lt;/ul&gt;</code></pre>
                     <b>Preview:</b>
                     <ul style="list-style-type: circle; background-color:#b5d6f3;">
@@ -250,12 +267,6 @@
                     </ul>
                 </section>
             </article>
-        </section>
-
-        <!-- Structure Section -->
-        <section id="structure">
-            <h2>Structure</h2>
-            
         </section>
     </main>
     <footer>
