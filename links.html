@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Placido—TLE 10 Notes</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="style.css">
@@ -12,7 +13,7 @@
     }
     header, footer, nav, main, section, article, aside {
       border: 0px solid #ccc;
-      padding: 10px;
+      padding: 1%;
       margin: 5px;
     }
     nav a {
@@ -36,7 +37,7 @@
     }
 
     iframe { 
-      width: 30%; height: 300px; border: 2px solid #333; margin-top: 10px; 
+      width: 70%; height: 300px; border: 2px solid #333; margin-top: 10px; 
     }
   </style>
 </head>
@@ -60,21 +61,14 @@
   <aside>
     <h3>Quick Links</h3>
     <ul>
-      <li><a href="#what">What is a list?</a></li>
-      <li><a href="#types">Types of Lists</a>
-        <ul>
-          <li><a href="#unordered">Unordered</a></li>
-          <li><a href="#ordered">Ordered</a></li>
-          <li><a href="#description">Description</a></li>
-        </ul>
-      </li>  
-      <li><a href="#nested">Nested Lists</a></li>
+      <li><a href="#link">What is a link?</a></li>
+      <li><a href="#hyperlink">Hyperlink</a>
       <li><a href="#top">Back to Top</a></li>
     </ul>
   </aside>
   <main>
     <section>
-      <h2>What is a Link?</h2>
+      <h2 id="link">What is a link?</h2>
       <p>A <em>link</em> is a concept in computing that refers to a connection between two objects (webpages, files, etc.).</p>
       <p>Meanwhile, a <em>hyperlink</em> is a specific type of link created and operated using HTML. In simple terms, a hyperlink is an
         <span class="tooltip">interactive link
@@ -87,13 +81,37 @@
     </section>
 
     <section>
-      <h2>Hyperlink</h2>
+      <h2 id="hyperlink">Hyperlink</h2>
       <p>
-        The hyperlink element inserts a hyperlink inside the HTML document. It is applied using the <em>anchor</em> tag <code>&lt;a&gt;</code>,
+        The hyperlink element inserts a hyperlink inside the HTML document. It is typically in the form of a colored, underlined text but can also be
+        in other elements (e.g. image, button). Another indicator that something is a hyperlink is the pointer's behavior when hovering over it.
+        The 
+          <span class="tooltip"><em>pointer</em>
+            <span class="tooltiptext">aka "cursor"; the arrow you're using now to read this tooltip text</span>
+          </span> 
+          typically takes the form of a hand when in front of a hyperlink. Try 
+        <a href="#hyperlink">here</a>.  
+      </p>
+      <p>
+        Hyperlinks by default also display a different color for each condition:
+      </p>
+      <ul>
+        <li><u style="color:blue">blue</u> - unvisited</li>
+        <li><u style="color: red">red</u> - 
+          <span class="tooltip">activated
+            <span class="tooltiptext">the instance it is clicked</span>
+          </span>  
+        </li>
+        <li><u style="color: #551A8B">purple</u> - visited</li>
+      </ul>
+      <p class="funfact">
+        <span class="b">🤓 Author's Markup:</span> You can cancel activting a link mid-click by dragging the pointer away <strong>before</strong> letting go of the left mouse button.
+      </p>  
+      <p>A hyperlink is applied using the <em>anchor</em> tag <code>&lt;a&gt;</code>,
         the <strong>required</strong> 
         <span class="tooltip"><em>hyperlink reference</em>
           <span class="tooltiptext"><code>href</code></span>
-        </span> attribute, and the 
+        </span>attribute, and the 
         <span class="tooltip"><em>link text</em>
           <span class="tooltiptext">interactive text representing the hyperlink</span>
         </span> 
@@ -145,16 +163,18 @@
       <h3>Example 1: target defined as <code>_self</code></h3>
       <b>Syntax</b><pre><code>
 &lt;p&gt;
-  Clicking the link will replace this page with the destination (simply go back to return here):
-  &lt;a href="https://youtube.com/shorts/DArL8-mqZqs?si=-GFqCSnn4T3E3ky4" <b>target="_self"</b> title="open the link in the current tab">
-    Watermelon Sugar PUG!
+  Clicking the link will replace this page with the destination &lt;strong&gt;(simply go back to return)&lt;/strong&gt;:
+  &lt;a href="https://www.youtube.com/shorts/DgnnbwXQ7Nc" <b>target="_self"</b> title="open the link in the current tab">
+    Fried bologna sandwich tutorial
   &lt;/a&gt;
 &lt;/p&gt;
         </code></pre>
       <b>Preview</b>
       <p>
-        Clicking the link will replace this page with the destination (simply go back to return here):
-        <a href="https://www.youtube.com/shorts/DgnnbwXQ7Nc" target="_self" title="open the link in the current tab">Watermelon Sugar PUG!</a>
+        Clicking the link will replace this page with the destination <strong>(simply go back to return)</strong>:
+        <a href="https://www.youtube.com/shorts/DgnnbwXQ7Nc" target="_self" title="open the link in the current tab">
+          Fried bologna sandwich tutorial
+        </a>
       </p>
 
       <h3>Example 2: target defined as <code>_blank</code></h3>
@@ -169,7 +189,9 @@
       <b>Preview</b>
       <p>
         Clicking the link will open the destination as a new tab:
-        <a href="https://www.youtube.com/shorts/tvDmruktCT4" target="_blank" title="open the link in a new tab">*vine boom*</a>
+        <a href="https://www.youtube.com/shorts/tvDmruktCT4" target="_blank" title="open the link in a new tab">
+          *vine boom*
+        </a>
       </p>
 
       <h3>Example 3: target defined as <code>_parent</code></h3>
