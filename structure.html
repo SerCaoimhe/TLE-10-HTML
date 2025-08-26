@@ -13,7 +13,7 @@
     header, footer, nav, main, section, article, aside {
       border: 0px solid #ccc;
       padding: 10px;
-      margin: 5px;
+      margin: 10px;
     }
     nav a {
       margin-right: 10px;
@@ -31,8 +31,8 @@
       overflow-y: auto;
     }
     main {
-      margin-right: 230px; 
-      padding-right: 10px;
+      margin-right: 1%; 
+      padding-right: 1%;
     }
   </style>
 </head>
@@ -134,7 +134,7 @@
             </li>
           </ol>
           
-          <p>Some elements are <em>empty</em> which means that they do not have element content nor an end tags (Example 2).</p>
+          <p>Some elements are <em>empty</em> which means that they do not have element content nor end tags (Example 2).</p>
           
           <table border="0" cellspacing="0" cellpadding="7" style="text-align: center; width: max-content;">
             <tr style="background-color:#b5d6f3;">
@@ -170,8 +170,8 @@
         <hr>
         
         <p class="funfact">
-          <span class="b">🤓 Author's Markup:</span> Regular elements will still be rendered even if their element content is not defined. 
-          Example: <code>&lt;p&gt;&lt;/p&gt;</code>
+          <span class="b">🤓 Author's Markup:</span> Some tags (e.g. <code>&lt;p&gt;</code>, <code>&lt;li&gt;</code>, <code>&lt;tr&gt;</code>) will technically still work without end tags, but this may lead to unexpected glitches, so it
+          is still the best practice to close all necessary tags.
         </p>
         </article>
         
