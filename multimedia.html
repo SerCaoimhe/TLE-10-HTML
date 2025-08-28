@@ -79,13 +79,15 @@
             <tr style="background-color:#b5d6f3;">
               <th>Medium</th>
               <th>Tag</th>
-              <th>Attributes</th>
+              <th colspan="3">Attributes</th>
               <th>File Types</th>
             </tr>
             <tr>
               <td>Image</td>
               <td><code>&lt;img&gt;</code></td>
-              <td><code>src</code>, <code>width</code>, <code>height</code>, <code>alt</code></td>
+              <td><code>src</code></td>
+              <td><code>width</code>, <code>height</code></td>
+              <td><code>alt</code></td>
               <td>
                 <span class="tooltip">APNG,
                   <span class="tooltiptext">Animated Portable Network Graphics</span>
@@ -111,7 +113,9 @@
             <tr>
               <td>Video</td>
               <td><code>&lt;video&gt;&lt;/video&gt;</code></td>
-              <td><code>src</code>, <code>width</code>, <code>height</code>, <code>controls</code>, <code>autoplay</code>, <code>muted</code></td>
+              <td><code>src</code>,</td>
+              <td><code>width</code>, <code>height</code>,</td>
+              <td><code>controls</code>, <code>loop</code>, <code>autoplay</code>, <code>muted</code></td>
               <td>
                 <span class="tooltip">MPEG-4/MP4,
                   <span class="tooltiptext">Moving Pictures Expert Group</span>
@@ -125,7 +129,9 @@
             <tr>
               <td>Audio</td>
               <td><code>&lt;audio&gt;&lt;/audio&gt;</code></td>
-              <td><code>src</code>, <code>controls</code>, <code>autoplay</code>, <code>muted</code></td>
+              <td><code>src</code>,</td>
+              <td></td>
+              <td><code>controls</code>, <code>loop</code>, <code>autoplay</code>, <code>muted</code></td>
               <td>
                 MP3,
                 <span class="tooltip">OGG,
@@ -140,39 +146,37 @@
           <h3>Example 1: Image</h3>
           <b>Syntax</b>
           <br>
-          <pre><code>&lt;img src="Multimedia/IMG_5835" width="500" alt="Sir Derik"&gt;</code></pre>
+          <pre><code>&lt;img src="Multimedia/IMG_5835.jpg" width="700" alt="Sir Derik with Grade 10-Platibabies" title="Sir Derik with Grade 10-Platibabies"&gt;</code></pre>
           
           <b>Preview</b>
           <br>
-          <a href="index.html">
-            <img src="Multimedia/IMG_5835.jpg" width="500" alt="Sir Derik" title="Sir Derik">
-          </a>
+          <img src="Multimedia/IMG_5835.jpg" width="700" alt="Sir Derik with Grade 10-Platibabies" title="Sir Derik with Grade 10-Platibabies">
           <br>
           
           <h3>Example 2: Video</h3>
           <b>Syntax</b>
           <br>
-          <pre><code>&lt;video src="Multimedia/IMG_5835.jpg" controls width="500" title="Picture taking"&gt;
-  Video cannot be played :(
+          <pre><code>&lt;video src="Multimedia/Dota 2 2024-02-22 21-49-41.mp4" controls width="700" title="Crushing it with Doom"&gt;
+  Video cannot be played &lt;!--This is the text that is displayed if ever the media cannot be displayed.--&gt;
 &lt;/video&gt;</pre></code>
           
           <b>Preview</b>
           <br>
-          <video src="Multimedia/MVI_7849.MP4" controls width="500" title="Picture taking">
-            Video cannot be played :(
+          <video src="Multimedia/Dota 2 2024-02-22 21-49-41.mp4" controls width="700" title="Crushing it with Doom">
+            Video cannot be played. <!--This is the text that is displayed if ever the media cannot be displayed.-->
           </video>
 
           <h3>Example 3: Audio</h3>
           <b>Syntax</b>
           <br>
           <pre><code>&lt;audio src="Multimedia/OHIOISONFIRE.mp3" controls title="OHIOISONFIRE"&gt;
-  Audio cannot be played :(
+  Audio cannot be played. &lt;!--This is the text that is displayed if ever the media cannot be displayed.--&gt;
 &lt;/audio&gt;</pre></code>
           
           <b>Preview</b>
           <br>
-          <audio src="Multimedia/OHIOISONFIRE.mp3" controls title="OHIOISONFIRE">
-            Audio cannot be played :(
+          <audio src="Multimedia/OHIOISONFIRE.mp3" controls loop title="OHIOISONFIRE">
+            Audio cannot be played. <!--This is the text that is displayed if ever the media cannot be displayed.-->
           </audio>
 
    
