@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"> 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Placido—TLE 10 Notes</title>
+  <title>Placido—Structure</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="style.css">
   <style>
@@ -35,7 +35,17 @@
       margin-right: 230px; 
       padding-right: 10px;
     }
-
+    table {
+      border-collapse: collapse;
+      text-align: center;
+      width: max-content;
+    }
+    thead {
+      background-color:#b5d6f3;
+    }
+    th, td {
+      padding: 3px 10px 3px 10px
+    }
     iframe { 
       width: 70%; height: 300px; border: 2px solid #333; margin-top: 10px; 
     }
@@ -74,7 +84,67 @@
     <main>
       <section id="structure">
         <h2>Structure</h2>
-            
+        <h3>Parts</h3>
+        <p>Basic HTML code contains the following structural elements:</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Element</th>
+              <th>Tags</th>
+              <th>Purpose</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Document type declaration</td>
+              <td><code>&lt;!DOCTYPE html&gt;</code></td>
+              <td style="text-align: left">Indicates to the browser that the document type is HTML</td>
+            </tr>
+            <tr>
+              <td>HTML</td>
+              <td><code>&lt;html&gt;&lt;/html&gt;</code></td>
+              <td style="text-align: left">Indicates the start and end of the HTML document</td>
+            </tr>
+            <tr>
+              <td>Head</td>
+              <td><code>&lt;head&gt;&lt;/head&gt;</code></td>
+              <td style="text-align: left">Contains  
+                <span class="tooltip"><em>metadata</em>
+                  <span class="tooltiptext">"data about data"; document properties</span>
+                </span>
+                about the HTML document
+              </td>
+            </tr>
+            <tr>
+              <td>Title</td>
+              <td><code>&lt;title&gt;&lt;/title&gt;</code></td>
+              <td style="text-align: left">Defines the title of the webpage on the browser tab and search results</td>
+            </tr>
+            <tr>
+              <td>Body</td>
+              <td><code>&lt;body&gt;&lt;/body&gt;</code></td>
+              <td style="text-align: left">Contains all visible elements of the webpage</td>
+            </tr>
+          </tbody>
+        </table>
+        <b>Syntax</b>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;HTML Basics&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;Structure&lt;/h1&gt;
+&lt;p&gt;This page talks about the basic structure of HTML.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        <b>Preview</b>
+        <br>
+        <iframe src="" style="width: 82.5%; height: 348px"></iframe>
+        <h3>Nesting</h3>
+        <p>An important aspect of HTML is the <em>nesting</em>.</p>
       </section>  
       
       <section id="syntax">
@@ -141,25 +211,29 @@
           
           <p>Some elements are <em>empty</em> which means that they do not have element content nor end tags (Example 2).</p>
           
-          <table border="0" cellspacing="0" cellpadding="7" style="text-align: center; width: max-content;">
-            <tr style="background-color:#b5d6f3;">
+          <table>
+            <thead>
+              <tr>
               <th></th>
               <th>Start Tag</th>
               <th>Element Content</th>
               <th>End Tag</th>
             </tr>
+            </thead>
+            <tbody>
             <tr>
-              <th style="background-color:#b5d6f3;">Regular Element</th>
+                <td>Regular Element</td>
               <td><code>&lt;x&gt;</code></td>
               <td><code>abc</code></td>
               <td><code>&lt;/x&gt;</code></td>
             </tr>
             <tr>
-              <th style="background-color:#b5d6f3;">Empty Element</th>
+                <td>Empty Element</td>
               <td><code>&lt;x&gt;</code></td>
               <td></td>
               <td></td>
             </tr>
+            </tbody>
           </table>
         
         <h4>Example 1: Regular Element (paragraph)</h4>
@@ -213,8 +287,9 @@
               <li>Property Value <code><span class="tooltip">value<span class="tooltiptext">the text after the colon</span></span></code></li>
               </ol>
             
-            <table border="0" cellspacing="0" cellpadding="7" style="text-align:center; width: max-content;">
-              <tr style="background-color:#b5d6f3;">
+            <table>
+              <thead>  
+                <tr>
                 <th></th>
                 <th></th>
                 <th>Attribute Name</th>
@@ -222,8 +297,10 @@
                 <th>Property Value</th>
                 <th></th>
               </tr>
+              </thead>
+              <tbody>
               <tr>
-                <th style="background-color:#b5d6f3;">HTML </th>
+                  <td>HTML </td>
                 <td><code>&lt;x</code></td>
                 <td><code>attribute=</code></td>
                 <td><code>"value"</code></th>
@@ -231,13 +308,14 @@
                 <td><pre><code> &gt; </code></pre></td>
               </tr>
               <tr>
-                <th style="background-color:#b5d6f3;">Style</th>
+                  <td>Style</td>
                 <td><code>&lt;x</code></td>
                 <td><code>style=</code></td>
                 <td><code>"property:</code></td>
                 <td><code>value"</code></td>
                 <td><pre><code> &gt; </code></pre></td>
               </tr>
+              </tbody>
             </table>
               
               <h4>Example 1: HTML attributes for an ordered list</h4>
