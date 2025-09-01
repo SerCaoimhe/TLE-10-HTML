@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"> 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Placido—Multimedia</title>
+  <title>Placido—TLE 10 Notes</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="style.css">
   <style>
@@ -35,17 +35,7 @@
       margin-right: 230px; 
       padding-right: 10px;
     }
-    table {
-      border-collapse: collapse;
-      text-align: center;
-      width: max-content;
-    }
-    thead {
-      background-color:#b5d6f3;
-    }
-    th, td {
-      padding: 3px 10px 3px 10px
-    }
+
     iframe { 
       width: 70%; height: 300px; border: 2px solid #333; margin-top: 10px; 
     }
@@ -97,19 +87,6 @@
           defined, the other dimension will adjust accordingly to maintain the original aspect ratio.
         </p>
         <p>Lastly, <strong>videos and audio</strong> may be inserted along with the <em>controls</em>, <em>autoplay</em>, and <em>muted</em> attributes. 
-          <code>controls</code> display play, pause, and volume buttons; <code>autoplay</code> instructs the browser to play the media immediately upon the running
-          of the webpage; and <code>muted</code> mutes the media by default.
-        </p>
-        <p>While there are many file types for each media, only selected ones are compatible in browsers (see table).</p>
-        <p>All three media can be inserted using their respective start tags, but <strong>only images do not have an end tag</strong>, making
-          the image element a void element.
-        </p>
-        <p>There <em>source</em> attribute is the one common among all three media elements. It is applied using <code>src</code> followed by the local file destination
-        path or URL.</p>
-        <p>Images and videos must be inserted with the <em>width</em> and <em>height</em> attributes specified. These define their pixel dimensions. If only one of these is
-          defined, the other dimension will adjust accordingly to maintain the original aspect ratio.
-        </p>
-        <p>Lastly, videos and audio may be inserted along with the <em>controls</em>, <em>autoplay</em>, and <em>muted</em> attributes. 
           <code>controls</code> display play, pause, and volume buttons; <code>autoplay</code> instructs the browser to play the media immediately upon the running
           of the webpage; and <code>muted</code> mutes the media by default.
         </p>
@@ -208,10 +185,45 @@
           <b>Preview</b>
           <br>
           <video src="" controls height="500" title="Jarrell dance">
-<<<<<<< HEAD
+            Video cannot be played. <!--This is the text that is displayed if ever the media cannot be displayed.-->
+          </video>
+
+          <h3>Example 3: Audio</h3>
+          <b>Syntax</b>
+          <br>
+          <pre><code>&lt;audio src="Multimedia/OHIOISONFIRE.mp3" controls loop title="OHIOISONFIRE"&gt;
+  Audio cannot be played. &lt;!--This is the text that is displayed if ever the media cannot be displayed.--&gt;
+&lt;/audio&gt;</pre></code>
+          
+          <b>Preview</b>
+          <br>
+          <audio src="Multimedia/OHIOISONFIRE.mp3" controls loop title="OHIOISONFIRE">
+            Audio cannot be played. <!--This is the text that is displayed if ever the media cannot be displayed.-->
+          </audio>
+
+   
+        
+          
+          <h3>Example 1: Image</h3>
+          <b>Syntax</b>
+          <br>
+          <pre><code>&lt;img src="Multimedia/IMG_5835.jpg" width="700" alt="Sir Derik with Grade 10-Platibabies" title="Sir Derik with Grade 10-Platibabies"&gt;</code></pre>
+          
+          <b>Preview</b>
+          <br>
+          <img src="Multimedia/IMG_5835.jpg" width="700" alt="Sir Derik with Grade 10-Platibabies" title="Sir Derik with Grade 10-Platibabies">
+          <br>
+          
+          <h3>Example 2: Video</h3>
+          <b>Syntax</b>
+          <br>
+          <pre><code>&lt;video src="Multimedia/Screen Recording 2024-10-09 183342.mp4" controls height="500" title="Jarrell dance"&gt;
+  Video cannot be played &lt;!--This is the text that is displayed if ever the media cannot be displayed.--&gt;
+&lt;/video&gt;</pre></code>
+          
+          <b>Preview</b>
+          <br>
           <video src="" controls height="500" title="Jarrell dance">
-=======
-          <video src="" controls width="700" title="Crushing it with Doom">
             Video cannot be played. <!--This is the text that is displayed if ever the media cannot be displayed.-->
           </video>
 
