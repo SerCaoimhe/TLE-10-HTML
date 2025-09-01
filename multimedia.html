@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"> 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Placido—TLE 10 Notes</title>
+  <title>Placido—Multimedia</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="style.css">
   <style>
@@ -35,7 +35,17 @@
       margin-right: 230px; 
       padding-right: 10px;
     }
-
+    table {
+      border-collapse: collapse;
+      text-align: center;
+      width: max-content;
+    }
+    thead {
+      background-color:#b5d6f3;
+    }
+    th, td {
+      padding: 3px 10px 3px 10px
+    }
     iframe { 
       width: 70%; height: 300px; border: 2px solid #333; margin-top: 10px; 
     }
@@ -55,7 +65,6 @@
         <a href="tables.html" target="_self" title="Learn about Tables">Tables</a>
         <a href="multimedia.html" target="_self" title="You're already here -_-">Multimedia</a>
         <a href="links.html" target="_self" title="Learn about Links">Links</a>
-        <a href="forms.html" target="_self" title="Learn about Forms">Forms</a>
         <a href="glossandex.html" target="_blank" title="Go to Glossary and Index of terms">Glossary & Index</a>
     </nav>
     <main>
@@ -65,12 +74,16 @@
         <p>All three media can be inserted using their respective start tags, but <strong>only images do not have an end tag</strong>, making
           the image element a void element.
         </p>
-        <p>There <em>source</em> attribute is the one common among all three media elements. It is applied using <code>src</code> followed by the local file destination
+        <h2>Attributes</h2>
+        <p>The <em>source</em> attribute is the one common among all three media elements. It is applied using <code>src</code> followed by the 
+          <span class="tooltip">local file destination
+            <span class="tooltiptext">e.g. C:\Users\Name\Pictures\File.png</span>
+          </span>
         path or URL.</p>
-        <p>Images and videos must be inserted with the <em>width</em> and <em>height</em> attributes specified. These define their pixel dimensions. If only one of these is
+        <p><strong>Images and videos</strong> must be inserted with the <em>width</em> and <em>height</em> attributes specified. These define their pixel dimensions. If only one of these is
           defined, the other dimension will adjust accordingly to maintain the original aspect ratio.
         </p>
-        <p>Lastly, videos and audio may be inserted along with the <em>controls</em>, <em>autoplay</em>, and <em>muted</em> attributes. 
+        <p>Lastly, <strong>videos and audio</strong> may be inserted along with the <em>controls</em>, <em>autoplay</em>, and <em>muted</em> attributes. 
           <code>controls</code> display play, pause, and volume buttons; <code>autoplay</code> instructs the browser to play the media immediately upon the running
           of the webpage; and <code>muted</code> mutes the media by default.
         </p>

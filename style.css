@@ -27,7 +27,7 @@
   
   /* Animation */
   opacity: 0;
-  transition: opacity 0.3s;
+  transition: opacity 0s;
   
   /* Small arrow */
   pointer-events: none;

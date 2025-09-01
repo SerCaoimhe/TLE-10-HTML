@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"> 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Placido—TLE 10 Notes</title>
+  <title>Placido—Links</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="style.css">
   <style>
@@ -35,7 +35,17 @@
       margin-right: 230px; 
       padding-right: 10px;
     }
-
+    table {
+      border-collapse: collapse;
+      text-align: center;
+      width: max-content;
+    }
+    thead {
+      background-color:#b5d6f3;
+    }
+    th, td {
+      padding: 3px 10px 3px 10px
+    }
     iframe { 
       width: 70%; height: 300px; border: 2px solid #333; margin-top: 10px; 
     }
@@ -55,7 +65,6 @@
     <a href="tables.html" target="_self" title="Learn about Tables">Tables</a>
     <a href="multimedia.html" target="_self" title="Learn about Multimedia Elements">Multimedia</a>
     <a href="links.html" target="_self" title="Learn about Links">Links</a>
-    <a href="forms.html" target="_self" title="Learn about Forms">Forms</a>
     <a href="glossandex.html" target="_blank" title="Go to Glossary and Index of terms">Glossary & Index</a>
   </nav>
   <aside>
@@ -107,7 +116,7 @@
       <p class="funfact">
         <span class="b">🤓 Author's Markup:</span> You can cancel activting a link mid-click by dragging the pointer away <strong>before</strong> letting go of the left mouse button.
       </p>  
-      <p>A hyperlink is applied using the <em>anchor</em> tag <code>&lt;a&gt;</code>,
+      <p>A hyperlink is applied using the <em>anchor</em> <code>&lt;a&gt;</code> tag,
         the <strong>required</strong> 
         <span class="tooltip"><em>hyperlink reference</em>
           <span class="tooltiptext"><code>href</code></span>
@@ -125,23 +134,27 @@
         </span>
         and <code>y</code> is the link text.
       
-      <table border="0" cellspacing="0" cellpadding="3" style="text-align:center; width: max-content;">
-        <tr style="background-color:#b5d6f3;">
-          <th></th>
-          <th>Attribute</th>
-          <th>Value</th>
-          <th></th>
-          <th>Element Content</th>
-          <th></th>
-        </tr>
-        <tr>
-          <td><code>&lt;a</code></td>
-          <td><pre><code>   href=   </code></pre></td>
-          <td><code>"x"</code></td>
-          <td><code>&gt;</code></td>
-          <td><code>y</code></td>
-          <td><code>&lt;/a&gt;</code></td>
-        </tr>
+      <table>
+        <thead>  
+          <tr style="background-color:#b5d6f3;">
+            <th></th>
+            <th>Attribute</th>
+            <th>Value</th>
+            <th></th>
+            <th>Element Content</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>&lt;a</code></td>
+            <td><code>href=</code></td>
+            <td><code>"x"</code></td>
+            <td><code>&gt;</code></td>
+            <td><code>y</code></td>
+            <td><code>&lt;/a&gt;</code></td>
+          </tr>
+        </thead>
       </table>
       <p>Another attribute ideally used is <em>target</em>. By default, the linked document will be opened in the same 
         <span class="tooltip">frame,

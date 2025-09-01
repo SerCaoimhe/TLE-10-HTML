@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"> 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Placido—TLE 10 Notes</title>
+  <title>Placido—Text</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="style.css">
   <style>
@@ -35,7 +35,17 @@
       margin-right: 230px; 
       padding-right: 10px;
     }
-
+    table {
+      border-collapse: collapse;
+      text-align: center;
+      width: max-content;
+    }
+    thead {
+      background-color:#b5d6f3;
+    }
+    th, td {
+      padding: 3px 10px 3px 10px
+    }
     iframe { 
       width: 70%; height: 300px; border: 2px solid #333; margin-top: 10px; 
     }
@@ -55,7 +65,6 @@
     <a href="tables.html" target="_self" title="Learn about Tables">Tables</a>
     <a href="multimedia.html" target="_self" title="Learn about Multimedia Elements">Multimedia</a>
     <a href="links.html" target="_self" title="Learn about Links">Links</a>
-    <a href="forms.html" target="_self" title="Learn about Forms">Forms</a>
     <a href="glossandex.html" target="_blank" title="Go to Glossary and Index of terms">Glossary & Index</a>
   </nav>
   <aside>
@@ -124,10 +133,10 @@
   This still belongs to the same paragraph but is forced onto the next line.
 &lt;/p&gt;
 &lt;p&gt;This is another paragraph.&lt;/p&gt;</code></pre>
-          <h4>Preview:</h4>
-          <p>This is one paragraph but you want a break after this.<br>
-              This still belongs to the same paragraph but is forced onto the next line.</p>
-          <p>This is another paragraph.</p>
+        <h4>Preview:</h4>
+        <p>This is one paragraph but you want a break after this.<br>
+          This still belongs to the same paragraph but is forced onto the next line.</p>
+        <p>This is another paragraph.</p>
       </article>
       <article>
         <h3>2. Horizontal Rule</h3>
@@ -347,104 +356,104 @@ extra spaces and line breaks in the code are
     <section id="formatting">
       <h2>Formatting</h2>
       <p>Formatting elements can be added to make either <em>visual</em> or 
-          <em>semantic</em> changes to text. 
-          Visual changes are purely for appearance, while semantic changes 
-          affect how the browser treats the text.
+        <em>semantic</em> changes to text. 
+        Visual changes are purely for appearance, while semantic changes 
+        affect how the browser treats the text.
       </p>
-      <table border="1" cellspacing="0" cellpadding="3" style="text-align:center; width:max-content;">
-          <thead>
-              <tr style="background-color:#b5d6f3;">
-                  <th>Format</th>
-                  <th>Tags</th>
-                  <th>Syntax</th>
-                  <th>Preview</th>
-                  <th>Semantic?</th>
-              </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td style="text-align:center">Normal</td>
-              <td style="text-align:center">-</td>
-              <td style="text-align:center"><pre><code>&lt;p&gt;Normal&lt;/p&gt;</code></pre></td>
-              <td style="text-align:center">Normal</td>
-              <td style="text-align:center">No</td>
-            </tr>
-            <tr>
-              <td style="text-align:center">Bold</td>
-              <td style="text-align:center"><pre><code>&lt;b&gt;&lt;/b&gt;</code></pre></td>
-              <td style="text-align:center"><pre><code>&lt;b&gt;Bold&lt;/b&gt;</code></pre></td>
-              <td style="text-align:center"><b>Bold</b></td>
-              <td style="text-align:center">No</td>
-            </tr>
-            <tr>
-              <td style="text-align:center">Strong</td>
-              <td style="text-align:center"><pre><code>&lt;strong&gt;&lt;/strong&gt;</code></pre></td>
-              <td style="text-align:center"><pre><code>&lt;strong&gt;Strong&lt;/strong&gt;</code></pre></td>
-              <td style="text-align:center"><strong>Strong</strong></td>
-              <td style="text-align:center">Yes</td>
-            </tr>
-            <tr>
-              <td style="text-align:center">Italicized</td>
-              <td style="text-align:center"><pre><code>&lt;i&gt;&lt;/i&gt;</code></pre></td>
-              <td style="text-align:center"><pre><code>&lt;i&gt;Italicized&lt;/i&gt;</code></pre></td>
-              <td style="text-align:center"><i>Italicized</i></td>
-              <td style="text-align:center">No</td>
-            </tr>
-            <tr>
-              <td style="text-align:center">Emphasis</td>
-              <td style="text-align:center"><pre><code>&lt;em&gt;&lt;/em&gt;</code></pre></td>
-              <td style="text-align:center"><pre><code>&lt;em&gt;Emphasis&lt;/em&gt;</code></pre></td>
-              <td style="text-align:center"><em>Emphasis</em></td>
-              <td style="text-align:center">Yes</td>
-            </tr>
-            <tr>
-              <td style="text-align:center">Underlined</td>
-              <td style="text-align:center"><pre><code>&lt;u&gt;&lt;/u&gt;</code></pre></td>
-              <td style="text-align:center"><pre><code>&lt;u&gt;Underlined&lt;/u&gt;</code></pre></td>
-              <td style="text-align:center"><u>Underlined</u></td>
-              <td style="text-align:center">No</td>
-            </tr>  
-            <tr>
-              <td style="text-align:center">Inserted</td>
-              <td style="text-align:center"><pre><code>&lt;ins&gt;&lt;/ins&gt;</code></pre></td>
-              <td style="text-align:center"><pre><code>&lt;ins&gt;Inserted&lt;/ins&gt;</code></pre></td>
-              <td style="text-align:center"><ins>Inserted</ins></td>
-              <td style="text-align:center">Yes</td>
-            </tr>          
-            <tr>
-              <td style="text-align:center">Small</td>
-              <td style="text-align:center"><pre><code>&lt;small&gt;&lt;/small&gt;</code></pre></td>
-              <td style="text-align:center"><pre><code>&lt;small&gt;Small&lt;/small&gt;</code></pre></td>
-              <td style="text-align:center"><small>Small</small></td>
-              <td style="text-align:center">Yes</td>
-            </tr>
-            <tr>
-              <td style="text-align:center">Subscript</td>
-              <td style="text-align:center"><pre><code>&lt;sub&gt;&lt;/sub&gt;</code></pre></td>
-              <td style="text-align:center"><pre><code>X&lt;sub&gt;Subscript&lt;/sub&gt;</code></pre></td>
-              <td style="text-align:center">X<sub>Subscript</sub></td>
-              <td style="text-align:center">Yes</td>
-            </tr>
-            <tr>
-              <td style="text-align:center">Superscript</td>
-              <td style="text-align:center"><pre><code>&lt;sup&gt;&lt;/sup&gt;</code></pre></td>
-              <td style="text-align:center"><pre><code>X&lt;sup&gt;Superscript&lt;/sup&gt;</code></pre></td>
-              <td style="text-align:center">X<sup>Superscript</sup></td>
-              <td style="text-align:center">Yes</td>
-            </tr>
-            <tr>
-              <td style="text-align:center">Strikethrough</td>
-              <td style="text-align:center"><pre><code>&lt;s&gt;&lt;/s&gt;</code></pre></td>
-              <td style="text-align:center"><pre><code>&lt;s&gt;Strikethrough&lt;/s&gt;</code></pre></td>
-              <td style="text-align:center"><s>Strikethrough</s></td>
-              <td style="text-align:center">No</td>
+      <table>
+        <thead>
+          <tr style="background-color:#b5d6f3;">
+            <th>Format</th>
+            <th>Tags</th>
+            <th>Syntax</th>
+            <th>Preview</th>
+            <th>Semantic?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="text-align:center">Normal</td>
+            <td style="text-align:center">-</td>
+            <td style="text-align:center"><pre><code>&lt;p&gt;Normal&lt;/p&gt;</code></pre></td>
+            <td style="text-align:center">Normal</td>
+            <td style="text-align:center">No</td>
           </tr>
           <tr>
-              <td style="text-align:center">Deleted</td>
-              <td style="text-align:center"><pre><code>&lt;del&gt;&lt;/del&gt;</code></pre></td>
-              <td style="text-align:center"><pre><code>&lt;del&gt;Deleted&lt;/del&gt;</code></pre></td>
-              <td style="text-align:center"><del>Deleted</del></td>
-              <td style="text-align:center">Yes</td>
+            <td style="text-align:center">Bold</td>
+            <td style="text-align:center"><pre><code>&lt;b&gt;&lt;/b&gt;</code></pre></td>
+            <td style="text-align:center"><pre><code>&lt;b&gt;Bold&lt;/b&gt;</code></pre></td>
+            <td style="text-align:center"><b>Bold</b></td>
+            <td style="text-align:center">No</td>
+          </tr>
+          <tr>
+            <td style="text-align:center">Strong</td>
+            <td style="text-align:center"><pre><code>&lt;strong&gt;&lt;/strong&gt;</code></pre></td>
+            <td style="text-align:center"><pre><code>&lt;strong&gt;Strong&lt;/strong&gt;</code></pre></td>
+            <td style="text-align:center"><strong>Strong</strong></td>
+            <td style="text-align:center">Yes</td>
+          </tr>
+          <tr>
+            <td style="text-align:center">Italicized</td>
+            <td style="text-align:center"><pre><code>&lt;i&gt;&lt;/i&gt;</code></pre></td>
+            <td style="text-align:center"><pre><code>&lt;i&gt;Italicized&lt;/i&gt;</code></pre></td>
+            <td style="text-align:center"><i>Italicized</i></td>
+            <td style="text-align:center">No</td>
+          </tr>
+          <tr>
+            <td style="text-align:center">Emphasis</td>
+            <td style="text-align:center"><pre><code>&lt;em&gt;&lt;/em&gt;</code></pre></td>
+            <td style="text-align:center"><pre><code>&lt;em&gt;Emphasis&lt;/em&gt;</code></pre></td>
+            <td style="text-align:center"><em>Emphasis</em></td>
+            <td style="text-align:center">Yes</td>
+          </tr>
+          <tr>
+            <td style="text-align:center">Underlined</td>
+            <td style="text-align:center"><pre><code>&lt;u&gt;&lt;/u&gt;</code></pre></td>
+            <td style="text-align:center"><pre><code>&lt;u&gt;Underlined&lt;/u&gt;</code></pre></td>
+            <td style="text-align:center"><u>Underlined</u></td>
+            <td style="text-align:center">No</td>
+          </tr>  
+          <tr>
+            <td style="text-align:center">Inserted</td>
+            <td style="text-align:center"><pre><code>&lt;ins&gt;&lt;/ins&gt;</code></pre></td>
+            <td style="text-align:center"><pre><code>&lt;ins&gt;Inserted&lt;/ins&gt;</code></pre></td>
+            <td style="text-align:center"><ins>Inserted</ins></td>
+            <td style="text-align:center">Yes</td>
+          </tr>          
+          <tr>
+            <td style="text-align:center">Small</td>
+            <td style="text-align:center"><pre><code>&lt;small&gt;&lt;/small&gt;</code></pre></td>
+            <td style="text-align:center"><pre><code>&lt;small&gt;Small&lt;/small&gt;</code></pre></td>
+            <td style="text-align:center"><small>Small</small></td>
+            <td style="text-align:center">Yes</td>
+          </tr>
+          <tr>
+            <td style="text-align:center">Subscript</td>
+            <td style="text-align:center"><pre><code>&lt;sub&gt;&lt;/sub&gt;</code></pre></td>
+            <td style="text-align:center"><pre><code>X&lt;sub&gt;Subscript&lt;/sub&gt;</code></pre></td>
+            <td style="text-align:center">X<sub>Subscript</sub></td>
+            <td style="text-align:center">Yes</td>
+          </tr>
+          <tr>
+            <td style="text-align:center">Superscript</td>
+            <td style="text-align:center"><pre><code>&lt;sup&gt;&lt;/sup&gt;</code></pre></td>
+            <td style="text-align:center"><pre><code>X&lt;sup&gt;Superscript&lt;/sup&gt;</code></pre></td>
+            <td style="text-align:center">X<sup>Superscript</sup></td>
+            <td style="text-align:center">Yes</td>
+          </tr>
+          <tr>
+            <td style="text-align:center">Strikethrough</td>
+            <td style="text-align:center"><pre><code>&lt;s&gt;&lt;/s&gt;</code></pre></td>
+            <td style="text-align:center"><pre><code>&lt;s&gt;Strikethrough&lt;/s&gt;</code></pre></td>
+            <td style="text-align:center"><s>Strikethrough</s></td>
+            <td style="text-align:center">No</td>
+          </tr>
+          <tr>
+            <td style="text-align:center">Deleted</td>
+            <td style="text-align:center"><pre><code>&lt;del&gt;&lt;/del&gt;</code></pre></td>
+            <td style="text-align:center"><pre><code>&lt;del&gt;Deleted&lt;/del&gt;</code></pre></td>
+            <td style="text-align:center"><del>Deleted</del></td>
+            <td style="text-align:center">Yes</td>
           </tr>
           <tr>
             <td style="text-align:center">Marked</td>
