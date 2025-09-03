@@ -88,10 +88,10 @@
       <h2>What is a list?</h2>
       <p>A list enumerates items belonging to a group.</p>
       <p>Lists can be 
-        <span class="tooltip">combined
+        <span class="tooltip" id="combineddef">combined
           <span class="tooltiptext">with other types of list</span>
         </span> and 
-        <span class="tooltip">nested.
+        <span class="tooltip" id="nesteddef">nested.
           <span class="tooltiptext">comprised of sublists</span>
         </span>
       </p>
@@ -104,27 +104,27 @@
           <h3 id="unordered">1. Unordered List</h3>
           <p>The unordered list element is used to enumerate items <strong>in no particular order</strong> using
             bullets as the default 
-            <span class="tooltip"><em>list marker</em>
+            <span class="tooltip" id="lmdef"><em>list marker</em>
               <span class="tooltiptext">symbol that marks each item</span>
             </span>. It is begun with the <em>unordered list</em> <code>&lt;ul&gt;</code> 
             tag and filled with the <em>list item</em> <code>&lt;li&gt;</code> tag.
           </p>
           <p>The list marker may be changed from a bullet to another type using the 
-            <span class="tooltip">style attribute
-                <span class="tooltiptext">see Structure>Attribute</span>
+            <span class="tooltip" id="sadef">style attribute
+                <span class="tooltiptext">includes various definable visual properties</span>
             </span> 
             with the <em>list-style-type</em> property and corresponding property value with the syntax:
             <code>&lt;ul style="list-style-type:x;"&gt;</code> where <code>x</code> is any of the following values: 
-            <span class="tooltip"><em>disc</em>,
+            <span class="tooltip" id="discdef"><em>disc</em>,
                 <span class="tooltiptext">default, shaded circle aka "bullet"</span>
             </span> 
-            <span class="tooltip"><em>circle</em>,
+            <span class="tooltip" id="circledef"><em>circle</em>,
                 <span class="tooltiptext">unshaded circle</span>
             </span>
-            <span class="tooltip"><em>square</em>,
+            <span class="tooltip" id="squaredef"><em>square</em>,
                 <span class="tooltiptext">shaded square</span>
             </span>
-            <span class="tooltip"><em>none</em>
+            <span class="tooltip" id="nonedef"><em>none</em>
                 <span class="tooltiptext">no list marker</span>
             </span>.
               The disc value will return the default bullet marker.
@@ -162,7 +162,7 @@
             tag or for a <strong>specific item</strong> by placing it in the <code>&lt;li&gt;</code> tag.
           </p>
           <p>All items in the list will stick to the list-style-type value defined for the list unless 
-            <span class="tooltip">overridden
+            <span class="tooltip" id="overriddendef">overridden
               <span class="tooltiptext">when a general rule is replaced by a more specific rule</span>
             </span> by a custom list-style-type value in an item (Example 2).
           </p>
@@ -204,7 +204,7 @@
         <article>
           <h3 id="ordered">2. Ordered List</h3>
           <p>The ordered list element is used to enumerate items <strong>in a particular order</strong> using
-            <span class="tooltip">Arabic numerals
+            <span class="tooltip" id="arabicdef">Arabic numerals
               <span class="tooltiptext">e.g. -1, 0, 1</span>
             </span> 
             as the default numbering style. It is begun with the <em>ordered list</em> <code>&lt;ol&gt;</code> tag and filled with the 
@@ -228,7 +228,15 @@
             <span class="tooltip"><em>a</em>
                 <span class="tooltiptext">for lowercase alphabet</span>
             </span>;
-            and <code>y</code> is any natural number (integer in the case of Arabic numerals). 
+            and <code>y</code> is any 
+            <span class="tooltip" id="nndef">natural number
+              <span class="tooltiptext">1, 2, 3,...</span>
+            </span> 
+            (
+            <span class="tooltip" id="integerdef">integer
+              <span class="tooltiptext">...-1, 0, 1</span>
+            </span> 
+            in the case of Arabic numerals). 
           </p>
           <p> If no attributes are used, the list will use the default Arabic numerals starting from 1.</p> 
           <p class="funfact">

@@ -79,10 +79,10 @@
         </p>
         <h2>Attributes</h2>
         <p>The <em>source</em> attribute is the one common among all three media elements. It is applied using <code>src</code> followed by the 
-          <span class="tooltip">local file destination
+          <span class="tooltip" id="lfpdef">local file path
             <span class="tooltiptext">e.g. C:\Users\Name\Pictures\File.png</span>
           </span>
-        path or URL.</p>
+        or URL.</p>
         <p><strong>Images and videos</strong> must be inserted with the <em>width</em> and <em>height</em> attributes specified. These define their pixel dimensions. If only one of these is
           defined, the other dimension will adjust accordingly to maintain the original aspect ratio.
         </p>
@@ -105,22 +105,22 @@
               <td><code>width</code>, <code>height</code></td>
               <td><code>alt</code></td>
               <td>
-                <span class="tooltip">APNG,
+                <span class="tooltip" id="">APNG,
                   <span class="tooltiptext">Animated Portable Network Graphics</span>
                 </span>
-                <span class="tooltip">GIF,
+                <span class="tooltip" id="">GIF,
                   <span class="tooltiptext">Graphics Interchange Format</span>
                 </span>
-                <span class="tooltip">ICO,
+                <span class="tooltip" id="">ICO,
                   <span class="tooltiptext">Microsoft Icon</span>
                 </span>
-                <span class="tooltip">JPEG,
+                <span class="tooltip" id="">JPEG,
                   <span class="tooltiptext">Joint Photographic Expert Group</span>
                 </span>
-                <span class="tooltip">PNG,
+                <span class="tooltip" id="">PNG,
                   <span class="tooltiptext">Portable Network Graphics</span>
                 </span>
-                <span class="tooltip">SVG,
+                <span class="tooltip" id="">SVG,
                   <span class="tooltiptext">Scalable Vector Graphics</span>
                 </span>
               </td>
@@ -133,11 +133,11 @@
               <td><code>width</code>, <code>height</code>,</td>
               <td><code>controls</code>, <code>loop</code>, <code>autoplay</code>, <code>muted</code></td>
               <td>
-                <span class="tooltip">MPEG-4/MP4,
+                <span class="tooltip" id="">MPEG-4/MP4,
                   <span class="tooltiptext">Moving Pictures Expert Group</span>
                 </span>
                 OGG,
-                <span class="tooltip">WebM,
+                <span class="tooltip" id="">WebM,
                   <span class="tooltiptext">Web Media</span>
                 </span>
               </td>
@@ -151,7 +151,7 @@
               <td>
                 MP3, OGG,
                 </span>
-                <span class="tooltip">WAV,
+                <span class="tooltip" id="">WAV,
                   <span class="tooltiptext">Waveform Audio File Format</span>
                 </span></td>
             </tr>
@@ -176,7 +176,7 @@
           
           <b>Preview</b>
           <br>
-          <video src="" controls height="500" title="Jarrell dance">
+          <video controls height="500" title="Jarrell dance">
             Video cannot be played. <!--This is the text that is displayed if ever the media cannot be displayed.-->
           </video>
 
@@ -194,45 +194,8 @@
           </audio>
 
    
-        
-          
-          <h3>Example 1: Image</h3>
-          <b>Syntax</b>
-          <br>
-          <pre><code>&lt;img src="Multimedia/IMG_5835.jpg" width="700" alt="Sir Derik with Grade 10-Platibabies" title="Sir Derik with Grade 10-Platibabies"&gt;</code></pre>
-          
-          <b>Preview</b>
-          <br>
-          <img src="Multimedia/IMG_5835.jpg" width="700" alt="Sir Derik with Grade 10-Platibabies" title="Sir Derik with Grade 10-Platibabies">
-          <br>
-          
-          <h3>Example 2: Video</h3>
-          <b>Syntax</b>
-          <br>
-          <pre><code>&lt;video src="" controls height="500" title="Jarrell dance"&gt;
-  Video cannot be played &lt;!--This is the text that is displayed if ever the media cannot be displayed.--&gt;
-&lt;/video&gt;</pre></code>
-          
-          <b>Preview</b>
-          <br>
-          <video src="" controls height="500" title="Jarrell dance">
-            Video cannot be played. <!--This is the text that is displayed if ever the media cannot be displayed.-->
-          </video>
 
-          <h3>Example 3: Audio</h3>
-          <b>Syntax</b>
-          <br>
-          <pre><code>&lt;audio src="Multimedia/OHIOISONFIRE.mp3" controls loop title="OHIOISONFIRE"&gt;
-  Audio cannot be played. &lt;!--This is the text that is displayed if ever the media cannot be displayed.--&gt;
-&lt;/audio&gt;</pre></code>
           
-          <b>Preview</b>
-          <br>
-          <audio src="Multimedia/OHIOISONFIRE.mp3" controls loop title="OHIOISONFIRE">
-            Audio cannot be played. <!--This is the text that is displayed if ever the media cannot be displayed.-->
-          </audio>
-
-   
         
       </section>
     </main>

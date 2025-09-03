@@ -120,7 +120,7 @@
               <td>Head</td>
               <td><code>&lt;head&gt;&lt;/head&gt;</code></td>
               <td style="text-align: left">Contains  
-                <span class="tooltip"><em>metadata</em>
+                <span class="tooltip" id="metadatadef"><em>metadata</em>
                   <span class="tooltiptext">"data about data"; document properties</span>
                 </span>
                 about the HTML document
@@ -164,15 +164,15 @@
           <h3 id="element">Element</h3>
           <p>
             The <em>element</em> is the building block of HTML. It defines the content to be presented by the 
-            <span class="tooltip"><em>browser</em>.
+            <span class="tooltip" id="browserdef"><em>browser</em>.
               <span class="tooltiptext">program or application that displays webpages</span>
             </span>
             It is comprised of 
-            <span class="tooltip"><em>characters</em>
+            <span class="tooltip" id="charactersdef"><em>characters</em>
               <span class="tooltiptext">letters, numbers, symbols, and spaces</span>
             </span>
             arranged according to a particular 
-            <span class="tooltip"><em>syntax</em>.
+            <span class="tooltip" id="syntaxdef"><em>syntax</em>.
               <span class="tooltiptext">rules governing how a language is structured</span>
             </span>
           </p>
@@ -190,13 +190,13 @@
           <p>
             An element has specific parts that must be present to be understood and executed by the browser. 
             It is initiated by the 
-            <span class="tooltip"><em>start tag</em>,
+            <span class="tooltip" id="stdef"><em>start tag</em>,
               <span class="tooltiptext">aka "open" tag</span>
             </span>contains 
-            <span class="tooltip"><em>element content</em>,
+            <span class="tooltip" id="ecdef"><em>element content</em>,
               <span class="tooltiptext">the actual content to be presented by the browser</span>
             </span>and ends with the 
-            <span class="tooltip"><em>end tag</em>
+            <span class="tooltip" id="etdef"><em>end tag</em>
               <span class="tooltiptext">aka "close" tag</span>
             </span>.
           </p>
@@ -204,16 +204,16 @@
           <ol>
             <li>Start Tag
               <ol type="a">
-                <li><span class="tooltip">Opening angle bracket<span class="tooltiptext">aka the "less than symbol"</span></span> <code>&lt;</code></li>
-                <li><span class="tooltip">Tag name<span class="tooltiptext">element identifier</span></span> <code>x</code></li>
-                <li><span class="tooltip">Closing angle bracket<span class="tooltiptext">aka the "greater than symbol"</span></span> <code>&gt;</code></li>
+                <li><span class="tooltip" id="oabdef">Opening angle bracket<span class="tooltiptext">aka the "less than symbol"</span></span> <code>&lt;</code></li>
+                <li><span class="tooltip" id="tndef">Tag name<span class="tooltiptext">element identifier</span></span> <code>x</code></li>
+                <li><span class="tooltip" id="cabdef">Closing angle bracket<span class="tooltiptext">aka the "greater than symbol"</span></span> <code>&gt;</code></li>
               </ol>
             </li>
             <li>Element Content <code>abc</code></li>
             <li>End Tag
               <ol type="a">
                 <li>Opening angle bracket <code>&lt;</code></li>
-                <li><span class="tooltip">Forward slash<span class="tooltiptext">indicates closing tag</span></span> <code>/</code></li>
+                <li><span class="tooltip" id="fsdef">Forward slash<span class="tooltiptext">indicates closing tag</span></span> <code>/</code></li>
                 <li>Tag name <code>x</code></li>
                 <li>Closing angle bracket <code>&gt;</code></li>
               </ol>
@@ -268,20 +268,20 @@
         <article>
             <h3 id="attribute">Attribute</h3>
             <p>
-              An <em>attribute</em> is an aspect of an element. It provides additional information that serves to further specify
+              An <em id="attributedef">attribute</em> is an aspect of an element. It provides additional information that serves to further specify
               instructions for the browser. They can be applied to <strong>all elements</strong>, but most do not require them, save for
               <span class="tooltip">some.
                 <span class="tooltiptext">e.g. <code>&lt;a&gt;, &lt;img&gt;, &lt;iframe&gt;, &lt;input&gt;</code></span>
               </span>
                 To be applied, the
-              <span class="tooltip"><em>attribute name</em>
+              <span class="tooltip" id="attributedef"><em>attribute</em>
                 <span class="tooltiptext">name of the attribute to be defined</span>
               </span>
-              and
-              <span class="tooltip"><em> attribute value</em>
+              and corresponding
+              <span class="tooltip" id="valuedef"><em>value</em>,
                 <span class="tooltiptext">how the browser presents the element content based on chosen attribute</span>
               </span>
-              must be encoded <strong>inside the start tag</strong>.
+              if any, must be encoded <strong>inside the start tag</strong>.
             </p>
             
             <h4>Parts of an Attribute</h4>
@@ -289,7 +289,7 @@
               <li>Attribute Name <code><span class="tooltip">attribute<span class="tooltiptext">the text before the equal sign</span></span></code></li>
               <li>Attribute Value <code><span class="tooltip">value<span class="tooltiptext">the text inside the quotes</span></span></code></li>
               <p><em>Style</em>, a CSS attribute, can be used in HTML, and it has an additional component, the 
-                <span class="tooltip"><em>property</em>
+                <span class="tooltip" id="propertydef"><em>property</em>
                   <span class="tooltiptext">one of many definable variables of the style attribtue
                 </span>
               </p>
@@ -332,7 +332,7 @@
               <h4>Example 1: HTML attributes for an ordered list</h4>
               <p>The attributes applied are <em>type</em> and <em>start</em>. The defined values for each are inside the quotation marks.</p>
               <b>Syntax:</b>
-              <pre><code>&lt;ol <span class="tooltip">type<span class="tooltiptext">attribute</span></span>="<span class="tooltip">I<span class="tooltiptext">value</span></span>" start="1"&gt;
+              <pre><code>&lt;ol <span class="tooltip">type<span class="tooltiptext">attribute<sub>1</sub></span></span>="<span class="tooltip">I<span class="tooltiptext">value<sub>1</sub></span></span>" <span class="tooltip">start<span class="tooltiptext">attribute<sub>2</sub></span></span>="<span class="tooltip">1<span class="tooltiptext">value<sub>2</sub></span></span>"&gt;
   &lt;li&gt;Item 1&lt;/li&gt;
   &lt;li&gt;Item 2&lt;/li&gt;     
 &lt;/ol&gt;</code></pre>
