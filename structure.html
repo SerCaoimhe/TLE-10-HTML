@@ -155,7 +155,37 @@
         <br>
         <iframe src="Multimedia/Screenshot 2025-09-01 223326.png" style="width: 80%; height: 348px"></iframe>
         <h3>Nesting</h3>
-        <p>An important aspect of HTML is the <em>nesting</em>.</p>
+        <p>An important aspect of HTML is <em>nesting</em>. This refers to the hierarchical organization of elements. Some elements are broader and contain elements within.
+          The former is called the <em>parent</em>, while the latter are called <em>children</em> (which can also be parents if containing smaller elements). Children elements
+          within the same parent element are called <em>siblings</em>.
+        </p>
+        <b>Syntax</b>
+        <pre><code>&lt;body&gt;
+  &lt;main&gt;
+    &lt;section&gt;
+      &lt;p&gt;Paragraph&lt;/p&gt;
+      &lt;ul&gt;
+          &lt;li&gt;List&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/section&gt;
+  &lt;/main&gt;
+&lt;body&gt;</code></pre>
+        <b>Preview</b>
+        <div style="background-color: rgb(35, 145, 205); padding: 1%">
+          <h2>Body (Main's parent)</h2>
+          <div style="background-color: rgb(75, 175, 228); margin:1%; padding: 1%">
+            <h3>Main (Body's child, Section's parent)</h3>
+            <div style="background-color: rgb(150, 210, 243); margin:1%; padding: 1%">
+              <h4>Section (Main's child, Paragraph and List's parent)</h4>
+              <div style="background-color: rgb(255, 255, 255); margin:1%; padding: 1%">
+                <p>Paragraph (Section's child, List's sibling)</p>
+                <ul>
+                  <li>List (Section's child, Paragraph's sibling)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>  
       
       <section id="syntax">
@@ -366,5 +396,21 @@
     <footer>
         <p>© 2025 Derik's Notes. All rights reserved.</p>
     </footer>
+
+<main><!--this is a parent-->
+  <section>Chapter 1</section><!--this is a child of main-->
+    <p>Lorem ipsum, dolor sit amet consectetur 
+      adipisicing elit. Iste inventore dolorem 
+      perferendis sit quos explicabo sapiente 
+      aperiam nihil? Expedita delectus dolor inventore quam quas repudiandae quibusdam ipsam pariatur rerum nam.</p>
+  <section>Chapter 2</section>
+
+</main>
+
+
+
+
+
+
 </body>
 </html>
