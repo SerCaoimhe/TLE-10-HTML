@@ -82,13 +82,13 @@
     <aside>
         <h3>Quick Links</h3>
         <ul>
-            <li><a href="#syntax">Syntax</a>
+          <li><a href="#structure">Structure</a></li>  
+          <li><a href="#syntax">Syntax</a>
                 <ul>
                 <li><a href="#element">Element</a></li>
                 <li><a href="#attribute">Attribute</a></li>
                 </ul>
             </li>
-          <li><a href="#structure">Structure</a></li>
           <li><a href="#top">Back to Top</a></li>
         </ul>
     </aside>
@@ -155,7 +155,7 @@
         <br>
         <iframe src="Multimedia/Screenshot 2025-09-01 223326.png" style="width: 80%; height: 348px"></iframe>
         <h3>Other Semantic and Nonsemantic Parts</h3>
-        <table>
+        <table style="text-align: left;">
           <thead>
             <tr>
               <th>Part</th>
@@ -169,43 +169,43 @@
               <td>Main</td>
               <td><code>&lt;main&gt;&lt;/main&gt;</td>
               <td>contains primary content unique to the webpage</td>
-              <td>Yes</td>
+              <td style="text-align: center;">Yes</td>
             </tr>
             <tr>
               <td>Section</td>
               <td><code>&lt;section&gt;&lt;/section&gt;</td>
               <td>divides content thematically</td>
-              <td>Yes</td>
+              <td style="text-align: center;">Yes</td>
             </tr>
             <tr>
               <td>Article</td>
               <td><code>&lt;article&gt;&lt;/article&gt;</td>
               <td>contains stand-alone content that can make sense outside the current page</td>
-              <td>Yes</td>
+              <td style="text-align: center;">Yes</td>
             </tr>
             <tr>
               <td>Aside</td>
               <td><code>&lt;aside&gt;&lt;/aside&gt;</td>
               <td>contains content indirectly, if at all, related to the main content</td>
-              <td>Yes</td>
+              <td style="text-align: center;">Yes</td>
             </tr>
             <tr>
               <td>Header</td>
               <td><code>&lt;header&gt;&lt;/header&gt;</td>
               <td>contains introductory elements for the parent or repeating introductory content across webpages</td>
-              <td>Yes</td>
+              <td style="text-align: center;">Yes</td>
             </tr>
             <tr>
               <td>Footer</td>
               <td><code>&lt;footer&gt;&lt;/footer&gt;</td>
               <td>contains secondary information for the parent or repeating secondary content across webpages</td>
-              <td>Yes</td>
+              <td style="text-align: center;">Yes</td>
             </tr>
             <tr>
               <td>Division</td>
               <td><code>&lt;div&gt;&lt;/div&gt;</td>
-              <td>All purpose structural element</td>
-              <td>No</td>
+              <td>all purpose structural element, demarcates a block part of the code</td>
+              <td style="text-align: center;">No</td>
             </tr>
             <tr>
               <td>Span</td>
@@ -214,42 +214,126 @@
                 <span class="tooltip">inline
                   <span class="tooltiptext">element that DOES NOT occupy an entire line</span>
                 </span> part of the code</td>
-              <td>No</td>
+              <td style="text-align: center;">No</td>
             </tr>
           </tbody>
         </table>
         <h3>Nesting</h3>
-        <p>An important aspect of HTML is <em>nesting</em>. This refers to the hierarchical organization of elements. Some elements are broader and contain elements within.
-          The former is called the <em>parent</em>, while the latter are called <em>children</em> (which can also be parents if containing smaller elements). Children elements
+        <p>An important aspect of HTML is <em>nesting</em>. This refers to the hierarchical organization of elements. Some elements are broader and contain elements within. 
+          The former is called the <em>parent</em>, while the latter are called <em>children</em> (which can also be parents if containing sub-elements). Children elements
           within the same parent element are called <em>siblings</em>.
         </p>
         <b>Syntax</b>
-        <pre><code>&lt;body&gt;
-  &lt;main&gt;
-    &lt;section&gt;
-      &lt;p&gt;Paragraph&lt;/p&gt;
+        <pre><code><span style="background-color: rgb(35, 145, 205);">&lt;body&gt;</span>
+  <span style="background-color: rgb(75, 175, 228);">&lt;main&gt;</span>
+    <span style="background-color: rgb(150, 210, 243);">&lt;section&gt;</span>
+      <span style="background-color: rgb(255,255,255);">&lt;p&gt;Paragraph&lt;/p&gt;
       &lt;ul&gt;
           &lt;li&gt;List&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/section&gt;
-  &lt;/main&gt;
-&lt;body&gt;</code></pre>
+      &lt;/ul&gt;</span>
+    <span style="background-color: rgb(150, 210, 243);">&lt;/section&gt;</span>
+    <span style="background-color: rgb(150, 210, 243);">&lt;section&gt;</span>
+      <span style="background-color: rgb(255,255,255);">&lt;p&gt;Paragraph&lt;/p&gt;
+      &lt;ul&gt;
+          &lt;li&gt;List&lt;/li&gt;
+      &lt;/ul&gt;</span>
+    <span style="background-color: rgb(150, 210, 243);">&lt;/section&gt;</span>
+  <span style="background-color: rgb(75, 175, 228);">&lt;/main&gt;</span>
+<span style="background-color: rgb(35, 145, 205);">&lt;body&gt;</span></code></pre>
         <b>Preview</b>
         <div style="background-color: rgb(35, 145, 205); padding: 1%">
           <h2>Body (Main's parent)</h2>
           <div style="background-color: rgb(75, 175, 228); margin:1%; padding: 1%">
             <h3>Main (Body's child, Section's parent)</h3>
             <div style="background-color: rgb(150, 210, 243); margin:1%; padding: 1%">
-              <h4>Section (Main's child, Paragraph and List's parent)</h4>
+              <h4>Section 1 (Main's child, Paragraph and List's parent)</h4>
               <div style="background-color: rgb(255, 255, 255); margin:1%; padding: 1%">
-                <p>Paragraph (Section's child, List's sibling)</p>
+                <p>Paragraph 1 (Section's child, List 1's sibling)               
+                </p>
                 <ul>
-                  <li>List (Section's child, Paragraph's sibling)</li>
+                  <li>List 1 (Section's child, Paragraph 1's sibling)</li>
+                </ul>
+              </div>
+              <h4>Section 2 (Main's child, Paragraph and List's parent)</h4>
+              <div style="background-color: rgb(255, 255, 255); margin:1%; padding: 1%">
+                <p>Paragraph 2 (Section2 's child, List 2's sibling)               
+                </p>
+                <ul>
+                  <li>List 2 (Section 2's child, Paragraph 2's sibling)</li>
                 </ul>
               </div>
             </div>
           </div>
         </div>
+        <h3>Block and Inline Elements</h3>
+        <p>Another important aspect of HTML structure is the use of <em>block</em> and <em>inline</em> elements. A webpage is essentially made up of lines (or rows) and columns in which
+          the content is allocated. Block and inline assigments determine the nature of the elements and how they interact with the lines of the webpage.
+        </p>
+        <div style="background-color: #76b9f3; padding: 5px"><b>BLOCK ELEMENT 1 (occupies this entire line)</b></div>
+        <div style="background-color: #76b9f3; padding: 5px"><b>BLOCK ELEMENT 2 (occupies this entire line)</b><span style="background-color: rgb(255, 255, 255); padding: 5px">INLINE ELEMENT 1 
+          (co-occupies this line)</span><span style="background-color: rgb(167, 215, 241); padding: 5px">INLINE ELEMENT 2 (co-occupies this line)</span></div>
+        <h4>Block Elements</h4>
+        <p>These elements <em>occupy an entire line</em> in the webpage. This means that no other content can be displayed in that line. 
+          Here are some examples of block elements:</p>
+        <ul>
+          <li>h1–h6</li>
+          <li>p</li>
+          <li>hr</li>
+          <li>pre</li>
+          <li>main</li>
+          <li>section</li>
+          <li>article</li>
+          <li>aside</li>
+          <li>header</li>
+          <li>footer</li>
+          <li>div</li>
+          <li>nav</li>
+          <li>ul, ol, li, dt, dd</li>
+          <li>table, thead, tbody, tr, th, td, caption, foot</li>
+          <li>form</li>
+        </ul>
+        <b>Syntax</b>
+        <pre><code>&lt;p&gt;The paragraph element is a block element.&lt;p&gt;</span>&lt;hr&gt;<b>&lt;!--the horizontal rule &lthr&gt;is another block element, so it cannot occupy the same line as &lt;p&gt; even if they are written in the same line in code--&gt;</b></span></code></pre>
+        <b>Preview</b>
+        <p>The paragraph element is a block element.</p><hr>
+
+        <h4>Inline Elements</h4>
+        <p>These elements <em>do not occupy an entire line</em> in the webpage. This means that they can be displayed side by side each other and the block element. 
+          Here are some examples of inline elements:</p>
+        <ul>
+          <li>br</li>
+          <li>a</li>
+          <li>b, strong</li>
+          <li>i, em</li>
+          <li>u, ins</li>
+          <li>s, del</li>
+          <li>small</li>
+          <li>sup, sub</li>
+          <li>small</li>
+          <li>mark</li>
+          <li>img</li>
+          <li>audio</li>
+          <li>span</li>
+        </ul>
+        <b>Syntax</b>
+        <pre><code>&lt;p&gt;The paragraph element is a block element but the inline elements &lt;code&gt;img&lt;/code&gt;&lt;img src="Multimedia/woodstock.webp" width="100"&gt; 
+  and &lt;code&gt;
+  &lt;span class="tooltip"&gt;vid
+    &lt;span class="tooltiptext"&gt;technically this is an inline-block type of element&lt;/span&gt;
+  &lt;/span&gt;
+  &lt;/code&gt;&lt;video src="Multimedia/Screen Recording 2024-10-09 183342.mp4" width="200" controls audtoplay loop muted&gt;
+  &lt;/video&gt;
+  can be placed without being displaced to a new line.
+&lt;/p&gt;</code></pre>
+        <b>Preview</b>
+        <p>The paragraph element is a block element but the inline elements <code>img</code>
+          <img src="Multimedia/woodstock.webp" width="100"> and <code>
+            <span class="tooltip">vid
+              <span class="tooltiptext">technically this is an inline-block type of element</span>
+            </span>
+            </code><video src="Multimedia/Screen Recording 2024-10-09 183342.mp4" width="200" controls audtoplay loop muted></video> 
+          can be placed without being displaced to a new line.
+        </p>
       </section>  
       
       <section id="syntax">
@@ -460,21 +544,5 @@
     <footer>
         <p>© 2025 Derik's Notes. All rights reserved.</p>
     </footer>
-
-<main><!--this is a parent-->
-  <section>Chapter 1</section><!--this is a child of main-->
-    <p>Lorem ipsum, dolor sit amet consectetur 
-      adipisicing elit. Iste inventore dolorem 
-      perferendis sit quos explicabo sapiente 
-      aperiam nihil? Expedita delectus dolor inventore quam quas repudiandae quibusdam ipsam pariatur rerum nam.</p>
-  <section>Chapter 2</section>
-
-</main>
-
-
-
-
-
-
 </body>
 </html>
