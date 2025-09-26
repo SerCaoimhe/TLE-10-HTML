@@ -6,40 +6,6 @@
   <title>Placido—TLE 10 Notes</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="style.css">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-    }
-    header, footer, nav, main, section, article, aside {
-      border: 0px solid #ccc;
-      padding: 1%;
-      margin: 5px;
-    }
-    nav a {
-      margin-right: 10px;
-    }
-    aside {
-      position: fixed;
-      bottom: 0;              
-      right: 0;
-      width: auto;
-      height: auto; 
-      background-color: #76b9f3;
-      padding: 1%;
-      border-left: 7px solid #2666c0;
-      font-size: 0.9rem;
-      overflow-y: auto;
-    }
-    main {
-      margin-right: 230px; 
-      padding-right: 10px;
-    }
-
-    iframe { 
-      width: 70%; height: 300px; border: 2px solid #333; margin-top: 10px; 
-    }
-  </style>
 </head>
 <body>
     <header>
@@ -57,15 +23,28 @@
         <a href="links.html" target="_self" title="Learn about Links">Links</a>
         <a href="glossandex.html" target="_blank" title="Go to Glossary and Index of terms">Glossary & Index</a>
     </nav>
+    <aside>
+    <h3 class="no-counter">Quick Links</h3>
+    <ul>
+      <li><a href="#what">Multimedia Elements</a></li>
+      <li><a href="#attributes">Attributes</a></li>
+      <li><a href="#img">Image</a></li>
+      <li><a href="#video">Video</a></li>
+      <li><a href="#audio">Audio</a></li>
+      <li><a href="#top">Back to Top</a></li>
+      <li><a href="tables.html">Previous</a></li>
+      <li><a href="links.html">Next</a></li>
+    </ul>
+  </aside>
     <main>
       <section>
-        <h2>What are multimedia elements?</h2>
+        <h2 id="what">What are multimedia elements?</h2>
         <p>Multimedia elements include content other than text, such as: images, videos, and audio.</p>
         <p>All three media can be inserted using their respective start tags, but <strong>only images do not have an end tag</strong>, making
           the image element a void element.
         </p>
         
-        <h2>Attributes</h2>
+        <h2 id="attributes">Attributes</h2>
         <p>The <em>source</em> attribute is the one common among all three media elements. It is applied using <code>src</code> followed by the 
           <span class="tooltip" id="lfpdef">local file path
             <span class="tooltiptext">e.g. C:\Users\Name\Pictures\File.png</span>
@@ -138,14 +117,13 @@
               <td><code>controls</code>, <code>loop</code>, <code>autoplay</code>, <code>muted</code></td>
               <td>
                 MP3, OGG,
-                </span>
                 <span class="tooltip" id="">WAV,
                   <span class="tooltiptext">Waveform Audio File Format</span>
                 </span></td>
             </tr>
           </table>
           
-          <h3>Example 1: Image</h3>
+          <h3 id="img">Example 1: Image</h3>
           <b>Syntax</b>
           <br>
           <pre><code>&lt;img src="Multimedia/IMG_5835.jpg" width="700" alt="Sir Derik with Grade 10-Platibabies" title="Sir Derik with Grade 10-Platibabies"&gt;</code></pre>
@@ -155,12 +133,12 @@
           <img src="Multimedia/IMG_5835.jpg" width="600" alt="Sir Derik with Grade 10-Platibabies" title="Sir Derik with Grade 10-Platibabies">
           <br>
           
-          <h3>Example 2: Video</h3>
+          <h3 id="video">Example 2: Video</h3>
           <b>Syntax</b>
           <br>
           <pre><code>&lt;video src="Multimedia/Dota 2 2024-02-22 21-49-41.mp4" controls width="700" title="Crushing it with Doom"&gt;
   Video cannot be played &lt;!--This is the text that is displayed if ever the media cannot be displayed.--&gt;
-&lt;/video&gt;</pre></code>
+&lt;/video&gt;</code></pre>
           
           <b>Preview</b>
           <br>
@@ -168,12 +146,12 @@
             Video cannot be played. <!--This is the text that is displayed if ever the media cannot be displayed.-->
           </video>
 
-          <h3>Example 3: Audio</h3>
+          <h3 id="audio">Example 3: Audio</h3>
           <b>Syntax</b>
           <br>
           <pre><code>&lt;audio src="Multimedia/OHIOISONFIRE.mp3" controls loop title="OHIOISONFIRE"&gt;
   Audio cannot be played. &lt;!--This is the text that is displayed if ever the media cannot be displayed.--&gt;
-&lt;/audio&gt;</pre></code>
+&lt;/audio&gt;</code></pre>
           
           <b>Preview</b>
           <br>

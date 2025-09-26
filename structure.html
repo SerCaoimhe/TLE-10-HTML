@@ -7,61 +7,6 @@
   <title>Placido—Structure</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="style.css">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-    }
-    header, footer, nav, main, section, article, aside {
-      border: 0px solid #ccc;
-      padding: 1%;
-      margin: 5px;
-    }
-    nav a {
-      margin-right: 10px;
-    }
-    aside {
-      position: fixed;
-      bottom: 0;              
-      right: 0;
-      width: auto;
-      height: auto; 
-      background-color: #76b9f3;
-      padding: 1%;
-      border-left: 7px solid #2666c0;
-      font-size: 0.9rem;
-      overflow-y: auto;
-    }
-    main {
-      margin-right: 230px; 
-      padding-right: 10px;
-    }
-    table {
-      border-collapse: collapse;
-      text-align: center;
-      width: max-content;
-    }
-    thead {
-      background-color:#b5d6f3;
-    }
-    th, td {
-      padding: 3px 10px 3px 10px
-    }
-    table {
-      border-collapse: collapse;
-      text-align: center;
-      width: max-content;
-    }
-    thead {
-      background-color:#b5d6f3;
-    }
-    th, td {
-      padding: 3px 10px 3px 10px
-    }
-    iframe { 
-      width: 70%; height: 300px; border: 2px solid #333; margin-top: 10px; 
-    }
-  </style>
 </head>
 <body>
     <header>
@@ -82,20 +27,29 @@
     <aside>
         <h3>Quick Links</h3>
         <ul>
-          <li><a href="#structure">Structure</a></li>  
+          <li><a href="#structure">Structure</a>
+            <ul>
+                <li><a href="#mainparts">Main Parts</a></li>
+                <li><a href="#otherparts">Other Parts</a></li>
+                <li><a href="#nesting">Nesting</a></li>
+                <li><a href="#blockinline">Block and Inline</a></li>
+              </ul>
+          </li>  
           <li><a href="#syntax">Syntax</a>
-                <ul>
+              <ul>
                 <li><a href="#element">Element</a></li>
                 <li><a href="#attribute">Attribute</a></li>
-                </ul>
+              </ul>
             </li>
           <li><a href="#top">Back to Top</a></li>
+          <li><a href="index.html">Previous</a></li>
+          <li><a href="editor.html">Next</a></li>
         </ul>
     </aside>
     <main>
-      <section id="structure">
-        <h2>Structure</h2>
-        <h3>Parts</h3>
+      <section>
+        <h2 id="structure">Structure</h2>
+        <h3 id="mainparts">Main Parts</h3>
         <p>Basic HTML code contains the following structural elements:</p>
         <table>
           <thead>
@@ -138,7 +92,7 @@
             </tr>
           </tbody>
         </table>
-        <b>Syntax</b>
+        <b>Syntax:</b>
         <pre><code>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
@@ -146,15 +100,15 @@
 &lt;/head&gt;
 &lt;body&gt;
 
-&lt;h1&gt;Structure&lt;/h1&gt;
-&lt;p&gt;This page talks about the basic structure of HTML.&lt;/p&gt;
+  &lt;h1&gt;Structure&lt;/h1&gt;
+  &lt;p&gt;This page talks about the basic structure of HTML.&lt;/p&gt;
 
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
-        <b>Preview</b>
+        <b>Preview:</b>
         <br>
         <iframe src="Multimedia/Screenshot 2025-09-01 223326.png" style="width: 80%; height: 348px"></iframe>
-        <h3>Other Semantic and Nonsemantic Parts</h3>
+        <h3 id="otherparts">Other Parts</h3>
         <table style="text-align: left;">
           <thead>
             <tr>
@@ -167,49 +121,49 @@
           <tbody>
             <tr>
               <td>Main</td>
-              <td><code>&lt;main&gt;&lt;/main&gt;</td>
+              <td><code>&lt;main&gt;&lt;/main&gt;</code></td>
               <td>contains primary content unique to the webpage</td>
               <td style="text-align: center;">Yes</td>
             </tr>
             <tr>
               <td>Section</td>
-              <td><code>&lt;section&gt;&lt;/section&gt;</td>
+              <td><code>&lt;section&gt;&lt;/section&gt;</code></td>
               <td>divides content thematically</td>
               <td style="text-align: center;">Yes</td>
             </tr>
             <tr>
               <td>Article</td>
-              <td><code>&lt;article&gt;&lt;/article&gt;</td>
+              <td><code>&lt;article&gt;&lt;/article&gt;</code></td>
               <td>contains stand-alone content that can make sense outside the current page</td>
               <td style="text-align: center;">Yes</td>
             </tr>
             <tr>
               <td>Aside</td>
-              <td><code>&lt;aside&gt;&lt;/aside&gt;</td>
+              <td><code>&lt;aside&gt;&lt;/aside&gt;</code></td>
               <td>contains content indirectly, if at all, related to the main content</td>
               <td style="text-align: center;">Yes</td>
             </tr>
             <tr>
               <td>Header</td>
-              <td><code>&lt;header&gt;&lt;/header&gt;</td>
+              <td><code>&lt;header&gt;&lt;/header&gt;</code></td>
               <td>contains introductory elements for the parent or repeating introductory content across webpages</td>
               <td style="text-align: center;">Yes</td>
             </tr>
             <tr>
               <td>Footer</td>
-              <td><code>&lt;footer&gt;&lt;/footer&gt;</td>
+              <td><code>&lt;footer&gt;&lt;/footer&gt;</code></td>
               <td>contains secondary information for the parent or repeating secondary content across webpages</td>
               <td style="text-align: center;">Yes</td>
             </tr>
             <tr>
               <td>Division</td>
-              <td><code>&lt;div&gt;&lt;/div&gt;</td>
+              <td><code>&lt;div&gt;&lt;/div&gt;</code></td>
               <td>all purpose structural element, demarcates a block part of the code</td>
               <td style="text-align: center;">No</td>
             </tr>
             <tr>
               <td>Span</td>
-              <td><code>&lt;span&gt;&lt;/span&gt;</td>
+              <td><code>&lt;span&gt;&lt;/span&gt;</code></td>
               <td>demarcates an 
                 <span class="tooltip">inline
                   <span class="tooltiptext">element that DOES NOT occupy an entire line</span>
@@ -218,12 +172,12 @@
             </tr>
           </tbody>
         </table>
-        <h3>Nesting</h3>
+        <h3 id="nesting">Nesting</h3>
         <p>An important aspect of HTML is <em>nesting</em>. This refers to the hierarchical organization of elements. Some elements are broader and contain elements within. 
           The former is called the <em>parent</em>, while the latter are called <em>children</em> (which can also be parents if containing sub-elements). Children elements
           within the same parent element are called <em>siblings</em>.
         </p>
-        <b>Syntax</b>
+        <b>Syntax:</b>
         <pre><code><span style="background-color: rgb(35, 145, 205);">&lt;body&gt;</span>
   <span style="background-color: rgb(75, 175, 228);">&lt;main&gt;</span>
     <span style="background-color: rgb(150, 210, 243);">&lt;section&gt;</span>
@@ -240,13 +194,13 @@
     <span style="background-color: rgb(150, 210, 243);">&lt;/section&gt;</span>
   <span style="background-color: rgb(75, 175, 228);">&lt;/main&gt;</span>
 <span style="background-color: rgb(35, 145, 205);">&lt;body&gt;</span></code></pre>
-        <b>Preview</b>
+        <b>Preview:</b>
         <div style="background-color: rgb(35, 145, 205); padding: 1%">
-          <h2>Body (Main's parent)</h2>
+          <h2 class="no-counter">Body (Main's parent)</h2>
           <div style="background-color: rgb(75, 175, 228); margin:1%; padding: 1%">
-            <h3>Main (Body's child, Section's parent)</h3>
+            <h3 class="no-counter">Main (Body's child, Section's parent)</h3>
             <div style="background-color: rgb(150, 210, 243); margin:1%; padding: 1%">
-              <h4>Section 1 (Main's child, Paragraph and List's parent)</h4>
+              <h4 class="no-counter">Section 1 (Main's child, Paragraph and List's parent)</h4>
               <div style="background-color: rgb(255, 255, 255); margin:1%; padding: 1%">
                 <p>Paragraph 1 (Section's child, List 1's sibling)               
                 </p>
@@ -254,7 +208,7 @@
                   <li>List 1 (Section's child, Paragraph 1's sibling)</li>
                 </ul>
               </div>
-              <h4>Section 2 (Main's child, Paragraph and List's parent)</h4>
+              <h4 class="no-counter">Section 2 (Main's child, Paragraph and List's parent)</h4>
               <div style="background-color: rgb(255, 255, 255); margin:1%; padding: 1%">
                 <p>Paragraph 2 (Section2 's child, List 2's sibling)               
                 </p>
@@ -265,7 +219,7 @@
             </div>
           </div>
         </div>
-        <h3>Block and Inline Elements</h3>
+        <h3 id="blockinline">Block and Inline Elements</h3>
         <p>Another important aspect of HTML structure is the use of <em>block</em> and <em>inline</em> elements. A webpage is essentially made up of lines (or rows) and columns in which
           the content is allocated. Block and inline assigments determine the nature of the elements and how they interact with the lines of the webpage.
         </p>
@@ -292,9 +246,9 @@
           <li>table, thead, tbody, tr, th, td, caption, foot</li>
           <li>form</li>
         </ul>
-        <b>Syntax</b>
-        <pre><code>&lt;p&gt;The paragraph element is a block element.&lt;p&gt;</span>&lt;hr&gt;<b>&lt;!--the horizontal rule &lthr&gt;is another block element, so it cannot occupy the same line as &lt;p&gt; even if they are written in the same line in code--&gt;</b></span></code></pre>
-        <b>Preview</b>
+        <b>Syntax:</b>
+        <pre><code>&lt;p&gt;The paragraph element is a block element.&lt;p&gt;<span>&lt;hr&gt;<b>&lt;!--the horizontal rule &lthr&gt;is another block element, so it cannot occupy the same line as &lt;p&gt; even if they are written in the same line in code--&gt;</b></span></code></pre>
+        <b>Preview:</b>
         <p>The paragraph element is a block element.</p><hr>
 
         <h4>Inline Elements</h4>
@@ -315,7 +269,7 @@
           <li>audio</li>
           <li>span</li>
         </ul>
-        <b>Syntax</b>
+        <b>Syntax:</b>
         <pre><code>&lt;p&gt;The paragraph element is a block element but the inline elements &lt;code&gt;img&lt;/code&gt;&lt;img src="Multimedia/woodstock.webp" width="100"&gt; 
   and &lt;code&gt;
   &lt;span class="tooltip"&gt;vid
@@ -325,7 +279,7 @@
   &lt;/video&gt;
   can be placed without being displaced to a new line.
 &lt;/p&gt;</code></pre>
-        <b>Preview</b>
+        <b>Preview:</b>
         <p>The paragraph element is a block element but the inline elements <code>img</code>
           <img src="Multimedia/woodstock.webp" width="100"> and <code>
             <span class="tooltip">vid
@@ -334,10 +288,13 @@
             </code><video src="Multimedia/Screen Recording 2024-10-09 183342.mp4" width="200" controls audtoplay loop muted></video> 
           can be placed without being displaced to a new line.
         </p>
+        <h4>Inline-Block Elements</h4>
+        <p>These elements <em>occupy an entire line</em> in the webpage. This means that no other content can be displayed in that line. 
+          Here are some examples of block elements:</p>
       </section>  
       
-      <section id="syntax">
-        <h2>Syntax</h2>
+      <section>
+        <h2 id="syntax">Syntax</h2>
         <article>
           <h3 id="element">Element</h3>
           <p>
@@ -425,13 +382,14 @@
             </tbody>
           </table>
         
-        <h4>Example 1: Regular Element (paragraph)</h4>
+        <h4>Examples</h4>
+        <p><u>Example 1: Regular Element (paragraph)</u></p>
         <b>Syntax:</b>
         <pre><code>&lt;p&gt;This is the element content.&lt;/p&gt;</code></pre>
         <b>Preview:</b>
         <p>This is the element content.</p>
         
-        <h4>Example 2: Empty Element (horizontal rule)</h4>
+        <p><u>Example 2: Empty Element (horizontal rule)</u></p>
         <b>Syntax:</b>
         <pre><code>&lt;hr&gt;</code></pre>
         <b>Preview:</b>
@@ -452,7 +410,7 @@
                 <span class="tooltiptext">e.g. <code>&lt;a&gt;, &lt;img&gt;, &lt;iframe&gt;, &lt;input&gt;</code></span>
               </span>
                 To be applied, the
-              <span class="tooltip" id="attributedef"><em>attribute</em>
+              <span class="tooltip"><em>attribute</em>
                 <span class="tooltiptext">name of the attribute to be defined</span>
               </span>
               and corresponding
@@ -468,7 +426,7 @@
               <li>Attribute Value <code><span class="tooltip">value<span class="tooltiptext">the text inside the quotes</span></span></code></li>
               <p><em>Style</em>, a CSS attribute, can be used in HTML, and it has an additional component, the 
                 <span class="tooltip" id="propertydef"><em>property</em>
-                  <span class="tooltiptext">one of many definable variables of the style attribtue
+                  <span class="tooltiptext">one of many definable variables of the style attribtue</span>
                 </span>
               </p>
               <li>Property
@@ -492,7 +450,7 @@
                   <td>HTML </td>
                   <td><code>&lt;x</code></td>
                   <td><code>attribute=</code></td>
-                  <td><code>"value"</code></th>
+                  <td><code>"value"</code></td>
                   <td></td>
                   <td><pre><code> &gt; </code></pre></td>
                 </tr>
@@ -507,28 +465,29 @@
               </tbody>
             </table>
               
-              <h4>Example 1: HTML attributes for an ordered list</h4>
+              <h4>Examples</h4>
+              <p><u>Example 1: HTML attributes for an ordered list</u></p>
               <p>The attributes applied are <em>type</em> and <em>start</em>. The defined values for each are inside the quotation marks.</p>
               <b>Syntax:</b>
               <pre><code>&lt;ol <span class="tooltip">type<span class="tooltiptext">attribute<sub>1</sub></span></span>="<span class="tooltip">I<span class="tooltiptext">value<sub>1</sub></span></span>" <span class="tooltip">start<span class="tooltiptext">attribute<sub>2</sub></span></span>="<span class="tooltip">1<span class="tooltiptext">value<sub>2</sub></span></span>"&gt;
   &lt;li&gt;Item 1&lt;/li&gt;
   &lt;li&gt;Item 2&lt;/li&gt;     
 &lt;/ol&gt;</code></pre>
-                    <b>Preview:</b>
-                    <ol type="I" start="1">
-                        <li>Item 1</li>
-                        <li>Item 2</li>     
-                    </ol>
+              <b>Preview:</b>
+              <ol type="I" start="1">
+                  <li>Item 1</li>
+                  <li>Item 2</li>     
+              </ol>
 
-                    <h4>Example 2: Style and properties for an unordered list</h4>
-                    <p>The attribute applied is <em>style</em>, while the properties are <em>line-style-type</em> and <em>background-color</em>. 
-                        The defined value for each property is placed after the colon.
-                    </p>
-                    <p>Multiple properties can be included inside the style attribute and are separated by semicolons. Take note that all 
-                        <em>property:value</em> pairs, separated by semicolons, are enclosed within the one quote pair after the equal sign.
-                    </p>
-                    <b>Syntax:</b>
-                    <pre><code>&lt;ul <span class="tooltip">style<span class="tooltiptext">attribute</span></span>="<span class="tooltip">list-style-type<span class="tooltiptext">property<sub>1</sub></span></span>: <span class="tooltip">circle<span class="tooltiptext">value<sub>1</sub></span></span>; <span class="tooltip">background-color<span class="tooltiptext">property<sub>2</sub></span></span>:<span class="tooltip">#b5d6f3<span class="tooltiptext">value<sub>2</sub></span></span>;"&gt;
+              <p><u>Example 2: Style and properties for an unordered list</u></p>
+              <p>The attribute applied is <em>style</em>, while the properties are <em>line-style-type</em> and <em>background-color</em>. 
+                  The defined value for each property is placed after the colon.
+              </p>
+              <p>Multiple properties can be included inside the style attribute and are separated by semicolons. Take note that all 
+                  <em>property:value</em> pairs, separated by semicolons, are enclosed within the one quote pair after the equal sign.
+              </p>
+              <b>Syntax:</b>
+              <pre><code>&lt;ul <span class="tooltip">style<span class="tooltiptext">attribute</span></span>="<span class="tooltip">list-style-type<span class="tooltiptext">property<sub>1</sub></span></span>: <span class="tooltip">circle<span class="tooltiptext">value<sub>1</sub></span></span>; <span class="tooltip">background-color<span class="tooltiptext">property<sub>2</sub></span></span>:<span class="tooltip">#b5d6f3<span class="tooltiptext">value<sub>2</sub></span></span>;"&gt;
   &lt;li&gt;Item 1&lt;/li&gt;
   &lt;li&gt;Item 2&lt;/li&gt;     
 &lt;/ul&gt;</code></pre>
@@ -537,7 +496,7 @@
                         <li>Item 1</li>
                         <li>Item 2</li>     
                     </ul>
-                </section>
+            
             </article>
         </section>
     </main>

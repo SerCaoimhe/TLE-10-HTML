@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html>
 <html lang="en-us">
 <head>
   <meta charset="UTF-8"> 
@@ -7,50 +6,6 @@
   <title>Placido—Lists</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="style.css">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-    }
-    header, footer, nav, main, section, article, aside {
-      border: 0px solid #ccc;
-      padding: 1%;
-      margin: 5px;
-    }
-    nav a {
-      margin-right: 10px;
-    }
-    aside {
-      position: fixed;
-      bottom: 0;              
-      right: 0;
-      width: auto;
-      height: auto; 
-      background-color: #76b9f3;
-      padding: 1%;
-      border-left: 7px solid #2666c0;
-      font-size: 0.9rem;
-      overflow-y: auto;
-    }
-    main {
-      margin-right: 230px; 
-      padding-right: 10px;
-    }
-    table {
-      border-collapse: collapse;
-      text-align: center;
-      width: max-content;
-    }
-    thead {
-      background-color:#b5d6f3;
-    }
-    th, td {
-      padding: 3px 10px 3px 10px
-    }
-    iframe { 
-      width: 70%; height: 300px; border: 2px solid #333; margin-top: 10px; 
-    }
-  </style>
 </head>
 <body><!--trying comment-->
   <header id="top">
@@ -81,6 +36,8 @@
       </li>  
       <li><a href="#nested">Nested Lists</a></li>
       <li><a href="#top">Back to Top</a></li>
+      <li><a href="text.html">Previous</a></li>
+      <li><a href="tables.html">Next</a></li>
     </ul>
   </aside>
   <main>
@@ -101,7 +58,7 @@
         <h2>Types of Lists</h2>
         <p>There are three types of lists, each with its appropriate use.</p>
         <article>
-          <h3 id="unordered">1. Unordered List</h3>
+          <h3 id="unordered">Unordered List</h3>
           <p>The unordered list element is used to enumerate items <strong>in no particular order</strong> using
             bullets as the default 
             <span class="tooltip" id="lmdef"><em>list marker</em>
@@ -166,20 +123,21 @@
               <span class="tooltiptext">when a general rule is replaced by a more specific rule</span>
             </span> by a custom list-style-type value in an item (Example 2).
           </p>
-          <h4>Example 1: property defined for entire list</h4>
+          <h4 class="no-counter">Examples</h4>
+          <p><u>Example 1: property defined for entire list</u></p>
           <b>Syntax:</b>
           <pre><code>&lt;ul style="list-style-type: circle;"&gt;
   &lt;li&gt;Item 1&lt;/li&gt;
   &lt;li&gt;Item 2&lt;/li&gt;
   &lt;li&gt;Item 3&lt;/li&gt;
 &lt;/ul&gt;</code></pre>
-          <h4>Preview:</h4>
+          <b>Preview:</b>
           <ul style="list-style-type: circle;">
             <li>Item 1</li>
             <li>Item 2</li>
             <li>Item 3</li>
           </ul>
-          <h4>Example 2: property defined for specific items</h4>
+          <p><u>Example 2: property defined for specific items</u></p>
           <b>Syntax:</b>
           <pre><code>&lt;ul&gt;<b>&lt;!--list-tyle-type is not defined, so list follows default bullet until overridden--&gt;</b>
   &lt;li&gt;Item 1&lt;/li&gt;
@@ -202,7 +160,7 @@
           </ul>
         </article>
         <article>
-          <h3 id="ordered">2. Ordered List</h3>
+          <h3 id="ordered">Ordered List</h3>
           <p>The ordered list element is used to enumerate items <strong>in a particular order</strong> using
             <span class="tooltip" id="arabicdef">Arabic numerals
               <span class="tooltiptext">e.g. -1, 0, 1</span>
@@ -303,7 +261,8 @@
           </p>
           <p>All items in the list will stick to the type value defined for the list unless overridden by a custom type value in an item (Example 2).
           </p>
-          <h4>Example 1: type defined for entire list</h4>
+          <h4 class="no-counter">Examples</h4>
+          <p><u>Example 1: type defined for entire list</u></p>
           <b>Syntax:</b>
           <pre><code>&lt;ol type="A" start="1"&gt;
   &lt;li&gt;Item 1&lt;/li&gt;
@@ -316,7 +275,7 @@
             <li>Item 2</li>
             <li>Item 3</li>
           </ol>
-          <h4>Example 2: type defined for specific items</h4>
+          <p><u>Example 2: type defined for specific items</u></p>
           <b>Syntax:</b>
           <pre><code>&lt;ol&gt;<b>&lt;!--type is not defined, so list follows default Arabic numerals until overridden--&gt;</b>
   &lt;li&gt;Item 1&lt;/li&gt;
@@ -339,7 +298,7 @@
           </ol>
       </article>
       <article>
-        <h3 id="description">3. Description List</h3>
+        <h3 id="description">Description List</h3>
         <p>The description list element is used to enumerate and describe items. It is begun with the <em>description list</em> 
           <code>&lt;dl&gt;</code> tag and filled with the <em>definition term</em> <code>&lt;dt&gt;</code> and <em>description details</em> 
           <code>&lt;dd&gt;</code> tag. 
@@ -349,7 +308,7 @@
           display whatever the element content is (including the list marker, if any). 
         </p>
         <p>When writing in code, separate each definition term with a blank line for clarity.</p>
-        <h4>Syntax:</h4>
+        <b>Syntax:</b>
         <pre><code>&lt;dl&gt;
   &lt;dt&gt;Item 1&lt;/dt&gt;
   &lt;dd&gt;Item 1 description 1 (no list marker)&lt;/dd&gt;
@@ -361,7 +320,7 @@
   &lt;dt&gt;Item 3&lt;/dt&gt;
   &lt;dd&gt;❤️ Item 3 description (emoji list marker)&lt;/dd&gt;
 &lt;/dl&gt;</code></pre>
-        <h4>Preview:</h4>
+        <b>Preview:</b>
         <dl>
           <dt>Item 1</dt>
           <dd>Item 1 description 1 (no list marker)</dd>
@@ -385,7 +344,7 @@
         <code>&lt;ol&gt;&lt;li&gt;&lt;ul&gt;&lt;li&gt;...&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ol&gt;</code>
       </p>
       <article>
-        <h4>Example 1: nested list using only one type (unordered list)</h4>
+        <p><u>Example 1: nested list using only one type (unordered list)</u></p>
         <b>Syntax:</b>
         <pre><code><b>&lt;!--spaces between items added for better legibility but not required--&gt;</b>
 &lt;h3&gt;Why Sir Derik is the best:&lt;/h3&gt;
@@ -438,7 +397,7 @@
 <b>&lt;!--END of main UNORDERED list--&gt;</b>
 &lt;/ul&gt;</code></pre>
         <b>Preview:</b>
-        <h3>Why Sir Derik is the best:</h3>
+        <h3 class="no-counter" id="best">Why Sir Derik is the best:</h3>
         <b><!--START of main UNORDERED list--></b>
         <ul>
           <li>He is tall<!--item is not closed until the sublist is closed-->
@@ -483,7 +442,7 @@
         </ul>
       </article>
       <article>
-        <h4>Example 2: nested list using multiple types</h4>
+        <p><u>Example 2: nested list using multiple types</u></p>
         <b>Syntax:</b>
         <pre><code><b>&lt;!--spaces between items added for better legibility but not required--&gt;</b>
 &lt;h3&gt;Why Sir Derik is the best:&lt;/h3&gt;
@@ -537,7 +496,7 @@
 <b>&lt;!--END of main ORDERED list--&gt;</b>
 &lt;/ol&gt;</code></pre>
         <b>Preview:</b>
-        <h3>Why Sir Derik is the best:</h3>
+        <h3 class="no-counter">Why Sir Derik is the best:</h3>
           <!--START of main ORDERED list-->
         <ol>
           <li>He is tall<!--item is not closed until the sublist is closed-->

@@ -6,50 +6,6 @@
   <title>Placido—Text</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="style.css">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-    }
-    header, footer, nav, main, section, article, aside {
-      border: 0px solid #ccc;
-      padding: 1%;
-      margin: 5px;
-    }
-    nav a {
-      margin-right: 10px;
-    }
-    aside {
-      position: fixed;
-      bottom: 0;              
-      right: 0;
-      width: auto;
-      height: auto; 
-      background-color: #76b9f3;
-      padding: 1%;
-      border-left: 7px solid #2666c0;
-      font-size: 0.9rem;
-      overflow-y: auto;
-    }
-    main {
-      margin-right: 230px; 
-      padding-right: 10px;
-    }
-    table {
-      border-collapse: collapse;
-      text-align: center;
-      width: max-content;
-    }
-    thead {
-      background-color:#b5d6f3;
-    }
-    th, td {
-      padding: 3px 10px 3px 10px
-    }
-    iframe { 
-      width: 70%; height: 300px; border: 2px solid #333; margin-top: 10px; 
-    }
-  </style>
 </head>
 <body>
   <header id="top">
@@ -70,18 +26,20 @@
   <aside>
     <h3>Quick Links</h3>
     <ul>
-      <li><a href="#text-elements">Text Elements</a></li>
+      <li><a href="#text-elements">Text Elements</a>
       <li><a href="#breaks">Breaks</a></li>
       <li><a href="#preformatted-text">Preformatted Text</a></li>
       <li><a href="#formatting">Formatting</a></li>
       <li><a href="#top">Back to Top</a></li>
+      <li><a href="editor.html">Previous</a></li>
+      <li><a href="lists.html">Next</a></li>
     </ul>
   </aside>
   <main>
     <section id="text-elements">
       <h2>Text Elements</h2>
       <article>
-        <h3>1. Heading</h3>
+        <h3>Heading</h3>
         <p>The heading element is used for 
           <span class="tooltip" id="headingsdef">headings
             <span class="tooltiptext">denote main topics in the page</span>
@@ -93,30 +51,29 @@
           <code>&lt;h1&gt;</code> to <em>heading 6</em> <code>&lt;h6&gt;</code> tags which define hierarchical levels for text, from highest
           (<code>&lt;h1&gt;</code>) to lowest (<code>&lt;h6&gt;</code>).
         </p>
-        <h4>Syntax:</h4>
+        <b>Syntax:</b>
 <pre><code>&lt;h1&gt;Heading 1&lt;/h1&gt;
 &lt;h2&gt;Heading 2&lt;/h2&gt;
 &lt;h3&gt;Heading 3&lt;/h3&gt;
 &lt;h4&gt;Heading 4&lt;/h4&gt;
 &lt;h5&gt;Heading 5&lt;/h5&gt;
-&lt;h6&gt;Heading 6&lt;/h6&gt;</code>
-</pre>
-                <h4>Preview:</h4>
-                <h1>Heading 1</h1>
-                <h2>Heading 2</h2>
-                <h3>Heading 3</h3>
-                <h4>Heading 4</h4>
-                <h5>Heading 5</h5>
-                <h6>Heading 6</h6>
+&lt;h6&gt;Heading 6&lt;/h6&gt;</code></pre>
+                <b>Preview:</b>
+                <h1 class="no-counter">Heading 1</h1>
+                <h2 class="no-counter">Heading 2</h2>
+                <h3 class="no-counter">Heading 3</h3>
+                <h4 class="no-counter">Heading 4</h4>
+                <h5 class="no-counter">Heading 5</h5>
+                <h6 class="no-counter">Heading 6</h6>
       </article>
       <article>
-        <h3>2. Paragraph</h3>
+        <h3>Paragraph</h3>
         <p>The paragraph element is used for bodies of text. It is applied using the <em>paragraph</em>
           <code>&lt;p&gt;</code> tag which automatically creates a new line with space above and below.</p>
-        <h4>Syntax:</h4>
+        <b>Syntax:</b>
         <pre><code>&lt;p&gt;This is one paragraph.&lt;/p&gt;&lt;p&gt;This new paragraph is on the same line in the code, but is delegated to the next line in the browser.&lt;/p&gt;
 &lt;p&gt;This is another paragraph.&lt;/p&gt;</code></pre>
-        <h4>Preview:</h4>
+        <b>Preview:</b>
         <p>This is one paragraph.</p><p>This new paragraph is on the same line in the code, but is delegated to the next line in the browser.</p>
         <p>This is another paragraph.</p>
       </article>
@@ -124,42 +81,42 @@
     <section id="breaks">
       <h2>Breaks</h2>
       <article>
-        <h3>1. Line Break</h3>
+        <h3>Line Break</h3>
         <p>The line break element forces the content to continue on a new line <strong>within</strong> the paragraph. It is applied using the <em>break</em> <code>&lt;br&gt;</code>
           <span class="tooltip" id="vtdef"><em>void tag</em>.
             <span class="tooltiptext">does not have an element content nor an end tag</span>
           </span>  
           A void tag is also known as a <em>self-closing</em> or <em>empty tag</em>.
         </p>
-        <h4>Syntax:</h4>
+        <b>Syntax:</b>
         <pre><code>&lt;p&gt;This is one paragraph but you want a break after this.&lt;br&gt;
   This still belongs to the same paragraph but is forced onto the next line.
 &lt;/p&gt;
 &lt;p&gt;This is another paragraph.&lt;/p&gt;</code></pre>
-        <h4>Preview:</h4>
+        <b>Preview:</b>
         <p>This is one paragraph but you want a break after this.<br>
           This still belongs to the same paragraph but is forced onto the next line.</p>
         <p>This is another paragraph.</p>
       </article>
       <article>
-        <h3>2. Horizontal Rule</h3>
+        <h3>Horizontal Rule</h3>
         <p>The horizontal rule element indicates a 
           <span class="tooltip" id="semanticdef"><em>semantic</em>
             <span class="tooltiptext">has meaning and non-visual implication</span>
           </span> break in the content and is indicated by a horizontal line <strong>between</strong> different parts of the page. 
           It is applied using the <em>horizontal rule</em> <code>&lt;hr&gt;</code> void tag.
         </p>
-        <h4>Syntax:</h4>
+        <b>Syntax:</b>
         <pre><code>&lt;h2&gt;This is a main heading.&lt;/h2&gt;
 &lt;p&gt;This is a paragraph.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2&gt;This is different main heading.&lt;/h2&gt;
 &lt;p&gt;This is a paragraph.&lt;/p&gt;</code></pre>
-        <h4>Preview:</h4>
-        <h2>This is a main heading.</h2>
+        <b>Preview:</b>
+        <h2 class="no-counter">This is a main heading.</h2>
         <p>This is a paragraph.</p>
         <hr>
-        <h2>This is a different main heading.</h2>
+        <h2 class="no-counter">This is a different main heading.</h2>
         <p>This is a paragraph.</p>
       </article>
     </section>
@@ -179,7 +136,7 @@
         </span>
         as seen in the <em>Syntax</em> sections in this site.
       </p>
-      <h4>Syntax:</h4>
+      <b>Syntax:</b>
       <pre><code>&lt;p&gt;This is regular 
               
               text where extra spaces and line breaks in the code are ignored.
@@ -192,7 +149,7 @@ extra spaces and line breaks in the code are
      preserved.
 &lt;/pre&gt;</code>
                 </pre>
-                <h4>Preview:</h4>
+                <b>Preview:</b>
                 <p>This is regular 
                     
                     text where extra spaces and line breaks in the code are ignored.
@@ -212,7 +169,7 @@ extra spaces and line breaks in the code are
         </span> with <code>&lt;code&gt;</code> tag to display coding syntax. 
         Example: <code>&lt;pre&gt;&lt;code&gt;...&lt;/code&gt;&lt;/pre&gt;</code>
       </p>
-      <h3>ASCII Art:</h3>
+      <h3 class="no-counter">ASCII Art:</h3>
       <p>This element is also useful for displaying <i>American Standard Code for Information Interchange (ASCII)</i> art.</p>  
       <table>
         <tr>
@@ -358,112 +315,128 @@ extra spaces and line breaks in the code are
 
     <section id="formatting">
       <h2>Formatting</h2>
-      <p>Formatting elements can be added to make either <em>visual</em> or 
-        <em>semantic</em> changes to text. 
-        Visual changes are purely for appearance, while semantic changes 
+      <p>Formatting elements can be added to make either <em>non-semantic</em> (visual) or <em>semantic</em> changes to text. Visual changes are purely for appearance, while semantic changes 
         affect how the browser treats the text.
       </p>
-      <table>
+      <p>Some pairs of formatting elements are rendered similarly, such as bold and strong. However, using one or the other is not arbitrary. It depends on the purpose for formatting the text. If there is no deep meaning behind making text thicker, use bold. Otherwise, if the word must be set apart for its importance, use strong.The same principle applies to other similar pairs of formatting elements.
+      </p>
+      <table style="text-align: left;">
+        <caption>Non-Semantic</caption>
         <thead>
           <tr style="background-color:#b5d6f3;">
             <th>Format</th>
             <th>Tags</th>
             <th>Syntax</th>
             <th>Preview</th>
-            <th>Semantic?</th>
+            <th>Purpose</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td style="text-align:center">Normal</td>
-            <td style="text-align:center">-</td>
-            <td style="text-align:center"><pre><code>&lt;p&gt;Normal&lt;/p&gt;</code></pre></td>
-            <td style="text-align:center">Normal</td>
-            <td style="text-align:center">No</td>
+            <td>Bold</td>
+            <td><pre><code>&lt;b&gt;&lt;/b&gt;</code></pre></td>
+            <td><pre><code>&lt;b&gt;Bold&lt;/b&gt;</code></pre></td>
+            <td><b>Bold</b></td>
+            <td>Thicken text</td>
           </tr>
           <tr>
-            <td style="text-align:center">Bold</td>
-            <td style="text-align:center"><pre><code>&lt;b&gt;&lt;/b&gt;</code></pre></td>
-            <td style="text-align:center"><pre><code>&lt;b&gt;Bold&lt;/b&gt;</code></pre></td>
-            <td style="text-align:center"><b>Bold</b></td>
-            <td style="text-align:center">No</td>
+            <td>Italicized</td>
+            <td><pre><code>&lt;i&gt;&lt;/i&gt;</code></pre></td>
+            <td><pre><code>&lt;i&gt;Italicized&lt;/i&gt;</code></pre></td>
+            <td><i>Italicized</i></td>
+            <td>Slant text</td>
           </tr>
           <tr>
-            <td style="text-align:center">Strong</td>
-            <td style="text-align:center"><pre><code>&lt;strong&gt;&lt;/strong&gt;</code></pre></td>
-            <td style="text-align:center"><pre><code>&lt;strong&gt;Strong&lt;/strong&gt;</code></pre></td>
-            <td style="text-align:center"><strong>Strong</strong></td>
-            <td style="text-align:center">Yes</td>
+            <td>Underlined</td>
+            <td><pre><code>&lt;u&gt;&lt;/u&gt;</code></pre></td>
+            <td><pre><code>&lt;u&gt;Underlined&lt;/u&gt;</code></pre></td>
+            <td><u>Underlined</u></td>
+            <td>Underline text</td>
           </tr>
           <tr>
-            <td style="text-align:center">Italicized</td>
-            <td style="text-align:center"><pre><code>&lt;i&gt;&lt;/i&gt;</code></pre></td>
-            <td style="text-align:center"><pre><code>&lt;i&gt;Italicized&lt;/i&gt;</code></pre></td>
-            <td style="text-align:center"><i>Italicized</i></td>
-            <td style="text-align:center">No</td>
+            <td>Strikethrough</td>
+            <td><pre><code>&lt;s&gt;&lt;/s&gt;</code></pre></td>
+            <td><pre><code>&lt;s&gt;Strikethrough&lt;/s&gt;</code></pre></td>
+            <td><s>Strikethrough</s></td>
+            <td>Cross out text</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table style="text-align: left;">
+        <caption>Semantic</caption>
+        <thead>
+          <tr style="background-color:#b5d6f3;">
+            <th>Format</th>
+            <th>Tags</th>
+            <th>Syntax</th>
+            <th>Preview</th>
+            <th width="200">Purpose</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Normal</td>
+            <td>-</td>
+            <td><pre><code>&lt;p&gt;Normal&lt;/p&gt;</code></pre></td>
+            <td>Normal</td>
+            <td>Indicate regular text</td>
           </tr>
           <tr>
-            <td style="text-align:center">Emphasis</td>
-            <td style="text-align:center"><pre><code>&lt;em&gt;&lt;/em&gt;</code></pre></td>
-            <td style="text-align:center"><pre><code>&lt;em&gt;Emphasis&lt;/em&gt;</code></pre></td>
-            <td style="text-align:center"><em>Emphasis</em></td>
-            <td style="text-align:center">Yes</td>
+            <td>Strong</td>
+            <td><pre><code>&lt;strong&gt;&lt;/strong&gt;</code></pre></td>
+            <td><pre><code>&lt;strong&gt;Strong&lt;/strong&gt;</code></pre></td>
+            <td><strong>Strong</strong></td>
+            <td>Indicate important text</td>
           </tr>
           <tr>
-            <td style="text-align:center">Underlined</td>
-            <td style="text-align:center"><pre><code>&lt;u&gt;&lt;/u&gt;</code></pre></td>
-            <td style="text-align:center"><pre><code>&lt;u&gt;Underlined&lt;/u&gt;</code></pre></td>
-            <td style="text-align:center"><u>Underlined</u></td>
-            <td style="text-align:center">No</td>
-          </tr>  
+            <td>Emphasis</td>
+            <td><pre><code>&lt;em&gt;&lt;/em&gt;</code></pre></td>
+            <td><pre><code>&lt;em&gt;Emphasis&lt;/em&gt;</code></pre></td>
+            <td><em>Emphasis</em></td>
+            <td>Indicate stressed text (as in speech) such as when introducing new terms</td>
+          </tr> 
           <tr>
-            <td style="text-align:center">Inserted</td>
-            <td style="text-align:center"><pre><code>&lt;ins&gt;&lt;/ins&gt;</code></pre></td>
-            <td style="text-align:center"><pre><code>&lt;ins&gt;Inserted&lt;/ins&gt;</code></pre></td>
-            <td style="text-align:center"><ins>Inserted</ins></td>
-            <td style="text-align:center">Yes</td>
+            <td>Inserted</td>
+            <td><pre><code>&lt;ins&gt;&lt;/ins&gt;</code></pre></td>
+            <td><pre><code>&lt;ins&gt;Inserted&lt;/ins&gt;</code></pre></td>
+            <td><ins>Inserted</ins></td>
+            <td>Indicate added text (to track revisions, for example)</td>
+          </tr>
+          <tr>
+            <td>Deleted</td>
+            <td><pre><code>&lt;del&gt;&lt;/del&gt;</code></pre></td>
+            <td><pre><code>&lt;del&gt;Deleted&lt;/del&gt;</code></pre></td>
+            <td><del>Deleted</del></td>
+            <td>Indicate removed text (to track revisions, for example)</td>
           </tr>          
           <tr>
-            <td style="text-align:center">Small</td>
-            <td style="text-align:center"><pre><code>&lt;small&gt;&lt;/small&gt;</code></pre></td>
-            <td style="text-align:center"><pre><code>&lt;small&gt;Small&lt;/small&gt;</code></pre></td>
-            <td style="text-align:center"><small>Small</small></td>
-            <td style="text-align:center">Yes</td>
+            <td>Small</td>
+            <td><pre><code>&lt;small&gt;&lt;/small&gt;</code></pre></td>
+            <td><pre><code>&lt;small&gt;Small&lt;/small&gt;</code></pre></td>
+            <td><small>Small</small></td>
+            <td>Indicate cursory and auxillary text (not important, side note)</td>
           </tr>
           <tr>
-            <td style="text-align:center">Subscript</td>
-            <td style="text-align:center"><pre><code>&lt;sub&gt;&lt;/sub&gt;</code></pre></td>
-            <td style="text-align:center"><pre><code>X&lt;sub&gt;Subscript&lt;/sub&gt;</code></pre></td>
-            <td style="text-align:center">X<sub>Subscript</sub></td>
-            <td style="text-align:center">Yes</td>
+            <td>Subscript</td>
+            <td><pre><code>&lt;sub&gt;&lt;/sub&gt;</code></pre></td>
+            <td><pre><code>X&lt;sub&gt;Subscript&lt;/sub&gt;</code></pre></td>
+            <td>X<sub>Subscript</sub></td>
+            <td>Indicate subscript</td>
           </tr>
           <tr>
-            <td style="text-align:center">Superscript</td>
-            <td style="text-align:center"><pre><code>&lt;sup&gt;&lt;/sup&gt;</code></pre></td>
-            <td style="text-align:center"><pre><code>X&lt;sup&gt;Superscript&lt;/sup&gt;</code></pre></td>
-            <td style="text-align:center">X<sup>Superscript</sup></td>
-            <td style="text-align:center">Yes</td>
+            <td>Superscript</td>
+            <td><pre><code>&lt;sup&gt;&lt;/sup&gt;</code></pre></td>
+            <td><pre><code>X&lt;sup&gt;Superscript&lt;/sup&gt;</code></pre></td>
+            <td>X<sup>Superscript</sup></td>
+            <td>Indicate superscript</td>
           </tr>
           <tr>
-            <td style="text-align:center">Strikethrough</td>
-            <td style="text-align:center"><pre><code>&lt;s&gt;&lt;/s&gt;</code></pre></td>
-            <td style="text-align:center"><pre><code>&lt;s&gt;Strikethrough&lt;/s&gt;</code></pre></td>
-            <td style="text-align:center"><s>Strikethrough</s></td>
-            <td style="text-align:center">No</td>
-          </tr>
-          <tr>
-            <td style="text-align:center">Deleted</td>
-            <td style="text-align:center"><pre><code>&lt;del&gt;&lt;/del&gt;</code></pre></td>
-            <td style="text-align:center"><pre><code>&lt;del&gt;Deleted&lt;/del&gt;</code></pre></td>
-            <td style="text-align:center"><del>Deleted</del></td>
-            <td style="text-align:center">Yes</td>
-          </tr>
-          <tr>
-            <td style="text-align:center">Marked</td>
-            <td style="text-align:center"><pre><code>&lt;mark&gt;&lt;/mark&gt;</code></pre></td>
-            <td style="text-align:center"><pre><code>&lt;mark&gt;Marked&lt;/mark&gt;</code></pre></td>
-            <td style="text-align:center"><mark>Marked</mark></td>
-            <td style="text-align:center">Yes</td>
+            <td>Marked</td>
+            <td><pre><code>&lt;mark&gt;&lt;/mark&gt;</code></pre></td>
+            <td><pre><code>&lt;mark&gt;Marked&lt;/mark&gt;</code></pre></td>
+            <td><mark>Marked</mark></td>
+            <td>Indicate text to be highlighted as notable</td>
           </tr>
         </tbody>
       </table>
