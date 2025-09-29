@@ -43,7 +43,8 @@
         <p>All three media can be inserted using their respective start tags, but <strong>only images do not have an end tag</strong>, making
           the image element a void element.
         </p>
-        
+      </section>
+      <section>  
         <h2 id="attributes">Attributes</h2>
         <p>The <em>source</em> attribute is the one common among all three media elements. It is applied using <code>src</code> followed by the 
           <span class="tooltip" id="lfpdef">local file path
@@ -122,7 +123,9 @@
                 </span></td>
             </tr>
           </table>
-          
+          </section>
+          <section>
+           <h2>Multimedia</h2> 
           <h3 id="img">Example 1: Image</h3>
           <b>Syntax</b>
           <br>
@@ -142,7 +145,7 @@
           
           <b>Preview</b>
           <br>
-          <video controls height="500" title="Jarrell dance">
+          <video src="Multimedia/Screen Recording 2024-10-09 183342.mp4" controls height="500" title="Jarrell dance">
             Video cannot be played. <!--This is the text that is displayed if ever the media cannot be displayed.-->
           </video>
 
@@ -158,6 +161,59 @@
           <audio src="Multimedia/OHIOISONFIRE.mp3" controls loop title="OHIOISONFIRE">
             Audio cannot be played. <!--This is the text that is displayed if ever the media cannot be displayed.-->
           </audio>
+
+            <h3>Inline Frame</h3>
+            <p>The inline frame or <em>iframe</em> element allows webpages and files to be embedded into a <span class="tooltip"><em>nested browsing context</em>
+                <span class="tooltiptext">smaller window inside the current window (viewport)</span> 
+                </span>
+                within the webpage.</p>
+                <p>This nested browsing context enables interaction with the content inside the iframe that does not affect the larger window surrounding it.</p>
+            <table border="0" cellspacing="0" cellpadding="7" style="text-align: left; width: max-content;">
+            <tr style="background-color:#b5d6f3;">
+              <th>Tags</th>
+              <th>Attributes</th>
+              <th colspan="2">File Types</th>
+            </tr>
+            <tr>
+              <td rowspan="5"><code>&lt;iframe&gt;&lt;/iframe&gt;</code></td>
+              <td rowspan="5"><code>src</code>, <code>width</code>, <code>height</code>
+              </td>
+              <td>Image</td>
+              <td>APNG, GIF, GIF, ICO, JPEG, PNG, SVG</td> 
+            </tr>
+            <tr>
+              <td>Video</td>
+              <td>MP4, OGG, WebM,</td> 
+            </tr>
+            <tr>
+              <td>Audio</td>
+              <td>MP3, OGG, WAV</td> 
+            </tr>
+            <tr>
+              <td>Document</td>
+              <td>DOCX, PPTX, XLSX, TXT, PDF</td> 
+            </tr>
+            <tr>
+              <td>Web Content</td>
+              <td>APNG, GIF, GIF, ICO, JPEG, PNG, SVG</td> 
+            </tr>
+          </table>
+            <h4>Image in iframe</h4>
+            <iframe width="560" height="315" src="Multimedia/IMG_7616 copy.jpg" title="Powderpuff Girls" frameborder="0">
+            </iframe>
+            <h4>Video in iframe</h4>
+            <iframe width="560" height="315" src="Multimedia/Screen Recording 2024-10-09 183342.mp4" title="Screen Recording 2024-10-09 183342.mp4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            </iframe>
+            <h4>Audio in iframe</h4>
+            <iframe width="560" height="315" src="Multimedia/OHIOISONFIRE.mp3" title="OHIOISONFIRE" frameborder="0" allow="accelerometer; autoplay;">
+            </iframe>
+            <h4>Document in iframe</h4>
+            <iframe width="560" height="315" src="Multimedia/DO-No.-88-s.-2010" title="DO-No.-88-s.-2010.pdf" frameborder="0">
+            </iframe>
+            <h4>Web Content in iframe</h4>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/YFeqYRuRwtY?si=C0rXfKm6Sn9J8w90" title="BERSERK // $uicideboy$ - DO YOU BELIEVE IN GOD? O PANA!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+           
+            
 
    
 
