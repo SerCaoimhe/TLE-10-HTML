@@ -7,10 +7,8 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="style.css">
 </head>
-<body style="background-image:url('Multimedia/b7e1e580-c611-11ea-9b24-523c65baea0e.png');
-  background-size: cover; 
-  background-repeat: no-repeat;">
-  <header>
+<body><!--trying comment-->
+  <header id="top">
     <h1>Forms</h1>
     <p>Welcome to my notes about the basics of HTML!</p>
   </header>
@@ -23,44 +21,264 @@
     <a href="tables.html" target="_self" title="Learn about Tables">Tables</a>
     <a href="multimedia.html" target="_self" title="Learn about Multimedia Elements">Multimedia</a>
     <a href="links.html" target="_self" title="Learn about Links">Links</a>
+    <a href="forms.html" target="_self" title="You're already here -_-">Forms</a>
     <a href="glossandex.html" target="_blank" title="Go to Glossary and Index of terms">Glossary & Index</a>
   </nav>
-  <!--
-      <aside>
-      <h3>Quick Links</h3>
-      <ul>
-        <li><a href="#text-elements">Text Elements</a></li>
-        <li><a href="#breaks">Breaks</a></li>
-        <li><a href="#preformatted-text">Preformatted Text</a></li>
-        <li><a href="#formatting">Formatting</a></li>
-      </ul>
-      </aside>
-      <main>
-      <section>
-          <h2>Forms</h2>
-          <article>
-              <h3>Main Topic 1</h3>
-              <p>Blablabla</p>
-          </article>
-          <article>
-              <h3>Main Topic 2</h3>
-              <p>Blablabla</p>
-              <article>
-                  <h4>Subtopic 1</h4>
-                  <p>Blablabla.</p>
-              </article>
-              <section>
-                  <h4>Subtopic 2</h4>
-                  <p>Blablabla.</p>
-                  <h5>Supporting Detail 1</h5>
-                  <h5>Supporting Detail 2</h5>
-                  <h5>Supporting Detail 3</h5>
-              </article>
-          </article>
-      </section>
-  </main>-->
+  <aside>
+    <h3>Quick Links</h3>
+    <ul>
+      <li><a href="#what">What is a form?</a></li>
+      <li><a href="#elements">Elements</a>
+        <ul>
+          <li><a href="#input">Input</a></li>
+          <li><a href="#text">Text Area</a></li>
+          <li><a href="#select">Select</a></li>
+          <li><a href="#field">Field Set</a></li>
+          <li><a href="#button">Button</a></li>
+        </ul>
+      </li>  
+      <li><a href="#top">Back to Top</a></li>
+      <li><a href="links.html">Previous</a></li>
+      <li><a href="glossandex.html">Next</a></li>
+    </ul>
+  </aside>
+  <main>
+    <section>
+      <h2 id="what">What is a form?</h2>
+      <p>A form is a data gathering instrument containing various 
+        <span class="tooltip"><em>input fields</em>
+          <span class="tooltiptext">aka "form fields"</span>
+        </span>
+        that respondents or data collectors fill out with the appropriate information. In the context of HTML, input fields are referred to as <em>form controls</em>. Websites can make use of forms for various purposes such as collecting registration details, login credentials, or feedback.
+      </p>
+    </section>
+    <section>
+      <h2 id="elements">Elements</h2>
+      <p>The form element is begun using the <em>form</em> <code>&lt;form&gt;</code> tag, filled with the form control (input fields, as previously mentioned) and auxilliary elements. Essentially, <strong>the form element merely contains the form controls and support elements</strong>, without which it is useless.
+      </p>
+      <p>The following is a list of common form elements:</p>
+      <table border="0" cellspacing="0" cellpadding="7" style="text-align: left; width: max-content;">
+        <caption>Form and Form Controls</caption>
+        <thead>
+          <tr style="background-color:#b5d6f3;">
+            <th>Element</th>
+            <th>Tags</th>
+            <th>Attributes</th>
+            <th>Purpose</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Form</td>
+            <td><code>&lt;form&gt;&lt;/form&gt;</code></td>
+            <td><code>action</code>, <code>target</code>, <code>method</code>, <code>autocomplete</code>, <code>oninput</code>*</td>
+            <td>Creates the form</td>
+          </tr>
+          <tr>
+            <td>Input</td>
+            <td><code>&lt;input&gt;</code></td>
+            <td><code>type</code>, <code>id</code>, <code>name</code></td>
+            <td>Creates a field for several types of responses</td>
+          </tr>
+          <tr>
+            <td>Text Area</td>
+            <td><code>&lt;textarea&gt;&lt;/textarea&gt;</code></td>
+            <td><code>name</code>, <code>rows</code>, <code>cols</code>, <code>autocomplete</code></td>
+            <td>Creates a multiline field for text responses</td>
+          </tr>
+          <tr>
+            <td>Select</td>
+            <td><code>&lt;select&gt;&lt;/select&gt;</code></td>
+            <td><code>id</code>, <code>name</code>, <code>size</code>, <code>multiple</code></td>
+            <td>Creates a drop-down field for predetermined responses</td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+
+      <table border="0" cellspacing="0" cellpadding="7" style="text-align: left; width: max-content;">
+        <caption>Auxilliary</caption>
+        <thead>
+          <tr style="background-color:#b5d6f3;">
+            <th>Element</th>
+            <th>Tags</th>
+            <th>Attributes</th>
+            <th>Purpose</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Label</td>
+            <td><code>&lt;label&gt;&lt;/label&gt;</code></td>
+            <td><code>for</code></td>
+            <td>Defines the form control label</td>
+          </tr>
+          <tr>
+            <td>Field Set</td>
+            <td><code>&lt;fieldset&gt;&lt;/fieldset&gt;</code></td>
+            <td>-</td>
+            <td>Creates a group for related form controls</td>
+          </tr>
+          <tr>
+            <td>Legend</td>
+            <td><code>&lt;legend&gt;&lt;/legend&gt;</code></td>
+            <td>-</td>
+            <td>Defines the field set caption</td>
+          </tr>
+          <tr>
+            <td>Data List</td>
+            <td><code>&lt;datalist&gt;&lt;/datalist&gt;</code></td>
+            <td><code>id</code></td>
+            <td>Creates a predetermined list of responses for an input field</td>
+          </tr>
+          <tr>
+            <td>Option Group</td>
+            <td><code>&lt;optgroup&gt;&lt;/optgroup&gt;</code></td>
+            <td><code>label</code></td>
+            <td>Creates groups for related options in a drop-down list</td>
+          </tr>
+          <tr>
+            <td>Option</td>
+            <td><code>&lt;option&gt;&lt;/option&gt;</code></td>
+            <td><code>value</code></td>
+            <td>Defines an option in a drop-down list</td>
+          </tr>
+          <tr>
+            <td>Button</td>
+            <td><code>&lt;button&gt;&lt;/button&gt;</code></td>
+            <td><code>type</code>, <code>onclick</code>*</td>
+            <td>Creates a clickable button</td>
+          </tr>
+          <tr>
+            <td>Output</td>
+            <td><code>&lt;output&gt;&lt;/output&gt;</code></td>
+            <td><code>id</code>, <code>name</code>, <code>for</code></td>
+            <td>Displays the result of a calculation</td>
+          </tr>
+        </tbody>
+      </table>
+      <p><small>*oninput and onclick attributes can be replaced with other 
+        <span class="tooltip"><em>event attributes</em>
+          <span class="tooltiptext">attributes (e.g. onchange, onmouseover, onkeydown) that indicate the trigger for a JS action</span>
+        </span></small></p>
+      <article>
+        <h3 id="input">Input</h3>
+        <form action="action_page.php" method="POST"> 
+          <div> 
+            <label for="gname">Given Name:</label> 
+            <input type="text" id="gname" name="gname" placeholder="Adam Antium" required> 
+          </div> 
+          <br> 
+          <div> 
+            <label for="mname">Middle Name:</label> 
+            <input type="text" id="mname" name="mname" placeholder="Skrrrt" required> 
+          </div> 
+          <br> 
+          <div> 
+            <label for="sname">Surname:</label> 
+            <input type="text" id="sname" name="sname" placeholder="Grrrah" required> 
+          </div> 
+          <br> 
+          <div> 
+            <label for="mname">Suffix:</label> 
+            <input type="suffix" id="suffix" name="suffix" placeholder="Jr."> 
+          </div> 
+          <br> 
+          <div> 
+            <label for="email">Email:</label> 
+            <input type="email" id="email" name="email" maxlength="89" placeholder="email@domain.com" required> 
+          </div> 
+          <br> 
+          <div> 
+            <label for="pass">Password:</label> 
+            <input type="password" id="pass" name="pass" minlength="8" placeholder="123!AbC" required> 
+          </div> 
+          <br> 
+          <div> 
+            <label for="phone">Phone No.:</label> 
+            <input type="tel" id="phone" name="phone" placeholder="(012)-345-6789" required> 
+          </div> 
+          <br> 
+          <div> 
+            <label for="bdate">Birthday:</label> 
+            <input type="date" id="bdate" name="bdate" required> 
+          </div> 
+          <br> 
+          <div> 
+            <label for="qty">Number of Pets:</label> 
+            <input type="number" id="qty" name="qty" min="0" max="200" placeholder="21" required> 
+          </div> 
+          <br> 
+          <div> 
+            <label for="Ltpc">Liked Topics:</label> 
+            <label for="int">Introduction</label> 
+            <input type="checkbox" id="int" name="Ltpc" value="Heading Levels"> 
+            <label for="str">Structure</label> 
+            <input type="checkbox" id="str" name="Ltpc" value="Paragraphs"> 
+            <label for="ed">Editor</label> 
+            <input type="checkbox" id="ed" name="Ltpc" value="Hyperlinks"> 
+            <label for="txt">Text</label> 
+            <input type="checkbox" id="txt" name="Ltpc" value="Formatting"> 
+            <label for="li">Lists</label> 
+            <input type="checkbox" id="li" name="Ltpc" value="Forms">
+            <label for="tb">Tables</label> 
+            <input type="checkbox" id="tb" name="Ltpc" value="Paragraphs"> 
+            <label for="mlt">Multimedia</label> 
+            <input type="checkbox" id="mlt" name="Ltpc" value="Hyperlinks"> 
+            <label for="lks">Links</label> 
+            <input type="checkbox" id="lks" name="Ltpc" value="Formatting"> 
+            <label for="fm">Forms</label> 
+            <input type="checkbox" id="fm" name="Ltpc" value="Forms">  
+          </div> 
+          <br>             
+          <div> 
+            <label for="visit">Visiting Again?:</label> 
+          
+          <!--name value should be the same across options to limit to one answer--> 
+          
+            <label for="ofc">Of Course</label> <input type="radio" id="ofc" name="visit" value="Of Course"> 
+            <label for="myb">Maybe</label> <input type="radio" id="myb" name="visit" value="Maybe"> 
+            <label for="nah">Nah</label> <input type="radio" id="nah" name="visit" value="Nah"> 
+          </div> 
+          <br> 
+        </form>
+      </article>
+      <article>
+        <h3 id="text">Text Area</h3>
+      </article>
+      <article>
+        <h3 id="select">Select</h3>
+        <div> 
+          <label for="ftopic">Fave topic:</label> 
+          <select id="ftopic" name="ftopic" required> 
+            <option value="Heading Levels">Introduction</option> 
+            <option value="Paragraphs">Structure</option> 
+            <option value="Hyperlinks">Editor</option> 
+            <option value="Formatting">Text</option> 
+            <option value="Forms">Lists</option>
+            <option value="Forms">Tables</option> 
+            <option value="Forms">Multimedia</option> 
+            <option value="Forms">Links</option> 
+            <option value="Forms">Forms</option>  
+          </select> 
+        </div> 
+      </article>
+      <article>
+        <h3 id="field">Field Set</h3>
+      </article>
+      <article>
+        <h3>Button</h3>
+        <form action="action_page.php" method="POST"> 
+          <div> 
+            <input type="reset" style="background-color:rgb(160, 229, 127); color:rgb(0, 0, 0); border-radius: 10px; width: 80px;"> 
+            <input type="submit" style="background-color:rgb(90, 169, 225); color:white; border-radius: 10px; width: 100px;"> 
+          </div> 
+        </form>
+      </article>
+    </section>
+  </main>
   <footer>
-      <p>© 2025 Derik's Notes. All rights reserved.</p>
+    <p>© 2025 Derik's Notes. All rights reserved.</p>
   </footer>
 </body>
 </html>
