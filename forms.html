@@ -54,7 +54,7 @@
     </section>
     <section>
       <h2 id="elements">Elements</h2>
-      <p>The form element is begun using the <em>form</em> <code>&lt;form&gt;</code> tag, filled with the form control (input fields, as previously mentioned) and auxilliary elements. Essentially, <strong>the form element merely contains the form controls and support elements</strong>, without which it is useless.
+      <p>The form element is applied using the <em>form</em> <code>&lt;form&gt;</code> tag, filled with the form control (input fields, as previously mentioned) and auxilliary elements. Essentially, <strong>the form element merely contains the form controls and support elements</strong>, without which it is useless.
       </p>
       <p>The following is a list of common form elements:</p>
       <table border="0" cellspacing="0" cellpadding="7" style="text-align: left; width: max-content;">
@@ -77,7 +77,7 @@
           <tr>
             <td>Input</td>
             <td><code>&lt;input&gt;</code></td>
-            <td><code>type</code>, <code>id</code>, <code>name</code></td>
+            <td><code>type</code>, <code>id</code>, <code>name</code>, <code>value</code>, <code>placeholder</code>, <code>readonly</code>, <code>disabled</code>, <code>required</code>, <code>size</code></td>
             <td>Creates a field for several types of responses</td>
           </tr>
           <tr>
@@ -95,7 +95,7 @@
         </tbody>
       </table>
       <br>
-
+      
       <table border="0" cellspacing="0" cellpadding="7" style="text-align: left; width: max-content;">
         <caption>Auxilliary</caption>
         <thead>
@@ -161,8 +161,256 @@
         <span class="tooltip"><em>event attributes</em>
           <span class="tooltiptext">attributes (e.g. onchange, onmouseover, onkeydown) that indicate the trigger for a JS action</span>
         </span></small></p>
-      <article>
-        <h3 id="input">Input</h3>
+      <p class="funfact">
+        <span class="b">🤓 Author's Markup:</span> 
+        A form in HTML is not functional until JS and PHP codes are added. However, it is still essential to know the structure and syntax of forms in this early stage of learning.
+      </p>
+        <section>
+          <h3>Form Layout</h3>
+          <p>A form can technically be created using only form control elements (Example 1); however, doing so would defeat the purpose of collecting information effectively. It is for this reason that one must use some layout elements discussed below.</p>
+          
+          <u>Example 1: form without labels</u>
+          <br><br>
+          <form style="background-color:rgba(167,215,241,0.6); padding: 5px">
+            <div>
+              <input type="text" id="fullname1" name="fullname" placeholder="Surder Ricks O. Hansom">
+            </div>
+            <div>
+              <input type="number" id="age1" name="age" placeholder="15">
+            </div>
+            <div>
+              <select id="grade1" name="grade level">
+                <option value="" selected hidden disabled></option>
+                <option value="7">Grade 7</option>
+                <option value="7">Grade 8</option>
+                <option value="7">Grade 9</option>
+                <option value="7">Grade 10</option>
+              </select>
+            </div>
+            <div>
+              <input type="radio" id="vma1" name="opinion" title="Very much agree">
+              <input type="radio" id="a1" name="opinion" title="Agree">
+              <input type="radio" id="sa1" name="opinion" title="Somewhat agree">
+              <input type="radio" id="dnda1" name="opinion" title="Do not disagree">
+            </div>
+          </form>
+          <p>The form above may be functional but incomprehensible.</p>
+          
+          
+          <u>Example 2: form with labels</u>
+          <br><br>
+          <form style="background-color:rgba(167,215,241,0.6); padding: 5px">
+            <div>
+              <label for="fullname2">Full Name:</label>
+              <input type="text" id="fullname2" name="fullname" placeholder="Surder Ricks O. Hansom">
+            </div>
+            <div>
+              <label for="age2">Age:</label>
+              <input type="number" id="age2" name="age" placeholder="15">
+            </div>
+            <div>
+              <label for="grade2">Grade Level:</label>
+              <select id="grade2" name="grade level">
+                <option value="" selected hidden disabled></option>
+                <option value="7">Grade 7</option>
+                <option value="7">Grade 8</option>
+                <option value="7">Grade 9</option>
+                <option value="7">Grade 10</option>
+              </select>
+            </div>
+            <div>
+              <label for="opinion">Coding is fun:</label>
+              <label for="vma2" class="checkbox">Very much agree</label>
+              <input type="radio" id="vma2" name="opinion" title="Very much agree">
+              <label for="a2" class="checkbox">Agree</label>
+              <input type="radio" id="a2" name="opinion" title="Agree">
+              <label for="sa2" class="checkbox">Somewhat agree</label>
+              <input type="radio" id="sa2" name="opinion" title="Somewhat agree">
+              <label for="dnda2" class="checkbox">Do not disagree</label>
+              <input type="radio" id="dnda2" name="opinion" title="Do not disagree">
+            </div>
+          </form>
+          <p>The form above is understandable because of the labels.</p>
+          <p class="funfact">
+            <span class="b">🤓 Author's Markup:</span> 
+            Some forms on this page (the previous two, for example) are colored for purposes of clarity. This may not be reflected in the syntax sections for simplicity.
+          </p>
+
+          <article>
+            <h4>Label</h4>
+            <p>The label element, as the name suggests, provides a label to a form control in order to clarify what information is being gathered. It is applied using the label <code>&lt;label&gt;</code> tag and the <code>for</code> attribute with the syntax <code>&lt;label for="x"&gt;y&lt;/label&gt;</code>, where <i>x</i> is the <code>id</code> value of the corresponding form control and <i>y</i> is the actual label.</p>
+            <table>
+        <thead>  
+          <tr style="background-color:#b5d6f3;">
+            <th></th>
+            <th>Attribute</th>
+            <th>Value</th>
+            <th></th>
+            <th>Element Content</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>&lt;label</code></td>
+            <td><code>for=</code></td>
+            <td><code>"x"</code></td>
+            <td><code>&gt;</code></td>
+            <td><code>y</code></td>
+            <td><code>&lt;/label&gt;</code></td>
+          </tr>
+        </tbody>
+      </table>
+      <p>The label's <code>for</code> attribute value should match the form control's <code>id</code> attribute value.</p>
+        <pre><code>&lt;label for="x"&gt;
+&lt;input id="x"&gt;
+        </code></pre>
+      <p>This ensures that the label corresponds to the form control. When the label is clicked, the input field will be activated.</p>
+      <form>
+        <div> 
+          <label for="if">Label (click me):</label> 
+          <input type="text" id="if" placeholder="Input field (will be activated after clicking label)" size="35"> 
+        </div>
+        <p>For <em>radio</em> or <em>checkbox</em> input, click the actual option label.</p>
+        <div>
+          <label for="radio">Radio (circle):</label>
+          <label for="cm1" class="checkbox">Click me!</label>
+          <input type="radio" id="cm1" name="radio">
+          <label for="cm2" class="checkbox">Now, me!</label>
+          <input type="radio" id="cm2" name="radio">
+        </div>
+        <div>
+          <label for="radio">Checkbox (square):</label>
+          <label for="cm3" class="checkbox">Click me!</label>
+          <input type="checkbox" id="cm3" name="radio">
+          <label for="cm4" class="checkbox">Me too!</label>
+          <input type="checkbox" id="cm4" name="radio">
+        </div>
+        </form>
+
+      <br><br>
+      <b>Syntax</b>
+      <pre><code>&lt;form action="action_page.php" method="POST"&gt; 
+  &lt;div&gt; 
+    &lt;label for="gname"&gt;Given Name:&lt;/label&gt; 
+    &lt;input type="text" id="gname" name="gname" placeholder="Caoimhe Saoirse" required&gt; 
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;label for="age3"&gt;Age:&lt;/label&gt;
+    &lt;input type="number" id="age3" name="age" placeholder="18" required&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+      <b>Preview</b>
+      <br><br>
+      <form action="action_page.php" method="POST"> 
+        <div> 
+          <label for="gname">Given Name:</label> 
+          <input type="text" id="gname" name="gname" placeholder="Caoimhe Saoirse" required> 
+        </div>
+        <div>
+          <label for="age3">Age:</label>
+          <input type="number" id="age3" name="age" placeholder="18" required>
+        </div>
+        <!--<div> 
+          <label for="sex">Civil Status:</label> 
+          <input list="cs options" id="sex" name="sex" required> 
+          <datalist id="cs options">
+            <option value="Single">Single</option>
+            <option value="Married">Married</option>
+            <option value="Separated">Separated</option>
+            <option value="Divorced">Divorced</option>
+            <option value="Widowed">Widowed</option>
+          </datalist>
+        </div>-->
+      </form> 
+          </article>
+
+          <article>
+            <h4>Field Set and Legend</h4>
+            <p>The <em>field set</em> element groups related form controls for better organization. This is <strong>not required</strong> but is recommended for longer or more complicated forms. It is applied using the <code>&lt;fieldset&gt;</code> tag.</p>
+            <p>Often placed inside the fieldset element is the <em>legend</em> element which adds a name to the field set. It is applied using the <code>&lt;legend&gt;</code> tag.</p>
+            <b>Syntax</b>
+            <pre><code>&lt;form action="action_page.php" method="POST"&gt; 
+  <div style="background-color:rgba(167,215,241,0.6);">&lt;fieldset&gt;
+    &lt;legend&gt;Identification&lt;/legend&gt;
+    &lt;div&gt; 
+      &lt;label for="gname2"&gt;Given Name:&lt;/label&gt; 
+      &lt;input type="text" id="gname2" name="gname" placeholder="Adam Antium"&gt; 
+    &lt;/div&gt; 
+    &lt;div&gt; 
+      &lt;label for="sname"&gt;Surname:&lt;/label&gt; 
+      &lt;input type="text" id="sname" name="sname" placeholder="Grrrah"&gt; 
+    &lt;/div&gt; 
+&lt;/fieldset&gt;</div>
+  &lt;br&gt;
+  <div style="background-color:rgba(167,215,241,0.6);">&lt;fieldset&gt;
+    &lt;legend&gt;Contact Details&lt;/legend&gt; 
+    &lt;div&gt; 
+      &lt;label for="email"&gt;Email:&lt;/label&gt; 
+      &lt;input type="email" id="email" name="email" maxlength="89" placeholder="email@domain.com"&gt; 
+    &lt;/div&gt;
+    &lt;div&gt; 
+      &lt;label for="phone"&gt;Phone No.:&lt;/label&gt; 
+      &lt;input type="tel" id="phone" name="phone" placeholder="(012)-345-6789" required&gt; 
+    &lt;/div&gt;
+&lt;/fieldset&gt;</div>
+&lt;/form&gt;</code></pre>
+            <b>Preview</b>
+            <br><br>
+            <form action="action_page.php" method="POST"> 
+              <div style="background-color:rgba(167,215,241,0.6); padding: 5px">
+                <fieldset>
+                  <legend>Identification</legend>
+                  <div> 
+                  <label for="gname2">Given Name:</label> 
+                  <input type="text" id="gname2" name="gname" placeholder="Adam Antium"> 
+                  </div> 
+                  <div> 
+                    <label for="mname">Middle Name:</label> 
+                    <input type="text" id="mname" name="mname" placeholder="Skrrrt"> 
+                  </div> 
+                  <div> 
+                    <label for="sname">Surname:</label> 
+                    <input type="text" id="sname" name="sname" placeholder="Grrrah"> 
+                  </div> 
+                  <div> 
+                    <label for="suffix">Suffix:</label> 
+                    <input type="suffix" id="suffix" name="suffix" placeholder="Jr."> 
+                  </div>
+                </fieldset>
+              </div>
+              <br>
+              <div style="background-color:rgba(167,215,241,0.6); padding: 5px">
+                <fieldset>
+                  <legend>Contact Details</legend> 
+                  <div> 
+                    <label for="email">Email:</label> 
+                    <input type="email" id="email" name="email" maxlength="89" placeholder="email@domain.com"> 
+                  </div>
+                  <div> 
+                    <label for="phone">Phone No.:</label> 
+                    <input type="tel" id="phone" name="phone" placeholder="(012)-345-6789" required> 
+                  </div>
+                </fieldset>
+              </div>
+            </form>
+            <p class="funfact">
+            <span class="b">🤓 Author's Markup:</span> 
+            <code>div</code> elements are used above to put each form control in a separate line. Otherwise, the form controls would be next to each other because of their inline assignment.
+          </p>
+          </article>
+        </section>
+        <section>
+        <h3 id="input">Form Controls</h3>
+        <article>
+        <h4>Input</h4>
+        <p>The input element is enables the creation of several form controls trhough the <code>type</code> attribute.</p>
+        <b>Syntax</b>
+        <br><br>
+        
+
+        <b>Preview</b>
+        <br><br>
         <form action="action_page.php" method="POST"> 
           <div> 
             <label for="gname">Given Name:</label> 
@@ -242,12 +490,14 @@
           </div> 
           <br> 
         </form>
+
       </article>
       <article>
-        <h3 id="text">Text Area</h3>
+        <h4 id="text">Text Area</h4>
       </article>
+   
       <article>
-        <h3 id="select">Select</h3>
+        <h4 id="select">Select</h4>
         <div> 
           <label for="ftopic">Fave topic:</label> 
           <select id="ftopic" name="ftopic" required> 
@@ -263,31 +513,44 @@
           </select> 
         </div> 
       </article>
+      
       <article>
-        <h3 id="field">Field Set</h3>
-      </article>
-      <article>
-        <h3>Button</h3>
+        <h4>Button</h4>
         <form action="action_page.php" method="POST"> 
           <div> 
             
             <button type="button" onclick="alert('Liar!!!')" 
               style="background-color:rgb(38, 130, 197); 
-              font-family: 'Chiller';
-              font-size: 3em;
+              font-family: 'Georgia';
+              font-size: 1em;
               font-weight: bold; 
               color:white;
               border-width: 0; 
               border-radius: 20px;
               box-shadow: 0 5px 5px 0 rgba(0,0,0,0.4); 
               height: 100px; 
-              width: 500px;
+              width: max-content;
               cursor: pointer">
               Click if you're a cutie!
+          </button>
+          <button type="button" onclick="alert('Don\'t be too modest!')" 
+              style="background-color:rgb(124, 128, 132); 
+              font-family: 'Chiller';
+              font-size: 2em;
+              font-weight: bold; 
+              color:white;
+              border-width: 0; 
+              border-radius: 20px;
+              box-shadow: 0 5px 5px 0 rgba(0,0,0,0.4); 
+              height: 100px; 
+              width: max-content;
+              cursor: pointer">
+              Click if you're not a cutie!
           </button>
           </div> 
         </form>
       </article>
+    </section>
     </section>
   </main>
   <footer>

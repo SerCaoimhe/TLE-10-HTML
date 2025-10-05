@@ -6,25 +6,6 @@ body {
 h2 {
   counter-reset: h3; 
 }
-h2::before {
-  counter-increment: h2;
-  content: counter(h2, upper-roman) ". ";
-}
-h3 {
-  counter-reset: h4; 
-}
-h3::before {
-  counter-increment: h3;
-  content: counter(h3, upper-alpha) ". ";
-}
-h4::before {
-  counter-increment: h4;
-  content: counter(h4, decimal) ". ";
-}
-.no-counter::before {
-  content: none;
-  counter-increment: none;
-}
 header, footer, nav, main, section, article, aside {
   border: 0px solid #ccc;
   padding: 1%;
@@ -134,5 +115,36 @@ h1 { font-size: 2em; }
 h2 { font-size: 1.5em; }
 h3 { font-size: 1.17em; }
 h4 { font-size: 1em; }
-h5 { font-size: 0.83em; }
-h6 { font-size: 0.67em; }
+h5 { font-size: 1em; }
+h6 { font-size: 1em; }
+
+h5.actual { font-size: 0.83em;}
+h6.actual { font-size: 0.67em;}
+
+h2::before {
+  counter-increment: h2;
+  content: counter(h2, upper-roman) ". ";
+}
+h3 {
+  counter-reset: h4; 
+}
+h3::before {
+  counter-increment: h3;
+  content: counter(h3, upper-alpha) ". ";
+}
+h4::before {
+  counter-increment: h4;
+  content: counter(h4, decimal) ". ";
+}
+.no-counter::before {
+  content: none;
+  counter-increment: none;
+}
+
+label {
+  font-weight: bold;
+}
+
+label.checkbox {
+  font-weight: normal;
+}
