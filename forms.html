@@ -57,106 +57,111 @@
       <p>The form element is applied using the <em>form</em> <code>&lt;form&gt;</code> tag, filled with the form control (input fields, as previously mentioned) and auxilliary elements. Essentially, <strong>the form element merely contains the form controls and support elements</strong>, without which it is useless.
       </p>
       <p>The following is a list of common form elements:</p>
-      <table border="0" cellspacing="0" cellpadding="7" style="text-align: left; width: max-content;">
-        <caption>Form and Form Controls</caption>
-        <thead>
-          <tr style="background-color:#b5d6f3;">
-            <th>Element</th>
-            <th>Tags</th>
-            <th>Attributes</th>
-            <th>Purpose</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Form</td>
-            <td><code>&lt;form&gt;&lt;/form&gt;</code></td>
-            <td><code>action</code>, <code>target</code>, <code>method</code>, <code>autocomplete</code>, <code>oninput</code>*</td>
-            <td>Creates the form</td>
-          </tr>
-          <tr>
-            <td>Input</td>
-            <td><code>&lt;input&gt;</code></td>
-            <td><code>type</code>, <code>id</code>, <code>name</code>, <code>value</code>, <code>placeholder</code>, <code>readonly</code>, <code>disabled</code>, <code>required</code>, <code>size</code></td>
-            <td>Creates a field for several types of responses</td>
-          </tr>
-          <tr>
-            <td>Text Area</td>
-            <td><code>&lt;textarea&gt;&lt;/textarea&gt;</code></td>
-            <td><code>name</code>, <code>rows</code>, <code>cols</code>, <code>autocomplete</code></td>
-            <td>Creates a multiline field for text responses</td>
-          </tr>
-          <tr>
-            <td>Select</td>
-            <td><code>&lt;select&gt;&lt;/select&gt;</code></td>
-            <td><code>id</code>, <code>name</code>, <code>size</code>, <code>multiple</code></td>
-            <td>Creates a drop-down field for predetermined responses</td>
-          </tr>
-        </tbody>
-      </table>
+      
+      <div class="table-container">
+        <table border="0" cellspacing="0" cellpadding="7" style="text-align: left; width: max-content;">
+          <caption>Form and Form Controls</caption>
+          <thead>
+            <tr style="background-color:#b5d6f3;">
+              <th>Element</th>
+              <th>Tags</th>
+              <th>Attributes</th>
+              <th>Purpose</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Form</td>
+              <td><code>&lt;form&gt;&lt;/form&gt;</code></td>
+              <td><code>action</code>, <code>target</code>, <code>method</code>, <code>autocomplete</code>, <code>oninput</code>*</td>
+              <td>Creates the form</td>
+            </tr>
+            <tr>
+              <td>Input</td>
+              <td><code>&lt;input&gt;</code></td>
+              <td><code>type</code>, <code>id</code>, <code>name</code>, <code>value</code>, <code>placeholder</code>, <code>readonly</code>, <code>disabled</code>, <code>required</code>, <code>size</code></td>
+              <td>Creates a field for several types of responses</td>
+            </tr>
+            <tr>
+              <td>Text Area</td>
+              <td><code>&lt;textarea&gt;&lt;/textarea&gt;</code></td>
+              <td><code>name</code>, <code>rows</code>, <code>cols</code>, <code>autocomplete</code></td>
+              <td>Creates a multiline field for text responses</td>
+            </tr>
+            <tr>
+              <td>Select</td>
+              <td><code>&lt;select&gt;&lt;/select&gt;</code></td>
+              <td><code>id</code>, <code>name</code>, <code>size</code>, <code>multiple</code></td>
+              <td>Creates a drop-down field for predetermined responses</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
       <br>
       
-      <table border="0" cellspacing="0" cellpadding="7" style="text-align: left; width: max-content;">
-        <caption>Auxilliary</caption>
-        <thead>
-          <tr style="background-color:#b5d6f3;">
-            <th>Element</th>
-            <th>Tags</th>
-            <th>Attributes</th>
-            <th>Purpose</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Label</td>
-            <td><code>&lt;label&gt;&lt;/label&gt;</code></td>
-            <td><code>for</code></td>
-            <td>Defines the form control label</td>
-          </tr>
-          <tr>
-            <td>Field Set</td>
-            <td><code>&lt;fieldset&gt;&lt;/fieldset&gt;</code></td>
-            <td>-</td>
-            <td>Creates a group for related form controls</td>
-          </tr>
-          <tr>
-            <td>Legend</td>
-            <td><code>&lt;legend&gt;&lt;/legend&gt;</code></td>
-            <td>-</td>
-            <td>Defines the field set caption</td>
-          </tr>
-          <tr>
-            <td>Data List</td>
-            <td><code>&lt;datalist&gt;&lt;/datalist&gt;</code></td>
-            <td><code>id</code></td>
-            <td>Creates a predetermined list of responses for an input field</td>
-          </tr>
-          <tr>
-            <td>Option Group</td>
-            <td><code>&lt;optgroup&gt;&lt;/optgroup&gt;</code></td>
-            <td><code>label</code></td>
-            <td>Creates groups for related options in a drop-down list</td>
-          </tr>
-          <tr>
-            <td>Option</td>
-            <td><code>&lt;option&gt;&lt;/option&gt;</code></td>
-            <td><code>value</code></td>
-            <td>Defines an option in a drop-down list</td>
-          </tr>
-          <tr>
-            <td>Button</td>
-            <td><code>&lt;button&gt;&lt;/button&gt;</code></td>
-            <td><code>type</code>, <code>onclick</code>*</td>
-            <td>Creates a clickable button</td>
-          </tr>
-          <tr>
-            <td>Output</td>
-            <td><code>&lt;output&gt;&lt;/output&gt;</code></td>
-            <td><code>id</code>, <code>name</code>, <code>for</code></td>
-            <td>Displays the result of a calculation</td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="table-container">
+        <table border="0" cellspacing="0" cellpadding="7" style="text-align: left; width: max-content;">
+          <caption>Auxilliary</caption>
+          <thead>
+            <tr style="background-color:#b5d6f3;">
+              <th>Element</th>
+              <th>Tags</th>
+              <th>Attributes</th>
+              <th>Purpose</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Label</td>
+              <td><code>&lt;label&gt;&lt;/label&gt;</code></td>
+              <td><code>for</code></td>
+              <td>Defines the form control label</td>
+            </tr>
+            <tr>
+              <td>Field Set</td>
+              <td><code>&lt;fieldset&gt;&lt;/fieldset&gt;</code></td>
+              <td>-</td>
+              <td>Creates a group for related form controls</td>
+            </tr>
+            <tr>
+              <td>Legend</td>
+              <td><code>&lt;legend&gt;&lt;/legend&gt;</code></td>
+              <td>-</td>
+              <td>Defines the field set caption</td>
+            </tr>
+            <tr>
+              <td>Data List</td>
+              <td><code>&lt;datalist&gt;&lt;/datalist&gt;</code></td>
+              <td><code>id</code></td>
+              <td>Creates a predetermined list of responses for an input field</td>
+            </tr>
+            <tr>
+              <td>Option Group</td>
+              <td><code>&lt;optgroup&gt;&lt;/optgroup&gt;</code></td>
+              <td><code>label</code></td>
+              <td>Creates groups for related options in a drop-down list</td>
+            </tr>
+            <tr>
+              <td>Option</td>
+              <td><code>&lt;option&gt;&lt;/option&gt;</code></td>
+              <td><code>value</code></td>
+              <td>Defines an option in a drop-down list</td>
+            </tr>
+            <tr>
+              <td>Button</td>
+              <td><code>&lt;button&gt;&lt;/button&gt;</code></td>
+              <td><code>type</code>, <code>onclick</code>*</td>
+              <td>Creates a clickable button</td>
+            </tr>
+            <tr>
+              <td>Output</td>
+              <td><code>&lt;output&gt;&lt;/output&gt;</code></td>
+              <td><code>id</code>, <code>name</code>, <code>for</code></td>
+              <td>Displays the result of a calculation</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
       <p><small>*oninput and onclick attributes can be replaced with other 
         <span class="tooltip"><em>event attributes</em>
           <span class="tooltiptext">attributes (e.g. onchange, onmouseover, onkeydown) that indicate the trigger for a JS action</span>
@@ -239,58 +244,60 @@
           <article>
             <h4>Label</h4>
             <p>The label element, as the name suggests, provides a label to a form control in order to clarify what information is being gathered. It is applied using the label <code>&lt;label&gt;</code> tag and the <code>for</code> attribute with the syntax <code>&lt;label for="x"&gt;y&lt;/label&gt;</code>, where <i>x</i> is the <code>id</code> value of the corresponding form control and <i>y</i> is the actual label.</p>
-            <table>
-        <thead>  
-          <tr style="background-color:#b5d6f3;">
-            <th></th>
-            <th>Attribute</th>
-            <th>Value</th>
-            <th></th>
-            <th>Element Content</th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><code>&lt;label</code></td>
-            <td><code>for=</code></td>
-            <td><code>"x"</code></td>
-            <td><code>&gt;</code></td>
-            <td><code>y</code></td>
-            <td><code>&lt;/label&gt;</code></td>
-          </tr>
-        </tbody>
-      </table>
-      <p>The label's <code>for</code> attribute value should match the form control's <code>id</code> attribute value.</p>
-        <pre><code>&lt;label for="x"&gt;
-&lt;input id="x"&gt;
-        </code></pre>
-      <p>This ensures that the label corresponds to the form control. When the label is clicked, the input field will be activated.</p>
-      <form>
-        <div> 
-          <label for="if">Label (click me):</label> 
-          <input type="text" id="if" placeholder="Input field (will be activated after clicking label)" size="35"> 
-        </div>
-        <p>For <em>radio</em> or <em>checkbox</em> input, click the actual option label.</p>
-        <div>
-          <label for="radio">Radio (circle):</label>
-          <label for="cm1" class="checkbox">Click me!</label>
-          <input type="radio" id="cm1" name="radio">
-          <label for="cm2" class="checkbox">Now, me!</label>
-          <input type="radio" id="cm2" name="radio">
-        </div>
-        <div>
-          <label for="radio">Checkbox (square):</label>
-          <label for="cm3" class="checkbox">Click me!</label>
-          <input type="checkbox" id="cm3" name="radio">
-          <label for="cm4" class="checkbox">Me too!</label>
-          <input type="checkbox" id="cm4" name="radio">
-        </div>
-        </form>
-
-      <br><br>
-      <b>Syntax</b>
-      <pre><code>&lt;form action="action_page.php" method="POST"&gt; 
+            <div class="table-container">
+              <table>
+                <thead>  
+                  <tr style="background-color:#b5d6f3;">
+                    <th></th>
+                    <th>Attribute</th>
+                    <th>Value</th>
+                    <th></th>
+                    <th>Element Content</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>&lt;label</code></td>
+                    <td><code>for=</code></td>
+                    <td><code>"x"</code></td>
+                    <td><code>&gt;</code></td>
+                    <td><code>y</code></td>
+                    <td><code>&lt;/label&gt;</code></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>The label's <code>for</code> attribute value should match the form control's <code>id</code> attribute value.</p>
+            <pre><code>&lt;label for="x"&gt;
+&lt;input id="x"&gt;</code></pre>
+            <p>This ensures that the label corresponds to the form control. When the label is clicked, the input field will be activated.</p>
+            <form>
+              <div> 
+                <label for="if">Label (click me):</label> 
+                <input type="text" id="if" placeholder="Input field will be activated after clicking label" size="34 "> 
+              </div>
+              <p>For <em>radio</em> or <em>checkbox</em> input, click the actual option label.</p>
+              <div>
+                <label for="radio">Radio (circle):</label>
+                <label for="cm1" class="checkbox">Click me!</label>
+                <input type="radio" id="cm1" name="radio">
+                <label for="cm2" class="checkbox">Now, me!</label>
+                <input type="radio" id="cm2" name="radio">
+              </div>
+              <div>
+                <label for="radio">Checkbox (square):</label>
+                <label for="cm3" class="checkbox">Click me!</label>
+                <input type="checkbox" id="cm3" name="radio">
+                <label for="cm4" class="checkbox">Me too!</label>
+                <input type="checkbox" id="cm4" name="radio">
+              </div>
+              </form>
+            
+            <br><br>
+            <b>Syntax:</b>
+            <div class="syn-container">
+              <pre><code>&lt;form action="action_page.php" method="POST"&gt; 
   &lt;div&gt; 
     &lt;label for="gname"&gt;Given Name:&lt;/label&gt; 
     &lt;input type="text" id="gname" name="gname" placeholder="Caoimhe Saoirse" required&gt; 
@@ -300,37 +307,38 @@
     &lt;input type="number" id="age3" name="age" placeholder="18" required&gt;
   &lt;/div&gt;
 &lt;/form&gt;</code></pre>
-      <b>Preview</b>
-      <br><br>
-      <form action="action_page.php" method="POST"> 
-        <div> 
-          <label for="gname">Given Name:</label> 
-          <input type="text" id="gname" name="gname" placeholder="Caoimhe Saoirse" required> 
-        </div>
-        <div>
-          <label for="age3">Age:</label>
-          <input type="number" id="age3" name="age" placeholder="18" required>
-        </div>
-        <!--<div> 
-          <label for="sex">Civil Status:</label> 
-          <input list="cs options" id="sex" name="sex" required> 
-          <datalist id="cs options">
-            <option value="Single">Single</option>
-            <option value="Married">Married</option>
-            <option value="Separated">Separated</option>
-            <option value="Divorced">Divorced</option>
-            <option value="Widowed">Widowed</option>
-          </datalist>
-        </div>-->
-      </form> 
+            </div>
+            <b>Preview</b>
+            <br><br>
+            <form action="action_page.php" method="POST"> 
+              <div> 
+                <label for="gname">Given Name:</label> 
+                <input type="text" id="gname" name="gname" placeholder="Caoimhe Saoirse" required> 
+              </div>
+              <div>
+                <label for="age3">Age:</label>
+                <input type="number" id="age3" name="age" placeholder="18" required>
+              </div>
+              <!--<div> 
+                <label for="sex">Civil Status:</label> 
+                <input list="cs options" id="sex" name="sex" required> 
+                <datalist id="cs options">
+                  <option value="Single">Single</option>
+                  <option value="Married">Married</option>
+                  <option value="Separated">Separated</option>
+                  <option value="Divorced">Divorced</option>
+                  <option value="Widowed">Widowed</option>
+                </datalist>
+              </div>-->
+            </form> 
           </article>
-
           <article>
             <h4>Field Set and Legend</h4>
             <p>The <em>field set</em> element groups related form controls for better organization. This is <strong>not required</strong> but is recommended for longer or more complicated forms. It is applied using the <code>&lt;fieldset&gt;</code> tag.</p>
             <p>Often placed inside the fieldset element is the <em>legend</em> element which adds a name to the field set. It is applied using the <code>&lt;legend&gt;</code> tag.</p>
-            <b>Syntax</b>
-            <pre><code>&lt;form action="action_page.php" method="POST"&gt; 
+            <b>Syntax:</b>
+            <div class="syn-container">
+              <pre><code>&lt;form action="action_page.php" method="POST"&gt; 
   <div style="background-color:rgba(167,215,241,0.6);">&lt;fieldset&gt;
     &lt;legend&gt;Identification&lt;/legend&gt;
     &lt;div&gt; 
@@ -355,7 +363,8 @@
     &lt;/div&gt;
 &lt;/fieldset&gt;</div>
 &lt;/form&gt;</code></pre>
-            <b>Preview</b>
+            </div>
+            <b>Preview:</b>
             <br><br>
             <form action="action_page.php" method="POST"> 
               <div style="background-color:rgba(167,215,241,0.6); padding: 5px">
@@ -394,10 +403,19 @@
                 </fieldset>
               </div>
             </form>
-            <p class="funfact">
+            <div class="funfact">
             <span class="b">🤓 Author's Markup:</span> 
             <code>div</code> elements are used above to put each form control in a separate line. Otherwise, the form controls would be next to each other because of their inline assignment.
-          </p>
+              <div>
+                <u>Example: form controls not put into <code>div</code></u>
+                <form style="padding: 5px">
+                    <label for="if1" class="checkbox">Label 1:</label>
+                    <input type="text" id="if1" placeholder="type whatever">
+                    <label for="if2" class="checkbox">Label 2:</label>
+                    <input type="text" id="if2" placeholder="type something">                  
+                </form>
+              </div>
+            </div>
           </article>
         </section>
         <section>
@@ -405,11 +423,13 @@
         <article>
         <h4>Input</h4>
         <p>The input element is enables the creation of several form controls trhough the <code>type</code> attribute.</p>
-        <b>Syntax</b>
+        <b>Syntax:</b>
+        <div class="syn-container">
+        </div>
         <br><br>
         
 
-        <b>Preview</b>
+        <b>Preview:</b>
         <br><br>
         <form action="action_page.php" method="POST"> 
           <div> 

@@ -126,7 +126,8 @@
           </p>
           <h4 class="no-counter">Examples</h4>
           <p><u>Example 1: property defined for entire list</u></p>
-          <b>Syntax:</b>
+          <div class="syn-container">
+        <b>Syntax</b>
           <pre><code>&lt;ul style="list-style-type: circle;"&gt;
   &lt;li&gt;Item 1&lt;/li&gt;
   &lt;li&gt;Item 2&lt;/li&gt;
@@ -140,7 +141,8 @@
           </ul>
           <p><u>Example 2: property defined for specific items</u></p>
           <b>Syntax:</b>
-          <pre><code>&lt;ul&gt;<b>&lt;!--list-tyle-type is not defined, so list follows default bullet until overridden--&gt;</b>
+          <div class="syn-container">
+            <pre><code>&lt;ul&gt;<b>&lt;!--list-tyle-type is not defined, so list follows default bullet until overridden--&gt;</b>
   &lt;li&gt;Item 1&lt;/li&gt;
   &lt;li&gt;Item 2&lt;/li&gt;
   &lt;li style="list-style-type: disc;"&gt;Item 3&lt;/li&gt;
@@ -149,6 +151,7 @@
   &lt;li style="list-style-type: none;"&gt;Item 6&lt;/li&gt;
   &lt;li&gt;Item 7&lt;/li&gt;
 &lt;/ul&gt;</code></pre>
+          </div>
           <b>Preview:</b>
           <ul>
             <li>Item 1</li>
@@ -265,11 +268,13 @@
           <h4 class="no-counter">Examples</h4>
           <p><u>Example 1: type defined for entire list</u></p>
           <b>Syntax:</b>
-          <pre><code>&lt;ol type="A" start="1"&gt;
+          <div class="syn-container">
+            <pre><code>&lt;ol type="A" start="1"&gt;
   &lt;li&gt;Item 1&lt;/li&gt;
   &lt;li&gt;Item 2&lt;/li&gt;
   &lt;li&gt;Item 3&lt;/li&gt;
 &lt;/ol&gt;</code></pre>
+          </div>
           <b>Preview:</b>
           <ol type="A" start="1">
             <li>Item 1</li>
@@ -278,7 +283,8 @@
           </ol>
           <p><u>Example 2: type defined for specific items</u></p>
           <b>Syntax:</b>
-          <pre><code>&lt;ol&gt;<b>&lt;!--type is not defined, so list follows default Arabic numerals until overridden--&gt;</b>
+          <div class="syn-container">
+            <pre><code>&lt;ol&gt;<b>&lt;!--type is not defined, so list follows default Arabic numerals until overridden--&gt;</b>
   &lt;li&gt;Item 1&lt;/li&gt;
   &lt;li&gt;Item 2&lt;/li&gt;
   &lt;li type="A"&gt;Item 3&lt;/li&gt;
@@ -287,6 +293,7 @@
   &lt;li type="a"&gt;Item 6&lt;/li&gt;
   &lt;li&gt;Item 7&lt;/li&gt;
 &lt;/ol&gt;</code></pre>
+          </div>
           <b>Preview:</b>
           <ol>
             <li>Item 1</li>
@@ -310,7 +317,8 @@
         </p>
         <p>When writing in code, separate each definition term with a blank line for clarity.</p>
         <b>Syntax:</b>
-        <pre><code>&lt;dl&gt;
+        <div class="syn-container">
+          <pre><code>&lt;dl&gt;
   &lt;dt&gt;Item 1&lt;/dt&gt;
   &lt;dd&gt;Item 1 description 1 (no list marker)&lt;/dd&gt;
   &lt;dd&gt;- Item 1 description 2 (hyphen list marker)&lt;/dd&gt;
@@ -321,6 +329,7 @@
   &lt;dt&gt;Item 3&lt;/dt&gt;
   &lt;dd&gt;❤️ Item 3 description (emoji list marker)&lt;/dd&gt;
 &lt;/dl&gt;</code></pre>
+        </div>
         <b>Preview:</b>
         <dl>
           <dt>Item 1</dt>
@@ -346,8 +355,9 @@
       </p>
       <article>
         <p><u>Example 1: nested list using only one type (unordered list)</u></p>
-        <b>Syntax:</b>
-        <pre><code><b>&lt;!--spaces between items added for better legibility but not required--&gt;</b>
+        <div class="syn-container">
+          <b>Syntax</b>
+          <pre><code><b>&lt;!--spaces between items added for better legibility but not required--&gt;</b>
 &lt;h3&gt;Why Sir Derik is the best:&lt;/h3&gt;
 <b>&lt;!--START of main UNORDERED list--&gt;</b>
 &lt;ul&gt;
@@ -397,6 +407,7 @@
 
 <b>&lt;!--END of main UNORDERED list--&gt;</b>
 &lt;/ul&gt;</code></pre>
+        </div>
         <b>Preview:</b>
         <h3 class="no-counter" id="best">Why Sir Derik is the best:</h3>
         <b><!--START of main UNORDERED list--></b>
@@ -444,8 +455,9 @@
       </article>
       <article>
         <p><u>Example 2: nested list using multiple types</u></p>
-        <b>Syntax:</b>
-        <pre><code><b>&lt;!--spaces between items added for better legibility but not required--&gt;</b>
+        <div class="syn-container">
+          <b>Syntax</b>
+          <pre><code><b>&lt;!--spaces between items added for better legibility but not required--&gt;</b>
 &lt;h3&gt;Why Sir Derik is the best:&lt;/h3&gt;
 <b>&lt;!--START of main ORDERED list--&gt;</b>
 &lt;ol&gt;
@@ -496,6 +508,7 @@
 
 <b>&lt;!--END of main ORDERED list--&gt;</b>
 &lt;/ol&gt;</code></pre>
+        </div>
         <b>Preview:</b>
         <h3 class="no-counter">Why Sir Derik is the best:</h3>
           <!--START of main ORDERED list-->
