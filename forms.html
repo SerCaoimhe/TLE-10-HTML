@@ -620,37 +620,36 @@
               <tbody>
                 <tr>
                   <td>
-                    
-                        <label for="punct">Liked terminal punctuation</label>
-                        <br>
-                        <input type="checkbox" id="?" name="punct" value="happy">
-                        <label class="checkbox" for="?">?</label>
-                        <br>
-                        <input type="checkbox" id="!" name="punct" value="sad">
-                        <label class="checkbox" for="!">!</label>
-                        <br>
-                        <input type="checkbox" id="." name="punct" value="hangry">
-                        <label class="checkbox" for=".">...</label>
-                        <br>
+                    <label for="dog">Cute dog breeds</label>
+                    <br>
+                    <input type="checkbox" id="pug" name="dog" value="Pug">
+                    <label class="checkbox" for="pug">Pug</label>
+                    <br>
+                    <input type="checkbox" id="alabai" name="dog" value="Alabai">
+                    <label class="checkbox" for="alabai">Alabai</label>
+                    <br>
+                    <input type="checkbox" id="hotdog" name="dog" value="Hotdog samwich">
+                    <label class="checkbox" for="hotdog">Hotdog samwich</label>
+                    <br>
                     <button 
-                        style="border-radius: 20px; padding: 5px; background-color: rgb(205, 123, 34); color: white;" 
-                        type="submit" 
-                        onclick="submitForm(event)">
-                        Submit
-                      </button>
+                      style="border-radius: 20px; margin: 5px; padding: 5px 8px 5px 8px; background-color: rgb(209, 23, 23); color: white;" 
+                      type="submit" 
+                      onclick="submitForm(event)">
+                      Submit
+                    </button>
                   </td>
                   <td>
                     <pre><code>&lt;form&gt;
-  &lt;label for="q"&gt;Liked terminal punctuation&lt;/label&gt;
+  &lt;label for="dog"&gt;Cute dog breeds&lt;/label&gt;
   &lt;br&gt;
-  &lt;input type="checkbox" id="?" name="q" value="happy"&gt;
-  &lt;label for="?"&gt;?&lt;/label&gt;
+  &lt;input type="checkbox" id="pug" name="dog" value="Pug"&gt;
+  &lt;label class="checkbox" for="pug"&gt;Pug&lt;/label&gt;
   &lt;br&gt;
-  &lt;input type="checkbox" id="!" name="q" value="sad"&gt;
-  &lt;label for="!"&gt;!&lt;/label&gt;
+  &lt;input type="checkbox" id="alabai" name="dog" value="Alabai"&gt;
+  &lt;label class="checkbox" for="alabai"&gt;Alabai&lt;/label&gt;
   &lt;br&gt;
-  &lt;input type="checkbox" id="." name="q" value="hangry"&gt;
-  &lt;label for="."&gt;...&lt;/label&gt;
+  &lt;input type="checkbox" id="hotdog" name="dog" value="Hotdog samwich"&gt;
+  &lt;label class="checkbox" for="hotdog"&gt;Hotdog samwich&lt;/label&gt;
 &lt;/form&gt;
                   </code></pre>
                   </td>
@@ -675,18 +674,16 @@
               <tbody>
                 <tr>
                   <td>
-                    
-                        <label for="coolness">Are you an aura farmer?</label>
-                        <br>
-                        <input type="radio" id="always" name="coolness" value="happy">
-                        <label class="checkbox" for="always">Always</label>
-                        <br>
-                        <input type="radio" id="sometimes" name="coolness" value="sad">
-                        <label class="checkbox" for="sometimes">Sometimes</label>
-                        <br>
-                        <input type="radio" id="never" name="coolness" value="hangry">
-                        <label class="checkbox" for="never">Never</label>
-                    
+                    <label for="coolness">Are you an aura farmer?</label>
+                    <br>
+                    <input type="radio" id="always" name="coolness" value="happy">
+                    <label class="checkbox" for="always">Always</label>
+                    <br>
+                    <input type="radio" id="sometimes" name="coolness" value="sad">
+                    <label class="checkbox" for="sometimes">Sometimes</label>
+                    <br>
+                    <input type="radio" id="never" name="coolness" value="hangry">
+                    <label class="checkbox" for="never">Never</label>
                   </td>
                   <td>
                     <pre><code>&lt;form&gt;
@@ -766,7 +763,7 @@
                   <tr>
                     <td>
                       <button 
-                        style="border-radius: 20px; padding: 5px; background-color: rgb(11, 69, 126); color: white;" 
+                        style="border-radius: 20px; padding: 5px 8px 5px 8px; background-color: rgb(11, 69, 126); color: white;" 
                         type="submit" 
                         onclick="submitForm(event)">
                         Submit
@@ -776,15 +773,27 @@
                 </tbody>
               </table>
             </div>
+            <label for="pinky">How long Bern's pinky</label>
+            0<input type="range" id="pinky" max="6">6 cm
         </form>
-
+        <div> 
+          <label for="g10">Grade 10 cuties:</label> 
+          <input list="g10c" id="g10" name="g10" required> 
+          <datalist id="g10c">
+            <option value="PJ">PJ</option>
+            <option value="Aki">Aki</option>
+            <option value="Hannah">Hannah</option>
+            <option value="Tine">Tine</option>
+            <option value="Zild">Zild</option>
+          </datalist>
+        </div>
 
        
 
       </article>
       <article>
         <h4 id="text">Text Area</h4>
-        <p>The text area element creates a multiline inputfield suitable for long-from responses. It is applied using the <code>&lt;textarea&gt;</code> tag and customized using the <code>&lt;rows&gt;</code> and <code>&lt;cols&gt;</code> attributes.</p>
+        <p>The text area element creates a multiline input field suitable for long-from responses. It is applied using the <code>&lt;textarea&gt;</code> tag and customized using the <code>&lt;rows&gt;</code> and <code>&lt;cols&gt;</code> attributes.</p>
         <p>The <code>&lt;rows&gt;</code> sets the number of visiblie lines while the <code>&lt;cols&gt;</code> sets the number of visible columns.</p>
         <b>Syntax:</b>
         <pre><code>&lt;label for="poem"&gt;Write a poem:&lt;/label&gt;
@@ -802,14 +811,14 @@
         <div> 
           <label for="ftopic">Fave topic:</label> 
           <select id="ftopic" name="ftopic" required> 
-            <option value="Heading Levels">Introduction</option> 
-            <option value="Paragraphs">Structure</option> 
-            <option value="Hyperlinks">Editor</option> 
-            <option value="Formatting">Text</option> 
-            <option value="Forms">Lists</option>
-            <option value="Forms">Tables</option> 
-            <option value="Forms">Multimedia</option> 
-            <option value="Forms">Links</option> 
+            <option value="Introdcution">Introduction</option> 
+            <option value="Structure">Structure</option> 
+            <option value="Editor">Editor</option> 
+            <option value="Text">Text</option> 
+            <option value="Lists">Lists</option>
+            <option value="Tables">Tables</option> 
+            <option value="Multimedia">Multimedia</option> 
+            <option value="Links">Links</option> 
             <option value="Forms">Forms</option>  
           </select> 
         </div> 
