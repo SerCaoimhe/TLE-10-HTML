@@ -171,7 +171,81 @@
         A form in HTML is not functional until JS and PHP codes are added. However, it is still essential to know the structure and syntax of forms in this early stage of learning.
       </p>
         <section>
-          <h3>Form Layout</h3>
+          <h3>Attributes</h3>
+          <p>Before proceeding to the other aspects of forms, it is essential to be familiar with common attributes as these are essential in understanding and applying proper syntax.</p>
+          <table border="0" cellspacing="0" cellpadding="7" style="text-align: left; width: max-content;">
+            <caption>Form and Form Controls</caption>
+            <thead>
+              <tr style="background-color:#b5d6f3;">
+                <th>Attribute</th>
+                <th>Element</th>
+                <th>Purpose</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>id</code></td>
+                <td>input, text area, select</td>
+                <td>defines unique identifying code for styling, links form control to its label</td>
+              </tr>
+              <tr>
+                <td><code>name</code></td>
+                <td>input, text area, select</td>
+                <td>defines label associated to the submitted response</td>
+              </tr>
+              <tr>
+                <td><code>value</code></td>
+                <td>input, text area, option</td>
+                <td>defines value of the default or submitted response</td>
+              </tr>
+              <tr>
+                <td><code>placeholder</code></td>
+                <td>input (text types), text area</td>
+                <td>defines displayed sample response</td>
+              </tr>
+              <tr>
+                <td><code>required</code></td>
+                <td>input, text area, select</td>
+                <td>sets form control as required for submission</td>
+              </tr>
+              <tr>
+                <td><code>disabled</code></td>
+                <td>input, text area, select</td>
+                <td>sets form control as <i>uneditable and excluded</i> from submission</td>
+              </tr>
+              <tr>
+                <td><code>readonly</code></td>
+                <td>input (text types), text area</td>
+                <td>sets form control as <i>uneditable but included</i> in submission</td>
+              </tr>
+            </tbody>
+          </table><br>
+          <u>Examples</u>
+          <br><br>
+          <table>
+            <thead>
+              <tr>
+                <th>Preview</th>
+                <th>Syntax</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <form>
+                    <div>
+                      <label for="name">Name:</label>
+                      <input type="text" id="name" value="asshat" required>
+                    </div>
+                  </form>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          
+        </section>
+        <section>
+          <h3 id="fl">Form Layout</h3>
           <p>A form can technically be created using only form control elements (Example 1); however, doing so would defeat the purpose of collecting information effectively. It is for this reason that one must use some layout elements discussed below.</p>
           
           <u>Example 1: form without labels</u>
@@ -365,6 +439,7 @@
 &lt;/form&gt;</code></pre>
             </div>
             <b>Preview:</b>
+            <form></form>
             <br><br>
             <form action="action_page.php" method="POST"> 
               <div style="background-color:rgba(167,215,241,0.6); padding: 5px">
@@ -373,18 +448,10 @@
                   <div> 
                   <label for="gname2">Given Name:</label> 
                   <input type="text" id="gname2" name="gname" placeholder="Adam Antium"> 
-                  </div> 
-                  <div> 
-                    <label for="mname">Middle Name:</label> 
-                    <input type="text" id="mname" name="mname" placeholder="Skrrrt"> 
-                  </div> 
+                  </div>
                   <div> 
                     <label for="sname">Surname:</label> 
                     <input type="text" id="sname" name="sname" placeholder="Grrrah"> 
-                  </div> 
-                  <div> 
-                    <label for="suffix">Suffix:</label> 
-                    <input type="suffix" id="suffix" name="suffix" placeholder="Jr."> 
                   </div>
                 </fieldset>
               </div>
@@ -419,22 +486,111 @@
           </article>
         </section>
         <section>
-        <h3 id="input">Form Controls</h3>
+        <h3 id="fc">Form Controls</h3>
         <article>
         <h4>Input</h4>
-        <p>The input element is enables the creation of several form controls trhough the <code>type</code> attribute.</p>
+        <p>The input element creates <strong>several kinds of form controls</strong> (aka <em>input types</em>). It is applied using the <code>&lt;input&gt;</code> tag and defined with the <code>type</code> attribute.</p>
+        <p>The following are the possible input types, each with its own appropriate use:</p>
+        <div class="table-container">
+          <table style="text-align: left;">
+            <caption>Focus in this class</caption>
+            <thead>
+              <tr>
+                <th>Type</th>
+                <th>Attribute Value</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Checkbox</td>
+                <td><code>checkbox</code></td>
+                <td>Sets input type to a checkbox, allowing respondent to select multiple answers from a set of 
+                  <span class="tooltip"><em>checkboxes</em>
+                    <span class="tooltiptext">toggleable boxes that are either marked (selected) or unmarked (not selected)</span>
+                  </span>
+                  </td>
+              </tr>
+              <tr>
+                <td>Date</td>
+                <td><code>date</code></td>
+                <td>Sets input type to a date, prompting respondent to choose from a pop-up calendar</td>
+              </tr>
+              <tr>
+                <td>Email</td>
+                <td><code>email</code></td>
+                <td>Sets input type to email, prompting respondent to enter a valid email</td>
+              </tr>
+              <tr>
+                <td>File</td>
+                <td><code>file</code></td>
+                <td>Sets input type to file upload, prompting respondent to select a file from the device to upload</td>
+              </tr>
+              <tr>
+                <td>Number</td>
+                <td><code>number</code></td>
+                <td>Sets input type to a number, pompting respondent to enter a number</td>
+              </tr>
+              <tr>
+                <td>Radio</td>
+                <td><code>radio</code></td>
+                <td>Sets input type to a radio button, allowing respondent to select only one answer from a set of 
+                  <span class="tooltip"><em>radio buttons</em>
+                    <span class="tooltiptext">toggleable circular buttons that are either marked (selected) or unmarked (not selected)</span>
+                  </span> 
+                </td>
+              </tr>
+              <tr>
+                <td>Range</td>
+                <td><code>range</code></td>
+                <td>Sets input type to a numerical slider, prompting respondent to move the slider to choose a number within the defined range</td>
+              </tr>
+              <tr>
+                <td>Telephone</td>
+                <td><code>tel</code></td>
+                <td>Sets input type to a telephone number, prompting respondent to enter a valid telephone number</td>
+              </tr>
+              <tr>
+                <td>Text</td>
+                <td><code>text</code></td>
+                <td>Sets input type to text, prompting respondent to enter a text response</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
         <b>Syntax:</b>
+        <div>
+          <label for="happiness">What are you feeling?</label>
+          <label class="checkbox" for="happiness">Happy:</label>
+          <input type="checkbox" id="happy" name="happiness" value="happy">
+          <label class="checkbox" for="happiness">Sad:</label>
+          <input type="checkbox" id="sad" name="happiness" value="sad">
+          <label class="checkbox" for="happiness">Hangry:</label>
+          <input type="checkbox" id="hangry" name="happiness" value="hangry">
+        </div>
         <div class="syn-container">
         </div>
         <br><br>
         
 
-        <b>Preview:</b>
+        <b>Previews:</b>
         <br><br>
         <form action="action_page.php" method="POST"> 
+          <div>
+            <label for="Submission">Submit</label>
+            0<input type="file" id="Submission">7
+          </div>
+
+          <label for="HL">Handsomeness</label>
+          0<input type="range" min="0" max="100">100
+
           <div> 
             <label for="gname">Given Name:</label> 
             <input type="text" id="gname" name="gname" placeholder="Adam Antium" required> 
+          </div>
+          <div> 
+            <label for="gname">Given Name:</label> 
+            <input type="text" id="gname" name="gname" placeholder="Adam Antium" max="95" required> 
           </div> 
           <br> 
           <div> 
