@@ -145,6 +145,10 @@ h4::before {
   counter-increment: none;
 }
 
+mark {
+  background-color:#76b9f3;
+}
+
 label {
   font-weight: bold;
 }
