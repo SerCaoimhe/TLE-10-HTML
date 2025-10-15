@@ -275,6 +275,17 @@
               </tbody>
             </table>
           </form>
+          <script>
+            function submitForm(event) {
+              event.preventDefault();
+              const form = document.getElementById('myForm');
+              if (form.checkValidity()) {
+                window.open('https://sercaoimhe.github.io/TLE-10-HTML/submitted.html', '_blank');
+              } else {
+                form.reportValidity();
+              }
+            }
+          </script>
         </section>
         <section>
           <h3 id="fl">Form Layout</h3>
