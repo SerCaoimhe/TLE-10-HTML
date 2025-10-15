@@ -607,7 +607,7 @@
         </div>
         <h5>Checkbox</h5>
         <p>Each checkbox is its own input element with its own label. Each one is connected to the main label (e.g. question being asked) through the <code>name</code> attribute.</p>
-        <p>The <code>name</code> value should match for all checkboxes and the <code>for</code> value of <strong>question label</strong>. Additionally, each label-input pair should have matching <code>for</code> and <code>id</code> values.</p>
+        <p>The <code>name</code> value should match for all checkboxes and the <code>for</code> value of the <strong>question label</strong>. Additionally, each label-input pair should have matching <code>for</code> and <code>id</code> values.</p>
         <form id="fcexs" action="mailto:ddp.rotp@yahoo.com" method="post" enctype="text/plain">
           <div class="table-container">
             <table style="text-align: left;">
@@ -621,15 +621,15 @@
                 <tr>
                   <td>
                     
-                        <label for="q">?</label>
+                        <label for="punct">Liked terminal punctuation</label>
                         <br>
-                        <input type="checkbox" id="?" name="q" value="happy">
+                        <input type="checkbox" id="?" name="punct" value="happy">
                         <label class="checkbox" for="?">?</label>
                         <br>
-                        <input type="checkbox" id="!" name="q" value="sad">
+                        <input type="checkbox" id="!" name="punct" value="sad">
                         <label class="checkbox" for="!">!</label>
                         <br>
-                        <input type="checkbox" id="." name="q" value="hangry">
+                        <input type="checkbox" id="." name="punct" value="hangry">
                         <label class="checkbox" for=".">...</label>
                         <br>
                     <button 
@@ -641,7 +641,7 @@
                   </td>
                   <td>
                     <pre><code>&lt;form&gt;
-  &lt;label for="q"&gt;?&lt;/label&gt;
+  &lt;label for="q"&gt;Liked terminal punctuation&lt;/label&gt;
   &lt;br&gt;
   &lt;input type="checkbox" id="?" name="q" value="happy"&gt;
   &lt;label for="?"&gt;?&lt;/label&gt;
@@ -662,7 +662,7 @@
 
         <h5>Radio</h5>
         <p>Each radio button is its own input element with its own label. Each one is connected to the main label (e.g. question being asked) through the <code>name</code> attribute. Unlike the checkbox, only one radio button can be selected at a time by default.</p>
-        <p>The <code>name</code> value should match for all radio buttons and the <code>for</code> value of <strong>question label</strong>. Additionally, each label-input pair should have matching <code>for</code> and <code>id</code> values.</p>
+        <p>The <code>name</code> value should match for all radio buttons and the <code>for</code> value of the <strong>question label</strong>. Additionally, each label-input pair should have matching <code>for</code> and <code>id</code> values.</p>
         
           <div class="table-container">
             <table style="text-align: left;">
@@ -722,10 +722,12 @@
                   <tr>
                     <td>
                       <label for="date">Date:</label>
-                      <input type="date" id="date" name="date" placeholder="placeholder (editable, excluded from submission unless edited)" required>
+                      <input type="date" id="date" name="date">
                     </td>
                     <td>
-                      <code>&lt;input type="text" id="ex1" name="ex1" <mark>placeholder</mark>="placeholder (editable, excluded from submission unless edited)" <mark>required</mark> size="50"&gt;</code>
+                      <code>
+&lt;label for="date"&gt;Date:&lt;/label&gt;&lt;input type="date" id="date" name="date"&gt;
+                      </code>
                     </td>
                   </tr>
                   <tr>
@@ -734,7 +736,9 @@
                       <input type="email" id="email2" name="email" placeholder="caoimhemile@atat.com">
                     </td>
                     <td>
-                      <code>&lt;input type="text" id="ex2" name="ex2" value="disabled (uneditable, excluded from submission)" <mark>disabled</mark> size="50"&gt;</code>
+                      <code>
+&lt;label for="email2"&gt;Email:&lt;/label&gt;&lt;input type="email" id="email2" name="email" placeholder="caoimhemile@atat.com"&gt;
+                      </code>
                     </td>
                   </tr>
                   <tr>
@@ -743,7 +747,9 @@
                       <input type="number" id="num" name="num" placeholder="99">
                     </td>
                     <td>
-                      <code>&lt;input type="text" id="name2" name="ex3" <mark>value</mark>="value (editable, included in submission)" size="50"&gt;</code>
+                      <code>
+&lt;label for="num"&gt;Number:&lt;/label&gt;&lt;input type="number" id="num" name="num" placeholder="99"&gt;
+                      </code>
                     </td>
                   </tr>
                   <tr>
@@ -752,7 +758,9 @@
                       <input type="tel" id="tel" name="tel" placeholder="09xxxxxxxxx">
                     </td>
                     <td>
-                      <code>&lt;input type="text" id="ex4" name="ex4" <mark>value</mark>="value + readonly (uneditable, included in submission)" <mark>readonly</mark> size="50"&gt;</code>
+                      <code>
+                        &lt;label for="tel"&gt;Telephone:&lt;/label&gt;&lt;input type="tel" id="tel" name="tel" placeholder="09xxxxxxxxx"&gt;
+                      </code>
                     </td>
                   </tr>
                   <tr>
