@@ -46,8 +46,10 @@
       <section>
         <h2 id="syntax">Syntax</h2>
         <h3>Rule</h3>
-        <p>If the basic building block of html is the <em>element</em>, in CSS, it is the <em>rule</em>. The rule itself can be split into two main segments, the <em>selector</em> and the <em>declaration block</em>, which in turn is composed of at least one <em>declarayion</em>. 
-        <p>Parts of the CSS rule:</p>
+        <p>If the basic building block of html is the <em>element</em>, in CSS, it is the <em>rule</em>. The rule itself can be split into two main segments, the <em>selector</em> and the <em>declaration block</em>, which in turn is composed of at least one <em>declaration</em>.
+        </p>
+        <p>A declaration is composed of the <em>property</em> and <em>value</em> pair. Multiple property-value pairs are separated by semicolons.</p> 
+        <b>Parts of the CSS rule:</b>
         <ol>
           <li>Selector <code>x</code></li>
           <li>Declaration Block
@@ -69,454 +71,90 @@
           <table>
             <thead>
               <tr>
-                <th>Format</th>
                 <th>Selector</th>
                 <th>Declaration Block</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Single Line</td>
                 <td><code>x</code></td>
                 <td><code>{y<sub>1</sub>: z<sub>1</sub>; y<sub>2</sub>: z<sub>2</sub>;}</code></td>
               </tr>
-              <tr>
-                <td>Multiline</td>
-                <td colspan="2"><pre><code>x {
-    y<sub>1</sub>: z<sub>1</sub>;
-    y<sub>2</sub>: z<sub>2</sub>;
-  }
-  </code></pre>
-                </td>
-              </tr>
             </tbody>
           </table>
         </div>
-        <div class="syn-container">
-          <b>Syntax:</b>
-          <pre><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-  &lt;title&gt;HTML Basics&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-
-  &lt;h1&gt;Structure&lt;/h1&gt;
-  &lt;p&gt;This page talks about the basic structure of HTML.&lt;/p&gt;
-
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-        </div>
-        <b>Preview:</b>
-        <br>
-        <iframe src="Multimedia/Screenshot 2025-09-01 223326.png" style="width: 80%; height: 348px"></iframe>
-        <h3 id="otherparts">Other Parts</h3>
-        <div class="table-container">
-          <table style="text-align: left;">
-            <thead>
-              <tr>
-                <th>Part</th>
-                <th>Tags</th>
-                <th>Purpose</th>
-                <th>Semantic?</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Main</td>
-                <td><code>&lt;main&gt;&lt;/main&gt;</code></td>
-                <td>contains primary content unique to the webpage</td>
-                <td style="text-align: center;">Yes</td>
-              </tr>
-              <tr>
-                <td>Section</td>
-                <td><code>&lt;section&gt;&lt;/section&gt;</code></td>
-                <td>divides content thematically</td>
-                <td style="text-align: center;">Yes</td>
-              </tr>
-              <tr>
-                <td>Article</td>
-                <td><code>&lt;article&gt;&lt;/article&gt;</code></td>
-                <td>contains stand-alone content that can make sense outside the current page</td>
-                <td style="text-align: center;">Yes</td>
-              </tr>
-              <tr>
-                <td>Aside</td>
-                <td><code>&lt;aside&gt;&lt;/aside&gt;</code></td>
-                <td>contains content indirectly, if at all, related to the main content</td>
-                <td style="text-align: center;">Yes</td>
-              </tr>
-              <tr>
-                <td>Header</td>
-                <td><code>&lt;header&gt;&lt;/header&gt;</code></td>
-                <td>contains introductory elements for the parent or repeating introductory content across webpages</td>
-                <td style="text-align: center;">Yes</td>
-              </tr>
-              <tr>
-                <td>Footer</td>
-                <td><code>&lt;footer&gt;&lt;/footer&gt;</code></td>
-                <td>contains secondary information for the parent or repeating secondary content across webpages</td>
-                <td style="text-align: center;">Yes</td>
-              </tr>
-              <tr>
-                <td>Division</td>
-                <td><code>&lt;div&gt;&lt;/div&gt;</code></td>
-                <td>all purpose structural element, demarcates a block part of the code</td>
-                <td style="text-align: center;">No</td>
-              </tr>
-              <tr>
-                <td>Span</td>
-                <td><code>&lt;span&gt;&lt;/span&gt;</code></td>
-                <td>demarcates an 
-                  <span class="tooltip">inline
-                    <span class="tooltiptext">element that DOES NOT occupy an entire line</span>
-                  </span> part of the code</td>
-                <td style="text-align: center;">No</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <h3 id="nesting">Nesting</h3>
-        <p>An important aspect of HTML is <em>nesting</em>. This refers to the hierarchical organization of elements. Some elements are broader and contain elements within. 
-          The former is called the <em>parent</em>, while the latter are called <em>children</em> (which can also be parents if containing sub-elements). Children elements
-          within the same parent element are called <em>siblings</em>.
-        </p>
-        <div class="syn-container">
-          <b>Syntax:</b>
-          <pre><code><span style="background-color: rgb(35, 145, 205);">&lt;body&gt;</span>
-  <span style="background-color: rgb(75, 175, 228);">&lt;main&gt;</span>
-    <span style="background-color: rgb(150, 210, 243);">&lt;section&gt;</span>
-      <span style="background-color: rgb(255,255,255);">&lt;p&gt;Paragraph&lt;/p&gt;
-      &lt;ul&gt;
-          &lt;li&gt;List&lt;/li&gt;
-      &lt;/ul&gt;</span>
-    <span style="background-color: rgb(150, 210, 243);">&lt;/section&gt;</span>
-    <span style="background-color: rgb(150, 210, 243);">&lt;section&gt;</span>
-      <span style="background-color: rgb(255,255,255);">&lt;p&gt;Paragraph&lt;/p&gt;
-      &lt;ul&gt;
-          &lt;li&gt;List&lt;/li&gt;
-      &lt;/ul&gt;</span>
-    <span style="background-color: rgb(150, 210, 243);">&lt;/section&gt;</span>
-  <span style="background-color: rgb(75, 175, 228);">&lt;/main&gt;</span>
-<span style="background-color: rgb(35, 145, 205);">&lt;body&gt;</span></code></pre>
-        </div>
-        <b>Preview:</b>
-        <div style="background-color: rgb(35, 145, 205); padding: 1%">
-          <h2 class="no-counter">Body (Main's parent)</h2>
-          <div style="background-color: rgb(75, 175, 228); margin:1%; padding: 1%">
-            <h3 class="no-counter">Main (Body's child, Section's parent)</h3>
-            <div style="background-color: rgb(150, 210, 243); margin:1%; padding: 1%">
-              <h4 class="no-counter">Section 1 (Main's child, Paragraph and List's parent)</h4>
-              <div style="background-color: rgb(255, 255, 255); margin:1%; padding: 1%">
-                <p>Paragraph 1 (Section's child, List 1's sibling)               
-                </p>
-                <ul>
-                  <li>List 1 (Section's child, Paragraph 1's sibling)</li>
-                </ul>
-              </div>
-              <h4 class="no-counter">Section 2 (Main's child, Paragraph and List's parent)</h4>
-              <div style="background-color: rgb(255, 255, 255); margin:1%; padding: 1%">
-                <p>Paragraph 2 (Section2 's child, List 2's sibling)               
-                </p>
-                <ul>
-                  <li>List 2 (Section 2's child, Paragraph 2's sibling)</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <h3 id="blockinline">Block and Inline Elements</h3>
-        <p>Another important aspect of HTML structure is the use of <em>block</em> and <em>inline</em> elements. A webpage is essentially made up of lines (or rows) and columns in which
-          the content is allocated. Block and inline assigments determine the nature of the elements and how they interact with the lines of the webpage.
-        </p>
-        <div style="background-color: #76b9f3; padding: 10px; margin: 10px;"><b>BLOCK ELEMENT 1 (occupies this entire line)</b></div>
-        <div style="background-color: #76b9f3; padding: 10px; margin: 10px;"><b>BLOCK ELEMENT 2 (occupies this entire line)</b><span style="background-color: rgb(255, 255, 255); padding: 2px; margin: 2px;">INLINE ELEMENT 1 
-          (co-occupies this line)</span><span style="background-color: rgb(167, 215, 241); padding: 2px; margin: 2px">INLINE ELEMENT 2 (co-occupies this line)</span></div>
-        <h4>Block Elements</h4>
-        <p>These elements <em>occupy an entire line</em> in the webpage. This means that no other content can be displayed in that line. 
-          Here are some examples of block elements:</p>
-        <ul>
-          <li>h1–h6</li>
-          <li>p</li>
-          <li>hr</li>
-          <li>pre</li>
-          <li>main</li>
-          <li>section</li>
-          <li>article</li>
-          <li>aside</li>
-          <li>header</li>
-          <li>footer</li>
-          <li>div</li>
-          <li>nav</li>
-          <li>ul, ol, li, dt, dd</li>
-          <li>table, thead, tbody, tr, th, td, caption, foot</li>
-          <li>form</li>
-        </ul>
-        <div class="syn-container">
-          <b>Syntax:</b>
-          <pre><code>&lt;p&gt;The paragraph element is a block element.&lt;p&gt;<span>&lt;hr&gt;<b>&lt;!--the horizontal rule &lthr&gt;is another block element, so it cannot occupy the same line as &lt;p&gt; even if they are written in the same line in code--&gt;</b></span></code></pre>
-        </div>
-        <b>Preview:</b>
-        <p>The paragraph element is a block element.</p><hr>
-
-        <h4>Inline Elements</h4>
-        <p>These elements <em>do not occupy an entire line</em> in the webpage. This means that they can be displayed side by side each other and the block element. 
-          Here are some examples of inline elements:</p>
-        <ul>
-          <li>br</li>
-          <li>a</li>
-          <li>b, strong</li>
-          <li>i, em</li>
-          <li>u, ins</li>
-          <li>s, del</li>
-          <li>small</li>
-          <li>sup, sub</li>
-          <li>small</li>
-          <li>mark</li>
-          <li>img</li>
-          <li>audio</li>
-          <li>span</li>
-        </ul>
-        <div class="syn-container">
-          <b>Syntax:</b>
-          <pre><code>&lt;p&gt;The paragraph element is a block element but the inline elements &lt;code&gt;img&lt;/code&gt;&lt;img src="Multimedia/woodstock.webp" width="100"&gt; 
-  and &lt;code&gt;
-  &lt;span class="tooltip"&gt;vid
-    &lt;span class="tooltiptext"&gt;technically this is an inline-block type of element&lt;/span&gt;
-  &lt;/span&gt;
-  &lt;/code&gt;&lt;video src="Multimedia/Screen Recording 2024-10-09 183342.mp4" width="200" controls audtoplay loop muted&gt;
-  &lt;/video&gt;
-  can be placed without being displaced to a new line.
-&lt;/p&gt;</code></pre>
-        </div>
-        <b>Preview:</b>
-        <p>The paragraph element is a block element but the inline elements <code>img</code>
-          <img src="Multimedia/woodstock.webp" width="100"> and <code>
-            <span class="tooltip">vid
-              <span class="tooltiptext">technically this is an inline-block type of element</span>
-            </span>
-            </code><video src="Multimedia/Screen Recording 2024-10-09 183342.mp4" width="200" controls audtoplay loop muted></video> 
-          can be placed without being displaced to a new line.
-        </p>
-        <h4>Inline-Block Elements</h4>
-        <p>These elements <em>occupy an entire line</em> in the webpage. This means that no other content can be displayed in that line. 
-          Here are some examples of block elements:</p>
+        <p>The syntax in the table above applies when the rule is put in a single line. However, for more detailed rules, it is recommended to split it into several lines for clarity.</p>
+        <b>Multiline rule syntax:</b>
+        <pre><code>
+        x {
+        y<sub>1</sub>: z<sub>1</sub>;
+        y<sub>2</sub>: z<sub>2</sub>;
+        y<sub>3</sub>: z<sub>3a</sub> z<sub>3b</sub>;
+        }
+        </code></pre>
+        <p>Properties can have multiple values as shown in the third property, <code>y<sub>3</sub></code>.</p>
+          
       </section>  
       
       <section>
         <h2 id="selectors">Selectors</h2>
+        <p>The selector is an essential part of CSS. It is the part of the rule that determines which element or elements are affected. There are several types of selectors, making styling highly flexible and precise.</p>
         <article>
-          <h3 id="element">Element</h3>
-          <p>
-            The <em>element</em> is the building block of HTML. It defines the content to be presented by the 
-            <span class="tooltip" id="browserdef"><em>browser</em>.
-              <span class="tooltiptext">program or application that displays webpages</span>
-            </span>
-            It is comprised of 
-            <span class="tooltip" id="charactersdef"><em>characters</em>
-              <span class="tooltiptext">letters, numbers, symbols, and spaces</span>
-            </span>
-            arranged according to a particular 
-            <span class="tooltip" id="syntaxdef"><em>syntax</em>.
-              <span class="tooltiptext">rules governing how a language is structured</span>
-            </span>
-          </p>
-          
-          <p>Examples of characters:</p>
-          <ul>
-            <li><code>a</code> is a character</li>
-            <li><code>1</code> is a character</li>
-            <li><code>!</code> is a character</li>
-            <li>(space) is a character</li>
-          </ul>
-          
-          <h4>Parts of an Element</h4>
-          
-          <p>
-            An element has specific parts that must be present to be understood and executed by the browser. 
-            It is initiated by the 
-            <span class="tooltip" id="stdef"><em>start tag</em>,
-              <span class="tooltiptext">aka "open" tag</span>
-            </span>contains 
-            <span class="tooltip" id="ecdef"><em>element content</em>,
-              <span class="tooltiptext">the actual content to be presented by the browser</span>
-            </span>and ends with the 
-            <span class="tooltip" id="etdef"><em>end tag</em>
-              <span class="tooltiptext">aka "close" tag</span>
-            </span>.
-          </p>
-          
-          <ol>
-            <li>Start Tag
-              <ol type="a">
-                <li><span class="tooltip" id="oabdef">Opening angle bracket<span class="tooltiptext">aka the "less than symbol"</span></span> <code>&lt;</code></li>
-                <li><span class="tooltip" id="tndef">Tag name<span class="tooltiptext">element identifier</span></span> <code>x</code></li>
-                <li><span class="tooltip" id="cabdef">Closing angle bracket<span class="tooltiptext">aka the "greater than symbol"</span></span> <code>&gt;</code></li>
-              </ol>
-            </li>
-            <li>Element Content <code>abc</code></li>
-            <li>End Tag
-              <ol type="a">
-                <li>Opening angle bracket <code>&lt;</code></li>
-                <li><span class="tooltip" id="fsdef">Forward slash<span class="tooltiptext">indicates closing tag</span></span> <code>/</code></li>
-                <li>Tag name <code>x</code></li>
-                <li>Closing angle bracket <code>&gt;</code></li>
-              </ol>
-            </li>
-          </ol>
-          
-          <p>Some elements are <em>empty</em> which means that they do not have element content nor end tags (Example 2).</p>
+          <h3 id="element">Individual</h3>
           <div class="table-container">
-            <table>
+            <table style="text-align: left;">
               <thead>
                 <tr>
-                  <th></th>
-                  <th>Start Tag</th>
-                  <th>Element Content</th>
-                  <th>End Tag</th>
+                  <th>Selector</th>
+                  <th>Syntax</th>
+                  <th>Purpose</th>
+                  <th>Example</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>Regular Element</td>
-                  <td><code>&lt;x&gt;</code></td>
-                  <td><code>abc</code></td>
-                  <td><code>&lt;/x&gt;</code></td>
+                  <td>Element</td>
+                  <td><code>element {declaration block}</code></td>
+                  <td>selects the defined element</td>
+                  <td><code>h2 {color: red; font-weight: normal}</code></td>
                 </tr>
                 <tr>
-                  <td>Empty Element</td>
-                  <td><code>&lt;x&gt;</code></td>
-                  <td></td>
-                  <td></td>
+                  <td>Class</td>
+                  <td><code>.class {declaration block}</code></td>
+                  <td>selects elements with the defined class attribute value</td>
+                  <td><code>.fab {color: pink; font-weight: strong}</code></td>
+                </tr>
+                <tr>
+                  <td>ID</td>
+                  <td><code>#id {declaration block}</code></td>
+                  <td>selects the elements with the defined id attribute value</td>
+                  <td><code>#blue {color: white; background-color: blue}</code></td>
+                </tr>
+                <tr>
+                  <td>Element-Class</td>
+                  <td><code>element.class {declaration block}</code></td>
+                  <td>selects only the defined element with the defined class attribute value</td>
+                  <td><code>p.fab {color: red; font-weight: normal}</code></td>
                 </tr>
               </tbody>
             </table>
           </div>
-        <h4>Examples</h4>
-        <p><u>Example 1: Regular Element (paragraph)</u></p>
-        <div class="syn-container">
-          <b>Syntax:</b>
-          <pre><code>&lt;p&gt;This is the element content.&lt;/p&gt;</code></pre>
-        </div>
-        <b>Preview:</b>
-        <p>This is the element content.</p>
+          <br>
+            <u>Examples</u>
+          
         
-        <p><u>Example 2: Empty Element (horizontal rule)</u></p>
-        <div class="syn-container">
-          <b>Syntax:</b>
-          <pre><code>&lt;hr&gt;</code></pre>
-        </div>
-        <b>Preview:</b>
-        <hr>
-        
-        <p class="funfact">
+        <!--<p class="funfact">
           <span class="b">🤓 Author's Markup:</span> Some tags (e.g. <code>&lt;p&gt;</code>, <code>&lt;li&gt;</code>, <code>&lt;tr&gt;</code>) will technically still work without end tags, but this may lead to unexpected glitches, so it
           is still the best practice to close all necessary tags.
-        </p>
+        </p>-->
         </article>
         
         <article>
-            <h3 id="attribute">Attribute</h3>
+            <h3 id="attribute">Group</h3>
             <p>
-              An <em id="attributedef">attribute</em> is an aspect of an element. It provides additional information that serves to further specify
-              instructions for the browser. They can be applied to <strong>all elements</strong>, but most do not require them, save for
-              <span class="tooltip">some.
-                <span class="tooltiptext">e.g. <code>&lt;a&gt;, &lt;img&gt;, &lt;iframe&gt;, &lt;input&gt;</code></span>
-              </span>
-                To be applied, the
-              <span class="tooltip"><em>attribute</em>
-                <span class="tooltiptext">name of the attribute to be defined</span>
-              </span>
-              and corresponding
-              <span class="tooltip" id="valuedef"><em>value</em>,
-                <span class="tooltiptext">how the browser presents the element content based on chosen attribute</span>
-              </span>
-              if any, must be encoded <strong>inside the start tag</strong>.
             </p>
-            
-            <h4>Parts of an Attribute</h4>
-            <ol>
-              <li>Attribute Name <code><span class="tooltip">attribute<span class="tooltiptext">the text before the equal sign</span></span></code></li>
-              <li>Attribute Value <code><span class="tooltip">value<span class="tooltiptext">the text inside the quotes</span></span></code></li>
-              <p><em>Style</em>, a CSS attribute, can be used in HTML, and it has an additional component, the 
-                <span class="tooltip" id="propertydef"><em>property</em>
-                  <span class="tooltiptext">one of many definable variables of the style attribtue</span>
-                </span>
-              </p>
-              <li>Property
-                <code><span class="tooltip">property<span class="tooltiptext">the text after the equal sign</span></span></code></li>
-              <li>Property Value <code><span class="tooltip">value<span class="tooltiptext">the text after the colon</span></span></code></li>
-              </ol>
-            <div class="table-container">
-              <table>
-                <thead>  
-                  <tr>
-                    <th></th>
-                    <th></th>
-                    <th>Attribute Name</th>
-                    <th>Attribute Value/Property</th>
-                    <th>Property Value</th>
-                    <th></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>HTML </td>
-                    <td><code>&lt;x</code></td>
-                    <td><code>attribute=</code></td>
-                    <td><code>"value"</code></td>
-                    <td></td>
-                    <td><pre><code> &gt; </code></pre></td>
-                  </tr>
-                  <tr>
-                    <td>Style</td>
-                    <td><code>&lt;x</code></td>
-                    <td><code>style=</code></td>
-                    <td><code>"property:</code></td>
-                    <td><code>value"</code></td>
-                    <td><pre><code> &gt; </code></pre></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-              <h4>Examples</h4>
-              <p><u>Example 1: HTML attributes for an ordered list</u></p>
-              <p>The attributes applied are <em>type</em> and <em>start</em>. The defined values for each are inside the quotation marks.</p>
-              <div class="syn-container">
-                <b>Syntax:</b>
-                <pre><code>&lt;ol <span class="tooltip">type<span class="tooltiptext">attribute<sub>1</sub></span></span>="<span class="tooltip">I<span class="tooltiptext">value<sub>1</sub></span></span>" <span class="tooltip">start<span class="tooltiptext">attribute<sub>2</sub></span></span>="<span class="tooltip">1<span class="tooltiptext">value<sub>2</sub></span></span>"&gt;
-  &lt;li&gt;Item 1&lt;/li&gt;
-  &lt;li&gt;Item 2&lt;/li&gt;     
-&lt;/ol&gt;</code></pre>
-              </div>
-              <b>Preview:</b>
-              <ol type="I" start="1">
-                  <li>Item 1</li>
-                  <li>Item 2</li>     
-              </ol>
-
-              <p><u>Example 2: Style and properties for an unordered list</u></p>
-              <p>The attribute applied is <em>style</em>, while the properties are <em>line-style-type</em> and <em>background-color</em>. 
-                  The defined value for each property is placed after the colon.
-              </p>
-              <p>Multiple properties can be included inside the style attribute and are separated by semicolons. Take note that all 
-                  <em>property:value</em> pairs, separated by semicolons, are enclosed within the one quote pair after the equal sign.
-              </p>
-              <div class="syn-container">
-                <b>Syntax:</b>
-                <pre><code>&lt;ul <span class="tooltip">style<span class="tooltiptext">attribute</span></span>="<span class="tooltip">list-style-type<span class="tooltiptext">property<sub>1</sub></span></span>: <span class="tooltip">circle<span class="tooltiptext">value<sub>1</sub></span></span>; <span class="tooltip">background-color<span class="tooltiptext">property<sub>2</sub></span></span>:<span class="tooltip">#b5d6f3<span class="tooltiptext">value<sub>2</sub></span></span>;"&gt;
-  &lt;li&gt;Item 1&lt;/li&gt;
-  &lt;li&gt;Item 2&lt;/li&gt;     
-&lt;/ul&gt;</code></pre>
-              </div>  
-              <b>Preview:</b>
-                <ul style="list-style-type: circle; background-color:#b5d6f3;">
-                  <li>Item 1</li>
-                  <li>Item 2</li>     
-                </ul>
-            
-            </article>
-        </section>
+        </article>    
+      </section>
       <section>
         <h2 id="types">Types</h2>
       </section>
