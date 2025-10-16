@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Placido—CSS Examples</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="examples.css">
+</head>
+<body>
+  <header>
+    <h1>CSS Examples</h1>
+  </header>
+
+  <section class="flex" id="x1">
+    <div>
+      <h2 id="e-selector">Element Selector</h2>
+      <h3 class="tnr blue">Heading 3A</h3>
+      <section>
+        <p class="tnr" id="yellow">Paragraph 1</p>
+        <p class="tnr">Paragraph 2</p>
+      </section>
+      <h3 class="courier">Heading 3B</h3>
+      <section>
+        <p class="courier" id="salmon">Paragraph 3</p>
+        <table>
+          <tr>
+            <th class="blue">Header 1</th>
+            <th class="yellow">Header 2</th>
+          </tr>
+          <tr>
+            <td class="tnr">Data 1</td>
+            <td class="tnr">Data 2</td>
+          </tr>
+        </table>
+      </section>
+    </div>
+    <div>
+      <pre><code>
+
+
+
+        &lt;<span style="background-color: #76b9f3;">h3</span> class="tnr blue"&gt;Heading 3A&lt;/h3&gt;
+        &lt;<span style="background-color: rgb(224, 136, 136);">p</span> class="tnr" id="yellow"&gt;Paragraph 1&lt;/p&gt;
+        &lt;<span style="background-color: rgb(224, 136, 136);">p</span> class="tnr"&gt;Paragraph 2&lt;/p&gt;
+        &lt;<span style="background-color: #76b9f3;">h3</span> class="courier"&gt;Heading 3B&lt;/h3&gt;
+        &lt;<span style="background-color: rgb(224, 136, 136);">p</span> class="courier" id="salmon"&gt;Paragraph 3&lt;/p&gt;
+        &lt;<span style="background-color: rgb(254, 227, 91);">table</span>&gt;
+          &lt;tr&gt;
+            &lt;th class="blue"&gt;Header 1&lt;/th&gt;
+            &lt;th class="yellow"&gt;Header 2&lt;/th&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td class="tnr"&gt;Data 1&lt;/td&gt;
+            &lt;td class="tnr"&gt;Data 2&lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/table&gt;</code></pre>
+    </div>
+  </section>
+
+  <section class="flex" id="x2">
+    <div>
+      <h2 id="c-selector">Class Selector</h2>
+      <h3 class="tnr2 blue2">Heading 3A</h3>
+      <section>
+        <p class="tnr2" id="yellow2">Paragraph 1</p>
+        <p class="tnr2">Paragraph 2</p>
+      </section>
+      <h3 class="courier2">Heading 3B</h3>
+      <section>
+        <p class="courier2" id="salmon2">Paragraph 3</p>
+        <table>
+          <tr>
+            <th class="blue2">Header 1</th>
+            <th class="yellow2">Header 2</th>
+          </tr>
+          <tr>
+            <td class="tnr2">Data 1</td>
+            <td class="tnr2">Data 2</td>
+          </tr>
+        </table>
+      </section>
+    </div>
+    <div>
+      <pre><code>
+
+
+
+        &lt;h3 class="<span style="background-color: #76b9f3;">tnr</span> blue"&gt;Heading 3A&lt;/h3&gt;
+        &lt;p class="<span style="background-color: #76b9f3;">tnr</span>" id="yellow"&gt;Paragraph 1&lt;/p&gt;
+        &lt;p class="<span style="background-color: #76b9f3;">tnr</span>"&gt;Paragraph 2&lt;/p&gt;
+        &lt;h3 class="<span style="background-color: rgb(224, 136, 136);">courier</span>"&gt;Heading 3B&lt;/h3&gt;
+        &lt;p class="<span style="background-color: rgb(224, 136, 136);">courier</span>" id="salmon"&gt;Paragraph 3&lt;/p&gt;
+        &lt;table&gt;
+          &lt;tr&gt;
+            &lt;th class="blue"&gt;Header 1&lt;/th&gt;
+            &lt;th class="yellow"&gt;Header 2&lt;/th&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td class="<span style="background-color: #76b9f3;">tnr</span>"&gt;Data 1&lt;/td&gt;
+            &lt;td class="<span style="background-color: #76b9f3;">tnr</span>"&gt;Data 2&lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/table&gt;</code></pre>
+    </div>
+  </section>
+  
+  <section class="flex" id="x3">
+    <div>
+      <h2 id="i-selector">ID Selector</h2>
+      <h3 class="tnr3 blue3">Heading 3A</h3>
+      <section>
+        <p class="tnr3" id="yellow3">Paragraph 1</p>
+        <p class="tnr3">Paragraph 2</p>
+      </section>
+      <h3 class="courier3">Heading 3B</h3>
+      <section>
+        <p class="courier3" id="salmon3">Paragraph 3</p>
+        <table>
+          <tr>
+            <th class="blue3">Header 1</th>
+            <th class="yellow3">Header 2</th>
+          </tr>
+          <tr>
+            <td class="tnr3">Data 1</td>
+            <td class="tnr3">Data 2</td>
+          </tr>
+        </table>
+      </section>
+    </div>
+    <div>
+      <pre><code>
+
+
+
+        &lt;h3 class="tnr blue"&gt;Heading 3A&lt;/h3&gt;
+        &lt;p class="tnr" id="<span style="background-color: #76b9f3;">yellow</span>"&gt;Paragraph 1&lt;/p&gt;
+        &lt;p class="tnr"&gt;Paragraph 2&lt;/p&gt;
+        &lt;h3 class="courier"&gt;Heading 3B&lt;/h3&gt;
+        &lt;p class="courier" id="<span style="background-color: rgb(224, 136, 136);">salmon</span>"&gt;Paragraph 3&lt;/p&gt;
+        &lt;table&gt;
+          &lt;tr&gt;
+            &lt;th class="blue"&gt;Header 1&lt;/th&gt;
+            &lt;th class="yellow"&gt;Header 2&lt;/th&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td class="tnr"&gt;Data 1&lt;/td&gt;
+            &lt;td class="tnr"&gt;Data 2&lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/table&gt;</code></pre>
+    </div>
+  </section>
+  <!--<h2>Heading 2</h2>
+    <h2 class="red">Heading 2b</h2>
+    <h3 class="red" id="arial">Heading 3</h3>
+    <p class="border">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, esse repudiandae facere voluptates sed quaerat? Dolor exercitationem voluptas deleniti quidem velit ipsum earum. Ipsa, voluptatem nihil eius in sapiente iusto.</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Selector</th>
+          <th>Declaration Block</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>x</code></td>
+          <td><code>{y<sub>1</sub>: z<sub>1</sub>; y<sub>2</sub>: z<sub>2</sub>;}</code>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="border">
+      <thead>
+        <tr>
+          <th>Selector</th>
+          <th>Declaration Block</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>x</code></td>
+          <td><code>{y<sub>1</sub>: z<sub>1</sub>; y<sub>2</sub>: z<sub>2</sub>;}</code></td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="border" id="wide">
+      <thead>
+        <tr>
+          <th>Selector</th>
+          <th>Declaration Block</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>x</code></td>
+          <td><code>{y<sub>1</sub>: z<sub>1</sub>; y<sub>2</sub>: z<sub>2</sub>;}</code>
+          </td>
+        </tr>
+      </tbody>
+    </table>-->
+
+</body>
+</html>
