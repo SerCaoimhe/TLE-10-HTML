@@ -248,8 +248,7 @@ font-weight: bold;
             <b>Syntax:</b>
               <pre><code>
 <span style="background-color: #76b9f3;">h3, h4</span> {
-  background-color: black;
-  color: yellow;
+  color: rgb(83, 186, 198)
 }
 <span style="background-color: rgb(224, 136, 136);">p, table</span> {
   background-color: rgb(114, 250, 114);
@@ -293,14 +292,71 @@ font-weight: bold;
       </section>
       <section>
         <h2 id="types">Types</h2>
-        <h3>Inline</h3>
-        <p>Integrated into html elements</p>
-        
-        <h3>Internal</h3>
-        <p>Integrated into html head element</p>
-
-        <h3>External</h3>
-        <p>In a separate .css file</p>
+        <p>There are three ways to add styles to an HTML document. In other words, there are three types of CSS-to-HTML integration. These three are not mutually exclusive, meaning they can exist simultaneously. However, each type is given a specific priority when it comes to implementation.
+        </p>
+        <p>The hierarchy is as follows from highest priority to lowest:</p>
+          <ol>
+            <li>inline</li>
+            <li>internal</li>
+            <li>external</li>
+          </ol>
+          <p>The browser will always implement higher priority CSS when available. It will override properties applied using lower priority CSS.
+        </p>
+        <article>
+          <h3>Inline</h3>
+          <p>Inline CSS refers to CSS encoded directly into html elements. This is whenever the <code>style</code> attribute is applied.</p>
+          <b>Syntax:</b>
+          <pre><code>&lt;div style="background-color: salmon; color:white"&gt;Inline CSS ftw&lt;/div&gt;</code></pre>
+          <b>Preview:</b>
+          <div style="background-color: salmon; color:white">Inline style ftw</div>
+        </article>
+        <article>  
+          <h3>Internal</h3>
+          <p>Inline CSS refers to CSS encoded in the <code>style</code> element within the <code>head</code> element of the HTML document.
+          </p>
+          <p>This is recommended for localized styles that vary from page to page.</p>
+          <b>Syntax:</b>
+          <pre><code>
+&lt;head&gt;
+  &lt;style&gt;
+    div {
+      background-color: rgb(115, 202, 159);
+      color:white;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div&gt;Internal CSS ftw&lt;/div&gt;
+&lt;/body&gt;
+          </code></pre>
+          <b>Preview:</b>
+          <style>
+                #internalexample {
+                  background-color: rgb(115, 202, 159);
+                  color:white;
+                }
+              </style>
+              <div id="internalexample">Internal CSS ftw</div>
+        </article>
+        <article>
+          <h3>External</h3>
+          <p>External CSS refers to CSS encoded in a separate <code>.css</code> document and 
+            <span class="tooltip"><em>linked</em>
+              <span class="tooltiptext">using the <code>&lt;link rel="stylesheet" href="filename.css"&gt;</code> element</span>
+              </span> 
+              to the HTML document in the <code>head</code> element of the HTML document.
+          </p>
+          <p>This is recommended for big projects where consistency and convenience of editing is crucial as all styles is found in a single document.</p>
+          <b>Syntax:</b>
+          <pre><code>&lt;head&gt;
+  &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div id="externalexample"&gt;External CSS ftw&lt;/div&gt;
+&lt;/body&gt;</code></pre>
+          <b>Preview</b>
+          
+        </article>
       </section>
       <section>
         <h2 id="specificity">Specificity</h2>
