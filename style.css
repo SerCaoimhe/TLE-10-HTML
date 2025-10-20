@@ -154,6 +154,11 @@ label.checkbox {
   font-weight: normal;
 }
 
+.flex {
+  display:flex;
+  justify-content: space-between;
+}
+
 @media only screen and (max-width: 767px) {
 
   aside {
@@ -203,9 +208,8 @@ label.checkbox {
     overflow-x: scroll;
     width: 100%;
   }
-}
-
-.flex {
-  display:flex;
-  justify-content: space-between;
+  .flex {
+    overflow-x: scroll;
+    width: 100%
+  }
 }
