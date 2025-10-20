@@ -149,6 +149,146 @@
         &lt;/table&gt;</code></pre>
     </div>
   </section>
+
+  <section class="flex" id="x4">
+    <div>
+      <h2 id="ec-selector">Element-Class Selector</h2>
+      <h3 class="tnr4 blue4">Heading 3A</h3>
+      <section>
+        <p class="tnr4" id="yellow4">Paragraph 1</p>
+        <p class="tnr4">Paragraph 2</p>
+      </section>
+      <h3 class="courier4">Heading 3B</h3>
+      <section>
+        <p class="courier4" id="salmon4">Paragraph 3</p>
+        <table>
+          <tr>
+            <th class="blue4">Header 1</th>
+            <th class="yellow4">Header 2</th>
+          </tr>
+          <tr>
+            <td class="tnr4">Data 1</td>
+            <td class="tnr4">Data 2</td>
+          </tr>
+        </table>
+      </section>
+    </div>
+    <div>
+      <pre><code>
+
+
+
+        &lt;<span style="background-color: #76b9f3;">h3</span> class="tnr <span style="background-color: #76b9f3;">blue</span>"&gt;Heading 3A&lt;/h3&gt;
+        &lt;p class="tnr" id="yellow"&gt;Paragraph 1&lt;/p&gt;
+        &lt;p class="tnr"&gt;Paragraph 2&lt;/p&gt;
+        &lt;h3 class="courier"&gt;Heading 3B&lt;/h3&gt;
+        &lt;p class="courier" id="salmon"&gt;Paragraph 3&lt;/p&gt;
+        &lt;table&gt;
+          &lt;tr&gt;
+            &lt;th class="blue"&gt;Header 1&lt;/th&gt;
+            &lt;th class="yellow"&gt;Header 2&lt;/th&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;<span style="background-color: rgb(224, 136, 136);">td</span> class="<span style="background-color: rgb(224, 136, 136);">tnr</span>"&gt;Data 1&lt;/td&gt;
+            &lt;<span style="background-color: rgb(224, 136, 136);">td</span> class="<span style="background-color: rgb(224, 136, 136);">tnr</span>"&gt;Data 2&lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/table&gt;</code></pre>
+    </div>
+  </section>
+
+  <section class="flex" id="x5">
+    <div>
+      <h2 id="g-selector1">Group Example 1</h2>
+      <h3 id="und1">Heading 3A</h3>
+      <section>
+        <h4>Heading 4</h4>
+        <p>Paragraph 1</p>
+      </section>
+      <h3>Heading 3B</h3>
+      <section>
+        <p class="strike">Paragraph 2</p>
+        <table>
+          <tr class="strike">
+            <th>Header 1</th>
+            <th>Header 2</th>
+          </tr>
+          <tr class="und">
+            <td>Data 1</td>
+            <td>Data 2</td>
+          </tr>
+        </table>
+      </section>
+    </div>
+    <div>
+      <pre><code>
+
+
+
+        &lt;<span style="background-color: #76b9f3;">h3</span> id="und1"&gt;Heading 3A&lt;/h3&gt;
+        &lt;<span style="background-color: #76b9f3;">h4</span>&gt;Heading 4&lt;/h4&gt;
+        &lt;<span style="background-color: rgb(224, 136, 136);">p</span>&gt;Paragraph 1&lt;/p&gt;
+        &lt;<span style="background-color: #76b9f3;">h3</span>&gt;Heading 3B&lt;/h3&gt;
+        &lt;<span style="background-color: rgb(224, 136, 136);">p</span> class="strike"&gt;Paragraph 2&lt;/p&gt;
+        &lt;<span style="background-color: rgb(224, 136, 136);">table</span>&gt;
+          &lt;tr class="strike"&gt;
+            &lt;th&gt;Header 1&lt;/th&gt;
+            &lt;th&gt;Header 2&lt;/th&gt;
+          &lt;/tr&gt;
+          &lt;tr class="und"&gt;
+            &lt;td&gt;Data 1&lt;/td&gt;
+            &lt;td&gt;Data 2&lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/table&gt;
+      </code></pre>
+    </div>
+  </section>
+
+  <section class="flex" id="x6">
+    <div>
+      <h2 id="g-selector2">Group Example 2</h2>
+      <h3 id="und3">Heading 3A</h3>
+      <section>
+        <h4>Heading 4</h4>
+        <p>Paragraph 1</p>
+      </section>
+      <h3>Heading 3B</h3>
+      <section>
+        <p class="strike">Paragraph 2</p>
+        <table>
+          <tr class="strike">
+            <th>Header 1</th>
+            <th>Header 2</th>
+          </tr>
+          <tr class="und">
+            <td>Data 1</td>
+            <td>Data 2</td>
+          </tr>
+        </table>
+      </section>
+    </div>
+    <div>
+      <pre><code>
+
+
+
+        &lt;h3 id="<span style="background-color: #76b9f3;">und1</span>"&gt;Heading 3A&lt;/h3&gt;
+        &lt;<span style="background-color: rgb(224, 136, 136);">h4</span>&gt;Heading 4&lt;/h4&gt;
+        &lt;p&gt;Paragraph 1&lt;/p&gt;
+        &lt;h3&gt;Heading 3B&lt;/h3&gt;
+        &lt;p class="<span style="background-color: rgb(224, 136, 136);">strike</span>"&gt;Paragraph 2&lt;/p&gt;
+        &lt;table&gt;
+          &lt;tr class="<span style="background-color: rgb(224, 136, 136);">strike</span>"&gt;
+            &lt;th&gt;Header 1&lt;/th&gt;
+            &lt;th&gt;Header 2&lt;/th&gt;
+          &lt;/tr&gt;
+          &lt;tr class="<span style="background-color: #76b9f3;">und</span>"&gt;
+            &lt;td&gt;Data 1&lt;/td&gt;
+            &lt;td&gt;Data 2&lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/table&gt;
+      </code></pre>
+    </div>
+  </section>
   <!--<h2>Heading 2</h2>
     <h2 class="red">Heading 2b</h2>
     <h3 class="red" id="arial">Heading 3</h3>
@@ -197,6 +337,7 @@
         </tr>
       </tbody>
     </table>-->
+
 
 </body>
 </html>

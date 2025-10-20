@@ -20,32 +20,31 @@
       <a href="c.text.html" target="_self" title="Learn about Text Elements">Text</a>
       <a href="c.structure.html" target="_self" title="Learn about Tables">Structure</a>
     </nav>
-    <!--<aside>
+    <aside>
         <h3>Quick Links</h3>
         <ul>
-          <li><a href="#structure">Structure</a>
-            <ul>
-                <li><a href="#mainparts">Main Parts</a></li>
-                <li><a href="#otherparts">Other Parts</a></li>
-                <li><a href="#nesting">Nesting</a></li>
-                <li><a href="#blockinline">Block and Inline</a></li>
-              </ul>
-          </li>  
-          <li><a href="#syntax">Syntax</a>
+          <li><a href="#syntax">Syntax</a></li>  
+          <li><a href="#selectors">Selectors</a>
               <ul>
-                <li><a href="#element">Element</a></li>
-                <li><a href="#attribute">Attribute</a></li>
+                <li><a href="#individual">Individual</a></li>
+                <li><a href="#group">Group</a></li>
+                <li><a href="#combinators">Combinators</a></li>
               </ul>
             </li>
+          <li><a href="#types">Types</a></li>
+            <ul>
+              <li><a href="#inline">Inline</a></li>
+              <li><a href="#internal">Internal</a></li>
+              <li><a href="#external">External</a></li>
+            </ul>
+          <li><a href="#specificity">Specificity</a></li>
           <li><a href="#top">Back to Top</a></li>
-          <li><a href="index.html">Previous</a></li>
-          <li><a href="editor.html">Next</a></li>
+          <li><a href="c.colors.html">Next</a></li>
         </ul>
-    </aside>-->
+    </aside>
     <main>
       <section>
         <h2 id="syntax">Syntax</h2>
-        <h3>Rule</h3>
         <p>If the basic building block of html is the <em>element</em>, in CSS, it is the <em>rule</em>. The rule itself can be split into two main segments, the <em>selector</em> and the <em>declaration block</em>, which in turn is composed of at least one <em>declaration</em>.
         </p>
         <p>A declaration is composed of the <em>property</em> and <em>value</em> pair. Multiple property-value pairs are separated by semicolons.</p> 
@@ -100,7 +99,7 @@
         <h2 id="selectors">Selectors</h2>
         <p>The selector is an essential part of CSS. It is the part of the rule that determines which element or elements are affected. There are several types of selectors, making styling highly flexible and precise.</p>
         <article>
-          <h3 id="element">Individual</h3>
+          <h3 id="individual">Individual</h3>
           <div class="table-container">
             <table style="text-align: left;">
               <thead>
@@ -108,33 +107,33 @@
                   <th>Selector</th>
                   <th>Syntax</th>
                   <th>Purpose</th>
-                  <th>Example</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
+                  <td>Universal</td>
+                  <td><code>* {declaration block}</code></td>
+                  <td>selects all elements</td>
+                </tr>
+                <tr>
                   <td>Element</td>
                   <td><code>element {declaration block}</code></td>
                   <td>selects the defined element</td>
-                  <td><code>h2 {color: red; font-weight: normal}</code></td>
                 </tr>
                 <tr>
                   <td>Class</td>
                   <td><code>.class {declaration block}</code></td>
                   <td>selects elements with the defined class attribute value</td>
-                  <td><code>.fab {color: pink; font-weight: strong}</code></td>
-                </tr>
-                <tr>
-                  <td>ID</td>
-                  <td><code>#id {declaration block}</code></td>
-                  <td>selects the elements with the defined id attribute value</td>
-                  <td><code>#blue {color: white; background-color: blue}</code></td>
                 </tr>
                 <tr>
                   <td>Element-Class</td>
                   <td><code>element.class {declaration block}</code></td>
                   <td>selects only the defined element with the defined class attribute value</td>
-                  <td><code>p.fab {color: red; font-weight: normal}</code></td>
+                </tr>
+                <tr>
+                  <td>ID</td>
+                  <td><code>#id {declaration block}</code></td>
+                  <td>selects the elements with the defined id attribute value</td>
                 </tr>
               </tbody>
             </table>
@@ -145,6 +144,7 @@
           <h4>Element Selector</h4>
           <div class="flex">
             <div style="flex-grow: 1;">
+              <b>Syntax:</b>
               <pre><code>
 <span style="background-color: #76b9f3;"> h3 </span> {
    font-style: italic;
@@ -157,6 +157,8 @@
  }</code></pre>
             </div>
             <div style="flex-grow: 20;">
+              <b>Preview:</b>
+              <br>
               <iframe src="cssexamples.html#e-selector"></iframe>
             </div>
           </div>
@@ -165,6 +167,7 @@
           <h4>Class Selector</h4>
           <div class="flex">
             <div style="flex-grow: 1;">
+              <b>Syntax:</b>
               <pre><code>
 <span style="background-color: #76b9f3;">.tnr</span> {
   font-family:'Times New Roman';
@@ -176,13 +179,39 @@
 }</code></pre>
             </div>
             <div style="flex-grow: 20;">
+              <b>Preview:</b>
+              <br>
               <iframe src="cssexamples.html#c-selector"></iframe>
+            </div>
+          </div>
+
+          <h4>Element-Class Selector</h4>
+          <div class="flex">
+            <div style="flex-grow: 1;">
+              <b>Syntax:</b>
+              <pre><code>
+<span style="background-color: #76b9f3;">h3.blue</span> {
+background-color: blue;
+color: white;
+}
+<span style="background-color: rgb(224, 136, 136);">td.tnr</span> {
+font-family: 'Times New Roman';
+background-color: salmon;
+color: white;
+font-weight: bold;
+}</code></pre>
+            </div>
+            <div style="flex-grow: 20;">
+              <b>Preview:</b>
+              <br>
+              <iframe src="cssexamples.html#ec-selector"></iframe>
             </div>
           </div>
 
           <h4>ID Selector</h4>
           <div class="flex">
             <div style="flex-grow: 1;">
+              <b>Syntax:</b>
               <pre><code>
 <span style="background-color: #76b9f3;">#yellow</span> {
   background-color: black;
@@ -194,6 +223,8 @@
 }</code></pre>
             </div>
             <div style="flex-grow: 20;">
+              <b>Preview:</b>
+              <br>
               <iframe src="cssexamples.html#i-selector"></iframe>
             </div>
           </div>
@@ -207,10 +238,58 @@
         </article>
         
         <article>
-            <h3 id="attribute">Group</h3>
+            <h3 id="group">Group</h3>
+            <p> Multiple selectors may be used in one rule to apply the same style to all of them. This makes the code less cluttered and more efficient. To use group selectors, simply separate the selectors with commas.
+            </p>
+            <u>Example 1: multiple element selectors</u>
+            <br><br>
+            <div class="flex">
+            <div style="flex-grow: 1;">
+            <b>Syntax:</b>
+              <pre><code>
+<span style="background-color: #76b9f3;">h3, h4</span> {
+  background-color: black;
+  color: yellow;
+}
+<span style="background-color: rgb(224, 136, 136);">p, table</span> {
+  background-color: rgb(114, 250, 114);
+}</code></pre>
+            </div>
+            <div style="flex-grow: 20;">
+              <b>Preview:</b>
+              <br>
+              <iframe src="cssexamples.html#g-selector1"></iframe>
+            </div>
+          </div>
+
+          <u>Example 2: mixed selectors</u>
+          <br><br>
+          <div class="flex">
+          <div style="flex-grow: 1;">
+          <b>Syntax:</b>
+              <pre><code>
+<span style="background-color: #76b9f3;">.und, #und1</span> {
+  text-decoration: underline;
+}
+<span style="background-color: rgb(224, 136, 136);">h4, .strike</span> {
+  text-decoration: line-through;
+  background-color:rgb(254, 227, 91);
+}</code></pre>
+            </div>
+            <div style="flex-grow: 20;">
+              <b>Preview:</b>
+              <br>
+              <iframe src="cssexamples.html#g-selector2"></iframe>
+            </div>
+          </div>
+
+            
+        </article>    
+        <article>
+            <h3 id="combinators">Combinators</h3>
             <p>
             </p>
-        </article>    
+        </article>  
       </section>
       <section>
         <h2 id="types">Types</h2>
@@ -222,6 +301,10 @@
 
         <h3>External</h3>
         <p>In a separate .css file</p>
+      </section>
+      <section>
+        <h2 id="specificity">Specificity</h2>
+        <p></p>
       </section>
     </main>
     <footer>
