@@ -17,7 +17,7 @@
       <a href="csyntax.html" target="_self" title="You're already here -_-">Syntax</a>
       <a href="ccolors.html" target="_self" title="Learn about Colors">Colors</a>
       <a href="cbackground.html" target="_self" title="Learn about Lists">Background</a>
-      <a href="c.text.html" target="_self" title="Learn about Text">Text</a>
+      <a href="ctext.html" target="_self" title="Learn about Text">Text</a>
       <a href="cstructure.html" target="_self" title="Learn about Structure">Structure</a>
     </nav>
     <aside>
@@ -25,18 +25,19 @@
         <ul>
           <li><a href="#syntax">Syntax</a></li>  
           <li><a href="#selectors">Selectors</a>
-              <ul>
-                <li><a href="#individual">Individual</a></li>
-                <li><a href="#group">Group</a></li>
-                <li><a href="#combinators">Combinators</a></li>
-              </ul>
-            </li>
-          <li><a href="#types">Types</a></li>
+            <ul>
+              <li><a href="#individual">Individual</a></li>
+              <li><a href="#group">Group</a></li>
+              <li><a href="#combinators">Combinators</a></li>
+            </ul>
+          </li>
+          <li><a href="#types">Types</a>
             <ul>
               <li><a href="#inline">Inline</a></li>
               <li><a href="#internal">Internal</a></li>
               <li><a href="#external">External</a></li>
             </ul>
+          </li>
           <li><a href="#specificity">Specificity</a></li>
           <li><a href="#top">Back to Top</a></li>
           <li><a href="c.colors.html">Next</a></li>
@@ -228,13 +229,6 @@ font-weight: bold;
               <iframe src="cssexamples.html#i-selector"></iframe>
             </div>
           </div>
-
-          
-        
-        <!--<p class="funfact">
-          <span class="b">🤓 Author's Markup:</span> Some tags (e.g. <code>&lt;p&gt;</code>, <code>&lt;li&gt;</code>, <code>&lt;tr&gt;</code>) will technically still work without end tags, but this may lead to unexpected glitches, so it
-          is still the best practice to close all necessary tags.
-        </p>-->
         </article>
         
         <article>
@@ -294,11 +288,11 @@ font-weight: bold;
         <h2 id="types">Types</h2>
         <p>There are three ways to add styles to an HTML document. In other words, there are three types of CSS-to-HTML integration. These three are not mutually exclusive, meaning they can exist simultaneously. However, each type is given a specific priority when it comes to implementation.
         </p>
-        <p>The hierarchy is as follows from highest priority to lowest:</p>
+        <p>The hierarchy is as follows from <strong>highest priority to lowest</strong>:</p>
           <ol>
-            <li>inline</li>
-            <li>internal</li>
-            <li>external</li>
+            <li>Inline</li>
+            <li>Internal</li>
+            <li>External</li>
           </ol>
           <p>The browser will always implement higher priority CSS when available. It will override properties applied using lower priority CSS.
         </p>
@@ -360,7 +354,68 @@ font-weight: bold;
       </section>
       <section>
         <h2 id="specificity">Specificity</h2>
-        <p></p>
+        <p><em>Specificity</em> refers to the priority given to rules based on the selectors used. There are cases when rules overlap because selectors are used multiple times in a stylesheet or internally. In such cases, the browser will implement the rule with the highest specificity.</p>
+        
+        <p>The selectors discussed in the previous section are presented in order of <strong>decreasing specificity</strong>:</p>
+        <ol>
+          <li>ID</li>
+          <li>Element-Class</li>
+          <li>Element</li>
+          <li>Universal</li>
+        </ol>
+        <p>In addition to the selector, specificity also considers the CSS type. The types discussed in the previous section are presented in order of <strong>decreasing specificity</strong>:</p>
+        <ol>
+          <li>Inline</li>
+          <li>Internal</li>
+          <li>External</li>
+        </ol>
+        <p>In summary, specificity dictates that <b>inline styles</b> will be implemented before any other. This will be followed by <b>internal styles</b>. The internal styles, in turn, will be checked for specificity based on selectors. Finally, <b>external styles</b> will be implemented based on selectors.</p>
+        <p>The following is the specificity hierarchy in order of <strong>decreasing specificity</strong>:</p>
+        <ol>
+          <li>Inline CSS</li>
+          <li>Internal CSS
+            <ol type="a">
+              <li>ID</li>
+              <li>Element-Class</li>
+              <li>Class</li>
+              <li>Element</li>
+              <li>Universal</li>
+            </ol>
+          </li>
+          <li>External CSS
+            <ol type="a">
+              <li>ID</li>
+              <li>Element-Class</li>
+              <li>Class</li>
+              <li>Element</li>
+              <li>Universal</li>
+            </ol>
+          </li>
+        </ol>
+        <p>The browser will implement styles following the list above.</p>
+        <u>Example:</u>
+          <br><br>
+          <div class="flex">
+          <div style="flex-grow: 1;">
+          <b>Syntax:</b>
+              <pre><code>
+<span style="background-color: #76b9f3;">.und, #und1</span> {
+  text-decoration: underline;
+}
+<span style="background-color: rgb(224, 136, 136);">h4, .strike</span> {
+  text-decoration: line-through;
+  background-color:rgb(254, 227, 91);
+}</code></pre>
+            </div>
+            <div style="flex-grow: 20;">
+              <b>Preview:</b>
+              <br>
+              <iframe src="cssexamples.html#g-selector2"></iframe>
+            </div>
+          </div>
+        <p class="funfact">
+          <span class="b">🤓 Author's Markup:</span> Although inline styles are great because of their high specificity (they will override any other styles), they should be used sparingly because they are difficult to locate and maintain in the long-term.
+        </p>
       </section>
     </main>
     <footer>
