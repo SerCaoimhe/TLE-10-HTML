@@ -1,0 +1,10 @@
+body {
+  background-color: black;
+  color: purple;
+  font-family: arial;
+}
+
+.flex {
+  display:flex;
+  justify-content:flex-start;
+}

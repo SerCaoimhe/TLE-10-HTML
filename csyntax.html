@@ -40,7 +40,7 @@
           </li>
           <li><a href="#specificity">Specificity</a></li>
           <li><a href="#top">Back to Top</a></li>
-          <li><a href="c.colors.html">Next</a></li>
+          <li><a href="ccolors.html">Next</a></li>
         </ul>
     </aside>
     <main>
@@ -160,7 +160,7 @@
             <div style="flex-grow: 20;">
               <b>Preview:</b>
               <br>
-              <iframe src="cssexamples.html#e-selector"></iframe>
+              <iframe src="cssexamples.html#e-selector" title="element selector example"></iframe>
             </div>
           </div>
 
@@ -182,7 +182,7 @@
             <div style="flex-grow: 20;">
               <b>Preview:</b>
               <br>
-              <iframe src="cssexamples.html#c-selector"></iframe>
+              <iframe src="cssexamples.html#c-selector" title="class selector example"></iframe>
             </div>
           </div>
 
@@ -205,7 +205,7 @@ font-weight: bold;
             <div style="flex-grow: 20;">
               <b>Preview:</b>
               <br>
-              <iframe src="cssexamples.html#ec-selector"></iframe>
+              <iframe src="cssexamples.html#ec-selector" title="element-class selectror example"></iframe>
             </div>
           </div>
 
@@ -226,7 +226,7 @@ font-weight: bold;
             <div style="flex-grow: 20;">
               <b>Preview:</b>
               <br>
-              <iframe src="cssexamples.html#i-selector"></iframe>
+              <iframe src="cssexamples.html#i-selector" title="id selector example"></iframe>
             </div>
           </div>
         </article>
@@ -251,7 +251,7 @@ font-weight: bold;
             <div style="flex-grow: 20;">
               <b>Preview:</b>
               <br>
-              <iframe src="cssexamples.html#g-selector1"></iframe>
+              <iframe src="cssexamples.html#g-selector1" title="multiple element selectors example"></iframe>
             </div>
           </div>
 
@@ -272,7 +272,7 @@ font-weight: bold;
             <div style="flex-grow: 20;">
               <b>Preview:</b>
               <br>
-              <iframe src="cssexamples.html#g-selector2"></iframe>
+              <iframe src="cssexamples.html#g-selector2" title="mixed selectors example"></iframe>
             </div>
           </div>
 
@@ -348,7 +348,6 @@ font-weight: bold;
 &lt;body&gt;
   &lt;div id="externalexample"&gt;External CSS ftw&lt;/div&gt;
 &lt;/body&gt;</code></pre>
-          <b>Preview</b>
           
         </article>
       </section>
@@ -360,6 +359,7 @@ font-weight: bold;
         <ol>
           <li>ID</li>
           <li>Element-Class</li>
+          <li>Class</li>
           <li>Element</li>
           <li>Universal</li>
         </ol>
@@ -398,19 +398,37 @@ font-weight: bold;
           <div class="flex">
           <div style="flex-grow: 1;">
           <b>Syntax:</b>
-              <pre><code>
-<span style="background-color: #76b9f3;">.und, #und1</span> {
-  text-decoration: underline;
-}
-<span style="background-color: rgb(224, 136, 136);">h4, .strike</span> {
-  text-decoration: line-through;
-  background-color:rgb(254, 227, 91);
+          <br><br>
+          External CSS (sample-external.css)
+          <pre><code>
+body {
+  background-color: black;
+  color: purple;
+  font-family: arial;
 }</code></pre>
+          Internal CSS
+          <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;CSS Examples&lt;/title&gt;
+  &lt;link rel="stylesheet" href="sample-external.css"&gt;
+  &lt;style&gt;
+    body {
+      background-color: white;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;/html&gt;
+          </code></pre>
+          Inline CSS
+          <pre><code>&lt;body style="background-color: rgb(254, 227, 91);"&gt;
+          </code></pre>
+
             </div>
             <div style="flex-grow: 20;">
               <b>Preview:</b>
               <br>
-              <iframe src="cssexamples.html#g-selector2"></iframe>
+              <iframe src="cssexamples2.html" title="CSS Examples HTML"></iframe>
             </div>
           </div>
         <p class="funfact">

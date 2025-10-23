@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS Examples</title>
+  <link rel="stylesheet" href="sample-external.css"> 
+  <style>
+    body {
+      background-color: white;
+    }
+  </style>
+</head>
+<body style="background-color: rgb(254, 227, 91);">
+  <h1>CSS Examples</h1>
+  <section class="flex">
+    <div style="text-align: justify; padding: 10px;">
+      <p>In this HTML document, all three types of CSS are applied: 1) external, 2) internal, and 3) inline.</p>
+      
+      <p>Pay attention to which among the three is implemented when there is an overlapping rule. Specifically, a rule for the <code>body</code> element is being applied externally, internally, and inline at the same time. Specificity will be considered by the browser when a declaration is conflicting among the CSS types. In this case, <strong>only the <code>background-color</code> property is conflicting</strong>. <code>color</code> and <code>font-family</code> are implemented as is.
+      </p>
+    </div>
+    <div>  
+      <pre><code>&lt;head&gt;
+  &lt;title&gt;CSS Examples&lt;/title&gt;
+  &lt;link rel="stylesheet" href="sample-external.css"&gt; 
+  &lt;style&gt;
+    body {
+      background-color: white;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body style="background-color: rgb(254, 227, 91);"&gt;
+...
+&lt;/body&gt;
+      </code></pre>
+    </div>
+  </section>
+</body>
+</html>
