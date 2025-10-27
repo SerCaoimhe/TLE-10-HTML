@@ -45,7 +45,7 @@
         </ul>
     </aside>-->
     <main>
-      <article>
+      <section>
         <h2>Colors in CSS</h2>
         <p>Colors can be applied with CSS in order to stylize HTML. There are a variety of ways to apply colors to elements, each of which has its own property for color.</p>
         <table style="text-align: left;">
@@ -78,94 +78,242 @@
 border-color: rgb(0,0,0)
 color: #000000
         </code></pre>
-      </article>
+      </section>
 
 
-      <article>
+      <section>
         <h2>Color Values</h2>
-        <p>Color values can be specified in a variety of ways as well. These color values can be applied freely. More than one way can be used in an HTML document.</p>
-        <p>Ways to specify colors in CSS:</p>
-        <ul>
-          <li><b>Color names</b> – <a href="https://www.w3schools.com/colors/colors_names.asp">predefined names for colors recognized by browsers</a></li>
-          <li><b>RGB</b> – combination of red, green, and blue 
-            <span class="tooltip"><em>values</em>
-              <span class="tooltiptext">from 0 to 255, where 0 represents no intenstiy and 255 represents full intensity</span>
-            </span>that defines a color</li>
-          <li><b>RGBA</b> – combination of RGB and
-            <span class="tooltip"><em>alpha</em>
-              <span class="tooltiptext">opacity level from 0 to 1, where 0 represents transparetnt and 1 represents opaque</span>
-            </span> values that defines a color's 
-            <span class="tooltip"><em>transaparency</em>
-              <span class="tooltiptext">how see-through something is; opposite of opacity</span>
-            </span>
-          </li>
-          <li><b>HEX</b> – 6-digit
-            <span class="tooltip"><em>hexadecimal</em>
-              <span class="tooltiptext">base-16 number system including 0, 1,2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, and F</span>
-            </span>value that defines a color
-          </li>
-          <li><b>HSL</b> – combination of
-            <span class="tooltip"><em>hue</em>,
-              <span class="tooltiptext">hue value in a color wheel from 0-360°</span>
-            </span>
-            <span class="tooltip"><em>saturation</em>,
-              <span class="tooltiptext">color intensity from 0-100%</span>
-            </span>and
-            <span class="tooltip"><em>light</em>
-              <span class="tooltiptext">color brightness from 0-100%</span>
-            </span> values that defines a color
-          </li>
-          <li><b>HSLA</b> – combination of HSL and alpha values that defines a color's transparency</li>
-        </ul>
-        <p class="funfact">
-          <span class="b">🤓 Author's Markup:</span> There are 16,777,216 possible colors whichever value type is used (with the exception of color names, of which there are 140).
-        </p>
-        <div class="table-container">
-          <table style="text-align: left;">
-            <caption>Color Value Types</caption>
-            <thead>
-              <tr>
-                <th>Type</th>
-                <th>Syntax*</th>
-                <th>Preview</th>                
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Color names</td>
-                <td><code>background-color: red</code></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>RGB</td>
-                <td><code>background-color: rgb(255,0,0)</code></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>RGBA</td>
-                <td><code>background-color: rgba(255,0,0,0.5)</code></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>HEX</td>
-                <td><code>background-color: red</code></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>HSL</td>
-                <td><code>background-color: red</code></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>HSLA</td>
-                <td><code>background-color: red</code></td>
-                <td></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <small>*The <code>background-color</code> property is just an example and can be replaced with <code>border-color</code> or <code>color</code>.</small>
-      </article>
+        <article>
+          <h3>Types</h3>
+          <p>Color values can be specified in a variety of ways as well. These color values can be applied freely. More than one way can be used in an HTML document.</p>
+          <p>Ways to specify colors in CSS:</p>
+          <ul>
+            <li><b>Color names</b> – <a href="https://www.w3schools.com/colors/colors_names.asp">predefined names for colors recognized by browsers</a></li>
+            <li><b>RGB</b> – combination of red, green, and blue 
+              <span class="tooltip"><em>values</em>
+                <span class="tooltiptext">from 0 to 255, where 0 represents no intenstiy and 255 represents full intensity</span>
+              </span>that defines a color</li>
+            <li><b>RGBA</b> – combination of RGB and
+              <span class="tooltip"><em>alpha</em>
+                <span class="tooltiptext">opacity level from 0 to 1, where 0 represents transparetnt and 1 represents opaque</span>
+              </span> values that defines a color's 
+              <span class="tooltip"><em>transaparency</em>
+                <span class="tooltiptext">how see-through something is; opposite of opacity</span>
+              </span>
+            </li>
+            <li><b>HEX</b> – 6-digit
+              <span class="tooltip"><em>hexadecimal</em>
+                <span class="tooltiptext">base-16 number system including 0, 1,2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, and F</span>
+              </span>value that defines a color
+            </li>
+            <li><b>HEX alpha</b> – 6-digit value and 2-digit alpha value that defines a color's transparency
+            </li>
+            <li><b>HSL</b> – combination of
+              <span class="tooltip"><em>hue</em>,
+                <span class="tooltiptext">hue value in a color wheel from 0-360°</span>
+              </span>
+              <span class="tooltip"><em>saturation</em>,
+                <span class="tooltiptext">color intensity from 0-100%</span>
+              </span>and
+              <span class="tooltip"><em>light</em>
+                <span class="tooltiptext">color brightness from 0-100%</span>
+              </span> values that defines a color
+            </li>
+            <li><b>HSLA</b> – combination of HSL and alpha values that defines a color's transparency</li>
+          </ul>
+          <p class="funfact">
+            <span class="b">🤓 Author's Markup:</span> There are 16,777,216 possible colors whichever value type is used (with the exception of color names, of which there are 140).
+          </p>
+          <div class="table-container">
+            <table style="text-align: left;">
+              <caption>Color Value Types</caption>
+              <thead>
+                <tr>
+                  <th>Type</th>
+                  <th>Syntax*</th>
+                  <th>Preview</th>                
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Color names</td>
+                  <td><code>background-color: red</code></td>
+                  <td style="background-color: red;"></td>
+                </tr>
+                <tr>
+                  <td>RGB</td>
+                  <td><code>background-color: rgb(255, 165, 0)</code></td>
+                  <td style="background-color: rgb(255, 165, 0);"></td>
+                </tr>
+                <tr>
+                  <td>RGBA</td>
+                  <td><code>background-color: rgba(255,255,0,0.7)</code></td>
+                  <td style="background-color: rgb(255, 255, 0,0.7);"></td>
+                </tr>
+                <tr>
+                  <td>HEX</td>
+                  <td><code>background-color: #008000</code></td>
+                  <td style="background-color: #008000;"></td>
+                </tr>
+                <tr>
+                  <td>HEX alpha</td>
+                  <td><code>background-color: #0000ff80</code></td>
+                  <td style="background-color: #0000ff80;"></td>
+                </tr>
+                <tr>
+                  <td>HSL</td>
+                  <td ><code>background-color: hsl(275, 100%, 25%)</code></td>
+                  <td style="background-color: hsl(275, 100%, 25%);"></td>
+                </tr>
+                <tr>
+                  <td>HSLA</td>
+                  <td><code>background-color: hsl(300, 100%, 25%,0.3)</code></td>
+                  <td style="background-color: hsl(300, 100%, 25%,0.3);"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <small>*The <code>background-color</code> property is just an example and can be replaced with <code>border-color</code> or <code>color</code>.</small>
+        </article>
+        <article>
+          <h3>Syntax Breakdown</h3>
+          <div class="table-container">
+            <table>
+              <caption>RGB and HEX</caption>
+              <thead>
+                <tr>
+                  <th>Type</th>
+                  <th colspan="7">Syntax</th>
+                  <th>Preview</th>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Property*</td>
+                  <td></td>
+                  <td colspan="4">Value</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>Red</td>
+                  <td>Green</td>
+                  <td>Blue</td>
+                  <td>Alpha</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>RGB</td>
+                  <td><code>background-color:</code></td>
+                  <td>rgb(</td>
+                  <td>255,</td>
+                  <td>255,</td>
+                  <td>255</td>
+                  <td></td>
+                  <td>)</td>
+                  <td style="background-color: white;"></td>
+                </tr>
+                <tr>
+                  <td>RGBA</td>
+                  <td><code>background-color:</code></td>
+                  <td>rgb(</td>
+                  <td>255,</td>
+                  <td>255,</td>
+                  <td>255,</td>
+                  <td>0.5</td>
+                  <td>)</td>
+                  <td style="background-color: rgba(255,255,255,0.5);"></td>
+                </tr>
+                <tr>
+                  <td>HEX</td>
+                  <td><code>background-color:</code></td>
+                  <td>#</td>
+                  <td>00</td>
+                  <td>00</td>
+                  <td>00</td>
+                  <td></td>
+                  <td></td>
+                  <td style="background-color: #000;"></td>
+                </tr>
+                <tr>
+                  <td>HEX alpha</td>
+                  <td><code>background-color:</code></td>
+                  <td>#</td>
+                  <td>00</td>
+                  <td>00</td>
+                  <td>00</td>
+                  <td>80</td>
+                  <td></td>
+                  <td style="background-color: #00000080;"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <small>*The <code>background-color</code> property is just an example and can be replaced with <code>border-color</code> or <code>color</code>.</small>
+          <br><br>
+          <div class="table-container">
+            <table>
+              <caption>HSL</caption>
+              <thead>
+                <tr>
+                  <th>Type</th>
+                  <th colspan="7">Syntax</th>
+                  <th>Preview</th>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Property*</td>
+                  <td></td>
+                  <td colspan="4">Value</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>Hue</td>
+                  <td>Saturation</td>
+                  <td>Light</td>
+                  <td>Alpha</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>HSL</td>
+                  <td><code>background-color:</code></td>
+                  <td>hsl(</td>
+                  <td>0,</td>
+                  <td>0%,</td>
+                  <td>100%</td>
+                  <td></td>
+                  <td>)</td>
+                  <td style="background-color: hsl(0, 0%, 100%);"></td>
+                </tr>
+                <tr>
+                  <td>HSLa</td>
+                  <td><code>background-color:</code></td>
+                  <td>hsl(</td>
+                  <td>0,</td>
+                  <td>0%,</td>
+                  <td>100%</td>
+                  <td>0.5</td>
+                  <td>)</td>
+                  <td style="background-color: hsla(0, 0%, 0%, 0.5);"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <small>*The <code>background-color</code> property is just an example and can be replaced with <code>border-color</code> or <code>color</code>.</small>
+        </article>
+      </section>
     </main>
     <footer>
         <p>© 2025 Derik's Notes. All rights reserved.</p>
