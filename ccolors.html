@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
+    <header id="top">
       <h1>CSS Colors</h1>
       <p>Welcome to my notes about the basics of CSS!</p>
     </header>
@@ -21,38 +21,30 @@
       <a href="ctext.html" target="_self" title="Learn about Text">Text</a>
       <a href="cstructure.html" target="_self" title="Learn about Structure">Structure</a>
     </nav>
-    <!--<aside>
-        <h3>Quick Links</h3>
+    <aside>
+        <h3 class="no-counter">Quick links</h3>
         <ul>
-          <li><a href="#syntax">Syntax</a></li>  
-          <li><a href="#selectors">Selectors</a>
+          <li><a href="#colors">Colors in CSS</a></li>  
+          <li><a href="#values">Color Values</a>
             <ul>
-              <li><a href="#individual">Individual</a></li>
-              <li><a href="#group">Group</a></li>
-              <li><a href="#combinators">Combinators</a></li>
+              <li><a href="#types">Types</a></li>
+              <li><a href="#group">Syntax Breakdown</a></li>
             </ul>
           </li>
-          <li><a href="#types">Types</a>
-            <ul>
-              <li><a href="#inline">Inline</a></li>
-              <li><a href="#internal">Internal</a></li>
-              <li><a href="#external">External</a></li>
-            </ul>
-          </li>
-          <li><a href="#specificity">Specificity</a></li>
           <li><a href="#top">Back to Top</a></li>
-          <li><a href="c.colors.html">Next</a></li>
+          <li><a href="csyntax.html">Previous</a></li>
+          <li><a href="cbackground.html">Next</a></li>
         </ul>
-    </aside>-->
+    </aside>
     <main>
       <section>
-        <h2>Colors in CSS</h2>
-        <p>Colors can be applied with CSS in order to stylize HTML. There are a variety of ways to apply colors to elements, each of which has its own property for color.</p>
+        <h2 id="colors">Colors in CSS</h2>
+        <p>Colors can be applied with CSS in order to stylize HTML. There are a variety of ways to apply colors to different parts, each of which has its own property for color.</p>
         <table style="text-align: left;">
-          <caption>Color Properties for Different Elements</caption>
+          <caption>Color Properties for Different Parts</caption>
           <thead>
             <tr>
-              <th>Element</th>
+              <th>Part</th>
               <th>Property</th>
             </tr>
           </thead>
@@ -82,9 +74,9 @@ color: #ffffff
 
 
       <section>
-        <h2>Color Values</h2>
+        <h2 id="values">Color Values</h2>
         <article>
-          <h3>Types</h3>
+          <h3 id="types">Types</h3>
           <p>Color values can be specified in a variety of ways as well. These color values can be applied freely. More than one way can be used in an HTML document.</p>
           <p>Ways to specify colors in CSS:</p>
           <ul>
@@ -106,7 +98,7 @@ color: #ffffff
                 <span class="tooltiptext">base-16 number system including 0, 1,2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, and F</span>
               </span>value that defines a color
             </li>
-            <li><b>HEX alpha</b> – 6-digit value and 2-digit alpha value that defines a color's transparency
+            <li><b>HEX alpha</b> – combination of a 6-digit value and a 2-digit alpha value that defines a color's transparency
             </li>
             <li><b>HSL</b> – combination of
               <span class="tooltip"><em>hue</em>,
@@ -121,9 +113,6 @@ color: #ffffff
             </li>
             <li><b>HSLA</b> – combination of HSL and alpha values that defines a color's transparency</li>
           </ul>
-          <p class="funfact">
-            <span class="b">🤓 Author's Markup:</span> There are 16,777,216 possible colors whichever value type is used (with the exception of color names, of which there are 140).
-          </p>
           <div class="table-container">
             <table style="text-align: left;">
               <caption>Color Value Types</caption>
@@ -143,11 +132,11 @@ color: #ffffff
                 <tr>
                   <td>RGB</td>
                   <td><code>background-color: rgb(255, 165, 0)</code></td>
-                  <td style="background-color: rgb(255, 165, 0);"></td>
+                  <td style="background-color: hsl(39, 100%, 50%);"></td>
                 </tr>
                 <tr>
                   <td>RGBA</td>
-                  <td><code>background-color: rgba(255,255,0,0.7)</code></td>
+                  <td><code>background-color: rgba(255,255,0.1)</code></td>
                   <td style="background-color: rgb(255, 255, 0,0.7);"></td>
                 </tr>
                 <tr>
@@ -167,16 +156,32 @@ color: #ffffff
                 </tr>
                 <tr>
                   <td>HSLA</td>
-                  <td><code>background-color: hsl(300, 100%, 25%, 0.3)</code></td>
-                  <td style="background-color: hsl(300, 100%, 25%,0.3);"></td>
+                  <td><code>background-color: hsla(300, 100%, 25%, 0.3)</code></td>
+                  <td style="background-color: hsla(300, 100%, 25%,0.3);"></td>
                 </tr>
               </tbody>
             </table>
           </div>
+          <p class="funfact">
+            <span class="b">🤓 Author's Markup:</span> There are 16,777,216 possible colors whichever value type is used (with the exception of color names, of which there are 140).
+          </p>
           <small>*The <code>background-color</code> property is just an example and can be replaced with <code>border-color</code> or <code>color</code>.</small>
+          
+          <p>The various codes for a selected color can be displayed and applied by clicking the color swatch (colored square next to "orange" in the images below) then clicking on the top bar (displaying the color codes).</p>
+          <div class="flex">
+            <div style="flex-grow: 1;">
+              <img src="Multimedia/rgb.png" width="100%" alt="rgb color picker" title="rgb color picker">
+            </div>
+            <div style="flex-grow: 1;">
+              <img src="Multimedia/hsl.png" width="100%" alt="hsl color picker" title="hsl color picker">
+            </div>
+            <div style="flex-grow: 1;">
+              <img src="Multimedia/hex.png" width="100%" alt="hex color picker" title="hex color picker">
+            </div>
+          </div>
         </article>
         <article>
-          <h3>Syntax Breakdown</h3>
+          <h3 id="syntax">Syntax Breakdown</h3>
           <div class="table-container">
             <table>
               <caption>RGB and HEX</caption>
@@ -298,23 +303,21 @@ color: #ffffff
                   <td style="background-color: hsl(0, 0%, 100%);"></td>
                 </tr>
                 <tr>
-                  <td>HSLa</td>
+                  <td>HSLA</td>
                   <td><code>background-color:</code></td>
-                  <td>hsl(</td>
+                  <td>hsla(</td>
                   <td>0,</td>
                   <td>0%,</td>
                   <td>100%</td>
                   <td>0.5</td>
                   <td>)</td>
-                  <td style="background-color: hsla(0, 0%, 0%, 0.5);"></td>
+                  <td style="background-color: lch(0% 0 0 / 0.5);"></td>
                 </tr>
               </tbody>
             </table>
           </div>
           <small>*The <code>background-color</code> property is just an example and can be replaced with <code>border-color</code> or <code>color</code>.</small>
-          <p class="funfact">
-            <span class="b">🤓 Author's Markup:</span> To change the value type dislpayed in the code, the tab at the top of the color picker pop-up can be clicked to cycle through the different types. This also allows you to see the different codes for the same color.
-          </p>
+          
         </article>
       </section>
     </main>
