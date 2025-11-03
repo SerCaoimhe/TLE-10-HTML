@@ -49,52 +49,89 @@
         <h2>What is a background?</h2>
         <p>The <em>background</em> refers to the back-most part of an element. Each element has a background. A paragraph element, for example, has a background independent from the body's. By default, the background is transparent until styled (e.g. with a color).</p> 
         <p>This paragraph's background is currently transparent, and, in effect, the body's gradient background color is visible. If the background is styled <span style="background-color: black; color:white;">such as in this <code>span</code> element within the <code>paragraph</code>,</span> it will appear accordingly.</p>
-        <b>Syntax:</b>
-        <pre><code>&lt;div 
-  style="background-color: rgb(63, 103, 189);
-    width: 250px; 
-    height: 289x;"&gt;
-  &lt;img src="Multimedia/Untitled video.gif" 
-    width="70%"
-    style="mix-blend-mode: normal;"&gt;
-&lt;/div&gt;
-&lt;div 
-  style=
-    "background-image: url(Multimedia/snoopy.png); 
-    flex-grow: 1; 
-    height: 289px; 
-    width: 250px;
-    background-repeat: no-repeat;""
+        <u>Example 1: color background</u>
+        <br><br>
+
+        <div class="flex">
+          <div style="flex-grow: 0.1;">
+            <b>Syntax:</b>
+            <pre><code>&lt;div style=
+  "<mark>background-color: steelblue;</mark>
+  width: 250px; 
+  height: 289x;
+  color:white;
+  padding: 10px"
 &gt;
-  &lt;img src="Multimedia/woodstock.webp" 
-    height="40%" 
-    style="mix-blend-mode:darken;"&gt;
+  <mark>Video on top of steel blue background</mark>
+  <span style="background-color: salmon;">&lt;video 
+    src="Multimedia/1000.mp4"
+    controls
+    autoplay
+    width="100%"&gt;
+    1000% dance
+  &lt;/video&gt;</span>
 &lt;/div&gt;
-        </code></pre>
-
-
-      <b>Preview:</b>
-      <div class="flex">
-          <div 
-            style="background-color: rgb(63, 103, 189);
-            width: 250px; 
-            height: 289x;
-            color:white">GIF on top of blue background
-            <img src="Multimedia/Untitled video.gif" 
-              width="70%"
-              style="mix-blend-mode: normal;">
+</code></pre>
           </div>
-          <div 
-          style=
-            "background-image: url(Multimedia/snoopy.png); 
-            flex-grow: 1; 
-            height: 289px; 
-            width: 250px;
-            background-repeat: no-repeat;">
-            <p>WEBP on top of PNG background</p>
-            <img src="Multimedia/woodstock.webp" 
-              height="40%" 
-              style="mix-blend-mode:darken;">
+          <div style="flex-grow: 4;">
+          <b>Preview:</b>
+            <div style="background-color: steelblue;
+              flex-grow: 1;
+              width: 350px; 
+              height: 289x;
+              color:white;
+              padding: 10px">
+              Video on top of steel blue background
+              <video 
+                src="Multimedia/1000.mp4"
+                controls
+                autoplay
+                width="100%">
+                1000% dance
+              </video>
+            </div>
+          </div>
+        </div>
+        <br>
+        <u>Example 2: image background</u>
+        <br><br>
+        <div class="flex">
+          <div style="flex-grow: 0.1;">
+            <b>Syntax:</b>
+            <pre><code>&lt;div style=
+  "<mark>background-image: url(Multimedia/snoopy.png);</mark>
+  flex-grow: 1; 
+  height: 289px; 
+  width: 250px;
+  background-repeat: no-repeat;
+  padding: 10px"
+&gt;
+  &lt;span style="background-color: white;"&gt;
+    <mark>Picture on top of PNG background</mark>
+  &lt;/span&gt;
+  &lt;br&gt;
+  <span style="background-color: salmon;">&lt;img src="Multimedia/woodstock.webp" 
+    height="40%" 
+    style="mix-blend-mode:darken;"&gt;</span>
+&lt;/div&gt;</code></pre>
+          </div>
+          <div style="flex-grow: 4;">
+            <b>Preview:</b>
+            <div style=
+              "background-image: url(Multimedia/snoopy.png); 
+              flex-grow: 1;
+              height: 289px; 
+              width: 250px;
+              background-repeat: no-repeat;
+              padding: 10px">
+              <span style="background-color: white;">
+                Picture on top of PNG background
+              </span>
+              <br>
+              <img src="Multimedia/woodstock.webp" 
+                height="40%" 
+                style="mix-blend-mode:darken;">
+            </div>
           </div>
         </div>
         
@@ -144,7 +181,7 @@
                 <td>Background Origin</td>
                 <td><code>background-origin:</code></td>
                 <td>defines the position of the background in terms of the 
-                  <span class="tooltip">element structure
+                  <span class="tooltip"><em>element structure</em>
                     <span class="tooltiptext">eg. border, padding, content box</span>
                   </span>
                 </td>
@@ -163,7 +200,7 @@
                 <td>Background</td>
                 <td><code>background:</code></td>
                 <td>
-                  <span class="tooltip">shorthand property
+                  <span class="tooltip"><em>shorthand property</em>
                     <span class="tooltiptext">abbreviated method of styling a property by defining multiple values at once</span>
                   </span> with values defined in the order following the order of the properties listed above (color, image, position, etc.)
                 </td>
