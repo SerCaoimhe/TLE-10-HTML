@@ -45,7 +45,132 @@
         </ul>
     </aside>-->
     <main>
-      
+      <article>
+        <h2>What is a background?</h2>
+        <p>The <em>background</em> refers to the back-most part of an element. Each element has a background. A paragraph element, for example, has a background independent from the body's. By default, the background is transparent until styled (e.g. with a color).</p> 
+        <p>This paragraph's background is currently transparent, and, in effect, the body's gradient background color is visible. If the background is styled <span style="background-color: black; color:white;">such as in this <code>span</code> element within the <code>paragraph</code>,</span> it will appear accordingly.</p>
+        <b>Syntax:</b>
+        <pre><code>&lt;div 
+  style="background-color: rgb(63, 103, 189);
+    width: 250px; 
+    height: 289x;"&gt;
+  &lt;img src="Multimedia/Untitled video.gif" 
+    width="70%"
+    style="mix-blend-mode: normal;"&gt;
+&lt;/div&gt;
+&lt;div 
+  style=
+    "background-image: url(Multimedia/snoopy.png); 
+    flex-grow: 1; 
+    height: 289px; 
+    width: 250px;
+    background-repeat: no-repeat;""
+&gt;
+  &lt;img src="Multimedia/woodstock.webp" 
+    height="40%" 
+    style="mix-blend-mode:darken;"&gt;
+&lt;/div&gt;
+        </code></pre>
+
+
+      <b>Preview:</b>
+      <div class="flex">
+          <div 
+            style="background-color: rgb(63, 103, 189);
+            width: 250px; 
+            height: 289x;
+            color:white">GIF on top of blue background
+            <img src="Multimedia/Untitled video.gif" 
+              width="70%"
+              style="mix-blend-mode: normal;">
+          </div>
+          <div 
+          style=
+            "background-image: url(Multimedia/snoopy.png); 
+            flex-grow: 1; 
+            height: 289px; 
+            width: 250px;
+            background-repeat: no-repeat;">
+            <p>WEBP on top of PNG background</p>
+            <img src="Multimedia/woodstock.webp" 
+              height="40%" 
+              style="mix-blend-mode:darken;">
+          </div>
+        </div>
+        
+        
+      </article>
+      <article>
+        <h2>Properties</h2>
+        <p>There are several properties that can be defined in order to style the backgorund.</p>
+        <div class="table-container">
+          <table style="text-align: left;">
+            <caption>Background Properties</caption>
+            <thead>
+              <tr>
+                <th>Property</th>
+                <th>Syntax</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Background Color</td>
+                <td><code>background-color:</code></td>
+                <td>defines the background color</td>
+              </tr>
+              <tr>
+                <td>Background Image</td>
+                <td><code>background-image:</code></td>
+                <td>defines the background image</td>
+              </tr>
+              <tr>
+                <td>Background Position</td>
+                <td><code>background-position:</code></td>
+                <td>defines the relative position of the background within the element</td>
+              </tr>
+              <tr>
+                <td>Background Size</td>
+                <td><code>background-size:</code></td>
+                <td>defines the size of the background</td>
+              </tr>
+              <tr>
+                <td>Background Repeat</td>
+                <td><code>background-repeat:</code></td>
+                <td>defines how the background image will be repeated horizontally and/or vertically</td>
+              </tr>
+              <tr>
+                <td>Background Origin</td>
+                <td><code>background-origin:</code></td>
+                <td>defines the position of the background in terms of the 
+                  <span class="tooltip">element structure
+                    <span class="tooltiptext">eg. border, padding, content box</span>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>Background Clip</td>
+                <td><code>background-position:</code></td>
+                <td>defines the outermost bounds of the background in terms of element structure</td>
+              </tr>
+              <tr>
+                <td>Background Attachment</td>
+                <td><code>background-attachment:</code></td>
+                <td>defines how the background behaves with scrolling</td>
+              </tr>
+              <tr>
+                <td>Background</td>
+                <td><code>background:</code></td>
+                <td>
+                  <span class="tooltip">shorthand property
+                    <span class="tooltiptext">abbreviated method of styling a property by defining multiple values at once</span>
+                  </span> with values defined in the order following the order of the properties listed above (color, image, position, etc.)
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
     </main>
     <footer>
         <p>© 2025 Derik's Notes. All rights reserved.</p>

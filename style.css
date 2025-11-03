@@ -3,6 +3,7 @@ body {
   margin: 0;
   counter-reset: h2;
   background-image: linear-gradient(-45deg, #2470b4, #b5d6f3, white);
+  background-attachment: fixed;
   color: black !important;
 }
 h2 {
@@ -157,6 +158,11 @@ label.checkbox {
 .flex {
   display:flex;
   justify-content: space-between;
+}
+
+#externalexample {
+  background-color: rgb(254, 227, 91);
+  color: rgb(0, 0, 0);
 }
 
 @media only screen and (max-width: 767px) {

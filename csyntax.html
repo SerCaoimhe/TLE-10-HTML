@@ -87,9 +87,9 @@
         <b>Multiline rule syntax:</b>
         <pre><code>
         x {
-        y<sub>1</sub>: z<sub>1</sub>;
-        y<sub>2</sub>: z<sub>2</sub>;
-        y<sub>3</sub>: z<sub>3a</sub> z<sub>3b</sub>;
+          y<sub>1</sub>: z<sub>1</sub>;
+          y<sub>2</sub>: z<sub>2</sub>;
+          y<sub>3</sub>: z<sub>3a</sub> z<sub>3b</sub>;
         }
         </code></pre>
         <p>Properties can have multiple values as shown in the third property, <code>y<sub>3</sub></code>.</p>
@@ -342,12 +342,27 @@ font-weight: bold;
           </p>
           <p>This is recommended for big projects where consistency and convenience of editing is crucial as all styles is found in a single document.</p>
           <b>Syntax:</b>
-          <pre><code>&lt;head&gt;
+          <br>
+          <div class="flex">
+            <div style="flex-grow: .04;">
+              <p>Head link syntax</p>
+              <pre><code>&lt;head&gt;
   &lt;link rel="stylesheet" href="style.css"&gt;
 &lt;/head&gt;
 &lt;body&gt;
   &lt;div id="externalexample"&gt;External CSS ftw&lt;/div&gt;
 &lt;/body&gt;</code></pre>
+            </div>
+            <div style="flex-grow: 1;">
+              <p>style.css syntax</p>
+              <pre><code>#externalexample {
+  background-color: rgb(254, 227, 91);
+  color: rgb(0, 0, 0);
+}</code></pre>
+            </div>
+          </div>
+          <b>Preview:</b>
+          <div id="externalexample">External CSS ftw</div>
           
         </article>
       </section>
