@@ -7,7 +7,9 @@
   <title>Placido—Structure</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?
+  family=Montserrat&family=Roboto+Flex:wdth,wght@75..125,400..700&display=swap">
+
 </head>
 <body>
     <header>
@@ -54,8 +56,8 @@
         </p>
       </section>
       <section>
-        <h2>Properties</h2>
-        <p>There are various aspects of text that can be styled using CSS:
+        <h2>Aspects and Properties</h2>
+        <p>There are various aspects of text, each with its own sent of properites, that can be styled using CSS:
           <ul>
             <li>Font – style of text; the "aesthetic"</li>
             <li>Color – 
@@ -72,7 +74,7 @@
         </p>
         <article>
           <h3>Font</h3>
-          <p>As text can be handwritten in a variety of ways, so can it be rendered in the digital space. This aspect of text is what is referred to as <em>font</em>. For example, in a word processor like Microsoft Word, fonts can vary from Arial, to Calibri, to Times New Roman, among others. </p>
+          <p>As text can be handwritten in a variety of ways, so can it be rendered in the digital space. This aspect of text is what is referred to as <em>font</em>. For example, in a word processor like Microsoft Word, fonts can vary from Arial, to Calibri, to 'Times New Roman', among others. </p>
           <div class="table-container">
             <table style="text-align: left;">
               <caption style="text-align: left;">Font Properties</caption>
@@ -122,11 +124,14 @@
               </tbody>
             </table>
           </div>
-          <u>Examples:</u>
-          <br><br>
+          
+          <h4>Style</h4>
+          <p>Style sets the <em>uprightness</em> or <em>slantness</em>  of text. Unless defined, the font will be rendered in its default state. This is usually upright (not slanted), but there are exceptions like <span style="font-family: Photograph Signature; font-size: 1.5em;">Photograph Signature</span> which already appear italicized by default.</p>
+          <p>Italic and oblique styles are confusing because they seem to behave similarly. However, there is an cosmetic and semantic difference. Italic is a deliberate, slanted version of the font altogether. Sometimes its letter design is different from the normal version's. On the other hand, oblique simply slants text by force. It uses the same characters but angled.</p>
+          <p>Use <code>italic</code> for slanted text unless a <strong>synthetic</strong> or <strong>artificial</strong> slant is intended, in which case, use <code>oblique</code>. If a font does not have italics, the browser will attempt to apply oblique anyway.</p>
           <div class="table-container">
             <table>
-              <caption style="text-align: left;">Style</caption>
+              <caption style="text-align: left;">Style (Times New Roman)</caption>
               <thead>
                 <tr>
                   <th colspan="2">Syntax</th>
@@ -142,25 +147,29 @@
                 <tr>
                   <td><code>font-style:</code></td>
                   <td><code>normal</code></td>
-                  <td style="font-family: bebas neue; font-style: normal;">normal</td>
+                  <td style="font-family: 'Times New Roman'; font-style: normal;">abcdefghijklmnopqrstuvwxyz1234567890</td>
                 </tr>
                 <tr>
                   <td><code>font-style:</code></td>
                   <td><code>italic</code></td>
-                  <td style="font-family: bebas neue; font-style: italic;">italic</td>
+                  <td style="font-family: 'Times New Roman'; font-style: italic;">abcdefghijklmnopqrstuvwxyz1234567890</td>
                 </tr>                
                 <tr>
                   <td><code>font-style:</code></td>
                   <td><code>oblique</code></td>
-                  <td style="font-family: bebas neue; font-style: oblique;">oblique</td>
+                  <td style="font-family: 'Times New Roman'; font-style: oblique;">abcdefghijklmnopqrstuvwxyz1234567890</td>
                 </tr>
               </tbody>
             </table>
           </div>
-          <br><br>
+          <h4>Variant</h4>
+          <p>Use variant when <span class="tooltip">small capitals
+            <span class="tooltiptext">uppercase letters with lowercase height</span>
+            </span>(small caps) are desired. Small caps are used for subtler emphasis compared to all caps, Latin phrases, and for acronyms (e.g. <span style="font-variant: small-caps;"> pagasa, am, pm</span>), among others. 
+          </p>
           <div class="table-container">
             <table>
-              <caption style="text-align: left;">Variant</caption>
+              <caption style="text-align: left;">Variant (Times New Roman)</caption>
               <thead>
                 <tr>
                   <th colspan="2">Syntax</th>
@@ -176,20 +185,20 @@
                 <tr>
                   <td><code>font-variant:</code></td>
                   <td><code>normal</code></td>
-                  <td style="font-family: 'calibri'; font-variant: normal;">normal</td>
+                  <td style="font-family: 'Times New Roman'; font-variant: normal;">abcdefghijklmnopqrstuvwxyz1234567890</td>
                 </tr>
                 <tr>
                   <td><code>font-variant:</code></td>
                   <td><code>small-caps</code></td>
-                  <td style="font-family: calibri; font-variant:small-caps">small-caps</td>
+                  <td style="font-family: 'Times New Roman'; font-variant:small-caps">abcdefghijklmnopqrstuvwxyz1234567890</td>
                 </tr>
               </tbody>
             </table>
           </div>
-          <br><br>
+          <h4>Weight</h4>
           <div class="table-container">
             <table>
-              <caption style="text-align: left;">Weight</caption>
+              <caption style="text-align: left;">Weight (Montserrat)</caption>
               <thead>
                 <tr>
                   <th colspan="2">Syntax</th>
@@ -203,53 +212,53 @@
               </thead>
               <tbody>
                 <tr>
-                  <td><code>font-style:</code></td>
-                  <td><code>bold</code></td>
-                  <td style="font-family: arial; font-weight: bold;">bold</td>
-                </tr>
-                <tr>
-                  <td><code>font-style:</code></td>
-                  <td><code>bolder</code></td>
-                  <td style="font-family: arial; font-weight: bolder">bolder</td>
-                </tr>                
-                <tr>
-                  <td><code>font-style:</code></td>
-                  <td><code>lighter</code></td>
-                  <td style="font-family: arial; font-weight: lighter;">lighter</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <br><br>
-          <div class="table-container">
-            <table>
-              <caption style="text-align: left;">Stretch</caption>
-              <thead>
-                <tr>
-                  <th colspan="2">Syntax</th>
-                  <th>Preview</th>
-                </tr>
-                <tr>
-                  <td>Property</td>
-                  <td>Value</td>
-                  <td></td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><code>font-style:</code></td>
+                  <td><code>font-weight:</code></td>
                   <td><code>normal</code></td>
-                  <td style="font-family: 'Roboto Flex'; font-stretch: normal;">normal</td>
+                  <td style="font-family: montserrat; font-weight:normal;">abcdefghijklmnopqrstuvwxyz1234567890</td>
                 </tr>
                 <tr>
-                  <td><code>font-style:</code></td>
-                  <td><code>condensed</code></td>
-                  <td style="font-family: 'Roboto Flex'; font-stretch:condensed;">condensed</td>
+                  <td><code>font-weight:</code></td>
+                  <td><code>light</code></td>
+                  <td style="font-family: montserrat; font-weight:lighter">abcdefghijklmnopqrstuvwxyz1234567890</td>
                 </tr>                
                 <tr>
-                  <td><code>font-style:</code></td>
-                  <td><code>expanded</code></td>
-                  <td style="font-family: 'Roboto Flex'; font-stretch: expanded;">expanded</td>
+                  <td><code>font-weight:</code></td>
+                  <td><code>bolder</code></td>
+                  <td style="font-family: montserrat; font-weight: bolder;">abcdefghijklmnopqrstuvwxyz1234567890</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <h4>Stretch</h4>
+          <div class="table-container">
+            <table>
+              <caption style="text-align: left;">Stretch (Roboto Flex)</caption>
+              <thead>
+                <tr>
+                  <th colspan="2">Syntax</th>
+                  <th>Preview</th>
+                </tr>
+                <tr>
+                  <td>Property</td>
+                  <td>Value</td>
+                  <td></td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>font-stretch:</code></td>
+                  <td><code>75%</code></td>
+                  <td style="font-family: 'Roboto Flex'; font-stretch: 75%;">abcdefghijklmnopqrstuvwxyz1234567890</td>
+                </tr>
+                <tr>
+                  <td><code>font-stretch:</code></td>
+                  <td><code>100%</code></td>
+                  <td style="font-family: 'Roboto Flex'; font-stretch: 100%;">abcdefghijklmnopqrstuvwxyz1234567890</td>
+                </tr>                
+                <tr>
+                  <td><code>font-stretch:</code></td>
+                  <td><code>125%</code></td>
+                  <td style="font-family: 'Roboto Flex'; font-stretch: 125%;">abcdefghijklmnopqrstuvwxyz1234567890</td>
                 </tr>
               </tbody>
             </table>
@@ -272,32 +281,32 @@
               </thead>
               <tbody>
                 <tr>
-                  <td><code>font-style:</code></td>
+                  <td><code>font-size:</code></td>
                   <td><code>small</code></td>
-                  <td style="font-family: calibri; font-size:small;">size</td>
+                  <td style="font-family: calibri; font-size:small;">abcdefghijklmnopqrstuvwxyz1234567890</td>
                 </tr>
                 <tr>
-                  <td><code>font-style:</code></td>
+                  <td><code>font-size:</code></td>
                   <td><code>medium</code></td>
-                  <td style="font-family: calibri; font-size: medium;">size</td>
+                  <td style="font-family: calibri; font-size: medium;">abcdefghijklmnopqrstuvwxyz1234567890</td>
                 </tr>
                 <tr>
-                  <td><code>font-style:</code></td>
+                  <td><code>font-size:</code></td>
                   <td><code>large</code></td>
-                  <td style="font-family: calibri; font-size:large;">size</td>
+                  <td style="font-family: calibri; font-size:large;">abcdefghijklmnopqrstuvwxyz1234567890</td>
                 </tr>                
                 <tr>
-                  <td><code>font-style:</code></td>
+                  <td><code>font-size:</code></td>
                   <td><code>larger</code></td>
-                  <td style="font-family: calibri; font-size: larger;">size</td>
+                  <td style="font-family: calibri; font-size: larger;">abcdefghijklmnopqrstuvwxyz1234567890</td>
                 </tr>
                 <tr>
-                  <td><code>font-style:</code></td>
-                  <td><code>2<span class="tooltip"><em>em</em>
+                  <td><code>font-size:</code></td>
+                  <td><code>1.5<span class="tooltip"><em>em</em>
                     <span class="tooltiptext">element's multiplier</span>                    
                   </span>
                   </code></td>
-                  <td style="font-family: calibri; font-size:2em;">size</td>
+                  <td style="font-family: calibri; font-size:1.5em">abcdefghijklmnopqrstuvwxyz1234567890</td>
                 </tr>
               </tbody>
             </table>
@@ -364,6 +373,14 @@
             </table>
           </div>
         </article>
+      </section>
+      <section>
+        <h2>Discussion</h2>
+        <p id="text1">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque magnam eveniet tenetur qui sed tempore sunt voluptatem officia asperiores quod! Cum aspernatur architecto libero tempora rerum nam molestias quod mollitia.
+        </p>
+        <p id="text2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos nihil magni nobis quas consequatur, autem nemo praesentium odio repellat mollitia quisquam cupiditate similique incidunt necessitatibus! Quidem unde eius vero incidunt.</p>
+        <p id="text3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic corrupti, atque delectus modi qui beatae dolorem dolorum eius nihil magni officia temporibus itaque, impedit id ipsa est quisquam similique. Repudiandae.</p>
       </section>
       
     </main>
