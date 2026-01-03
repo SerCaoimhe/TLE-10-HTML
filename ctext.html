@@ -12,7 +12,7 @@
 
 </head>
 <body>
-    <header>
+    <header id="top">
       <h1>CSS Text</h1>
       <p>Welcome to my notes about the basics of CSS!</p>
     </header>
@@ -24,39 +24,36 @@
       <a href="ctext.html" target="_self" title="You're already here -_-">Text</a>
       <a href="cstructure.html" target="_self" title="Learn about Structure">Structure</a>
     </nav>
-    <!--<aside>
+    <aside>
         <h3 class="no-counter">Quick links</h3>
         <ul>
-          <li><a href="#syntax">Syntax</a></li>  
-          <li><a href="#selectors">Selectors</a>
+          <li><a href="#text">Text</a></li>  
+          <li><a href="#aspects">Aspects and Properties</a>
             <ul>
-              <li><a href="#individual">Individual</a></li>
-              <li><a href="#group">Group</a></li>
-              <li><a href="#combinators">Combinators</a></li>
+              <li><a href="#font">Font</a></li>
+              <li><a href="#color">Color</a></li>
+              <li><a href="#alignment">Alignment</a></li>
+              <li><a href="#decoration">Decoration</a></li>
+              <li><a href="#transformation">Transformation</a></li>
+              <li><a href="#spacing">Spacing</a></li>
+              <li><a href="#shadow">Shadow</a></li>
             </ul>
           </li>
-          <li><a href="#types">Types</a>
-            <ul>
-              <li><a href="#inline">Inline</a></li>
-              <li><a href="#internal">Internal</a></li>
-              <li><a href="#external">External</a></li>
-            </ul>
-          </li>
-          <li><a href="#specificity">Specificity</a></li>
           <li><a href="#top">Back to Top</a></li>
-          <li><a href="c.colors.html">Next</a></li>
+          <li><a href="cbackground.html">Previous</a></li>
+          <li><a href="cstructure.html">Next</a></li>
         </ul>
-    </aside>-->
+    </aside>
     <main>
       <section>
-        <h2>Text</h2>
+        <h2 id="text">Text</h2>
         <p>Text is an important part of any webpage. As discussed in the 
           <a href="text.html" target="_blank">Text</a> 
           chapter of HTML, it can come in the form of letters, numbers, symbols, and even a space character.
         </p>
       </section>
       <section>
-        <h2>Aspects and Properties</h2>
+        <h2 id="aspects">Aspects and Properties</h2>
         <p>There are various aspects of text, each with its own sent of properites, that can be styled using CSS:
           <ul>
             <li>Font – style of text; the "aesthetic"</li>
@@ -73,7 +70,7 @@
           </ul>
         </p>
         <article>
-          <h3>Font</h3>
+          <h3 id="font">Font</h3>
           <p>As text can be handwritten in a variety of ways, so can it be rendered in the digital space. This aspect of text is what is referred to as <em>font</em>. For example, in a word processor like Microsoft Word, fonts can vary from Arial, to Calibri, to 'Times New Roman', among others. </p>
           <div class="table-container">
             <table style="text-align: left;">
@@ -127,7 +124,7 @@
           
           <h4>Style</h4>
           <p>Style sets the <em>uprightness</em> or <em>slantness</em>  of text. Unless defined, the font will be rendered in its default state. This is usually upright (not slanted), but there are exceptions like <span style="font-family: Photograph Signature; font-size: 1.5em;">Photograph Signature</span> which already appear italicized by default.</p>
-          <p>Italic and oblique styles are confusing because they seem to behave similarly. However, there is an cosmetic and semantic difference. Italic is a deliberate, slanted version of the font altogether. Sometimes its letter design is different from the normal version's. On the other hand, oblique simply slants text by force. It uses the same characters but angled.</p>
+          <p>Italic and oblique styles are confusing because they seem to behave similarly. However, there is a cosmetic and semantic difference. Italic is a deliberate, slanted version of the font altogether. Sometimes its letter design is different from the normal version's. On the other hand, oblique simply slants text by force. It uses the same characters but angled.</p>
           <p>Use <code>italic</code> for slanted text unless a <strong>synthetic</strong> or <strong>artificial</strong> slant is intended, in which case, use <code>oblique</code>. If a font does not have italics, the browser will attempt to apply oblique anyway.</p>
           <div class="table-container">
             <table>
@@ -165,7 +162,7 @@
           <h4>Variant</h4>
           <p>Use variant when <span class="tooltip">small capitals
             <span class="tooltiptext">uppercase letters with lowercase height</span>
-            </span>(small caps) are desired. Small caps are used for subtler emphasis compared to all caps, Latin phrases, and for acronyms (e.g. <span style="font-variant: small-caps;"> pagasa, am, pm</span>), among others. 
+            </span>(small caps) are desired. Small caps are used for subtler emphasis compared to all caps, Latin phrases, and acronyms (e.g. <span style="font-variant: small-caps;"> pagasa, am, pm</span>), among others. 
           </p>
           <div class="table-container">
             <table>
@@ -196,6 +193,8 @@
             </table>
           </div>
           <h4>Weight</h4>
+          <p>Weight sets the <em>thickness</em> of text. Values include <code>normal</code>, <code>lighter</code>, <code>bold</code>, and <code>bolder</code>, among others. Thickness can also be set using integer values from <code>100</code> to <code>1000</code>.</p> 
+          <p><strong>Compatible values will vary from font to font</strong>. Some fonts do not have <code>bolder</code> weight, for example; some do not have <code>100</code>; so on and so forth.</p>
           <div class="table-container">
             <table>
               <caption style="text-align: left;">Weight (Montserrat)</caption>
@@ -218,18 +217,114 @@
                 </tr>
                 <tr>
                   <td><code>font-weight:</code></td>
-                  <td><code>light</code></td>
+                  <td><code>lighter</code></td>
                   <td style="font-family: montserrat; font-weight:lighter">abcdefghijklmnopqrstuvwxyz1234567890</td>
                 </tr>                
                 <tr>
                   <td><code>font-weight:</code></td>
-                  <td><code>bolder</code></td>
-                  <td style="font-family: montserrat; font-weight: bolder;">abcdefghijklmnopqrstuvwxyz1234567890</td>
+                  <td><code>bold</code></td>
+                  <td style="font-family: montserrat; font-weight: bold;">abcdefghijklmnopqrstuvwxyz1234567890</td>
+                </tr>
+                <tr>
+                  <td><code>font-weight:</code></td>
+                  <td><code>100</code></td>
+                  <td style="font-family: montserrat; font-weight: 100;">abcdefghijklmnopqrstuvwxyz1234567890</td>
+                </tr>
+                <tr>
+                  <td><code>font-weight:</code></td>
+                  <td><code>200</code></td>
+                  <td style="font-family: montserrat; font-weight: 200;">abcdefghijklmnopqrstuvwxyz1234567890</td>
+                </tr>
+                <tr>
+                  <td><code>font-weight:</code></td>
+                  <td><code>300</code></td>
+                  <td style="font-family: montserrat; font-weight: 300;">abcdefghijklmnopqrstuvwxyz1234567890</td>
+                </tr>
+                <tr>
+                  <td><code>font-weight:</code></td>
+                  <td><code>400</code></td>
+                  <td style="font-family: montserrat; font-weight: 400;">abcdefghijklmnopqrstuvwxyz1234567890</td>
+                </tr>
+                <tr>
+                  <td><code>font-weight:</code></td>
+                  <td><code>500</code></td>
+                  <td style="font-family: montserrat; font-weight: 500;">abcdefghijklmnopqrstuvwxyz1234567890</td>
+                </tr>
+                <tr>
+                  <td><code>font-weight:</code></td>
+                  <td><code>600</code></td>
+                  <td style="font-family: montserrat; font-weight: 600;">abcdefghijklmnopqrstuvwxyz1234567890</td>
+                </tr>
+                <tr>
+                  <td><code>font-weight:</code></td>
+                  <td><code>700</code></td>
+                  <td style="font-family: montserrat; font-weight: 700;">abcdefghijklmnopqrstuvwxyz1234567890</td>
+                </tr>
+                <tr>
+                  <td><code>font-weight:</code></td>
+                  <td><code>800</code></td>
+                  <td style="font-family: montserrat; font-weight: 800;">abcdefghijklmnopqrstuvwxyz1234567890</td>
+                </tr>
+                <tr>
+                  <td><code>font-weight:</code></td>
+                  <td><code>900</code></td>
+                  <td style="font-family: montserrat; font-weight: 900;">abcdefghijklmnopqrstuvwxyz1234567890</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <br><br>
+          <div class="table-container">
+            <table>
+              <caption style="text-align: left;">Weight (Roboto Flex)</caption>
+              <thead>
+                <tr>
+                  <th colspan="2">Syntax</th>
+                  <th>Preview</th>
+                </tr>
+                <tr>
+                  <td>Property</td>
+                  <td>Value</td>
+                  <td></td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>font-weight:</code></td>
+                  <td><code>normal</code></td>
+                  <td style="font-family: 'Roboto Flex'; font-weight: normal;">abcdefghijklmnopqrstuvwxyz1234567890</td>
+                </tr>
+                <tr>
+                  <td><code>font-weight:</code></td>
+                  <td><code>bold</code></td>
+                  <td style="font-family: 'Roboto Flex'; font-weight: bold">abcdefghijklmnopqrstuvwxyz1234567890</td>
+                </tr>                
+                <tr>
+                  <td><code>font-weight:</code></td>
+                  <td><code>400</code></td>
+                  <td style="font-family: 'Roboto Flex'; font-weight: 400;">abcdefghijklmnopqrstuvwxyz1234567890</td>
+                </tr>
+                <tr>
+                  <td><code>font-weight:</code></td>
+                  <td><code>500</code></td>
+                  <td style="font-family: 'Roboto Flex'; font-weight: 500;">abcdefghijklmnopqrstuvwxyz1234567890</td>
+                </tr>
+                <tr>
+                  <td><code>font-weight:</code></td>
+                  <td><code>600</code></td>
+                  <td style="font-family: 'Roboto Flex'; font-weight: 600">abcdefghijklmnopqrstuvwxyz1234567890</td>
+                </tr>                
+                <tr>
+                  <td><code>font-weight:</code></td>
+                  <td><code>700</code></td>
+                  <td style="font-family: 'Roboto Flex'; font-weight: 700;">abcdefghijklmnopqrstuvwxyz1234567890</td>
                 </tr>
               </tbody>
             </table>
           </div>
           <h4>Stretch</h4>
+          <p>Stretch sets the width of the characters and, in effect, the text overall. Values include <code>condensed</code>, <code>normal</code>, and <code>expanded</code>, among others. Stretch can also be set using percentage values.</p>
+          <p><strong>Compatible values will vary from font to font</strong>. Some fonts do not have <code>condensed</code> stretch, for example; some do not have <code>50%</code>; so on and so forth.</p>
           <div class="table-container">
             <table>
               <caption style="text-align: left;">Stretch (Roboto Flex)</caption>
@@ -247,27 +342,89 @@
               <tbody>
                 <tr>
                   <td><code>font-stretch:</code></td>
-                  <td><code>75%</code></td>
-                  <td style="font-family: 'Roboto Flex'; font-stretch: 75%;">abcdefghijklmnopqrstuvwxyz1234567890</td>
+                  <td><code>condensed</code></td>
+                  <td style="font-family: 'Roboto Flex'; font-stretch:condensed;">abcdefghijklmnopqrstuvwxyz1234567890</td>
+                </tr>
+                <tr>
+                  <td><code>font-stretch:</code></td>
+                  <td><code>semi-condensed</code></td>
+                  <td style="font-family: 'Roboto Flex'; font-stretch:semi-condensed;">abcdefghijklmnopqrstuvwxyz1234567890</td>
+                </tr>                
+                <tr>
+                  <td><code>font-stretch:</code></td>
+                  <td><code>normal</code></td>
+                  <td style="font-family: 'Roboto Flex'; font-stretch: normal;">abcdefghijklmnopqrstuvwxyz1234567890</td>
+                </tr>
+                <tr>
+                  <td><code>font-stretch:</code></td>
+                  <td><code>semi-expanded</code></td>
+                  <td style="font-family: 'Roboto Flex'; font-stretch:semi-expanded;">abcdefghijklmnopqrstuvwxyz1234567890</td>
+                </tr>
+                <tr>
+                  <td><code>font-stretch:</code></td>
+                  <td><code>expanded</code></td>
+                  <td style="font-family: 'Roboto Flex'; font-stretch:expanded;">abcdefghijklmnopqrstuvwxyz1234567890</td>
+                </tr>                
+                <tr>
+                  <td><code>font-stretch:</code></td>
+                  <td><code>80%</code></td>
+                  <td style="font-family: 'Roboto Flex'; font-stretch: 80%;">abcdefghijklmnopqrstuvwxyz1234567890</td>
+                </tr>
+                <tr>
+                  <td><code>font-stretch:</code></td>
+                  <td><code>85%</code></td>
+                  <td style="font-family: 'Roboto Flex'; font-stretch: 85%;">abcdefghijklmnopqrstuvwxyz1234567890</td>
+                </tr>
+                <tr>
+                  <td><code>font-stretch:</code></td>
+                  <td><code>95%</code></td>
+                  <td style="font-family: 'Roboto Flex'; font-stretch: 95%;">abcdefghijklmnopqrstuvwxyz1234567890</td>
                 </tr>
                 <tr>
                   <td><code>font-stretch:</code></td>
                   <td><code>100%</code></td>
                   <td style="font-family: 'Roboto Flex'; font-stretch: 100%;">abcdefghijklmnopqrstuvwxyz1234567890</td>
-                </tr>                
+                </tr>
+                <tr>
+                  <td><code>font-stretch:</code></td>
+                  <td><code>110%</code></td>
+                  <td style="font-family: 'Roboto Flex'; font-stretch: 110%;">abcdefghijklmnopqrstuvwxyz1234567890</td>
+                  <tr>
+                  <td><code>font-stretch:</code></td>
+                  <td><code>120%</code></td>
+                  <td style="font-family: 'Roboto Flex'; font-stretch: 120%;">abcdefghijklmnopqrstuvwxyz1234567890</td>
+                </tr>
                 <tr>
                   <td><code>font-stretch:</code></td>
                   <td><code>125%</code></td>
                   <td style="font-family: 'Roboto Flex'; font-stretch: 125%;">abcdefghijklmnopqrstuvwxyz1234567890</td>
                 </tr>
+                </tr>
               </tbody>
             </table>
           </div>
           
-          <br><br>
+          <h4>Size</h4>
+          <p>Size sets the size of text. Values include descriptive ones such as <code>small</code>, <code>medium</code>, and <code>large</code>; absolute lengths such as 
+            <code>
+              <span class="tooltip">5px
+                <span class="tooltiptext">5 pixels</span>
+              </span>
+            </code>,
+            <code>
+              <span class="tooltip">3cm
+                <span class="tooltiptext">5 centimeters</span>
+              </span>
+            </code>; relative lengths such as 
+            <code>
+              <span class="tooltip">2em
+                <span class="tooltiptext">2 times element's multiplier</span>
+              </span>
+            </code> and percentages such as <code>75%</code>.
+          </p>
           <div class="table-container">
             <table>
-              <caption style="text-align: left;">Size</caption>
+              <caption style="text-align: left;">Size (Calibri)</caption>
               <thead>
                 <tr>
                   <th colspan="2">Syntax</th>
@@ -283,7 +440,7 @@
                 <tr>
                   <td><code>font-size:</code></td>
                   <td><code>small</code></td>
-                  <td style="font-family: calibri; font-size:small;">abcdefghijklmnopqrstuvwxyz1234567890</td>
+                  <td style="font-family: calibri; font-size: small;">abcdefghijklmnopqrstuvwxyz1234567890</td>
                 </tr>
                 <tr>
                   <td><code>font-size:</code></td>
@@ -293,7 +450,7 @@
                 <tr>
                   <td><code>font-size:</code></td>
                   <td><code>large</code></td>
-                  <td style="font-family: calibri; font-size:large;">abcdefghijklmnopqrstuvwxyz1234567890</td>
+                  <td style="font-family: calibri; font-size: large;">abcdefghijklmnopqrstuvwxyz1234567890</td>
                 </tr>                
                 <tr>
                   <td><code>font-size:</code></td>
@@ -302,20 +459,129 @@
                 </tr>
                 <tr>
                   <td><code>font-size:</code></td>
-                  <td><code>1.5<span class="tooltip"><em>em</em>
-                    <span class="tooltiptext">element's multiplier</span>                    
-                  </span>
-                  </code></td>
-                  <td style="font-family: calibri; font-size:1.5em">abcdefghijklmnopqrstuvwxyz1234567890</td>
+                  <td><code>15px</code></td>
+                  <td style="font-family: calibri; font-size: 15px">abcdefghijklmnopqrstuvwxyz1234567890</td>
+                </tr>
+                <tr>
+                  <td><code>font-size:</code></td>
+                  <td><code>0.6cm</code></td>
+                  <td style="font-family: calibri; font-size: 0.6cm">abcdefghijklmnopqrstuvwxyz1234567890</td>
+                </tr>
+                <tr>
+                  <td><code>font-size:</code></td>
+                  <td><code>1.5em</code></td>
+                  <td style="font-family: calibri; font-size: 1.5em">abcdefghijklmnopqrstuvwxyz1234567890</td>
+                </tr>
+                <tr>
+                  <td><code>font-size:</code></td>
+                  <td><code>150%</code></td>
+                  <td style="font-family: calibri; font-size: 150%">abcdefghijklmnopqrstuvwxyz1234567890</td>
                 </tr>
               </tbody>
             </table>
           </div>
-
+          <p class="funfact">
+          <span class="b">🤓 Author's Markup:</span> Notice that 1.5em and 150% values have the same size. This is because they both mean 1.5 times the element's (<code>table data</code> in this case) font size.
+          </p>
+          
+          <h4>Family</h4>
+          <p>Family sets the design of the text. A font family contains different iterations of a font in terms of style, weight, and stretch. This is the reason why possible property values for each font varies; some font families are more comprehensive than others.
+          </p>
+          <p>When discussing font family, it is also helpful to understand the concept of <em>font fallbacks</em>. When setting a font family, it is recommended that font fallbacks are also specified. Fallbacks are backups in case the originally set family is unable to be rendered for whatever reason. The browser will try to render each one in order until it succeeds.
+          </p>
+          <p>Examples of the recommended syntax for the <code>font-family</code> property is as follows:</p>
+          <div class="table-container">
+            <table>
+              <caption style="text-align: left;">Font Family and Fallbacks</caption>
+              <thead>
+                <tr>
+                  <th rowspan="2" style="vertical-align: top;">Property</th>
+                  <th colspan="2">Value</th>
+                </tr>
+                <tr>
+                  <td>Named Fonts</td>
+                  <td>Generic Fonts</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>font-family:</code></td>
+                  <td><code>Arial</code>, <code>Calibri</code>,</td>
+                  <td><code>sans-serif</code></td>
+                </tr>
+                <tr>
+                  <td><code>font-family:</code></td>
+                  <td><code>"Roboto Flex"</code>, <code>Montserrat</code>,</td>
+                  <td><code>sans-serif</code></td>
+                </tr>
+                <tr>
+                  <td><code>font-family:</code></td>
+                  <td><code>"Courier New"</code>, <code>Courier</code>,</td>
+                  <td><code>monospace</code></td>
+                  
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <small>Font names comprised of more than one word must be enclosed in quotation marks as seen above.</small>
+          <p>There are five generic font families which can be used as the last resort font family values:</p>
+          <ul>
+            <li><b>Serif</b> – have ornate character ends and corners (e.g. <span style="font-family: 'Times New Roman'">Times New Roman</span>)</li>
+            <li><b>Sans-serif</b> – have simple character ends and corners (e.g. <span style="font-family: Calibri">Calibri</span>)</li>
+            <li><b>Monospace</b> – have equally-wide characters (e.g. <span style="font-family:'Courier New'">Courier New</span>)</li>
+            <li><b>Cursive</b> – have handwritten-styled and connected characters (e.g. <span style="font-family: Photograph Signature">Photograph Signature</span>)</li>
+            <li><b>Fantasy</b> – have decorative or medieval-styled characters (e.g. <span style="font-family: Papyrus">Papyrus</span>)</li>
+          </ul>
+          <p>Including fallbacks ensures that text will be rendered as closely as intended in whatever situation.</p>
+          <br><br>
+          <div class="table-container">
+            <table>
+              <caption style="text-align: left;">Font Family</caption>
+              <thead>
+                <tr>
+                  <th colspan="2">Syntax</th>
+                  <th>Preview</th>
+                </tr>
+                <tr>
+                  <td>Property</td>
+                  <td>Value</td>
+                  <td></td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>font-family:</code></td>
+                  <td><code>Arial</code></td>
+                  <td style="font-family: Arial;">abcdefghijklmnopqrstuvwxyz1234567890</td>
+                </tr>
+                <tr>
+                  <td><code>font-family:</code></td>
+                  <td><code>Times New Roman</code></td>
+                  <td style="font-family: 'Times New Roman';">abcdefghijklmnopqrstuvwxyz1234567890</td>
+                </tr>                
+                <tr>
+                  <td><code>font-family:</code></td>
+                  <td><code>Comic Sans</code></td>
+                  <td style="font-family: 'Comic Sans';">abcdefghijklmnopqrstuvwxyz1234567890</td>
+                </tr>
+                <tr>
+                  <td><code>font-family:</code></td>
+                  <td><code>semi-expanded</code></td>
+                  <td style="font-family: 'Roboto Flex'; font-stretch:semi-expanded;">abcdefghijklmnopqrstuvwxyz1234567890</td>
+                </tr>
+                <tr>
+                  <td><code>font-family:</code></td>
+                  <td><code>expanded</code></td>
+                  <td style="font-family: 'Roboto Flex'; font-stretch:expanded;">abcdefghijklmnopqrstuvwxyz1234567890</td>
+                </tr>  
+              </tbody>
+            </table>
+          </div>
           
         </article>
+        <hr>
         <article>
-          <h3>Color</h3>
+          <h3 id="color">Color</h3>
           <div class="table-container">
             <table style="text-align: left;">
               <caption style="text-align: left;">Color Property</caption>
@@ -336,8 +602,9 @@
             </table>
           </div>
         </article>
+        <hr>
         <article>
-          <h3>Alignment</h3>
+          <h3 id="alignment">Alignment</h3>
           <div class="table-container">
             <table style="text-align: left;">
               <caption style="text-align: left;">Alignment Properties</caption>
