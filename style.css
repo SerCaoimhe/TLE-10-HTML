@@ -171,7 +171,13 @@ label.checkbox {
 td {
   text-align: left;
   vertical-align: top;
+  text-decoration-skip-ink: none;
 }
+
+/**#rf {
+  font: normal bold large 'Pacifico';
+}
+  **/
 
 @media only screen and (max-width: 767px) {
 

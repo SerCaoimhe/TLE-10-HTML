@@ -8,7 +8,7 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?
-  family=Montserrat&family=Roboto+Flex:wdth,wght@75..125,400..700&display=swap">
+  family=Montserrat&family=Roboto+Flex:wdth,wght@75..125,400..700&family=Comic+Neue&family=Pacifico&family=Pixelify+Sans&family=Grenze+Gotisch&family=Fira+Mono&family=Glegoo">
 
 </head>
 <body>
@@ -34,11 +34,12 @@
               <li><a href="#color">Color</a></li>
               <li><a href="#alignment">Alignment</a></li>
               <li><a href="#decoration">Decoration</a></li>
-              <li><a href="#transformation">Transformation</a></li>
+              <!--<li><a href="#transformation">Transformation</a></li>
               <li><a href="#spacing">Spacing</a></li>
-              <li><a href="#shadow">Shadow</a></li>
+              <li><a href="#shadow">Shadow</a></li>-->
             </ul>
           </li>
+          <li><a href="#google">Google Fonts</a></li>
           <li><a href="#top">Back to Top</a></li>
           <li><a href="cbackground.html">Previous</a></li>
           <li><a href="cstructure.html">Next</a></li>
@@ -73,7 +74,7 @@
           <h3 id="font">Font</h3>
           <p>As text can be handwritten in a variety of ways, so can it be rendered in the digital space. This aspect of text is what is referred to as <em>font</em>. For example, in a word processor like Microsoft Word, fonts can vary from Arial, to Calibri, to 'Times New Roman', among others. </p>
           <div class="table-container">
-            <table style="text-align: left;">
+            <table id="fpt" style="text-align: left;">
               <caption style="text-align: left;">Font Properties</caption>
               <thead>
                 <tr>
@@ -541,43 +542,112 @@
                 <tr>
                   <th colspan="2">Syntax</th>
                   <th>Preview</th>
+                  <th>Generic Family</th>
                 </tr>
                 <tr>
                   <td>Property</td>
                   <td>Value</td>
+                  <td></td>
                   <td></td>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td><code>font-family:</code></td>
-                  <td><code>Arial</code></td>
-                  <td style="font-family: Arial;">abcdefghijklmnopqrstuvwxyz1234567890</td>
-                </tr>
+                  <td><code>Glegoo</code></td>
+                  <td style="font-family: Glegoo;">abcdefghijklmnopqrstuvwxyz1234567890</td>
+                  <td>serif</td>
+                </tr>                 
                 <tr>
                   <td><code>font-family:</code></td>
                   <td><code>Times New Roman</code></td>
                   <td style="font-family: 'Times New Roman';">abcdefghijklmnopqrstuvwxyz1234567890</td>
-                </tr>                
-                <tr>
-                  <td><code>font-family:</code></td>
-                  <td><code>Comic Sans</code></td>
-                  <td style="font-family: 'Comic Sans';">abcdefghijklmnopqrstuvwxyz1234567890</td>
+                  <td>serif</td>
                 </tr>
                 <tr>
                   <td><code>font-family:</code></td>
-                  <td><code>semi-expanded</code></td>
-                  <td style="font-family: 'Roboto Flex'; font-stretch:semi-expanded;">abcdefghijklmnopqrstuvwxyz1234567890</td>
+                  <td><code>Comic Neue</code></td>
+                  <td style="font-family: 'Comic Neue';">abcdefghijklmnopqrstuvwxyz1234567890</td>
+                  <td>sans-serif</td>
                 </tr>
                 <tr>
                   <td><code>font-family:</code></td>
-                  <td><code>expanded</code></td>
-                  <td style="font-family: 'Roboto Flex'; font-stretch:expanded;">abcdefghijklmnopqrstuvwxyz1234567890</td>
-                </tr>  
+                  <td><code>Pixelify Sans</code></td>
+                  <td style="font-family: 'Pixelify Sans';">abcdefghijklmnopqrstuvwxyz1234567890</td>
+                  <td>sans serif</td>
+                </tr>
+                <tr>
+                  <td><code>font-family:</code></td>
+                  <td><code>Fira Mono</code></td>
+                  <td style="font-family: 'Fira Mono';">abcdefghijklmnopqrstuvwxyz1234567890</td>
+                  <td>monospace</td>
+                </tr>    
+                <tr>
+                  <td><code>font-family:</code></td>
+                  <td><code>Pacifico</code></td>
+                  <td style="font-family: Pacifico;">abcdefghijklmnopqrstuvwxyz1234567890</td>
+                  <td>cursive</td>
+                </tr>
+                <tr>
+                  <td><code>font-family:</code></td>
+                  <td><code>Grenze Gotisch</code></td>
+                  <td style="font-family: 'Grenze Gotisch';">abcdefghijklmnopqrstuvwxyz1234567890</td>
+                  <td>fantasy</td>
+                </tr>
               </tbody>
             </table>
           </div>
-          
+
+          <h4>Font (shorthand property)</h4>
+          <p>The <code>font</code> property is another example of a shorthand property like the previously discussed <code>background</code> property. To give a recap, a shorthand property compresses properties and corresponding values into a single declaration for efficiency. An important thing to note whenever using shorthand properties is to input values in the correct order. In the case of <code>font</code>, refer to the <a href="#fpt">Font Properties table</a> from top to bottom.
+          </p>
+          <div class="table-container">
+            <table>
+              <caption>Font Shorthand Property</caption>
+              <thead>
+                <tr>
+                  <th colspan="7">Syntax</th>
+                  <th rowspan="3" style="vertical-align: top;">Preview</th>
+                </tr>
+                <tr>
+                  <td style="text-align: center;">Property</td>
+                  <td colspan="6" style="text-align: center;">Values</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Style</td>
+                  <td>Variant</td>
+                  <td>Weight</td>
+                  <td>Stretch</td>
+                  <td>Size*</td>
+                  <td>Family*</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>font:</code></td>
+                  <td><code></code></td>
+                  <td><code>small-caps</code></td>
+                  <td><code></code></td>
+                  <td><code></code></td>
+                  <td><code>x-large</code></td>
+                  <td><code>"Comic Neue"</code></td>
+                  <td style="font: small-caps x-large 'Comic Neue'">abcdefghijklmnopqrstuvwxyz1234567890</td>
+                </tr>
+                <tr>
+                  <td><code>font:</code></td>
+                  <td><code>italic</code></td>
+                  <td><code></code></td>
+                  <td><code>bold</code></td>
+                  <td><code></code></td>
+                  <td><code>xx-large</code></td>
+                  <td><code>"Comic Neue"</code></td>
+                  <td style="font: italic  bold xx-large 'Comic Neue'">abcdefghijklmnopqrstuvwxyz1234567890</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <small>*value must be specified; everything else will be considered default when left blank</small>
         </article>
         <hr>
         <article>
@@ -640,14 +710,107 @@
             </table>
           </div>
         </article>
+
+        <article>
+          <h3 id="decoration">Decoration</h3>
+          <p>Use <code>text-decoration-skip-ink: "none"</code> to fix unintended broken decoration.</p>
+          <div class="table-container">
+            <table style="text-align: left;">
+              <caption style="text-align: left;">Decoration Shorthand Property</caption>
+              <thead>
+                <tr>
+                  <th colspan="5" style="text-align: center;">Syntax</th>
+                  <th rowspan="3" style="vertical-align: top; text-align: center;">Preview</th>
+                </tr>
+                <tr>
+                  <td style="text-align: center;">Property</td>
+                  <td colspan="4" style="text-align: center;">Values</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Line*</td>
+                  <td>Color</td>
+                  <td>Style</td>
+                  <td>Thickness</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>text-decoration:</code></td>
+                  <td><code>line-through</code></td>
+                  <td><code>red</code></td>
+                  <td><code></code></td>
+                  <td><code>2px</code></td>
+                  <td style="text-decoration: line-through red 2px">abcdefghijklmnopqrstuvwxyz1234567890</td>
+                </tr>
+                <tr>
+                  <td><code>text-decoration:</code></td>
+                  <td><code>line-through</code></td>
+                  <td><code>orange</code></td>
+                  <td><code>solid</code></td>
+                  <td><code>3px</code></td>
+                  <td style="text-decoration: line-through orange solid 3px;">abcdefghijklmnopqrstuvwxyz1234567890</td>
+                </tr>
+                <tr>
+                  <td><code>text-decoration:</code></td>
+                  <td><code>overline</code></td>
+                  <td><code>yellow</code></td>
+                  <td><code>dashed</code></td>
+                  <td><code></code></td>
+                  <td style="text-decoration: overline yellow dashed 4px;">abcdefghijklmnopqrstuvwxyz1234567890</td>
+                </tr>
+                <tr>
+                  <td><code>text-decoration:</code></td>
+                  <td><code>overline</code></td>
+                  <td><code>green</code></td>
+                  <td><code>dotted</code></td>
+                  <td><code>5px</code></td>
+                  <td style="text-decoration: overline green dotted 5px">abcdefghijklmnopqrstuvwxyz1234567890</td>
+                </tr>
+                <tr>
+                  <td><code>text-decoration:</code></td>
+                  <td><code>underline</code></td>
+                  <td><code>blue</code></td>
+                  <td><code>double</code></td>
+                  <td><code>6px</code></td>
+                  <td style="text-decoration: underline blue double 6px;">abcdefghijklmnopqrstuvwxyz1234567890</td>
+                </tr>
+                <tr>
+                  <td><code>text-decoration:</code></td>
+                  <td><code>underline</code></td>
+                  <td><code>violet</code></td>
+                  <td><code>wavy</code></td>
+                  <td><code>7px</code></td>
+                  <td style="text-decoration: underline purple wavy 2px;">abcdefghijklmnopqrstuvwxyz1234567890</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
       </section>
       <section>
-        <h2>Discussion</h2>
+        <h2 id="google">Google Fonts</h2>
         <p id="text1">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque magnam eveniet tenetur qui sed tempore sunt voluptatem officia asperiores quod! Cum aspernatur architecto libero tempora rerum nam molestias quod mollitia.
+          Aside from the built-in fonts in browsers, Google fonts may also be used for more options and flexibility. There are 
+          <a href="https://www.w3schools.com/howto/howto_google_fonts.asp">1,916 fonts</a> available to choose from.
         </p>
-        <p id="text2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos nihil magni nobis quas consequatur, autem nemo praesentium odio repellat mollitia quisquam cupiditate similique incidunt necessitatibus! Quidem unde eius vero incidunt.</p>
-        <p id="text3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic corrupti, atque delectus modi qui beatae dolorem dolorum eius nihil magni officia temporibus itaque, impedit id ipsa est quisquam similique. Repudiandae.</p>
+        <p>To apply Google fonts, simply use a <code>link</code> element in the <code>head</code> element of the HTML file.</p>
+        <p>To apply multiple Google fonts, simply separate them using ampersands (<code>&</code>)</p>
+        <b>Syntax:</b>
+        <pre><code>
+&lt;head&gt;
+  &lt;link rel="stylesheet" href="https://fonts.googleapis.com/css2?
+    family=Montserrat&
+    family=Roboto+Flex&
+    family=Comic+Neue&
+    family=Pacifico&
+    family=Pixelify+Sans&
+    family=Grenze+Gotisch&
+    family=Fira+Mono&
+    family=Glegoo
+  &gt;
+&lt;head&gt;
+        </code></pre>
       </section>
       
     </main>
