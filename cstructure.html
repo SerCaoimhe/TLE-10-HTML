@@ -7,13 +7,6 @@
   <title>Placido—Structure</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="style.css">
-  <style>
-    body {
-      background-image: url(Multimedia/b7e1e580-c611-11ea-9b24-523c65baea0e.png);
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
-  </style>
 </head>
 <body>
     <header>
@@ -52,7 +45,43 @@
         </ul>
     </aside>-->
     <main>
-      
+      <section>
+        <h2>Box Model</h2>
+        <p>CSS follows a structure known as the <em>box model</em>, which is so named because of its appearance being akin to boxes within boxes.</p>
+        <div style="text-align: center; vertical-align: center;;">
+          <div style="padding: 1%; border: solid 1px">
+            Margin
+            <div style="background-color: rgb(75, 175, 228); margin:1%; padding: 0.5% 3% 3% 3%">
+              Border
+              <div style="background-image: linear-gradient(-45deg, #2470b4, #b5d6f3, white); background-attachment: fixed; margin:1%; padding: 1%;">
+                Padding
+                <div style="background-image: linear-gradient(-45deg, #2470b4, #b5d6f3, white); background-attachment: fixed;; margin:1%; padding: 3% 3% 3% 3%; border: solid 1px">
+                  Content
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h2>Discussion</h2>
+      </section>
+      <pre id="bm1">Pre Element
+        <code>
+  #bm1 {
+    margin: 0px;
+    padding: 0px;
+    border: dashed black 6.7px;
+    height: 100px;
+  }        </code>
+      </pre>
+      <pre id="bm2">Paragraph</pre>
+      <div style="display: flex; justify-content: center; border: solid black 1px;">
+        <img src="Multimedia/snoopy.png" id="bm3">
+        <img src="Multimedia/snoopy.png" id="bm4">
+        <img src="Multimedia/snoopy.png" id="bm5">
+        <img src="Multimedia/snoopy.png" id="bm6">
+      </div>
     </main>
     <footer>
         <p>© 2025 Derik's Notes. All rights reserved.</p>

@@ -57,6 +57,49 @@ iframe {
   border-bottom: 1px dashed #555; /* subtle underline */
 }
 
+#bm1 {
+  margin: 0px;
+  padding: 0px;
+  border: dashed black 5px;
+  height:fit-content;
+}
+
+#bm2 {
+  /*margin: top right bottom left*/
+  margin: 20px 10px 30px 150px;
+  /*padding: top right bottom left*/
+  padding: 10px 10px 30px 40px;
+  border: solid red 20px;
+}
+
+#bm3 {
+  margin: 30px 0px 30px 0px;
+  padding: 14.2px;
+  border: solid black 6.7px;
+  object-fit: contain;
+}
+
+#bm4 {
+  margin: 20px 0px 20px 0px;
+  padding: 14.2px;
+  border: solid black 6.7px;
+  object-fit: contain;
+}
+
+#bm5 {
+  margin: 10px 0px 10px 0px;
+  padding: 14.2px;
+  border: solid black 6.7px;
+  object-fit: contain;
+}
+
+#bm6 {
+  margin: 10px 0px 5px 0px;
+  padding: 14.2px;
+  border: solid black 6.7px;
+  object-fit: contain;
+}
+
 /* Tooltip text */
 .tooltip .tooltiptext {
   visibility: hidden;
