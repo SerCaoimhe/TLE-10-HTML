@@ -22,7 +22,7 @@
       <a href="cstructure.html" target="_self" title="Learn about Text">Structure</a>
       <a href="cflex.html" target="_self" title="You're already here -_-">Flexbox</a>
     </nav>
-    <aside>
+    <!--<aside>
         <h3 class="no-counter">Quick links</h3>
         <ul>
           <li><a href="#colors">Colors in CSS</a></li>  
@@ -36,314 +36,144 @@
           <li><a href="csyntax.html">Previous</a></li>
           <li><a href="cbackground.html">Next</a></li>
         </ul>
-    </aside>
+    </aside>-->
     <main>
       <section>
-        <h2 id="colors">What is flexbox?</h2>
-        <p>Colors can be applied with CSS in order to stylize HTML. There are a variety of ways to apply colors to different 
-          <span class="tooltip"><em>parts</em>
-            <span class="tooltiptext">e.g. border, background, element content, box-shadow, outline</span>
-            </span>
-             of an element, each of which has its own property for color.</p>
-        <table style="text-align: left;">
-          <caption>Color Properties for Different Parts</caption>
-          <thead>
-            <tr>
-              <th>Part</th>
-              <th>Property</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Background</td>
-              <td><code>background-color</code></td>
-            </tr>
-            <tr>
-              <td>Border</td>
-              <td><code>border-color</code></td>
-            </tr>
-            <tr>
-              <td>Text</td>
-              <td><code>color</code></td>
-            </tr>
-          </tbody>
-        </table>
-        <p>Color properties can be combined  with any of the color value types discussed below.</p>
-        <u>Example: color properties and value types</u>
-        <br><br>
+        <h2 id="what">What is flexbox?</h2>
+        <p><em>Flexbox</em> is short for <em>Flexible Box Container Layout</em>. It is a webpage layouting method that makes use of <em>flex containers</em> and <em>flex items</em> within those containers.</p>
         <div class="flex">
-          <div style="flex-grow: .01;">
+          <div class="syn-container" style="flex-grow: .1;">
             <b>Syntax:</b>
-            <pre><code>&lt;div style="
-  background-color: lightcoral;
-  border-color: rgb(0,0,0);
-  color: #ffffff"&gt;
-  1 2 3 4 5 6 7 8 9 0
-&lt;/div&gt;
-            </code></pre>
+            <pre><code>&lt;div style="background-color: white; padding: 5px;"&gt;
+  Flex Container
+  &lt;div style="display: flex; background-color: white;"&gt;
+    &lt;div style="background-color: rgb(75, 175, 228); margin: 10px; padding: 2px"&gt;Flex Item 1&lt;/div&gt;
+    &lt;div style="background-color: rgb(75, 175, 228);; margin: 10px; padding: 2px"&gt;Flex Item 2&lt;/div&gt;
+    &lt;div style="background-color: rgb(75, 175, 228);; margin: 10px; padding: 2px"&gt;Flex Item 3&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
           </div>
-          <div style="flex-grow: 1;">
+          <div class="syn-container" style="flex-grow: 10;">
             <b>Preview:</b>
-            <div style="border: 3px solid rgb(0,0,0); background-color: lightcoral; color: #ffffff;">
-              1 2 3 4 5 6 7 8 9 0</div>
+            <div style="background-color: white; padding: 5px;">
+              Flex Container
+              <div style="display: flex; background-color: white;">
+                <div style="background-color: rgb(75, 175, 228); margin: 10px; padding: 2px">Flex Item 1</div>
+                <div style="background-color: rgb(75, 175, 228);; margin: 10px; padding: 2px">Flex Item 2</div>
+                <div style="background-color: rgb(75, 175, 228);; margin: 10px; padding: 2px">Flex Item 3</div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
 
       <section>
-        <h2 id="values">Color Values</h2>
+        <h2 id="values">Flex Container</h2>
+        <p>The flex container is the parent element containing flex items. Adjusting its properties will affect how the flex items are arranged within.</p>
         <article>
-          <h3 id="types">Types</h3>
-          <p>Color values can be specified in a variety of ways. These color values can be applied freely. More than one way can be used in an HTML document.</p>
-          <p>These are the different value types that can be used in CSS:</p>
-          <ul>
-            <li><b>Color names</b> – <a href="https://www.w3schools.com/colors/colors_names.asp">predefined names for colors recognized by browsers</a></li>
-            <li><b>RGB</b> – combination of red, green, and blue 
-              <span class="tooltip"><em>values</em>
-                <span class="tooltiptext">from 0 to 255, where 0 represents no intenstiy and 255 represents full intensity</span>
-              </span>that defines a color</li>
-            <li><b>RGBA</b> – combination of RGB and
-              <span class="tooltip"><em>alpha</em>
-                <span class="tooltiptext">opacity level from 0 to 1, where 0 represents transparent and 1 represents opaque</span>
-              </span> values that defines a color's 
-              <span class="tooltip"><em>transparency</em>
-                <span class="tooltiptext">how see-through something is; opposite of opacity</span>
-              </span>
-            </li>
-            <li><b>HEX</b> – 6-digit
-              <span class="tooltip"><em>hexadecimal</em>
-                <span class="tooltiptext">base-16 number system including 0, 1,2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, and F</span>
-              </span>value that defines a color
-            </li>
-            <li><b>HEX alpha</b> – combination of a 6-digit value and a 2-digit alpha value that defines a color's transparency
-            </li>
-            <li><b>HSL</b> – combination of
-              <span class="tooltip"><em>hue</em>,
-                <span class="tooltiptext">hue value in a color wheel from 0-360°</span>
-              </span>
-              <span class="tooltip"><em>saturation</em>,
-                <span class="tooltiptext">color intensity from 0-100%</span>
-              </span>and
-              <span class="tooltip"><em>light</em>
-                <span class="tooltiptext">color brightness from 0-100%</span>
-              </span> values that defines a color
-            </li>
-            <li><b>HSLA</b> – combination of HSL and alpha values that defines a color's transparency</li>
-          </ul>
+          <h3>Properties</h3>
           <div class="table-container">
-            <table style="text-align: left;">
-              <caption>Color Value Types</caption>
+            <table id="fpt" style="text-align: left;">
+              <caption style="text-align: left;">Flexbox Container Properties</caption>
               <thead>
                 <tr>
-                  <th>Type</th>
-                  <th>Syntax*</th>
-                  <th>Preview</th>
-                  <th>Preview (no transparency)</th>                
+                  <th>Property</th>
+                  <th>Syntax</th>
+                  <th>Description</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>Color names</td>
-                  <td><code>red</code></td>
-                  <td style="background-color: red;"></td>
-                  <td style="background-color: red;"></td>
+                  <td>Display</td>
+                  <td><code>display:</code></td>
+                  <td>sets how the container behaves with surrounding elements: <code>&lt;flex&gt;</code> for block or <code>&lt;inline-flex&gt;</code> for inline </td>
                 </tr>
                 <tr>
-                  <td>RGB</td>
-                  <td><code>rgb(255, 165, 0)</code></td>
-                  <td style="background-color: hsl(39, 100%, 50%);"></td>
-                  <td style="background-color: hsl(39, 100%, 50%);"></td>
+                  <td>Flex Direction</td>
+                  <td><code>flex-direction:</code></td>
+                  <td>sets the direction of the flex items</td>
                 </tr>
                 <tr>
-                  <td>RGBA</td>
-                  <td><code>rgba(255,255,0, 0.4)</code></td>
-                  <td style="background-color: rgb(255, 255, 0, 0.4);"></td>
-                  <td style="background-color: rgb(255, 255, 0, 1);"></td>
+                  <td>Flex Wrap</td>
+                  <td><code>flex-wrap:</code></td>
+                  <td>determines whether flex items 
+                    <span class="tooltip">wrap
+                      <span class="tooltiptext">go to the next line</span>
+                    </span>
+                    when there is insufficient space</td>
                 </tr>
                 <tr>
-                  <td>HEX</td>
-                  <td><code>#008000</code></td>
-                  <td style="background-color: #008000;"></td>
-                  <td style="background-color: #008000;"></td>
+                  <td>Flex Flow</td>
+                  <td><code>flex-flow:</code></td>
+                  <td>shorthand property for flex direction and flex wrap</td>
                 </tr>
                 <tr>
-                  <td>HEX alpha</td>
-                  <td><code>#0000ff80</code></td>
-                  <td style="background-color: #0000ff80;"></td>
-                  <td style="background-color: #0000ffff;"></td>
+                  <tr>
+                    <td>Justify Content</td>
+                    <td><code>justify-content:</code></td>
+                    <td>sets horizontal alignment (along main axis) of flex items</td>
+                  </tr>
+                  <td>Align Items</td>
+                  <td><code>align-items:</code></td>
+                  <td>sets vertical alignment (along cross axis) of flex items</td>
                 </tr>
                 <tr>
-                  <td>HSL</td>
-                  <td ><code>hsl(275, 100%, 25%)</code></td>
-                  <td style="background-color: hsl(275, 100%, 25%);"></td>
-                  <td style="background-color: hsl(275, 100%, 25%);"></td>
-                </tr>
-                <tr>
-                  <td>HSLA</td>
-                  <td><code>hsla(300, 100%, 25%, 0.5)</code></td>
-                  <td style="background-color: hsla(300, 100%, 25%, 0.5);"></td>
-                  <td style="background-color: hsla(300, 100%, 25%, 1);"></td>
+                  <td>Align Content</td>
+                  <td><code>align-content:</code></td>
+                  <td>sets alignment if flex items wrap</td>
                 </tr>
               </tbody>
             </table>
-          </div>
-          <p class="funfact">
-            <span class="b">🤓 Author's Markup:</span> There are 16,777,216 possible colors whichever value type is used (with the exception of color names, of which there are 140).
-          </p>
-          <p>The various codes for a selected color can be displayed and applied by clicking the color swatch (colored square next to "orange" in the images below) then clicking on the top bar (displaying the color codes).</p>
-          <div class="flex">
-            <div style="flex-grow: 1;">
-              <img src="Multimedia/rgb.png" width="100%" alt="rgb color picker" title="rgb color picker">
-            </div>
-            <div style="flex-grow: 1;">
-              <img src="Multimedia/hsl.png" width="100%" alt="hsl color picker" title="hsl color picker">
-            </div>
-            <div style="flex-grow: 1;">
-              <img src="Multimedia/hex.png" width="100%" alt="hex color picker" title="hex color picker">
-            </div>
           </div>
         </article>
         <article>
-          <h3 id="synb">Syntax Breakdown</h3>
-          <div class="table-container">
-            <table>
-              <caption>RGB and HEX</caption>
-              <thead>
-                <tr>
-                  <th>Type</th>
-                  <th colspan="7">Syntax</th>
-                  <th>Preview</th>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td>Property*</td>
-                  <td></td>
-                  <td colspan="4">Value</td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td>Red</td>
-                  <td>Green</td>
-                  <td>Blue</td>
-                  <td>Alpha</td>
-                  <td></td>
-                  <td></td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>RGB</td>
-                  <td><code>background-color:</code></td>
-                  <td>rgb(</td>
-                  <td>255,</td>
-                  <td>255,</td>
-                  <td>255</td>
-                  <td></td>
-                  <td>)</td>
-                  <td style="background-color: white;"></td>
-                </tr>
-                <tr>
-                  <td>RGBA</td>
-                  <td><code>background-color:</code></td>
-                  <td>rgba(</td>
-                  <td>255,</td>
-                  <td>255,</td>
-                  <td>255,</td>
-                  <td>0.5</td>
-                  <td>)</td>
-                  <td style="background-color: rgba(255,255,255,0.5);"></td>
-                </tr>
-                <tr>
-                  <td>HEX</td>
-                  <td><code>background-color:</code></td>
-                  <td>#</td>
-                  <td>00</td>
-                  <td>00</td>
-                  <td>00</td>
-                  <td></td>
-                  <td></td>
-                  <td style="background-color: #000;"></td>
-                </tr>
-                <tr>
-                  <td>HEX alpha</td>
-                  <td><code>background-color:</code></td>
-                  <td>#</td>
-                  <td>00</td>
-                  <td>00</td>
-                  <td>00</td>
-                  <td>80</td>
-                  <td></td>
-                  <td style="background-color: #00000080;"></td>
-                </tr>
-              </tbody>
-            </table>
+          <h3>Examples</h3>
+          <div>
+            <b>Syntax:</b>
+            <pre><code>
+  color: white;
+  height: 300px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex-wrap: wrap-reverse;
+  align-items: stretch;
+  align-content: stretch
+            </code></pre>
           </div>
-          <small>*The <code>background-color</code> property is just an example and can be replaced with <code>border-color</code> or <code>color</code>.</small>
-          <br><br>
-          <div class="table-container">
-            <table>
-              <caption>HSL</caption>
-              <thead>
-                <tr>
-                  <th>Type</th>
-                  <th colspan="7">Syntax</th>
-                  <th>Preview</th>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td>Property*</td>
-                  <td></td>
-                  <td colspan="4">Value</td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td>Hue</td>
-                  <td>Saturation</td>
-                  <td>Light</td>
-                  <td>Alpha</td>
-                  <td></td>
-                  <td></td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>HSL</td>
-                  <td><code>background-color:</code></td>
-                  <td>hsl(</td>
-                  <td>0,</td>
-                  <td>0%,</td>
-                  <td>100%</td>
-                  <td></td>
-                  <td>)</td>
-                  <td style="background-color: hsl(0, 0%, 100%);"></td>
-                </tr>
-                <tr>
-                  <td>HSLA</td>
-                  <td><code>background-color:</code></td>
-                  <td>hsla(</td>
-                  <td>0,</td>
-                  <td>0%,</td>
-                  <td>100%</td>
-                  <td>0.5</td>
-                  <td>)</td>
-                  <td style="background-color: lch(0% 0 0 / 0.5);"></td>
-                </tr>
-              </tbody>
-            </table>
+          <div class="flex">
+            <div class="syn-container" style="flex-grow: 10;">
+              <b>Preview:</b>
+              <div style="background-color: white; padding: 5px;">
+                <div style="
+                  color: white;
+                  height: 300px;
+                  text-align: center;
+                  display: flex;
+                  flex-direction: row;
+                  justify-content: flex-start;
+                  flex-wrap: wrap-reverse;
+                  align-items: stretch;
+                  align-content: stretch">
+                  <div style="background-color: red; margin: 1px;">Flex Item 1</div>
+                  <div style="background-color: orange; margin: 1px;">Flex Item 2</div>
+                  <div style="background-color: yellow; margin: 1px;">Flex Item 3</div>
+                  <div style="background-color: green; margin: 1px;">Flex Item 4</div>
+                  <div style="background-color: blue; margin: 1px;">Flex Item 5</div>
+                  <div style="background-color: indigo; margin: 1px;">Flex Item 6</div>
+                  <div style="background-color: purple; margin: 1px;">Flex Item 7</div>
+                  <div style="background-color: violet; margin: 1px;">Flex Item 8</div>
+                </div>
+              </div>
+            </div>
           </div>
-          <small>*The <code>background-color</code> property is just an example and can be replaced with <code>border-color</code> or <code>color</code>.</small>
-          
         </article>
       </section>
+
+      
+      
     </main>
     <footer>
         <p>© 2025 Derik's Notes. All rights reserved.</p>
