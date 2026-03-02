@@ -9,39 +9,36 @@
     }
 
     #rowcontainer {
-      background-image: url(Multimedia/row2.png);
-      background-size: contain;
-      background-repeat: no-repeat;
+      background: url(Multimedia/row2.png) center / contain no-repeat;
+      flex-wrap: ;
       border: solid black 5px; 
       display: flex;
       height: 600px;
       gap: 5px;
       flex-direction: row;
-      flex-wrap: wrap;
+      flex-wrap: ;
+      justify-content: center;/*main axis alignment*/
+      align-items: center;/*cross axis alignment*/
+      align-content: space-evenly;
+    }
+
+    #colcontainer {
+      background: url(Multimedia/column2.png) center / contain no-repeat;
+      border: solid black 5px; 
+      display: flex;
+      height: 900px;/*try changing the height*/
+      gap: 5px;
+      flex-direction: column;
+      flex-wrap: ;
       justify-content: center;/*main axis alignment*/
       align-items: center;/*cross axis alignment*/
       align-content: center;
     }
 
-    #colcontainer {
-      background-image: url(Multimedia/column2.png);
-      background-size: contain;
-      background-repeat: no-repeat;
-      border: solid black 5px; 
-      display: flex;
-      height: 600px;
-      gap: 5px;
-      flex-direction: column;
-      flex-wrap: wrap;
-      justify-content: center;/*main axis alignment*/
-      align-items: flex-end;/*cross axis alignment*/
-      align-content: flex-start;
-    }
-
     .item {
       height: 100px;
       width: 100px;
-      background-color: #2470b4;
+      background-color: hsl(208, 67%, 42%,.7);
       color: white;
       font-size: 40pt;
       display: flex;
@@ -53,6 +50,36 @@
 </head>
 <body>
   <h1>Flexbox Model</h1>
+  <p>Modify the properties of each <code>div</code> container using the appropriate values to see the effects and interactions between container and items.</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Property</th>
+        <th>Values</th>
+      </tr>
+    </thead>
+    <tr>
+      <td><code>flex-direction</code></td>
+      <td><code>row</code> (default), <code>column</code>, <code>row-reverse</code>, <code>column-reverse</code>,</td>
+    </tr>
+    <tr>
+      <td><code>flex-wrap</code></td>
+      <td><code>wrap</code>, <code>no-wrap</code> (default), <code>wrap-reverse</code></td>
+    </tr>
+    <tr>
+      <td><code>justify-content</code></td>
+      <td><code>flex-start</code>, <code>flex-end</code>, <code>center</code>, <code>space-between</code>, <code>space-around</code>, <code>space-evenly</code>,</td>
+    </tr>
+    <tr>
+      <td><code>align-items</code></td>
+      <td><code>flex-start</code>, <code>flex-end</code>, <code>center</code>, <code>space-between</code>, <code>space-around</code>, <code>space-evenly</code>,</td>
+    </tr>
+    <tr>
+      <td><code>align-content</code></td>
+      <td><code>flex-start</code>, <code>flex-end</code>, <code>center</code>, <code>space-between</code>, <code>space-around</code>, <code>space-evenly</code>,</td>
+    </tr>
+  </table>
+  <p>Try adding more flex items as well.</p>
   <h2>Row Direction</h2>
   <div id="rowcontainer">
     <div class="item">1</div>
@@ -72,6 +99,9 @@
     <div class="item">3</div>
     <div class="item">4</div>
     <div class="item">5</div>
+    <div class="item">6</div>
+    <div class="item">7</div>
+    <div class="item">8</div>
   </div>
   
 </body>
