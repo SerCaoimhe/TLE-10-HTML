@@ -75,6 +75,16 @@
         <h2 id="values">Flex Container</h2>
         <p>The flex container is the parent element containing flex items. Adjusting its properties will affect how the flex items are arranged within.</p>
         <article>
+          <h3>Axes</h3>
+          <p>A flex container has two axes: <em>main axis</em> and <em>cross axis</em>. The orientation of these axes depends on the direction of the flex items, determined by the set <code>flex-direction</code> value.</p>
+          <p>The <b>main axis</b> goes along the direction of the items.</p>
+          <p>The <b>cross axis</b> goes perpendicular to the main axis.</p>
+          <div class="flex">
+            <div style="background-image: url(Multimedia/row.png); background-size: contain; height: 300px; width: 300px">Flex direction set to <code>row</code></div>
+            <div style="background-image: url(Multimedia/column.png); background-size: contain; height: 300px; width: 300px">Flex direction set to <code>column</code></div>
+          </div>
+        </article>
+        <article>
           <h3>Properties</h3>
           <div class="table-container">
             <table id="fpt" style="text-align: left;">
@@ -126,8 +136,25 @@
                   <td><code>align-content:</code></td>
                   <td>sets alignment if flex items wrap</td>
                 </tr>
+                <tr>
+                  <td>Gap</td>
+                  <td><code>gap:</code></td>
+                  <td>sets gap size between items</td>
+                </tr>
+                <tr>
+                  <td>Row Gap</td>
+                  <td><code>row-gap:</code></td>
+                  <td>sets gap size between row items</td>
+                </tr>
+                <tr>
+                  <td>Column Gap</td>
+                  <td><code>column-gap:</code></td>
+                  <td>sets gap size between column items</td>
+                </tr>
               </tbody>
             </table>
+            <br>
+            <a href="flexbox model.html" target="_blank">Try manipulating this flexbox model.</a>
           </div>
         </article>
         <article>

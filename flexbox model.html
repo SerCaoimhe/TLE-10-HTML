@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Flexbox Model</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background: white;
+    }
+
+    #rowcontainer {
+      background-image: url(Multimedia/row2.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      border: solid black 5px; 
+      display: flex;
+      height: 600px;
+      gap: 5px;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;/*main axis alignment*/
+      align-items: center;/*cross axis alignment*/
+      align-content: center;
+    }
+
+    #colcontainer {
+      background-image: url(Multimedia/column2.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      border: solid black 5px; 
+      display: flex;
+      height: 600px;
+      gap: 5px;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;/*main axis alignment*/
+      align-items: flex-end;/*cross axis alignment*/
+      align-content: flex-start;
+    }
+
+    .item {
+      height: 100px;
+      width: 100px;
+      background-color: #2470b4;
+      color: white;
+      font-size: 40pt;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+  </style>
+</head>
+<body>
+  <h1>Flexbox Model</h1>
+  <h2>Row Direction</h2>
+  <div id="rowcontainer">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+    <div class="item">7</div>
+    <div class="item">8</div>
+  </div>
+  <br><br>
+  <h2>Column Direction</h2>
+  <div id="colcontainer">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+  </div>
+  
+</body>
+</html>

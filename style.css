@@ -203,8 +203,10 @@ label.checkbox {
 
 .flex {
   display:flex;
-  justify-content: space-between;
-}
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 10px;
+}/*previously justify-content: space-between (no wrap)*/
 
 #externalexample {
   background-color: rgb(254, 227, 91);
