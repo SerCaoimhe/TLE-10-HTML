@@ -193,6 +193,10 @@ mark {
   background-color:#76b9f3;
 }
 
+/*mark.white {
+  background-color: white;
+}*/
+
 label {
   font-weight: bold;
 }

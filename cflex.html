@@ -145,8 +145,8 @@
           <p>The <b>main axis</b> goes along the direction of the items.</p>
           <p>The <b>cross axis</b> goes perpendicular to the main axis.</p>
           <div class="flex">
-            <div style="background-image: url(Multimedia/row.png); background-size: contain; height: 300px; width: 300px">Flex direction set to <code>row</code></div>
-            <div style="background-image: url(Multimedia/column.png); background-size: contain; height: 300px; width: 300px">Flex direction set to <code>column</code></div>
+            <div style="background-image: url(Multimedia/row.png); background-size: contain; height: 300px; width: 300px"><mark class="white">Flex direction set to <code>row</code>, so <b>main axis</b> is <b>horizontal</b></mark></div>
+            <div style="background-image: url(Multimedia/column.png); background-size: contain; height: 300px; width: 300px"><mark class="white">Flex direction set to <code>column</code>, so <b>main axis</b> is vertical.</mark></div>
           </div>
         </article>
         <article>
@@ -158,6 +158,7 @@
                 <tr>
                   <th>Property</th>
                   <th>Syntax</th>
+                  <th>Values</th>
                   <th>Description</th>
                 </tr>
               </thead>
@@ -165,55 +166,68 @@
                 <tr>
                   <td>Display</td>
                   <td><code>display:</code></td>
+                  <td><code>flex</code></td>
                   <td>sets how the container behaves with surrounding elements: <code>&lt;flex&gt;</code> for block or <code>&lt;inline-flex&gt;</code> for inline </td>
                 </tr>
                 <tr>
                   <td>Flex Direction</td>
                   <td><code>flex-direction:</code></td>
+                  <td><code>row</code>, <code>column</code>, <code>row-reverse</code>, <code>column-reverse</code></td>
                   <td>sets the direction of the flex items</td>
                 </tr>
                 <tr>
                   <td>Flex Wrap</td>
                   <td><code>flex-wrap:</code></td>
+                  <td><code>wrap</code>, <code>nowrap</code>, <code>wrap-reverse</code></td>
                   <td>determines whether flex items 
                     <span class="tooltip">wrap
                       <span class="tooltiptext">go to the next line</span>
                     </span>
                     when there is insufficient space</td>
-                </tr>
-                <tr>
-                  <td>Flex Flow</td>
-                  <td><code>flex-flow:</code></td>
-                  <td>shorthand property for flex direction and flex wrap</td>
-                </tr>
-                <tr>
-                  <tr>
-                    <td>Justify Content</td>
-                    <td><code>justify-content:</code></td>
-                    <td>sets horizontal alignment (along main axis) of flex items</td>
                   </tr>
-                  <td>Align Items</td>
-                  <td><code>align-items:</code></td>
-                  <td>sets vertical alignment (along cross axis) of flex items</td>
-                </tr>
-                <tr>
-                  <td>Align Content</td>
-                  <td><code>align-content:</code></td>
+                  <tr>
+                    <td>Flex Flow</td>
+                    <td><code>flex-flow:</code></td>
+                    <td><i><code>&lt;flex direction value&gt; &lt;flex wrap value&gt;</code></i></td>
+                    <td>shorthand property for flex direction and flex wrap</td>
+                  </tr>
+                  <tr>
+                    <tr>
+                      <td>Justify Content</td>
+                      <td><code>justify-content:</code></td>
+                      <td><code>flex-start</code>, <code>flex-end</code>, <code>center</code>, <code>space-between</code>, <code>space-around</code>, <code>space-evenly</code>
+                      </td>
+                      <td>sets horizontal alignment (along main axis) of flex items</td>
+                    </tr>
+                    <td>Align Items</td>
+                    <td><code>align-items:</code></td>
+                    <td><code>flex-start</code>, <code>flex-end</code>, <code>center</code>, <code>space-between</code>, <code>space-around</code>, <code>space-evenly</code>
+                    </td>
+                    <td>sets vertical alignment (along cross axis) of flex items</td>
+                  </tr>
+                  <tr>
+                    <td>Align Content</td>
+                    <td><code>align-content:</code></td>
+                    <td><code>flex-start</code>, <code>flex-end</code>, <code>center</code>, <code>space-between</code>, <code>space-around</code>, <code>space-evenly</code>
+                    </td>
                   <td>sets alignment if flex items wrap</td>
                 </tr>
                 <tr>
                   <td>Gap</td>
                   <td><code>gap:</code></td>
+                  <td><i><code>&lt;number&gt;px</code></i></td>
                   <td>sets gap size between items</td>
                 </tr>
                 <tr>
                   <td>Row Gap</td>
                   <td><code>row-gap:</code></td>
+                  <td><i><code>&lt;number&gt;px</code></i></td>
                   <td>sets gap size between row items</td>
                 </tr>
                 <tr>
                   <td>Column Gap</td>
                   <td><code>column-gap:</code></td>
+                  <td><i><code>&lt;number&gt;px</code></i></td>
                   <td>sets gap size between column items</td>
                 </tr>
               </tbody>
@@ -269,7 +283,7 @@
       </section>
       <section>
         <h2>Flex Item</h2>
-        <p>The flex item is the child element inside the flex container. Adjusting its properties will also affect how the flex items are arranged within.</p>
+        <p>The <em>flex item</em> is the child element inside the <em>flex container</em>. Adjusting its properties will also affect how the flex items are arranged within.</p>
         <article>
           <h3>Properties</h3>
           <div class="table-container">
@@ -279,6 +293,7 @@
                 <tr>
                   <th>Property</th>
                   <th>Syntax</th>
+                  <th>Values</th>
                   <th>Description</th>
                 </tr>
               </thead>
@@ -286,37 +301,43 @@
                 <tr>
                   <td>Order</td>
                   <td><code>order:</code></td>
+                  <td><i><code>&lt;natural number&gt;</code> (e.g. 1, 2, 3)</i></td>
                   <td>sets the item's order relative to the others</td>
                 </tr>
                 <tr>
                   <td>Flex Grow</td>
                   <td><code>flex-grow:</code></td>
+                  <td><i><code>&lt;whole number&gt;</code> (e.g. 0, 1, 2)</i></td>
                   <td>sets how much the item grows relative to the others</td>
                 </tr>
                 <tr>
                   <td>Flex Shrink</td>
                   <td><code>flex-shrink:</code></td>
+                  <td><i><code>&lt;whole number&gt;</code> (e.g. 0, 1, 2)</i></td>
                   <td>sets how much the item shrinks relative to the others</td>
                 </tr>
                 <tr>
                   <td>Flex Basis</td>
                   <td><code>flex-basis:</code></td>
+                  <td><i><code>&lt;number&gt;px</code></i></td>
                   <td>sets the item's initial length</td>
                 </tr>
                 <tr>
                   <tr>
                     <td>Flex</td>
                     <td><code>flex:</code></td>
+                    <td><i><code>&lt;flex grow value&gt; &lt;flex shrink value&gt; &lt;flex basis value&gt;</code></i></td>
                     <td>shorthand property with values defined in the order following the order of the properties listed above (grow, shrink, basis)</td>
                   </tr>
                   <td>Align Self</td>
                   <td><code>align-self:</code></td>
+                  <td><code>flex-start</code>, <code>flex-end</code>, <code>center</code>, <code>space-between</code>, <code>space-around</code>, <code>space-evenly</code></td>
                   <td>sets the item's alignment, overriding the <code>align-item</code> value</td>
                 </tr>
               </tbody>
             </table>
           </div>
-          <p>Take note that the flex basis value will be added upon when the container is bigger than the total for all items <em>and</em> the flex grow is not greater than 0.</p>
+          <p>Take note that the flex basis value will be added upon when the container is bigger than the total for all items <em>and</em> the flex grow is greater than 0.</p>
         </article>
         <article>
           <h3>Examples</h3>
