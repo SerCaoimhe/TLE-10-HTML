@@ -7,6 +7,71 @@
   <title>Placido—Structure</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="style.css">
+  <style>
+    
+    #syntax-con{
+      display: flex;
+      gap: 5px;
+      flex-flow: row wrap;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    #preview-con{
+      overflow-x: scroll;
+      border: solid black 5px; 
+      display: flex;
+      height: 300px;
+      gap: 5px;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+
+    .item {
+      height: 100px;
+      width: 100px;
+      background-color: hsl(208, 67%, 42%,.7);
+      color: white;
+      font-size: 40pt;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #one {
+      background-color: red;
+      order: 1;
+      flex-grow: 0;
+      flex-shrink: 0;
+      flex-basis: 100px;
+      align-self: flex-start;
+    }
+    
+    #two {
+      background-color: orange;
+      order: 4;
+      flex-grow: ;
+      flex-shrink: 0;
+      flex-basis: 300px;
+      align-self: ;
+    }
+    
+    #three {
+      background-color: purple;
+      order: 3;
+      flex: 0 3 200px;
+      align-self: flex-end;
+    }
+    
+    #four {
+      background-color: blue;
+      order: 2;
+      flex: 0 5 100px;
+      align-self: ;
+    }
+
+  </style>
 </head>
 <body>
     <header id="top">
@@ -202,7 +267,127 @@
         </article>
         <a href="Ex. 4.2.html" target="_blank">Replicate this webpage. Change the images and the h3 element content.</a>
       </section>
-
+      <section>
+        <h2>Flex Item</h2>
+        <p>The flex item is the child element inside the flex container. Adjusting its properties will also affect how the flex items are arranged within.</p>
+        <article>
+          <h3>Properties</h3>
+          <div class="table-container">
+            <table id="fipt" style="text-align: left;">
+              <caption style="text-align: left;">Flexbox Item Properties</caption>
+              <thead>
+                <tr>
+                  <th>Property</th>
+                  <th>Syntax</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Order</td>
+                  <td><code>order:</code></td>
+                  <td>sets the item's order relative to the others</td>
+                </tr>
+                <tr>
+                  <td>Flex Grow</td>
+                  <td><code>flex-grow:</code></td>
+                  <td>sets how much the item grows relative to the others</td>
+                </tr>
+                <tr>
+                  <td>Flex Shrink</td>
+                  <td><code>flex-shrink:</code></td>
+                  <td>sets how much the item shrinks relative to the others</td>
+                </tr>
+                <tr>
+                  <td>Flex Basis</td>
+                  <td><code>flex-basis:</code></td>
+                  <td>sets the item's initial length</td>
+                </tr>
+                <tr>
+                  <tr>
+                    <td>Flex</td>
+                    <td><code>flex:</code></td>
+                    <td>shorthand property with values defined in the order following the order of the properties listed above (grow, shrink, basis)</td>
+                  </tr>
+                  <td>Align Self</td>
+                  <td><code>align-self:</code></td>
+                  <td>sets the item's alignment, overriding the <code>align-item</code> value</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Take note that the flex basis value will be added upon when the container is bigger than the total for all items <em>and</em> the flex grow is not greater than 0.</p>
+        </article>
+        <article>
+          <h3>Examples</h3>
+          <p>Try changing the value of each property in the following code using the Developer Tools (F12) to see the effects.</p>
+          <b>Syntax:</b>
+          <div id="syntax-con">
+            <div style=
+              "background-color: red; 
+              color: white;
+              padding: 5px">
+            one<pre><code>
+    #one {
+      order: 1;
+      flex-grow: 0;
+      flex-shrink: 0;
+      flex-basis: 100px;
+      align-self: flex-start;
+    }
+                </code></pre>
+            </div>
+            <div style=
+              "background-color: orange; 
+              color: white;
+              padding: 5px">
+            two<pre><code>
+    #two {
+      background-color: orange;
+      order: 4;
+      flex-grow: ;
+      flex-shrink: 0;
+      flex-basis: 300px;
+      align-self: ;
+    }
+                </code></pre>
+            </div>
+            <div style=
+              "background-color: purple; 
+              color: white;
+              padding: 5px">
+            three<pre><code>
+    #three {
+      background-color: purple;
+      order: 3;
+      flex: 0 3 200px;
+      align-self: flex-end;
+    }
+                  </code></pre>
+              </div>
+              <div style=
+                "background-color: blue; 
+                color: white;
+                padding: 5px">
+              four<pre><code>
+    #four {
+      background-color: blue;
+      order: 2;
+      flex: 0 5 100px;
+      align-self: ;
+    }
+                  </code></pre>
+              </div>
+            </div>
+            <b>Preview:</b>
+            <div id="preview-con">
+                <div class="item" id="one">one</div>
+                <div class="item" id="two">two</div>
+                <div class="item" id="three">three</div>
+                <div class="item" id="four">four</div>
+            </div>
+        </article>
+      </section>
       
       
     </main>

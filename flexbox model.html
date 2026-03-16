@@ -10,29 +10,28 @@
 
     #rowcontainer {
       background: url(Multimedia/row2.png) center / contain no-repeat;
-      flex-wrap: ;
       border: solid black 5px; 
       display: flex;
       height: 600px;
       gap: 5px;
       flex-direction: row;
-      flex-wrap: ;
-      justify-content: center;/*main axis alignment*/
-      align-items: center;/*cross axis alignment*/
-      align-content: space-evenly;
+      flex-wrap: wrap;
+      justify-content: space-evenly;/*main axis alignment*/
+      align-items: flex-end;/*cross axis alignment*/
+      align-content: space-between;
     }
 
     #colcontainer {
       background: url(Multimedia/column2.png) center / contain no-repeat;
       border: solid black 5px; 
       display: flex;
-      height: 900px;/*try changing the height*/
+      height: 400px;/*try changing the height*/
       gap: 5px;
       flex-direction: column;
-      flex-wrap: ;
-      justify-content: center;/*main axis alignment*/
+      flex-wrap: wrap;
+      justify-content: space-evenly;/*main axis alignment*/
       align-items: center;/*cross axis alignment*/
-      align-content: center;
+      align-content: flex-end;
     }
 
     .item {
@@ -60,25 +59,26 @@
     </thead>
     <tr>
       <td><code>flex-direction</code></td>
-      <td><code>row</code> (default), <code>column</code>, <code>row-reverse</code>, <code>column-reverse</code>,</td>
+      <td><code>row</code>*, <code>column</code>, <code>row-reverse</code>, <code>column-reverse</code></td>
     </tr>
     <tr>
       <td><code>flex-wrap</code></td>
-      <td><code>wrap</code>, <code>no-wrap</code> (default), <code>wrap-reverse</code></td>
+      <td><code>wrap</code>, <code>no-wrap</code>*, <code>wrap-reverse</code></td>
     </tr>
     <tr>
       <td><code>justify-content</code></td>
-      <td><code>flex-start</code>, <code>flex-end</code>, <code>center</code>, <code>space-between</code>, <code>space-around</code>, <code>space-evenly</code>,</td>
+      <td><code>flex-start</code>*, <code>flex-end</code>, <code>center</code>, <code>space-between</code>, <code>space-around</code>, <code>space-evenly</code></td>
     </tr>
     <tr>
       <td><code>align-items</code></td>
-      <td><code>flex-start</code>, <code>flex-end</code>, <code>center</code>, <code>space-between</code>, <code>space-around</code>, <code>space-evenly</code>,</td>
+      <td><code>flex-start</code>*, <code>flex-end</code>, <code>center</code>, <code>space-between</code>, <code>space-around</code>, <code>space-evenly</code></td>
     </tr>
     <tr>
       <td><code>align-content</code></td>
-      <td><code>flex-start</code>, <code>flex-end</code>, <code>center</code>, <code>space-between</code>, <code>space-around</code>, <code>space-evenly</code>,</td>
+      <td><code>flex-start</code>, <code>flex-end</code>, <code>center</code>, <code>space-between</code>, <code>space-around</code>, <code>space-evenly</code></td>
     </tr>
   </table>
+  <small>*default value</small>
   <p>Try adding more flex items as well.</p>
   <img src="Multimedia/chrissy.gif" style="height: 200px">
   <img src="Multimedia/enjoy.gif" style="height: 200px">
